@@ -1,0 +1,80 @@
+Introduction to iterative statements: for, while, do-while.
+
+**For loop:**
+used when you want to repeat a block of code a specific number of times. It consists of three parts: 
+initialization, condition, and increment/decrement.
+
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Iteration " + i);
+        }
+    }
+}
+
+In this for loop:
+int i = 0; initializes i to 0.
+i < 5; checks if i is less than 5. If true, the loop body executes; otherwise, the loop terminates.
+i++ increments i by 1 after each iteration.
+The loop executes 5 times because i goes from 0 to 4 (inclusive). The loop body prints the iteration number each time.
+
+1. Initialization: int i = 0;
+    This is where you initialize a loop variable. In Java, it's common to use int i = 0 as the initialization, where i is the loop variable.
+    You can initialize multiple variables separated by commas (,), but it's more common to initialize just one variable.
+    The initialization part is executed only once at the beginning of the loop.
+
+2. Condition: i < 5;
+    This is the condition that determines whether the loop will continue or stop. It's evaluated before each iteration of the loop.
+    If the condition evaluates to true, the loop body is executed. If it evaluates to false, the loop terminates, and program control
+    moves to the next statement after the loop.
+    In this example, i < 5 means the loop will continue as long as the value of i is less than 5.
+
+3. Increment/Decrement: i++
+    This part specifies how the loop variable is modified after each iteration of the loop. It's executed at the end of each iteration,
+     just before the condition is checked again.
+    In this example, i++ is the post-increment operator, which means the value of i is incremented by 1 after each iteration of the loop.
+     So, i starts at 0 and increases by 1 in each iteration until it reaches 
+
+
+     
+The while loop:
+    is another fundamental construct in Java used for iterative execution of a block of code based on a condition.
+    It keeps iterating the block of code as long as the condition remains true.
+
+    Initialization: int i = 0;
+    initializes the loop variable i to 0.
+    Condition: i < 5; specifies the condition that needs to be true for the loop to continue. 
+    As long as i is less than 5, the loop will continue.
+    Increment: i++; increments the value of i by 1 after each iteration of the loop.
+
+The loop will run 5 times because i starts at 0 and increases by 1 in each iteration until it reaches
+4. The loop stops when i becomes 5 because the condition i < 5 becomes false.
+
+
+
+
+do-while loop
+is used to execute a block of code repeatedly until a specified condition evaluates to false.
+The key difference between a do-while loop and a while loop is that a do-while loop always executes its body at 
+least once, even if the condition is false initially.
+
+Syntax
+{
+     // code to be executed
+ } while (condition);
+ 
+     The code block within the do and while statements will be executed.
+     After executing the code block, the condition specified in the while statement is evaluated.
+     If the condition evaluates to true, the loop will execute again, repeating steps 1 and 2.
+     If the condition evaluates to false, the loop terminates, and the program continues executing the code following the do-while loop.
+ 
+
+ public class DoWhileExample {
+     public static void main(String[] args) {
+         int i = 1;
+         do {
+             System.out.println(i);
+             i++;
+         } while (i <= 5);
+     }
+ }
