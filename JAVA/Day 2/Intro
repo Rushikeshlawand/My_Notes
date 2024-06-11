@@ -1,0 +1,45 @@
+What are Variables?
+
+In Java, a variable is a named memory location that stores data of a specific type. Variables are used to hold values that can be manipulated or accessed by the program during its execution. Each variable has a name, a data type, and a value associated with it.
+
+
+Role of Variables in Programming:
+
+Data Storage 
+Data Manipulation 
+State Management 
+Communication 
+Control Flow 
+Memory Management 
+
+
+Data Types:
+
+specify the type of data that a variable can hold. Java is a statically-typed language, meaning you must declare the data type of a variable before using it. Java provides several built-in data types, which can be broadly categorized into two groups: primitive data types and reference data types.
+
+Primitive Data Types:
+    byte: 8-bit signed integer (-128 to 127)
+    short: 16-bit signed integer (-32,768 to 32,767)
+    int: 32-bit signed integer (-2^31 to 2^31-1)
+    long: 64-bit signed integer (-2^63 to 2^63-1)
+    float: 32-bit floating-point number (single-precision)
+    double: 64-bit floating-point number (double-precision)
+    char: 16-bit Unicode character (0 to 65,535)
+    boolean: Represents true or false values
+
+byte b = 10;
+int i = 42;
+double d = 3.14;
+char c = 'A';
+boolean flag = true;
+
+Reference Data Types:
+used to store references to objects in memory. These data types don't actually contain the data but instead hold references (memory addresses) to objects. Reference data types include:
+
+    Classes: User-defined data types created using the class keyword.
+    Arrays: Ordered collections of elements of the same data type.
+    Interfaces: Similar to classes but can't be instantiated directly.
+
+String str = "Hello";
+int[] arr = {1, 2, 3, 4, 5};
+MyClass obj = new MyClass();

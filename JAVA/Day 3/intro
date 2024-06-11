@@ -1,0 +1,63 @@
+Introduction to operators: arithmetic, relational, logical, and assignment operators.
+Understanding expressions and their evaluation.
+
+Operators are symbols used to perform operations on variables and values in a programming language. They are essential building blocks for creating expressions, which are combinations of variables, values, and operators that produce a result. 
+
+
+Arithmetic Operators:
+Arithmetic operators are used to perform mathematical operations such as addition, subtraction, multiplication, division, and modulus (remainder). The basic arithmetic operators in Java are:
+
+    Addition (+)
+    Subtraction (-)
+    Multiplication (*)
+    Division (/)
+    Modulus (%)
+Ex:
+int result = 10 + 5;  // Addition
+int difference = 10 - 5;  // Subtraction
+int product = 10 * 5;  // Multiplication
+int quotient = 10 / 5;  // Division
+int remainder = 10 % 3;  // Modulus
+
+
+Relational Operators:
+Relational operators are used to compare values and determine the relationship between them. These operators return a boolean value (true or false). The relational operators in Java are:
+
+    Equal to (==)
+    Not equal to (!=)
+    Greater than (>)
+    Less than (<)
+    Greater than or equal to (>=)
+    Less than or equal to (<=)
+    Ex:
+boolean isEqual = (10 == 5);  // Equal to
+boolean isNotEqual = (10 != 5);  // Not equal to
+boolean isGreater = (10 > 5);  // Greater than
+boolean isLess = (10 < 5);  // Less than
+boolean isGreaterOrEqual = (10 >= 5);  // Greater than or equal to
+boolean isLessOrEqual = (10 <= 5);  // Less than or equal to
+
+
+Logical Operators:
+Logical operators are used to perform logical operations on boolean values. They are typically used to combine multiple conditions or negate a condition. The logical operators in Java are:
+
+    Logical AND (&& or &)
+    Logical OR (|| or |)
+    Logical NOT (!)
+Ex:
+boolean condition1 = true;
+boolean condition2 = false;
+boolean resultAnd = (condition1 && condition2);  // Logical AND
+boolean resultOr = (condition1 || condition2);  // Logical OR
+boolean resultNot = !condition1;  // Logical NOT
+
+
+Assignment Operators:
+Assignment operators are used to assign values to variables. They can also perform arithmetic or logical operations along with assignment. The basic assignment operator in Java is:
+
+    Assignment (=)
+
+Other assignment operators include compound assignment operators like +=, -=, *=, /=, and %=.
+Ex:
+int x = 10;  // Assignment
+x += 5;  // Compound assignment (x = x + 5)
