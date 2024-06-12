@@ -1,0 +1,71 @@
+**if-else**
+
+statements are used to execute code based on certain conditions. 
+They are a fundamental part of control flow in programming, allowing the program to make decisions and execute
+different code blocks based on boolean expressions.
+The if-else statement is a powerful tool for controlling the flow of a program based on conditions.
+
+Syntax:
+if (condition) {
+    // Code to execute if the condition is true
+} else {
+    // Code to execute if the condition is false
+}
+
+**else if Statement**
+
+The else if statement allows you to check multiple conditions before defaulting to the else statement.
+
+Syntax:
+if (condition1) {
+    // Code to execute if condition1 is true
+} else if (condition2) {
+    // Code to execute if condition2 is true
+} else {
+    // Code to execute if all conditions are false
+}
+
+**Nested if-else Statements**
+
+A nested if-else statement is an if-else statement placed inside another if or else block. 
+This allows for more complex decision-making structures by enabling multiple levels of condition checking
+You can nest if-else statements within each other to create more complex decision structures.
+
+Syntax:
+if (condition1) {
+    if (condition2) {
+        // Code to execute if both condition1 and condition2 are true
+    } else {
+        // Code to execute if condition1 is true and condition2 is false
+    }
+} else {
+    // Code to execute if condition1 is false
+}
+
+
+**switch** 
+statement is a control flow statement that allows a variable to be tested for equality against a list of values, called cases. 
+It's an alternative to using multiple if-else statements, particularly when you need to compare the same variable to many different values.
+The switch statement in Java provides a clean and efficient way to handle multiple conditional branches. 
+It's particularly useful when you have a single variable or expression that you need to compare against a list of possible values.
+
+Syntax:
+switch (expression) {
+    case value1:
+        // Code to execute if expression equals value1
+        break;
+    case value2:
+        // Code to execute if expression equals value2
+        break;
+    // You can have any number of case statements
+    default:
+        // Code to execute if expression doesn't match any case
+}
+
+Components:
+Expression: The variable or expression you want to test. This must be of a type compatible with switch: byte, short, char, int, String, 
+or an enumeration (enum).
+Case: A possible value for the expression. Each case is followed by a colon (:) and the code that should be executed if the expression
+matches this value.
+Break: This keyword terminates the switch statement. If omitted, execution will continue into the next case (known as "fall-through").
+Default: An optional case that executes if none of the other cases match. It works like the final else in an if-else chain.

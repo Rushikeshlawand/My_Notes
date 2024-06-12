@@ -4,6 +4,12 @@ Introduction to iterative statements: for, while, do-while.
 used when you want to repeat a block of code a specific number of times. It consists of three parts: 
 initialization, condition, and increment/decrement.
 
+Syntax:
+for (initialization; condition; update) {
+    // Code to execute
+}
+
+Ex:
 public class Main {
     public static void main(String[] args) {
         for (int i = 0; i < 5; i++) {
@@ -11,7 +17,6 @@ public class Main {
         }
     }
 }
-
 In this for loop:
 int i = 0; initializes i to 0.
 i < 5; checks if i is less than 5. If true, the loop body executes; otherwise, the loop terminates.
@@ -37,9 +42,22 @@ The loop executes 5 times because i goes from 0 to 4 (inclusive). The loop body 
 
 
      
-The while loop:
-    is another fundamental construct in Java used for iterative execution of a block of code based on a condition.
-    It keeps iterating the block of code as long as the condition remains true.
+**The while loop**
+
+is another fundamental construct in Java used for iterative execution of a block of code based on a condition.
+It keeps iterating the block of code as long as the condition remains true.
+
+Syntax:
+while (condition) {
+    // Code to execute
+}
+Ex:
+int i = 1;
+
+while (i <= 5) {
+    System.out.println(i);
+    i++;
+}
 
     Initialization: int i = 0;
     initializes the loop variable i to 0.
@@ -48,7 +66,7 @@ The while loop:
     Increment: i++; increments the value of i by 1 after each iteration of the loop.
 
 The loop will run 5 times because i starts at 0 and increases by 1 in each iteration until it reaches
-4. The loop stops when i becomes 5 because the condition i < 5 becomes false.
+The loop stops when i becomes 5 because the condition i < 5 becomes false.
 
 
 
