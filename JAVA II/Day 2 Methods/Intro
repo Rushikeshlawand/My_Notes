@@ -1,0 +1,76 @@
+Introduction to Methods and Their Role in Code Organization
+
+Methods are a fundamental part of Java (and most other programming languages) that allow you to organize your code into reusable,
+ manageable, and logical blocks. They help in:
+Code Reusability: Instead of writing the same code multiple times, you can write it once inside a method and call that method whenever needed.
+Code Organization: Methods help in breaking down a complex problem into smaller, more manageable pieces.
+Abstraction: Methods allow you to hide the implementation details and expose only the functionality.
+Maintainability: Well-organized code with methods is easier to read, understand, and maintain.
+
+
+Declaring Methods
+A method in Java is defined within a class. Here’s the general syntax for declaring a method:
+
+cessModifier returnType methodName(parameterList) {
+    // method body
+}
+
+    accessModifier: This defines the visibility of the method (e.g., public, private, protected, or default).
+    returnType: This defines the type of value the method returns (e.g., int, void, String).
+    methodName: This is the name of the method.
+    parameterList: This is a comma-separated list of input parameters with their types. It can be empty if no parameters are required.
+    method body: This contains the statements that define what the method does.
+
+
+Invoking Methods
+
+To call a method, you use the method name followed by parentheses, optionally passing arguments if the method requires parameters.
+Here’s the syntax for invoking a method:
+
+objectName.methodName(arguments);
+
+If the method is static, you can call it using the class name:
+
+ClassName.methodName(arguments);
+
+Example: Declaring and Invoking Methods
+Let’s create a class with methods that demonstrate the declaration and invocation of methods with parameters and return values.
+
+
+public class Calculator {
+
+    // Method to add two numbers
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    // Method to subtract two numbers
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+
+    // Method to multiply two numbers
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+
+    // Method to divide two numbers
+    public double divide(int a, int b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("Divisor cannot be zero");
+        }
+        return (double) a / b;
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of Calculator
+        Calculator calculator = new Calculator();
+
+        // Invoke methods and print results
+        int sum = calculator.add(10, 20);
+        int difference = calculator.subtract(20, 10);
+        int product = calculator.multiply(10, 20);
+        double quotient = calculator.divide(20, 10);
+
+        // Print results
+        System.out.println("Sum:
