@@ -1,11 +1,13 @@
-Introduction to operators: arithmetic, relational, logical, and assignment operators.
-Understanding expressions and their evaluation.
+Introduction to operators: 
 
-Operators are symbols used to perform operations on variables and values in a programming language. They are essential building blocks for creating expressions, which are combinations of variables, values, and operators that produce a result. 
+Operators are symbols used to perform operations on variables and values in a programming language. 
+They are essential building blocks for creating expressions, which are combinations of variables, values, and 
+operators that produce a result. 
 
 
 Arithmetic Operators:
-Arithmetic operators are used to perform mathematical operations such as addition, subtraction, multiplication, division, and modulus (remainder). The basic arithmetic operators in Java are:
+Arithmetic operators are used to perform mathematical operations such as addition, subtraction, multiplication, division, 
+and modulus (remainder). The basic arithmetic operators in Java are:
 
     Addition (+)
     Subtraction (-)
