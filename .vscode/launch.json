@@ -4,7 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+        {
+            "type": "java",
+            "name": "Inverted_half_pyramid",
+            "request": "launch",
+            "mainClass": "Inverted_half_pyramid",
+            "projectName": "Notes_78c535ff"
+        },
         {
             "type": "java",
             "name": "Current File",
