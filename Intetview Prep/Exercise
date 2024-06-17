@@ -48,3 +48,80 @@
 19. Java 8 Program to get Highest paid Employee in Each department using stream api?
 —————————————————————
 20. Write a java 8 program to find the words starting with vowels.
+
+
+
+21. Write a code to sort the array in the descending order
+—————————————————————
+22. String s = “ab12pq34”, Find the sum of digits in this string
+—————————————————————
+23. 
+class A {    
+    public void m1() {}
+}
+class B extends A {
+    public void m1() {}
+}
+
+A a = new A();
+a.m1();
+which m1 is called ?
+
+B b = new A();
+b.m1();
+which m1 is called ?
+
+A a = new B()
+a.m1();
+which m1 is called
+—————————————————————
+24. Can i call super class like this ? 
+class B extends A {
+    public void m1() {
+          System.out.println(”m1”);
+          super.m1();
+    }
+}
+—————————————————————
+25. Whenever I am writing a file to file, i dont want c to write to file, what can i do ?
+class A {
+    int a;
+    int b;
+    int c;
+}
+—————————————————————
+26. Employee table, employee id, name, salary and department.
+    Write a sql query to find the sum of salary department wise
+—————————————————————
+27. Write a program in java8  to 
+    - print the titles of books published after 2000
+    - Calculate the total price of all books
+    - Find the book with the highest price
+    - Create a new list with books priced less than $40
+
+
+28. Write a program in java8  to 
+    - print the titles of books published after 2000
+    - Calculate the total price of all books
+    - Find the book with the highest price
+    - Create a new list with books priced less than $40
+29. write code to find 2nd highest salary emp from collection of emp objects
+30. Write a fibbonacci series 0 1 1 2 3 5 8 13
+31. Write factorial of 5 using recursion ?
+32. How to find all possible substring of a given string ?
+    - input - abcd
+    - output - a ab abc abcd b bc bcd c cd d
+33. list of employees , having properties id , name , salary . List Top three highest paid employees.
+34. Array of numbers, find second highest number from the array
+35. I am Programmer and Programmer I am. Tell me whether they are anagram or not ?
+36. I have list of names. I need to find the names and number of occurance of each name ? Convert list to a map , key would be name and value would be number of occurance using streams,
+37. Find the continuos sequence of numbers in a given input. 
+    Eg. input: 1 2 3 5 9 a 6 7 8 4 @ -5 -7 -3 -2 -1
+    Output: There are 3 sequences 
+    123
+    678
+    -3-2-1
+
+... will add more real interview questions, check weekly ...
+... will add more real interview questions, check weekly ...
+———————————————
