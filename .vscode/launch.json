@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AreaOfCircleUsingMethod",
+            "request": "launch",
+            "mainClass": "AreaOfCircleUsingMethod",
+            "projectName": "Notes_b86ed586"
+        },
+        {
+            "type": "java",
             "name": "Inverted_half_pyramid",
             "request": "launch",
             "mainClass": "Inverted_half_pyramid",
