@@ -18,14 +18,14 @@ Data Types:
 specify the type of data that a variable can hold. Java is a statically-typed language, meaning you must declare the data type of a variable before using it. Java provides several built-in data types, which can be broadly categorized into two groups: primitive data types and reference data types.
 
 Primitive Data Types:
-    byte: 8-bit signed integer (-128 to 127)
-    short: 16-bit signed integer (-32,768 to 32,767)
-    int: 32-bit signed integer (-2^31 to 2^31-1)
-    long: 64-bit signed integer (-2^63 to 2^63-1)
-    float: 32-bit floating-point number (single-precision)
-    double: 64-bit floating-point number (double-precision)
-    char: 16-bit Unicode character (0 to 65,535)
-    boolean: Represents true or false values
+    byte: 8-bit signed integer (-128 to 127) 1byte
+    short: 16-bit signed integer (-32,768 to 32,767) 2byte
+    int: 32-bit signed integer (-2^31 to 2^31-1) 4 byte
+    long: 64-bit signed integer (-2^63 to 2^63-1) 8byte
+    float: 32-bit floating-point number (single-precision) 4byte
+    double: 64-bit floating-point number (double-precision) 8 byte
+    char: 16-bit Unicode character (0 to 65,535) 2byte
+    boolean: Represents true or false values 1bit
 
 byte b = 10;
 int i = 42;
@@ -33,7 +33,7 @@ double d = 3.14;
 char c = 'A';
 boolean flag = true;
 
-Reference Data Types:
+Non Primitive Data Types:
 used to store references to objects in memory. These data types don't actually contain the data but instead hold references (memory addresses) to objects. Reference data types include:
 
     Classes: User-defined data types created using the class keyword.

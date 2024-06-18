@@ -23,7 +23,8 @@ int remainder = 10 % 3;  // Modulus
 
 
 Relational Operators:
-Relational operators are used to compare values and determine the relationship between them. These operators return a boolean value (true or false). The relational operators in Java are:
+Relational operators are used to compare values and determine the relationship between them. 
+These operators return a boolean value (true or false). The relational operators in Java are:
 
     Equal to (==)
     Not equal to (!=)
@@ -31,7 +32,7 @@ Relational operators are used to compare values and determine the relationship b
     Less than (<)
     Greater than or equal to (>=)
     Less than or equal to (<=)
-    Ex:
+Ex::
 boolean isEqual = (10 == 5);  // Equal to
 boolean isNotEqual = (10 != 5);  // Not equal to
 boolean isGreater = (10 > 5);  // Greater than
