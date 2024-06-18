@@ -16,6 +16,7 @@ public class XOperators {
         System.out.println("Dividation is: "+ (a / b));
         System.out.println("Remainder is: "+ (a % b));
 
+        
         // Relational Operator
         System.out.println("a>b " + (a > b));
         System.out.println("a<b " + (a < b));
@@ -27,7 +28,6 @@ public class XOperators {
         //logical op
         System.out.println(voter==true && age>=18);
         System.out.println(voter==true || age>=18);
-
-
+        System.out.println(!true);
     }
 }
