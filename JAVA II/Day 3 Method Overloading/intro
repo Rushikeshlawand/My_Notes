@@ -1,5 +1,5 @@
 What is Method Overloading?
-
+same name of methods but diff parameter
 Feature that allows a class to have more than one method with the same name, provided their parameter lists are different. This means you can define multiple methods with the same name but with different parameter types, numbers, or both.
 
 

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MethodOverloadingOfArea",
+            "request": "launch",
+            "mainClass": "MethodOverloadingOfArea",
+            "projectName": "Notes_b86ed586"
+        },
+        {
+            "type": "java",
             "name": "main",
             "request": "launch",
             "mainClass": "main",
