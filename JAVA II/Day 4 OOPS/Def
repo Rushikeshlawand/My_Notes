@@ -1,0 +1,75 @@
+Class: A blueprint for creating objects. It defines a datatype by bundling data (fields) and methods (functions) 
+that operate on the data.
+Object: An instance of a class.
+
+
+Declaring a Class
+In Java, a class is declared using the class keyword. Here's an example:
+
+public class Car {
+    // Fields
+    String color;
+    String model;
+    int year;
+
+    // Methods
+    void displayInfo() {
+        System.out.println("Model: " + model + ", Color: " + color + ", Year: " + year);
+    }
+}
+
+
+Creating Objects
+Objects are created using the new keyword. Here's how you can create an object of the Car class and access its members:
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating an object of the Car class
+        Car myCar = new Car();
+
+        // Accessing fields and methods
+        myCar.color = "Red";
+        myCar.model = "Toyota";
+        myCar.year = 2020;
+
+        myCar.displayInfo(); // Output: Model: Toyota, Color: Red, Year: 2020
+    }
+}
+
+
+Understanding Constructors
+
+A constructor in Java is a special method that is called when an object is instantiated. Constructors are used to initialize the object's state.
+Declaring a Constructor.
+Here's how you can declare a constructor in the Car class:
+
+public class Car {
+    String color;
+    String model;
+    int year;
+
+    // Constructor
+    public Car(String color, String model, int year) {
+        this.color = color;
+        this.model = model;
+        this.year = year;
+    }
+
+    void displayInfo() {
+        System.out.println("Model: " + model + ", Color: " + color + ", Year: " + year);
+    }
+}
+
+
+Creating Objects with a Constructor
+
+You can now create objects using the constructor:
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating an object using the constructor
+        Car myCar = new Car("Red", "Toyota", 2020);
+        
+        myCar.displayInfo(); // Output: Model: Toyota, Color: Red, Year: 2020
+    }
+}

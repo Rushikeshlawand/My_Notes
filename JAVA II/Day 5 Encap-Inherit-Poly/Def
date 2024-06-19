@@ -1,0 +1,25 @@
+Introduction to encapsulation, inheritance, and polymorphism.
+Explaining access modifiers: public, private, protected, default.
+Implementing inheritance and method overriding.
+Examples and exercises to reinforce understanding of OOP concepts.
+
+
+1. Encapsulation:
+
+Encapsulation is the mechanism of wrapping the data (variables) and code (methods) together as a single unit. It restricts direct access to some of the object's components, which can prevent the accidental modification of data. This is usually achieved by using access modifiers.
+
+2. Inheritance
+
+Inheritance is a mechanism where one class acquires the properties (fields) and behaviors (methods) of another class. The class that inherits is called the subclass (or derived class), and the class from which it inherits is called the superclass (or base class).
+
+3. Polymorphism
+
+Polymorphism means "many forms," and it allows one interface to be used for a general class of actions. The most common use of polymorphism in OOP is when a parent class reference is used to refer to a child class object. It can be implemented via method overriding and method overloading.
+
+
+Access Modifiers
+
+1. public: The member is accessible from any other class.
+2. private: The member is accessible only within the class it is declared.
+3. protected: The member is accessible within its own package and by subclasses.
+4. default (no modifier): The member is accessible only within its own package.
