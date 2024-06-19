@@ -12,8 +12,7 @@ if (condition) {
     // Code to execute if the condition is false
 }
 
-else if Statement
-
+else if Statement:
 The else if statement allows you to check multiple conditions before defaulting to the else statement.
 
 Syntax:
@@ -25,7 +24,7 @@ if (condition1) {
     // Code to execute if all conditions are false
 }
 
-**Nested if-else Statements**
+Nested if-else Statements:
 
 A nested if-else statement is an if-else statement placed inside another if or else block. 
 This allows for more complex decision-making structures by enabling multiple levels of condition checking
@@ -43,7 +42,7 @@ if (condition1) {
 }
 
 
-**switch** 
+switch:
 statement is a control flow statement that allows a variable to be tested for equality against a list of values, called cases. 
 It's an alternative to using multiple if-else statements, particularly when you need to compare the same variable to many different values.
 The switch statement in Java provides a clean and efficient way to handle multiple conditional branches. 
