@@ -1,4 +1,4 @@
-**if-else**
+if-else
 
 statements are used to execute code based on certain conditions. 
 They are a fundamental part of control flow in programming, allowing the program to make decisions and execute
@@ -12,7 +12,7 @@ if (condition) {
     // Code to execute if the condition is false
 }
 
-**else if Statement**
+else if Statement
 
 The else if statement allows you to check multiple conditions before defaulting to the else statement.
 
