@@ -23,3 +23,6 @@ Access Modifiers
 2. private: The member is accessible only within the class it is declared.
 3. protected: The member is accessible within its own package and by subclasses.
 4. default (no modifier): The member is accessible only within its own package.
+
+
+Method overriding: is an essential feature of OOP in Java that allows a subclass to provide a specific implementation of a method that is already defined in its superclass. The overridden method in the subclass should have the same name, return type, and parameters as the method in the superclass.
