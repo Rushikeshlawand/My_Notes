@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DuplicateArray",
+            "request": "launch",
+            "mainClass": "DuplicateArray",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
