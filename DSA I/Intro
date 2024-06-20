@@ -134,7 +134,8 @@ There are two primary algorithms for searching in arrays:
     }
 
 2. Binary Search
-    Binary search is a more efficient algorithm but requires the array to be sorted. It works by repeatedly dividing the search interval in half. If the target value is less than the middle element, the search continues in the lower half; otherwise, it continues in the upper half.
+    Binary search is a more efficient algorithm but requires the array to be sorted. It works by repeatedly dividing the search interval in half. 
+    If the target value is less than the middle element, the search continues in the lower half; otherwise, it continues in the upper half.
     Time Complexity:
     Best Case: O(1) (middle element is the target)
     Worst Case: O(log n) (reducing the search space by half each time)
@@ -142,7 +143,6 @@ There are two primary algorithms for searching in arrays:
     Example: Binary Search in Java
 
     import java.util.Arrays;
-
     public class BinarySearch {
     public static void main(String[] args) {
         int[] array = {10, 20, 30, 40, 50};
@@ -178,7 +178,6 @@ There are two primary algorithms for searching in arrays:
     }
 
     When to Use Which Search?
-
     Linear Search: Use when the array is unsorted or small.
     Binary Search: Use when the array is sorted and large, as it is more efficient.
 
