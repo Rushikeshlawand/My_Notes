@@ -56,9 +56,9 @@ Accessing and Modifying Array Elements
     }
 Array Operations: Traversal, Searching, Sorting
 Traversal
-    Traversal of an array refers to the process of accessing each element in the array exactly once in a systematic manner. 
-    This operation is fundamental when performing various tasks, such as printing the array's elements, searching for a specific value, 
-    modifying elements, or applying some operations to each element.
+    Traversal of an array refers to the process of accessing each element in the array exactly once in a systematic 
+    manner. This operation is fundamental when performing various tasks, such as printing the array's elements, 
+    searching for a specific value, modifying elements, or applying some operations to each element.
     Traversal refers to the process of visiting each element of the array.
 
     public class TraverseArray {

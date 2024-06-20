@@ -161,3 +161,20 @@
     Store of a sequence of characters.            	Provides functionality to work with the strings.
     It is immutable.	It is mutable (can be modified and other string operations could be performed on them.)
     No thread operations in a string.                                                           	It is thread-safe (two threads can’t call the methods of StringBuffer simultaneously) 
+
+
+What is the default value of elements in a newly created array in Java?
+    For numeric types (int, float, etc.), the default value is 0.
+    For boolean, the default value is false.
+    For object references, the default value is null.
+
+Explain the bubble sort algorithm.
+    Bubble sort repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The process is repeated until the list is sorted.
+
+Explain the quick sort algorithm.
+    Quick sort is a divide-and-conquer algorithm that selects a 'pivot' element and partitions the array into two sub-arrays, according to whether elements are less than or greater than the pivot. The sub-arrays are then sorted recursively.
+
+What is a multidimensional array? How do you declare it in Java?
+A multidimensional array is an array of arrays. You can declare it in Java as follows:
+int[][] array = new int[3][4]; // 2D array with 3 rows and 4 columns
+
