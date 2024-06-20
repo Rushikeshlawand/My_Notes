@@ -42,7 +42,7 @@ The loop executes 5 times because i goes from 0 to 4 (inclusive). The loop body 
 
 
      
-**The while loop**
+The while loop
 
 is another fundamental construct in Java used for iterative execution of a block of code based on a condition.
 It keeps iterating the block of code as long as the condition remains true.
