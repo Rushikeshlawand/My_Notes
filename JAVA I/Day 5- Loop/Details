@@ -1,6 +1,6 @@
 Introduction to iterative statements: for, while, do-while.
 
-**For loop:**
+For loop:
 used when you want to repeat a block of code a specific number of times. It consists of three parts: 
 initialization, condition, and increment/decrement.
 
@@ -43,6 +43,7 @@ The loop executes 5 times because i goes from 0 to 4 (inclusive). The loop body 
 
 The while loop
 
+
 is another fundamental construct in Java used for iterative execution of a block of code based on a condition.
 It keeps iterating the block of code as long as the condition remains true.
 
@@ -68,8 +69,6 @@ The loop will run 5 times because i starts at 0 and increases by 1 in each itera
 The loop stops when i becomes 5 because the condition i < 5 becomes false.
 
 
-
-
 do-while loop
 is used to execute a block of code repeatedly until a specified condition evaluates to false.
 The key difference between a do-while loop and a while loop is that a do-while loop always executes its body at 
@@ -84,9 +83,8 @@ Syntax
      After executing the code block, the condition specified in the while statement is evaluated.
      If the condition evaluates to true, the loop will execute again, repeating steps 1 and 2.
      If the condition evaluates to false, the loop terminates, and the program continues executing the code following the do-while loop.
- 
 
- public class DoWhileExample {
+    public class DoWhileExample {
      public static void main(String[] args) {
          int i = 1;
          do {

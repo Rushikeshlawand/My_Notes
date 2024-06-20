@@ -14,7 +14,7 @@ public class XHWJob {
             System.out.print("Enter your Experience in years: ");
             int Experience=sc.nextInt();
 
-            if (Qualification.equals(RQualification)){
+            if (Qualification==RQualification){
                 if (Experience>=RExperience){
                     System.out.println("You are eligible");
                 }else {
