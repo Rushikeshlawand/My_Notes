@@ -41,7 +41,6 @@ The loop executes 5 times because i goes from 0 to 4 (inclusive). The loop body 
      So, i starts at 0 and increases by 1 in each iteration until it reaches 
 
 
-     
 The while loop
 
 is another fundamental construct in Java used for iterative execution of a block of code based on a condition.

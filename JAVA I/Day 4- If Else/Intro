@@ -43,6 +43,7 @@ if (condition1) {
 
 
 switch:
+
 statement is a control flow statement that allows a variable to be tested for equality against a list of values, called cases. 
 It's an alternative to using multiple if-else statements, particularly when you need to compare the same variable to many different values.
 The switch statement in Java provides a clean and efficient way to handle multiple conditional branches. 
