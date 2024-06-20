@@ -29,25 +29,16 @@ public class XHWRestaurant {
         double TotalDrinks=Drinks*QDrinks;
 
         double Subtotal=TotalStarterCost+TotalMainCourse+TotalDessert+TotalDrinks;
-        if (Subtotal > 50.00) {
-            double discount = Subtotal * 0.10;
-            Subtotal -= discount;
-        }
+        double Total=0;
+        double TToal=0;
 
         if (QMainCourse > 0 && QDessert > 0) {
-            double dessertDiscount = TotalDessert * 0.20;
-            TotalDessert -= dessertDiscount;
-        }
-        double totalBill = Subtotal;
-
-        System.out.println("\nBill Details:");
-        System.out.println("Subtotal:  " + Subtotal);
-
-        // Display discounts if applied
-        if (Subtotal != totalBill) {
-            System.out.println("Discount applied:  " + (Subtotal - totalBill));
-        }
-
-        System.out.println("Total Bill: "+ totalBill);
+            Total=Subtotal*20/100;
+            System.out.println("After applying 20% discount, The final amount is:  "+ (Subtotal-Total));
+        }else if (Subtotal > 50.00) {
+            TToal=Subtotal*10/100;
+            System.out.println("After applying 10% Discount,The final amount is: "+ (Subtotal-TToal));
+        }else
+        System.out.println("thank u");
     }
 }
