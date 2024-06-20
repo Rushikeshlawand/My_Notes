@@ -1,5 +1,5 @@
 Introduction to Arrays:
-    An array in Java is a collection of elements, all of the same type, stored in contiguous memory locations. 
+    An array is a collection of elements, all of the same type, stored in contiguous memory locations. 
     Arrays provide a way to store multiple values in a single variable and can be accessed using indices.
     Key Characteristics of Arrays:
     Fixed Size: The size of an array is specified when it is created and cannot be changed dynamically.
