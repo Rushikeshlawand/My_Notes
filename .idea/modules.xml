@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Intetview Preparations/Intetview Preparations.iml" filepath="$PROJECT_DIR$/Intetview Preparations/Intetview Preparations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA I/JAVA I.iml" filepath="$PROJECT_DIR$/JAVA I/JAVA I.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA II/JAVA II.iml" filepath="$PROJECT_DIR$/JAVA II/JAVA II.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Notes.iml" filepath="$PROJECT_DIR$/Notes.iml" />
+    </modules>
+  </component>
+</project>
