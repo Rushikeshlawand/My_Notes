@@ -1,4 +1,4 @@
-**What is an Array?**
+What is an Array?
 
 An array is a data structure that holds a fixed number of values of the same type.
 Arrays are used to store collections of data, and they are especially useful when you need to work with large amounts of data efficiently.
