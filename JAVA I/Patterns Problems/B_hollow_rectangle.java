@@ -6,7 +6,7 @@ public class B_hollow_rectangle {
                 if(i==1 || j==1 || i==5 || j==5){
                     System.out.print("* ");
                 } else{
-                    System.out.print("   ");
+                    System.out.print("  ");
                 }
             }
             System.out.println();
