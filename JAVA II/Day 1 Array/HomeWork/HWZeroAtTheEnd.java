@@ -15,7 +15,7 @@ public class HWZeroAtTheEnd {
             }
         }
         for (int k=0;k<n;k++){
-        System.out.println(runs[k]);
+        System.out.print(runs[k]+",");
         }
     }
 }
