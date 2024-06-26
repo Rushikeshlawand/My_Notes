@@ -1,3 +1,5 @@
+package HomeWork;
+
 public class HWZeroAtTheEnd {
     public static void main(String[] args) {
         int[]runs={124,2,0,45,0,34,0,0,3,223};

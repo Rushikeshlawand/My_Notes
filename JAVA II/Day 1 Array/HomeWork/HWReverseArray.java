@@ -1,3 +1,5 @@
+package HomeWork;
+
 public class HWReverseArray {
     public static void main(String[] args) {
         int[]array={1123,212,3123,12,435,46,56,57,235,23};

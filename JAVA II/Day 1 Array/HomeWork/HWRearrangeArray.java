@@ -1,3 +1,5 @@
+package HomeWork;
+
 public class HWRearrangeArray {
     public static void main(String[] args) {
         int[] arr = {4,-2, -1, 6, 1};

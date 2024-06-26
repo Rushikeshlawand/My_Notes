@@ -1,3 +1,5 @@
+package HomeWork;
+
 public class HWDuplicate {
     public static void main(String[] args) {
         int[]array={2,3,3,3,3,3,4,5,6,44,4,4};
