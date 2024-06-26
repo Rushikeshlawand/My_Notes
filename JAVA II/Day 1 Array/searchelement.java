@@ -11,11 +11,9 @@ public class searchelement {
             int number=sc.nextInt();
             narray[i]=number;
         }
-
        for (int i=0;i<n;i++){
            System.out.println(narray[i]);
        }
-
         System.out.println("which element you want to search?");
        int input=sc.nextInt();
 
@@ -26,7 +24,6 @@ public class searchelement {
                 break;
             }
         }
-
         if (found) {
             System.out.println("Element found");
         } else {

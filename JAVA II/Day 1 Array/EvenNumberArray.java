@@ -9,6 +9,5 @@ public class EvenNumberArray {
                 System.out.println("even number is: "+i);
             }
         }
-
         }
     }
