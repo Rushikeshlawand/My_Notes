@@ -1,5 +1,4 @@
 package HomeWork;
-
 public class HWRearrangeArray {
     public static void main(String[] args) {
 
@@ -9,13 +8,11 @@ public class HWRearrangeArray {
                 for (int i = 0; i < n; i++) {
                     newarr[i] = -1;
                 }
-
                 for (int i = 0; i < n; i++) {
                     if (arr[i] >= 0) {
                         int temp = arr[i];
                         newarr[temp] = arr[i];
                     }
-
                 }
                 for (int i=0;i<n;i++){
                     System.out.print(newarr[i]+" ");
