@@ -21,3 +21,29 @@ class arrayRotate {
         System.out.println();
     }
 }
+
+//Initialization:
+//
+//    Initialize an array arr with elements {1, 2, 3, 4, 5}.
+//    Get the length of the array n, which is 5.
+//
+//Input:
+//
+//    Prompt the user to enter the number of right rotations using Scanner.
+//    Read and store this value in rotations.
+//
+//Adjustment:
+//
+//    Calculate rotations = rotations % n to handle cases where rotations is greater than the array length.
+//
+//Rotation Process:
+//
+//    Perform rotations right rotations on the array:
+//        For each rotation:
+//            Store the last element of the array (arr[n - 1]) in last.
+//            Shift all elements one position to the right using a loop.
+//            Place the stored last element at the beginning of the array (arr[0]).
+//
+//Output:
+//
+//    Print the rotated array elements using a loop, showing the array after all rotations.
