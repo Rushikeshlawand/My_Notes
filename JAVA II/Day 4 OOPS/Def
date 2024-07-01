@@ -2,7 +2,6 @@ Class: A blueprint for creating objects. It defines a datatype by bundling data 
 that operate on the data.
 Object: An instance of a class.
 
-
 Declaring a Class
 In Java, a class is declared using the class keyword. Here's an example:
 
