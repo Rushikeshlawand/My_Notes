@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "carRentalL",
+            "request": "launch",
+            "mainClass": "carRentalL",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
             "name": "student",
             "request": "launch",
             "mainClass": "student",
