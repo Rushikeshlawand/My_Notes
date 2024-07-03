@@ -12,10 +12,10 @@ Polymorphism means "many forms," and it allows one interface to be used for a ge
 method overriding and method overloading.
 
 Access Modifiers
-1. public: The member is accessible from any other class.
-2. private: The member is accessible only within the class it is declared.
-3. protected: The member is accessible within its own package and by subclasses.
-4. default (no modifier): The member is accessible only within its own package.
+1. public: The member is accessible from any other class. If a class is declared as public then we can access that class from anywhere. (can access from Class-Subclass-Package-Global)
+2. private: The member is accessible only within the class it is declared.(can access from-Class)
+3. protected: The member is accessible within its own package and by subclasses. This modifier can be applied to the data member, method, and constructor, but this modifier can’t be applied to the top-level classes and interface. (can access from- Class-Subclass-Package)
+4. default (no modifier): The member is accessible only within its own package.(can access from- Class-Package)
 
 Method overriding: it allows a subclass to provide a specific implementation of a method that is already defined in its superclass. The overridden method in the subclass should have the same name, return type, and parameters as the method in the superclass.
 
