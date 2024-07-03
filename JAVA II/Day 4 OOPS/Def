@@ -17,7 +17,6 @@ public class Car {
     }
 }
 
-
 Creating Objects
 Objects are created using the new keyword. Here's how you can create an object of the Car class and access its members:
 
@@ -35,10 +34,10 @@ public class Main {
     }
 }
 
-
 Understanding Constructors
 
-A constructor in Java is a special method that is called when an object is instantiated. Constructors are used to initialize the object's state.
+A constructor in Java is a special method that is called when an object is instantiated. Constructors are used to 
+initialize the object's state.
 Declaring a Constructor.
 Here's how you can declare a constructor in the Car class:
 
@@ -58,7 +57,6 @@ public class Car {
         System.out.println("Model: " + model + ", Color: " + color + ", Year: " + year);
     }
 }
-
 
 Creating Objects with a Constructor
 

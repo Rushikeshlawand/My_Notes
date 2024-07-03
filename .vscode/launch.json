@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "student",
+            "request": "launch",
+            "mainClass": "student",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
+            "name": "Poly",
+            "request": "launch",
+            "mainClass": "Poly",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
+            "name": "GretestOfThreeNum",
+            "request": "launch",
+            "mainClass": "GretestOfThreeNum",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
             "name": "Xlogin",
             "request": "launch",
             "mainClass": "Xlogin",
