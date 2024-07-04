@@ -42,3 +42,16 @@ public class Candidate {
         }
     
 }
+
+// Define a class Candidate with the following description
+//Members are : RNo of int type, Name of type String, Score of type float, Remarks
+//of type String.
+//Member functions :
+//assignRem() to assign Remarks as per the Score obtained by a candidate.
+//Score range are given below:
+//Score Remarks
+//>=50 Selected
+//<50 Not Selected
+//■ A function ENTER() to allow user to enter values for RNo, Name, Score and call
+//function AssignRem() to assign the remarks.
+//■ A function DISPLAY() to allow user to view the content of all the data members.
