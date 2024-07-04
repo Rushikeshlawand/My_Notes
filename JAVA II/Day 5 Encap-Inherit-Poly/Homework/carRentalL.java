@@ -26,8 +26,6 @@ public class carRentalL {
         System.out.println("Car Type: " + this.CarType);
         System.out.println("Rent: " + this.Rent);
     }
-
-
     public static void main(String[] args) {
         carRentalL carRental = new carRentalL();
         carRental.GetCar(1, "SUV");

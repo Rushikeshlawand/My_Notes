@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Author",
+            "request": "launch",
+            "mainClass": "Author",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
+            "name": "Garments",
+            "request": "launch",
+            "mainClass": "Garments",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
+            "name": "Resort",
+            "request": "launch",
+            "mainClass": "Resort",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
+            "name": "Candidate",
+            "request": "launch",
+            "mainClass": "Candidate",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
+            "name": "SUPPLY",
+            "request": "launch",
+            "mainClass": "SUPPLY",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
             "name": "carRentalL",
             "request": "launch",
             "mainClass": "carRentalL",
