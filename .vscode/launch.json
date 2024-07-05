@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StringManipulator",
+            "request": "launch",
+            "mainClass": "Module.StringManipulator",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
+            "name": "MathOperations",
+            "request": "launch",
+            "mainClass": "Module.MathOperations",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
+            "name": "ShapeArea",
+            "request": "launch",
+            "mainClass": "Module.ShapeArea",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
             "name": "Calculator",
             "request": "launch",
             "mainClass": "Module.Calculator",
