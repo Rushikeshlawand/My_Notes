@@ -26,16 +26,15 @@ public class Garments {
             }
         } else {
             if (gType.equals("Shirt")) {
-                gPrice = 1300f * 90 / 100;
+                gPrice = 1300- (1300f * 10 / 100);
             } else {
-                gPrice = 1100f * 90 / 100;
+                gPrice = 1100-(1100f * 10 / 100);
             }
         }
     }
 
     void Input() {
         Scanner sc = new Scanner(System.in);
-
         gCode = sc.next();
         gType = sc.next();
         gSize = sc.nextInt();
@@ -44,13 +43,11 @@ public class Garments {
     }
 
     void Dispay() {
-
         System.out.println(gCode);
         System.out.println(gType);
         System.out.println(gSize);
         System.out.println(gFabric);
         System.out.println(gPrice);
-
     }
 
     public static void main(String[] args) {

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "animal",
+            "request": "launch",
+            "mainClass": "animal",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
             "name": "Author",
             "request": "launch",
             "mainClass": "Author",
