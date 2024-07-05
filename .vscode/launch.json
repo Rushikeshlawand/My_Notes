@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Calculator",
+            "request": "launch",
+            "mainClass": "Module.Calculator",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
             "name": "animal",
             "request": "launch",
             "mainClass": "animal",
