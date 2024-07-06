@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Employe",
+            "request": "launch",
+            "mainClass": "Module.Employe",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
+            "name": "AddDistance",
+            "request": "launch",
+            "mainClass": "Module.AddDistance",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
             "name": "Employee",
             "request": "launch",
             "mainClass": "Module.Employee",
