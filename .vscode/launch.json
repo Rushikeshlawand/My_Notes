@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Rectangle",
+            "request": "launch",
+            "mainClass": "Module.Rectangle",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
+            "name": "Reactangle",
+            "request": "launch",
+            "mainClass": "Module.Reactangle",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
+            "name": "Triangle",
+            "request": "launch",
+            "mainClass": "Module.Triangle",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
+            "name": "Students",
+            "request": "launch",
+            "mainClass": "Module.Students",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
+            "name": "Student",
+            "request": "launch",
+            "mainClass": "Module.Student",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
+            "name": "Area",
+            "request": "launch",
+            "mainClass": "Module.Area",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
             "name": "StringManipulator",
             "request": "launch",
             "mainClass": "Module.StringManipulator",
