@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Matrix",
+            "request": "launch",
+            "mainClass": "Module.Matrix",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
             "name": "Employe",
             "request": "launch",
             "mainClass": "Module.Employe",
