@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Employee",
+            "request": "launch",
+            "mainClass": "Module.Employee",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Module.Main",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
+            "name": "Average",
+            "request": "launch",
+            "mainClass": "Module.Average",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
+            "name": "Areaa",
+            "request": "launch",
+            "mainClass": "Module.Areaa",
+            "projectName": "Notes_78c535ff"
+        },
+        {
+            "type": "java",
             "name": "Rectangle",
             "request": "launch",
             "mainClass": "Module.Rectangle",
