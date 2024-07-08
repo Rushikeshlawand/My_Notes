@@ -243,6 +243,13 @@ Diverse Initialization: Extends to constructors, enabling diverse object initial
 Abstraction 
 in Java is a core concept of object-oriented programming (OOP) that focuses on hiding the complex implementation details of a system and exposing only the necessary and relevant parts to the user. It helps in reducing programming complexity and effort by allowing the programmer to focus on what an object does instead of how it does it.
 
+Interface
+In Java, an interface is a reference type that can contain constants, method signatures, default methods, static methods, and nested types. Interfaces cannot contain instance fields or constructors. By using interfaces, you can achieve a form of abstraction by specifying what methods a class must implement without dictating how these methods should be implemented. This allows for greater flexibility and decoupling in your code.
+
+//interface is 100% abstraction 
+all the methods or attributes are default public,static,final.
+we implement the interface not extend
+interface help us to multiple inheritence
 
 
 
