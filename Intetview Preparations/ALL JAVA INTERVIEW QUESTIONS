@@ -156,20 +156,6 @@ For numeric types (int, float, etc.), the default value is 0.
 For boolean, the default value is false.
 For object references, the default value is null.
 
-OOP's
-what is Array?
-An array is a data structure that can hold a fixed number of elements, typically of the same data type, in a specific order. 
-Arrays are used in programming to store multiple values in a single variable, and they allow for efficient access and manipulation of the elements based on their index positions.
-Characteristics of Arrays:
-Fixed Size: The size of an array is determined when it is created and cannot be changed.
-Indexed: Each element in an array can be accessed using its index, which is a number representing its position in the array. Indexing typically starts from 0.
-Homogeneous Elements: All elements in an array are of the same type (e.g., all integers, all strings).
-Efficient Access: Arrays allow for constant time complexity O(1)O(1) for accessing elements using their index.
-Types of Arrays:
-One-dimensional Array: A single row of elements.
-Example arr = [1, 2, 3, 4]
-Multi-dimensional Array: Arrays of arrays, such as two-dimensional (2D) arrays, which can be thought of as tables or matrices.
-Example:matrix = [[1, 2], [3, 4]]
 
 What is Methods?
 Methods are like mini-programs within a program. It is a set of codes that perform a particular task and return the result to the caller.
@@ -192,6 +178,24 @@ Method Name: Identifier for the method, following naming conventions. (Mandatory
 Parameter List: Data type and name of input parameters, separated by commas and enclosed in parentheses. (Optional) 
 Exception List: Specifies exceptions the method may throw. (Optional) 
 Method Body: Enclosed code block where operations are performed. (Optional)
+
+
+
+OOP's
+what is Array?
+An array is a data structure that can hold a fixed number of elements, typically of the same data type, in a specific order. 
+Arrays are used in programming to store multiple values in a single variable, and they allow for efficient access and manipulation of the elements based on their index positions.
+Characteristics of Arrays:
+Fixed Size: The size of an array is determined when it is created and cannot be changed.
+Indexed: Each element in an array can be accessed using its index, which is a number representing its position in the array. Indexing typically starts from 0.
+Homogeneous Elements: All elements in an array are of the same type (e.g., all integers, all strings).
+Efficient Access: Arrays allow for constant time complexity O(1)O(1) for accessing elements using their index.
+Types of Arrays:
+One-dimensional Array: A single row of elements.
+Example arr = [1, 2, 3, 4]
+Multi-dimensional Array: Arrays of arrays, such as two-dimensional (2D) arrays, which can be thought of as tables or matrices.
+Example:matrix = [[1, 2], [3, 4]]
+
 
 Classses and Objects:
 Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects," 
@@ -236,7 +240,8 @@ Efficient Execution: Implementations to specific scenarios, enabling efficient t
 Flexible Access: Allows accessing methods with slight variations in arguments and types, enhancing flexibility.
 Diverse Initialization: Extends to constructors, enabling diverse object initialization, and enhancing object creation flexibility
 
-
+Abstraction 
+in Java is a core concept of object-oriented programming (OOP) that focuses on hiding the complex implementation details of a system and exposing only the necessary and relevant parts to the user. It helps in reducing programming complexity and effort by allowing the programmer to focus on what an object does instead of how it does it.
 
 
 
