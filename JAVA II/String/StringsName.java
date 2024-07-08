@@ -10,6 +10,5 @@ public class StringsName{
         System.out.println(isPresent);
 
         System.out.println(Name.indexOf("R"));
-
     }
 }
