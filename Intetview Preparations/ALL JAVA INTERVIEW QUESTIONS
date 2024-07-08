@@ -254,6 +254,16 @@ interface help us to multiple inheritence
 
 
 
+
+
+
+
+
+
+
+
+
+
 Explain the bubble sort algorithm.
 Bubble sort repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The process is repeated until the list is sorted.
 

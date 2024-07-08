@@ -5,5 +5,11 @@ public class StringsName{
 
         System.out.println(Name+" "+Name1);
         System.out.println(Name.concat(Name1));
+
+        boolean isPresent=Name.contains("ke");
+        System.out.println(isPresent);
+
+        System.out.println(Name.indexOf("R"));
+
     }
 }
