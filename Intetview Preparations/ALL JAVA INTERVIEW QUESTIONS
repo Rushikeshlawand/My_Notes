@@ -251,7 +251,9 @@ all the methods or attributes are default public,static,final.
 we implement the interface not extend
 interface help us to multiple inheritence
 
+what is StringBuilder
 
+what isStringBuffer
 
 
 
