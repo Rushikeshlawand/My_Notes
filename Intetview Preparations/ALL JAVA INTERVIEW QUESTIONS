@@ -179,14 +179,6 @@ Method Body: Enclosed code block where operations are performed. (Optional)
 Final
 it used in various contexts to define constants and to ensure that certain variables, methods, and classes are not modified.
 
------------------------------ OOP's  ---------------------------------------
-
-Constructor
-Constructors are special methods in object-oriented programming that are used to initialize objects. When you create an object of a class using the new keyword, the constructor is automatically invoked to perform any necessary setup for the object.
-Initializing object attributes: Constructors are typically used to assign initial values to an object's attributes. This ensures that objects are created in a consistent state.
-Performing validation checks: Constructors can be used to validate the data that is being used to create an object. This can help to prevent errors in your program.
-Controlling object creation: Constructors can be used to control how objects are created. For example, you can create a constructor that takes arguments, which allows you to specify the initial state of the object.
-
 This Keyword
 In object-oriented programming, the this keyword is a special reference that refers to the current object instance. It's particularly useful within methods and constructors of a class to interact with the object's own properties and methods.
 Here are some common ways to use the this keyword:
@@ -194,6 +186,21 @@ Referencing object attributes: When a method needs to access or modify an attrib
 Invoking current class methods: You can use this to call other methods defined within the same class. This can be helpful when a method needs to perform additional operations on the current object.
 Calling current class constructor: Inside a constructor, you can use this() to call another constructor of the same class. This is useful for creating constructors with different parameter sets or for achieving specific initialization logic.
 Passing the current object as an argument: In some cases, you might want to pass the current object instance as an argument to another method. You can use this to achieve this.
+Understanding Constructors and Their Role in Object Initialization:
+A constructor is a special type of method that is automatically called when an object is created. It initializes the object's state by assigning initial values to its fields.
+Constructors have the same name as the class and do not have a return type, not even void.
+In Java, if you don't explicitly define a constructor for a class, Java provides a default constructor with no arguments.
+Constructors can be overloaded, meaning a class can have multiple constructors with different parameter lists. This allows for flexibility in object initialization.
+Constructors play a crucial role in ensuring that objects are properly initialized before they are used, which is essential for maintaining the integrity and correctness of the program's logic.
+
+
+----------------------------- OOP's  ---------------------------------------
+
+Constructor:
+Constructors are special methods in object-oriented programming that are used to initialize objects. When you create an object of a class using the new keyword, the constructor is automatically invoked to perform any necessary setup for the object.
+Initializing object attributes: Constructors are typically used to assign initial values to an object's attributes. This ensures that objects are created in a consistent state.
+Performing validation checks: Constructors can be used to validate the data that is being used to create an object. This can help to prevent errors in your program.
+Controlling object creation: Constructors can be used to control how objects are created. For example, you can create a constructor that takes arguments, which allows you to specify the initial state of the object.
 
 what is Array?
 An array is a data structure that can hold a fixed number of elements, typically of the same data type, in a specific order. 
@@ -209,7 +216,7 @@ Example arr = [1, 2, 3, 4]
 Multi-dimensional Array: Arrays of arrays, such as two-dimensional (2D) arrays, which can be thought of as tables or matrices.
 Example:matrix = [[1, 2], [3, 4]]
 
-Classses and Objects:
+Classses and Objects::
 Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects," 
 which can contain data in the form of fields (attributes or properties) and code in the form of procedures (methods or functions).
 A "class" serves as a blueprint or template for creating objects. It defines the properties (attributes) and behaviors (methods) that all objects of that class will have.
@@ -221,21 +228,33 @@ Within the class body, you define fields (variables) to represent attributes and
 To create an object of a class, you use the new keyword followed by the class name and parentheses (). This allocates memory for the object and initializes its attributes based on the class definition.
 You can access the members (fields and methods) of an object using the dot . operator. For example, objectName.fieldName accesses a field, and objectName.methodName() invokes a method.
 
-Understanding Constructors and Their Role in Object Initialization:
-A constructor is a special type of method that is automatically called when an object is created. It initializes the object's state by assigning initial values to its fields.
-Constructors have the same name as the class and do not have a return type, not even void.
-In Java, if you don't explicitly define a constructor for a class, Java provides a default constructor with no arguments.
-Constructors can be overloaded, meaning a class can have multiple constructors with different parameter lists. This allows for flexibility in object initialization.
-Constructors play a crucial role in ensuring that objects are properly initialized before they are used, which is essential for maintaining the integrity and correctness of the program's logic.
+Abstraction: 
+in Java is a core concept of object-oriented programming (OOP) that focuses on hiding the complex implementation details of a system and exposing only the necessary and relevant parts to the user. It helps in reducing programming complexity and effort by allowing the programmer to focus on what an object does instead of how it does it.
 
-Polymorphism
-Polymorphism: The word polymorphism means having many forms. In simple words, we can define Java Polymorphism as the ability of a message to be displayed in more than one form.
+Interface:
+In Java, an interface is a reference type that can contain constants, method signatures, default methods, static methods, and nested types. Interfaces cannot contain instance fields or constructors. By using interfaces, you can achieve a form of abstraction by specifying what methods a class must implement without dictating how these methods should be implemented. This allows for greater flexibility and decoupling in your code.
+
+//interface is 100% abstraction 
+all the methods or attributes are default public,static,final.
+we implement the interface not extend
+interface help us to multiple inheritence
+
+Inheritance:
+is a fundamental concept in object-oriented programming (OOP) that allows a new class (called a subclass or derived class) to inherit properties and behaviors (methods) from an existing class (called a superclass or base class). This mechanism promotes code reusability, modularity, and the creation of hierarchical relationships between classes.
+Types of Inheritance in Java
+Single Inheritance: A subclass inherits from one superclass.
+Multilevel Inheritance: A subclass inherits from another subclass, forming a chain.
+Hierarchical Inheritance: Multiple subclasses inherit from a single superclass.
+
+Polymorphism: 
+The word polymorphism means having many forms. In simple words, we can define Java Polymorphism as the ability of a message to be displayed in more than one form.
 Real-life Illustration of Polymorphism: A person can have different characteristics at the same time. Like a man, at the same time, is a father, a husband, and an employee. 
 So, the same person possesses different behaviors in different situations. This is called polymorphism.  Method Overloading is a Compile-time polymorphism.
 
+Method Overloading:
+it allows methods in the same class to have the same name but different signatures.
 Method Overloading allows methods in the same class to have the same name but different signatures.
-Method Overloading allows methods in the same class to have the same name but different signatures.
- Signatures can differ by the number or type of input parameters, or a combination of both.
+Signatures can differ by the number or type of input parameters, or a combination of both.
 It's also known as Compile-time Polymorphism, Static Polymorphism, or Early binding.
 In Method Overloading, the compiler selects the appropriate method based on the arguments provided during compile time.
 When calling an overloaded method, Java gives priority to the child argument over the parent argument.
@@ -252,16 +271,9 @@ Efficient Execution: Implementations to specific scenarios, enabling efficient t
 Flexible Access: Allows accessing methods with slight variations in arguments and types, enhancing flexibility.
 Diverse Initialization: Extends to constructors, enabling diverse object initialization, and enhancing object creation flexibility
 
-Abstraction 
-in Java is a core concept of object-oriented programming (OOP) that focuses on hiding the complex implementation details of a system and exposing only the necessary and relevant parts to the user. It helps in reducing programming complexity and effort by allowing the programmer to focus on what an object does instead of how it does it.
 
-Interface
-In Java, an interface is a reference type that can contain constants, method signatures, default methods, static methods, and nested types. Interfaces cannot contain instance fields or constructors. By using interfaces, you can achieve a form of abstraction by specifying what methods a class must implement without dictating how these methods should be implemented. This allows for greater flexibility and decoupling in your code.
+------------------------------- DSA -------------------------------------
 
-//interface is 100% abstraction 
-all the methods or attributes are default public,static,final.
-we implement the interface not extend
-interface help us to multiple inheritence
 
 what is StringBuilder
 StringBuilder is a class used to create mutable (modifiable) sequences of characters. Unlike String, which is immutable, StringBuilder allows you to modify the content without creating a new object for each modification, making it more efficient for scenarios where frequent modifications are required.
