@@ -303,3 +303,6 @@ Key Concepts of Recursion
 Base Case: Every recursive function must have one or more base cases — specific conditions where the function stops calling itself and returns a value. This prevents infinite recursion.
 Recursive Case: This is where the function calls itself with different arguments to solve a smaller instance of the same problem.
 Stack Usage: Recursion uses the call stack to store intermediate values and function calls. Each recursive call adds a new frame to the stack, which is popped off when the base case is reached.
+* used to complex Q by dividing big problems into smaller.
+* it uses recursion stack, it takes more memory.
+* approach is top to bottom & bottom to top.

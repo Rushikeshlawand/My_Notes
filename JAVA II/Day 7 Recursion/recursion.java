@@ -1,13 +1,13 @@
 public class recursion {
 
     void fun(int x) {
-        if (x == 10)
+        if (x> 100)
             return;
-        System.out.println(x);
         fun(x + 1);
+        System.out.println(x);
     }
     public static void main(String[] args) {
         recursion obj = new recursion();
-        obj.fun(0);
+        obj.fun(1);
     }
 }
