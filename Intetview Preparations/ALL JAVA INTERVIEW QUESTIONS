@@ -5,8 +5,7 @@ Java's versatility shines as it runs smoothly on different devices without needi
 Understanding Java is like teaching instructions to a robot, where programmers use Java to communicate with computers effectively.
 
 Who Developed Java
-James Gosling is the main brain behind Java, with notable contributions to computer science.
-Initially developed by Sun Microsystems, Java is now maintained by a global community under Oracle Corporation's oversight. in 1995.
+James Gosling is the main brain behind Java. Initially developed by Sun Microsystems, Java is now maintained by Oracle Corporation's oversight in 1995.
 
 Java Platform Independent if then how?
 Yes, Java is a Platform Independent language.
@@ -18,8 +17,7 @@ other system despite hardware or software being used which makes Java platform i
 
 What are the top Java Features?
 Simple: Java is quite simple to understand and the syntax
-Platform Independent: Java is platform independent means we can run the same program in 
-any software and hardware and will get the same result.
+Platform Independent: Java is platform independent means we can run the same program in any software and hardware and will get the same result.
 Interpreted: Java is interpreted as well as a compiler-based language. 
 Robust: features like Garbage collection, exception handling, etc that make the language robust.
 Object-Oriented: Java is an object-oriented language that supports the concepts of class,  objects, four pillars of OOPS, etc. 
@@ -46,7 +44,7 @@ JIT stands for (Just-in-Time) compiler is a part of JRE, it is used for better p
 Source code is compiled with javac compiler to form bytecode, Bytecode is further passed on to JVM 
 JIT is a part of JVM, JIT is responsible for compiling bytecode into native machine code at run time.
 The JIT compiler is enabled throughout, while it gets activated when a method is invoked. For a compiled method, the JVM directly calls the compiled code, instead of interpreting it.
-As JVM calls the compiled code that increases the performance and speed of the execution.\
+As JVM calls the compiled code that increases the performance and speed of the execution.
 
 What are Memory storages available with JVM?
 c:\Users\rushi\AppData\Local\Temp\JVM-Areas-768.png
@@ -156,7 +154,6 @@ For numeric types (int, float, etc.), the default value is 0.
 For boolean, the default value is false.
 For object references, the default value is null.
 
-
 What is Methods?
 Methods are like mini-programs within a program. It is a set of codes that perform a particular task and return the result to the caller.
 They help organize code, making it more readable, reusable, and modular. 
@@ -179,9 +176,25 @@ Parameter List: Data type and name of input parameters, separated by commas and 
 Exception List: Specifies exceptions the method may throw. (Optional) 
 Method Body: Enclosed code block where operations are performed. (Optional)
 
+Final
+it used in various contexts to define constants and to ensure that certain variables, methods, and classes are not modified.
 
+----------------------------- OOP's  ---------------------------------------
 
-OOP's
+Constructor
+Constructors are special methods in object-oriented programming that are used to initialize objects. When you create an object of a class using the new keyword, the constructor is automatically invoked to perform any necessary setup for the object.
+Initializing object attributes: Constructors are typically used to assign initial values to an object's attributes. This ensures that objects are created in a consistent state.
+Performing validation checks: Constructors can be used to validate the data that is being used to create an object. This can help to prevent errors in your program.
+Controlling object creation: Constructors can be used to control how objects are created. For example, you can create a constructor that takes arguments, which allows you to specify the initial state of the object.
+
+This Keyword
+In object-oriented programming, the this keyword is a special reference that refers to the current object instance. It's particularly useful within methods and constructors of a class to interact with the object's own properties and methods.
+Here are some common ways to use the this keyword:
+Referencing object attributes: When a method needs to access or modify an attribute (variable) of the current object, you can use this followed by a dot (.) and the attribute name. This helps avoid naming conflicts with local variables that might have the same name within the method.
+Invoking current class methods: You can use this to call other methods defined within the same class. This can be helpful when a method needs to perform additional operations on the current object.
+Calling current class constructor: Inside a constructor, you can use this() to call another constructor of the same class. This is useful for creating constructors with different parameter sets or for achieving specific initialization logic.
+Passing the current object as an argument: In some cases, you might want to pass the current object instance as an argument to another method. You can use this to achieve this.
+
 what is Array?
 An array is a data structure that can hold a fixed number of elements, typically of the same data type, in a specific order. 
 Arrays are used in programming to store multiple values in a single variable, and they allow for efficient access and manipulation of the elements based on their index positions.
@@ -195,7 +208,6 @@ One-dimensional Array: A single row of elements.
 Example arr = [1, 2, 3, 4]
 Multi-dimensional Array: Arrays of arrays, such as two-dimensional (2D) arrays, which can be thought of as tables or matrices.
 Example:matrix = [[1, 2], [3, 4]]
-
 
 Classses and Objects:
 Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects," 
@@ -264,6 +276,9 @@ replace(): Replaces characters in a substring with another string.
 delete(): Removes characters from the sequence.
 reverse(): Reverses the sequence.
 toString(): Converts the sequence to a String object.
+Not thread safe 
+Not synchronised 
+Faster
 
 what isStringBuffer
 StringBuffer is a class used for creating and manipulating sequences of characters. Like StringBuilder, StringBuffer is mutable, meaning its content can be modified after creation. However, StringBuffer is synchronized, making it thread-safe for use in concurrent programming environments.
@@ -278,25 +293,7 @@ replace(): Replaces characters in a substring with another string.
 delete(): Removes characters from the sequence.
 reverse(): Reverses the sequence.
 toString(): Converts the sequence to a String object.
+Thread safe
+Synchronised
+Slower
 
-
-
-
-
-
-
-
-
-
-
-
-
-Explain the bubble sort algorithm.
-Bubble sort repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The process is repeated until the list is sorted.
-
-Explain the quick sort algorithm.
-Quick sort is a divide-and-conquer algorithm that selects a 'pivot' element and partitions the array into two sub-arrays, according to whether elements are less than or greater than the pivot. The sub-arrays are then sorted recursively.
-
-What is a multidimensional array? How do you declare it in Java?
-A multidimensional array is an array of arrays. You can declare it in Java as follows:
-int[][] array = new int[3][4]; // 2D array with 3 rows and 4 columns
