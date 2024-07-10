@@ -252,8 +252,33 @@ we implement the interface not extend
 interface help us to multiple inheritence
 
 what is StringBuilder
+StringBuilder is a class used to create mutable (modifiable) sequences of characters. Unlike String, which is immutable, StringBuilder allows you to modify the content without creating a new object for each modification, making it more efficient for scenarios where frequent modifications are required.
+Key Features of StringBuilder
+Mutable: Unlike String, StringBuilder objects can be modified after they are created.
+Efficient: More efficient for concatenating multiple strings compared to String due to reduced overhead from creating new objects.
+Not Thread-Safe: Methods in StringBuilder are not synchronized, meaning they are not thread-safe. Use StringBuffer if thread safety is required.
+Common Methods in StringBuilder
+append(): Adds a string representation of any data type to the current sequence.
+insert(): Inserts a string at the specified index.
+replace(): Replaces characters in a substring with another string.
+delete(): Removes characters from the sequence.
+reverse(): Reverses the sequence.
+toString(): Converts the sequence to a String object.
 
 what isStringBuffer
+StringBuffer is a class used for creating and manipulating sequences of characters. Like StringBuilder, StringBuffer is mutable, meaning its content can be modified after creation. However, StringBuffer is synchronized, making it thread-safe for use in concurrent programming environments.
+Key Features of StringBuffer
+Mutable: StringBuffer objects can be modified after they are created, unlike String.
+Thread-Safe: Methods in StringBuffer are synchronized, ensuring that it is safe to use in multi-threaded environments.
+Efficiency: More efficient for concatenating multiple strings compared to String due to reduced overhead from creating new objects.
+Common Methods in StringBuffer
+append(): Adds a string representation of any data type to the current sequence.
+insert(): Inserts a string at the specified index.
+replace(): Replaces characters in a substring with another string.
+delete(): Removes characters from the sequence.
+reverse(): Reverses the sequence.
+toString(): Converts the sequence to a String object.
+
 
 
 
