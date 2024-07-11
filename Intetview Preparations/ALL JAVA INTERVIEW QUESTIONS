@@ -319,3 +319,19 @@ Stack Usage: Recursion uses the call stack to store intermediate values and func
 * it uses recursion stack, it takes more memory.
 * approach is top to bottom & bottom to top.
 
+
+Time and space complexity are metrics used to evaluate the efficiency of algorithms. 
+
+Time Complexity
+Time complexity measures the amount of time an algorithm takes to complete as a function of the length of the input. 
+It is usually expressed using Big O notation, which describes the upper bound of the algorithm's running time.
+
+Space Complexity
+Space complexity measures the amount of memory an algorithm uses as a function of the length of the input. It includes both the memory
+needed for the input data and any additional memory used by the algorithm. Space complexity is also expressed using Big O notation.
+
+3 Time Complexity- Best Ω (Omega), Average θ (Theta), Worst O (Big O)
+O(1): Constant time - the running time is independent of the input size.
+O(n): Linear time - the running time grows linearly with the input size.
+O(n^2): Quadratic time - the running time grows quadratically with the input size.
+O(log n): Logarithmic time - the running time grows logarithmically with the input size.
