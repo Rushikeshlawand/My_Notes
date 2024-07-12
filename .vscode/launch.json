@@ -4,7 +4,27 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+        {
+            "type": "java",
+            "name": "ReverseString",
+            "request": "launch",
+            "mainClass": "ReverseString",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "reverseString",
+            "request": "launch",
+            "mainClass": "reverseString",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "duplicateArray",
+            "request": "launch",
+            "mainClass": "duplicateArray",
+            "projectName": "Notes_8278a671"
+        },
         {
             "type": "java",
             "name": "stringAnagram",
