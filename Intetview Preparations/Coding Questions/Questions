@@ -4,11 +4,11 @@
 —————————————————————
 3. Find 5th largest number present in an array, what strategy would u apply to get that ?
 —————————————————————
-4. Suppose you have two strings, find out whether both strings are identical or not ? dont compare by word, compare character by character
+4. Suppose you have two strings, find out whether both strings are identical or not ? dont compare by word, compare character by character 
 —————————————————————
 5. Write a program to count the number of matching character in the pair of the string1 “abcd” and string2 “abad”. output is 3 . Also tell time complexity of the whole solution
 —————————————————————
-6. Program to find frequency of characters, Input = “abbc”, Output : a=1, b=2, c=3
+6. Program to find frequency of characters, Input = “abbc”, Output : a=1, b=2, c=3.
 —————————————————————
 7. Write a program to generate the largest number possible using these digits.
     - Input: arr[] = {8, 6, 0, 4, 6, 4, 2, 7}

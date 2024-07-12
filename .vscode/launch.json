@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "largestNumber",
+            "request": "launch",
+            "mainClass": "largestNumber",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "StringBufferr",
+            "request": "launch",
+            "mainClass": "StringBufferr",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
             "name": "ReverseString",
             "request": "launch",
             "mainClass": "ReverseString",
