@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "multiDimensionArray",
+            "request": "launch",
+            "mainClass": "multiDimensionArray",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
             "name": "largestNumber",
             "request": "launch",
             "mainClass": "largestNumber",

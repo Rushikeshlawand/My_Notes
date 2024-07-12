@@ -210,11 +210,10 @@ Fixed Size: The size of an array is determined when it is created and cannot be 
 Indexed: Each element in an array can be accessed using its index, which is a number representing its position in the array. Indexing typically starts from 0.
 Homogeneous Elements: All elements in an array are of the same type (e.g., all integers, all strings).
 Efficient Access: Arrays allow for constant time complexity O(1)O(1) for accessing elements using their index.
+
 Types of Arrays:
-One-dimensional Array: A single row of elements.
-Example arr = [1, 2, 3, 4]
-Multi-dimensional Array: Arrays of arrays, such as two-dimensional (2D) arrays, which can be thought of as tables or matrices.
-Example:matrix = [[1, 2], [3, 4]]
+*One-dimensional Array: A single row of elements. Example arr = [1, 2, 3, 4]
+*Multi-dimensional Array: Arrays of arrays, such as two-dimensional (2D) arrays, which can be thought of as tables or matrices. Example:matrix = [[1, 2], [3, 4]]
 
 Classses and Objects::
 Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects," 
