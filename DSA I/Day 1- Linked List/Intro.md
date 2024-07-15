@@ -17,9 +17,9 @@ Circular Linked List: The last node points back to the first node, forming a cir
 4. Flexible Data Structures: Linked lists form the basis for implementing various other data structures such as stacks, queues, and graphs. They provide a flexible way to represent these structures.
 5. Ease of Expansion: Adding new elements to a linked list does not require resizing or copying the existing elements, unlike dynamic arrays which might need to allocate new memory and copy old elements during resizing.
 
-*A DS in which elements are stored in non contiouos allocation memory
+*A DS in which elements are stored in non contiouos allocation memory | 
 Each element in LL is a node.
-node is 2 types
+*node is 2 types
 1. data types
 2. address which hold address of next node.
 1st node called special node "head". 
