@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "palindrome",
+            "request": "launch",
+            "mainClass": "palindrome",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "count",
+            "request": "launch",
+            "mainClass": "count",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "sumOfElement",
+            "request": "launch",
+            "mainClass": "sumOfElement",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
             "name": "linkedList",
             "request": "launch",
             "mainClass": "linkedList",

@@ -8,10 +8,10 @@ class node {
     }
 }
 
-public class sumOfElement {
+public class count {
     node head;
 
-    sumOfElement() {
+    count() {
         head = null;
     }
 
@@ -28,18 +28,18 @@ public class sumOfElement {
         last.next = newNode;
     }
 
-    int sumOfElements() {
-        int sum = 0;
+    int length() {
+        int count = 0;
         node current = head;
         while (current != null) {
-            sum += current.data;
+            count++;
             current = current.next;
         }
-        return sum;
+        return count;
     }
 
     public static void main(String[] args) {
-        sumOfElement obj = new sumOfElement();
+        count obj = new count();
 
         obj.insertAtTheEnd(10);
         obj.insertAtTheEnd(20);
@@ -47,6 +47,7 @@ public class sumOfElement {
         obj.insertAtTheEnd(40);
         obj.insertAtTheEnd(50);
         obj.insertAtTheEnd(60);
-        System.out.println("Sum of elements is : " + obj.sumOfElements());
+
+        System.out.println("Length of the linked list: " + obj.length());
     }
 }
