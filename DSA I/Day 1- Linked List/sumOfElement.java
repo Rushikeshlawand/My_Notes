@@ -37,16 +37,13 @@ public class sumOfElement {
         }
         return sum;
     }
-
     public static void main(String[] args) {
         sumOfElement obj = new sumOfElement();
-
         obj.insertAtTheEnd(10);
         obj.insertAtTheEnd(20);
         obj.insertAtTheEnd(30);
         obj.insertAtTheEnd(40);
         obj.insertAtTheEnd(50);
-        obj.insertAtTheEnd(60);
         System.out.println("Sum of elements is : " + obj.sumOfElements());
     }
 }

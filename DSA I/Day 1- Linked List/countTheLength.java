@@ -37,7 +37,6 @@ public class countTheLength {
         }
         return count;
     }
-
     public static void main(String[] args) {
         countTheLength obj = new countTheLength();
 

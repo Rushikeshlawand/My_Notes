@@ -8,10 +8,10 @@ class node {
     }
 }
 
-public class linkedList {
-    node head;
+public class middleElement {
+    static node head;
 
-    linkedList() {
+    middleElement() {
         head = null;
     }
 
@@ -28,21 +28,34 @@ public class linkedList {
         last.next = newNode;
     }
 
-    void printData() {
-        node last = head;
-        while (last != null) {
-            System.out.println(last.data);
-            last = last.next;
-
+    int getlen(node head) {
+        int len = 0;
+        node temp = head;
+        while (temp != null) {
+            len++;
+            temp = temp.next;
         }
+        return len;
     }
+
+    int middle(node head) {
+        int len = getlen(head);
+        node temp = head;
+        int mid = len / 2;
+        while (mid > 0) {
+            temp = temp.next;
+            mid--;
+        }
+        return temp.data;
+    }
+
     public static void main(String[] args) {
-        linkedList obj = new linkedList();
+        middleElement obj = new middleElement();
         obj.insertAtTheEnd(10);
         obj.insertAtTheEnd(20);
-        obj.insertAtTheEnd(30);
+        obj.insertAtTheEnd(90);
         obj.insertAtTheEnd(40);
         obj.insertAtTheEnd(50);
-        obj.printData();
+        System.out.println(obj.middle(middleElement.head));
     }
 }
