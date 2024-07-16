@@ -8,10 +8,10 @@ class node {
     }
 }
 
-public class count {
+public class countTheLength {
     node head;
 
-    count() {
+    countTheLength() {
         head = null;
     }
 
@@ -39,7 +39,7 @@ public class count {
     }
 
     public static void main(String[] args) {
-        count obj = new count();
+        countTheLength obj = new countTheLength();
 
         obj.insertAtTheEnd(10);
         obj.insertAtTheEnd(20);
@@ -48,6 +48,6 @@ public class count {
         obj.insertAtTheEnd(50);
         obj.insertAtTheEnd(60);
 
-        System.out.println("Length of the linked list: " + obj.length());
+        System.out.println("Length is:  " + obj.length());
     }
 }

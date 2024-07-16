@@ -44,7 +44,6 @@ public class linkedList {
         obj.insertAtTheEnd(30);
         obj.insertAtTheEnd(40);
         obj.insertAtTheEnd(50);
-        obj.insertAtTheEnd(60);
         obj.printData();
     }
 }
