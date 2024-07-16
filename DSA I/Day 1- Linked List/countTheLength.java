@@ -37,6 +37,17 @@ public class countTheLength {
         }
         return count;
     }
+
+    int middleElement() {
+        node slow = head;
+        node fast = head;
+        while (slow != null && fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow.data;
+    }
+
     public static void main(String[] args) {
         countTheLength obj = new countTheLength();
 
@@ -46,7 +57,8 @@ public class countTheLength {
         obj.insertAtTheEnd(40);
         obj.insertAtTheEnd(50);
         obj.insertAtTheEnd(60);
-
         System.out.println("Length is:  " + obj.length());
+        int middleElement = obj.middleElement();
+        System.out.println("middle element is: "+middleElement);
     }
 }
