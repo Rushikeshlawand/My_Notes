@@ -8,10 +8,10 @@ class node {
     }
 }
 
-public class middleElement {
-    static node head;
+public class frontAddition {
+    node head;
 
-    middleElement() {
+    frontAddition() {
         head = null;
     }
 
@@ -28,32 +28,28 @@ public class middleElement {
         last.next = newNode;
     }
 
-    int getlen(node head) {
-        int len = 0;
-        node temp = head;
-        while (temp != null) {
-            len++;
-            temp = temp.next;
-        }
-        return len;
+    void insertAtTheFront(int data) {
+        node newNode = new node(data);
+        newNode.next = head;
+        head = newNode;
     }
 
-    int middle(node head) {
-        int len = getlen(head);
-        node temp = head;
-        int mid = len / 2;
-        while (mid > 0) {
-            temp = temp.next;
-            mid--;
+    void printData() {
+        node last = head;
+        while (last != null) {
+            System.out.println(last.data);
+            last = last.next;
+
         }
-        return temp.data;
     }
     public static void main(String[] args) {
-        middleElement obj = new middleElement();
+        frontAddition obj = new frontAddition();
         obj.insertAtTheEnd(10);
         obj.insertAtTheEnd(20);
-        obj.insertAtTheEnd(90);
+        obj.insertAtTheEnd(30);
         obj.insertAtTheEnd(40);
-        System.out.println(obj.middle(middleElement.head));
+        obj.insertAtTheEnd(50);
+        obj.insertAtTheFront(1);
+        obj.printData();
     }
 }
