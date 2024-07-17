@@ -2,7 +2,7 @@ class node {
     int data;
     node next;
 
-    node(int data) {
+   public node(int data) {
         this.data = data;
         this.next = null;
     }
@@ -11,11 +11,11 @@ class node {
 public class linkedList {
     node head;
 
-    linkedList() {
-        head = null;
+    public linkedList() {
+        this.head = null;
     }
 
-    void insertAtTheEnd(int data) {
+    public void insertAtTheEnd(int data) {
         node newNode = new node(data);
         if (head == null) {
             head = newNode;
