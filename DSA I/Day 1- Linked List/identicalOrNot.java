@@ -38,6 +38,19 @@ public class identicalOrNot {
         }
     }
 
+    boolean areIdentical(node head1, node head2) {
+        node current1 = head1;
+        node current2 = head2;
+        while (current1 != null && current2 != null) {
+            if (current1.data != current2.data) {
+                return false;
+            }
+            current1 = current1.next;
+            current2 = current2.next;
+        }
+        return (current1 == null && current2 == null);
+    }
+
     public static void main(String[] args) {
         identicalOrNot obj = new identicalOrNot();
         obj.insertAtTheEnd(10);
@@ -55,10 +68,10 @@ public class identicalOrNot {
         obj1.insertAtTheEnd(40);
         obj1.printData();
 
-        if (obj.equals(obj1)) {
+        if (obj.areIdentical(obj.head, obj1.head)) {
             System.out.println("identical");
         } else {
-            System.out.println("Not equal");
+            System.out.println("Not identical");
         }
     }
 }
