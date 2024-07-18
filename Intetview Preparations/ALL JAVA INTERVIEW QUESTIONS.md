@@ -345,9 +345,9 @@ Java LinkedList allows dynamic size adjustment as and when elements are subtract
 A linked list is a linear data structure where elements are stored in nodes, and each node points to the next node in the sequence.
 
 <h2>Types of Linked Lists</h2>
-Singly Linked List: Each node points to the next node.
-Doubly Linked List: Each node points to both the next and the previous node.
-Circular Linked List: The last node points back to the first node, forming a circle.
+Singly Linked List: Each node points to the next node.<br>
+Doubly Linked List: Each node points to both the next and the previous node.<br>
+Circular Linked List: The last node points back to the first node, forming a circle.<br>
 
 <h2>Basic Operations</h2>
 ○ Insertion: Adding a new node at the beginning, end, or middle of the list.
