@@ -82,10 +82,12 @@ class LL { // This is the main class for the linked list.
         }
         currNode.next = null;
     }
+
     // Getting the Size
     public int getSize() {
         return size;
     }
+
     public static void main(String[] args) {
         LL obj = new LL();
         obj.addFirst(10);
