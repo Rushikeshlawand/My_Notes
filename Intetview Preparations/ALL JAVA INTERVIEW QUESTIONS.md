@@ -336,33 +336,33 @@ O(n^2): Quadratic time - the running time grows quadratically with the input siz
 O(log n): Logarithmic time - the running time grows logarithmically with the input size.
 
 
----------------------------- DSA  -------------------------------------------------
+<h1> DSA </h2>
 
-<h1>Linked List </h1>
+<h2>Linked List </h2>
 
 A LinkedList in Java is a linear and fundamental data structure that stores the Java components. It offers Java users an efficient, flexible way to store and work with various Java elements.
 Java LinkedList allows dynamic size adjustment as and when elements are subtracted or added. Here in this tutorial, you will learn what is LinkedList, its needs, its operation, demonstration, LinkedList in a data structure, and much more.
 A linked list is a linear data structure where elements are stored in nodes, and each node points to the next node in the sequence.
 
-*Types of Linked Lists:
+<h2>Types of Linked Lists</h2>
 Singly Linked List: Each node points to the next node.
 Doubly Linked List: Each node points to both the next and the previous node.
 Circular Linked List: The last node points back to the first node, forming a circle.
 
-Basic Operations:
+<h2>Basic Operations</h2>
 ○ Insertion: Adding a new node at the beginning, end, or middle of the list.
 ○ Deletion: Removing a node from the list.
 ○ Traversal: Iterating through the list to access or manipulate nodes.
 ○ Search: Finding a node with a specific value or index.
 
-Advantages:
+<h2>Advantages</h2>
 ○ Dynamic size: Linked lists can grow or shrink in size during execution.
 ○ Ease of insertion and deletion: Adding or removing nodes doesn't require
 shifting elements, unlike arrays.
 ○ Versatility: Different types of linked lists offer flexibility based on the
 application needs.
 
-Disadvantages:
+<h2>Disadvantages</h2>
 ○ Memory Overhead: Each node in a linked list requires extra memory for
 storing the link.
 ○ Traversal: Sequential access is slower compared to arrays because
@@ -371,7 +371,7 @@ elements are not stored contiguously in memory.
 index requires traversing from the beginning.
 
 
-*Why Use Linked Lists:
+<h2>Why Use Linked Lists</h2>
 
 1. Dynamic Size: Unlike arrays, linked lists can grow and shrink in size dynamically. This makes them suitable for situations where the number of elements is unknown or varies significantly.
 2. Efficient Insertions/Deletions: Insertions and deletions in a linked list are more efficient compared to arrays. Adding or removing elements can be done in constant time O(1) if the position is known, without the need to shift elements like in arrays.
@@ -380,12 +380,12 @@ index requires traversing from the beginning.
 5. Ease of Expansion: Adding new elements to a linked list does not require resizing or copying the existing elements, unlike dynamic arrays which might need to allocate new memory and copy old elements during resizing.
 
 
-A doubly linked list:
+<h2>A doubly linked list</h2>
 
 in Java is a data structure where each node contains references to both the next and the previous node in the sequence. This allows for traversal of the list in both directions. Here's a basic implementation:
 
 
-Notes:
+<h2>Notes</h2>
 
 *A DS in which elements are stored in non contiouos allocation memory | 
 Each element in LL is a node.
