@@ -17,17 +17,17 @@ Although JVM is platform dependent, the bytecode can be created on any System an
 other system despite hardware or software being used which makes Java platform independent.
 
 <h2>What are the top Java Features?</h2>
-Simple: Java is quite simple to understand and the syntax
-Platform Independent: Java is platform independent means we can run the same program in any software and hardware and will get the same result.
+Simple: Java is quite simple to understand and the syntax<br>
+Platform Independent: Java is platform independent means we can run the same program in any software and hardware and will get the same result.<br>
 Interpreted: Java is interpreted as well as a compiler-based language. <br>
-Robust: features like Garbage collection, exception handling, etc that make the language robust.
-Object-Oriented: Java is an object-oriented language that supports the concepts of class,  objects, four pillars of OOPS, etc. 
-Secured: As we can directly share an application with the user without sharing the actual program makes Java a secure language. 
-High Performance:  faster than other traditional interpreted programming languages.
-Dynamic: supports dynamic loading of classes and interfaces.
-Distributed: feature of Java makes us able to access files by calling the methods from any machine connected.
-Multithreaded: deal with multiple tasks at once by defining multiple threads
-Architecture Neutral: it is not dependent on the architecture.
+Robust: features like Garbage collection, exception handling, etc that make the language robust.<br>
+Object-Oriented: Java is an object-oriented language that supports the concepts of class,  objects, four pillars of OOPS, etc. <br>
+Secured: As we can directly share an application with the user without sharing the actual program makes Java a secure language. <br>
+High Performance:  faster than other traditional interpreted programming languages.<br>
+Dynamic: supports dynamic loading of classes and interfaces.<br>
+Distributed: feature of Java makes us able to access files by calling the methods from any machine connected.<br>
+Multithreaded: deal with multiple tasks at once by defining multiple threads<br>
+Architecture Neutral: it is not dependent on the architecture.<br>
 
 <h2>Introduction to JDK</h2>
 The Java Development Kit (JDK) is a comprehensive software package provided by Oracle Corporation for Java development.
@@ -49,11 +49,11 @@ As JVM calls the compiled code that increases the performance and speed of the e
 
 <h2>What are Memory storages available with JVM?</h2>
 c:\Users\rushi\AppData\Local\Temp\JVM-Areas-768.png
-Class(Method) Area: stores class-level data of every class such as the runtime constant pool, field, and method data, and the code for methods.
-Heap: Objects are created or objects are stored. It is used to allocate memory to objects during run time.
-Stack: stores data and partial results which will be needed while returning value for method and performing dynamic linking
-Program Counter Register: stores the address of the Java virtual machine instruction currently being executed.
-Native Method Stack: stores all the native methods used in the application.
+Class(Method) Area: stores class-level data of every class such as the runtime constant pool, field, and method data, and the code for methods.<br>
+Heap: Objects are created or objects are stored. It is used to allocate memory to objects during run time.<br>
+Stack: stores data and partial results which will be needed while returning value for method and performing dynamic linking<br>
+Program Counter Register: stores the address of the Java virtual machine instruction currently being executed.<br>
+Native Method Stack: stores all the native methods used in the application.<br>
 
 <h2>What is a classloader?</h2>
 Classloader is the part of JRE(Java Runtime Environment), during the execution of the bytecode or created .class file 
@@ -61,20 +61,19 @@ classloader is responsible for dynamically loading the java classes and interfac
 Because of classloaders Java run time system does not need to know about files and file systems.
 
 <h2>Difference between JVM, JRE, and JDK.</h2>
-JVM: JVM also known as Java Virtual Machine is a part of JRE. JVM is a type of interpreter responsible for converting bytecode into machine-readable code.
-JVM itself is platform dependent but it interprets the bytecode which is the platform-independent reason why Java is platform-independent. 
-JRE: JRE stands for Java Runtime Environment, it is an installation package that provides an environment to run the Java program or application on any machine.
-JDK: JDK stands for Java Development Kit which provides the environment to develop and execute Java programs. JDK is a package that includes two things Development Tools to provide 
-an environment to develop your Java programs and, JRE to execute Java programs or applications.
+JVM: JVM also known as Java Virtual Machine is a part of JRE. JVM is a type of interpreter responsible for converting bytecode into machine-readable code.<br>
+JVM itself is platform dependent but it interprets the bytecode which is the platform-independent reason why Java is platform-independent. <br>
+JRE: JRE stands for Java Runtime Environment, it is an installation package that provides an environment to run the Java program or application on any machine.<br>
+JDK: JDK stands for Java Development Kit which provides the environment to develop and execute Java programs. JDK is a package that includes two things Development Tools to provide an environment to develop your Java programs and, JRE to execute Java programs or applications.<br>
 
 <h2>Explain public static void main(String args[]) in Java.</h2>
 Main_function
-Unlike any other programming language like C, C++, etc. In Java, we declared the main function as a public static void main (String args[]). The meanings of the terms are mentioned below:
-public: the public is the access modifier responsible for mentioning who can access the element or the method and what is the limit.  It is responsible for making the main function globally available. 
+Unlike any other programming language like C, C++, etc. In Java, we declared the main function as a public static void main (String args[]). The meanings of the terms are mentioned below:<br>
+public: the public is the access modifier responsible for mentioning who can access the element or the method and what is the limit.  It is responsible for making the main function globally available. <br>
 It is made public so that JVM can invoke it from outside the class as it is not present in the current class.
-static: static is a keyword used so that we can use the element without initiating the class so to avoid the unnecessary allocation of the memory. 
-void: void is a keyword and is used to specify that a method doesn’t return anything. As the main function doesn’t return anything we use void.
-main: main represents that the function declared is the main function. It helps JVM to identify that the declared function is the main function.
+static: static is a keyword used so that we can use the element without initiating the class so to avoid the unnecessary allocation of the memory. <br>
+void: void is a keyword and is used to specify that a method doesn’t return anything. As the main function doesn’t return anything we use void.<br>
+main: main represents that the function declared is the main function. It helps JVM to identify that the declared function is the main function.<br>
 String args[]: It stores Java command-line arguments and is an array of type java.lang.String class.
 
 <h2>What will happen if we declare don’t declare the main as static?</h2>
@@ -91,14 +90,14 @@ We can also have the hidden classes that are not visible outside and are used by
 It is easier to locate the related classes.
 
 <h2>How many types of packages are there in Java?</h2>
-User-defined packages
+User-defined packages<br>
 Build In packages
 
 <h2>Explain different data types in Java.</h2>
 Primitive Data Type: Primitive data are single values with no special capabilities. There are 8 primitive data types:
-boolean: stores value true or false
-byte: stores an 8-bit signed two’s complement integer
-char: stores a single 16-bit Unicode character
+boolean: stores value true or false<br>
+byte: stores an 8-bit signed two’s complement integer<br>
+char: stores a single 16-bit Unicode character<br>
 short: stores a 16-bit signed two’s complement integer
 int: stores a 32-bit signed two’s complement integer
 long: stores a 64-bit two’s complement integer
@@ -171,10 +170,10 @@ public int add(int a,int b)
 modifier-return type-method name-parameter list.
 
 <h2>Modifier: Defines access level: public, protected, private, or default (no modifier). (Optional) </h2>
-Return Type: Data type of the value returned by the method, or void if no value is returned. (Mandatory) 
-Method Name: Identifier for the method, following naming conventions. (Mandatory) 
-Parameter List: Data type and name of input parameters, separated by commas and enclosed in parentheses. (Optional) 
-Exception List: Specifies exceptions the method may throw. (Optional) 
+Return Type: Data type of the value returned by the method, or void if no value is returned. (Mandatory) <br>
+Method Name: Identifier for the method, following naming conventions. (Mandatory) <br>
+Parameter List: Data type and name of input parameters, separated by commas and enclosed in parentheses. (Optional) <br>
+Exception List: Specifies exceptions the method may throw. (Optional) <br>
 Method Body: Enclosed code block where operations are performed. (Optional)
 
 <h2>Final</h2>
@@ -182,39 +181,36 @@ it used in various contexts to define constants and to ensure that certain varia
 
 <h2>This Keyword</h2>
 In object-oriented programming, the this keyword is a special reference that refers to the current object instance. It's particularly useful within methods and constructors of a class to interact with the object's own properties and methods.
-Here are some common ways to use the this keyword:
-Referencing object attributes: When a method needs to access or modify an attribute (variable) of the current object, you can use this followed by a dot (.) and the attribute name. This helps avoid naming conflicts with local variables that might have the same name within the method.
-Invoking current class methods: You can use this to call other methods defined within the same class. This can be helpful when a method needs to perform additional operations on the current object.
-Calling current class constructor: Inside a constructor, you can use this() to call another constructor of the same class. This is useful for creating constructors with different parameter sets or for achieving specific initialization logic.
-Passing the current object as an argument: In some cases, you might want to pass the current object instance as an argument to another method. You can use this to achieve this.
-Understanding Constructors and Their Role in Object Initialization:
-A constructor is a special type of method that is automatically called when an object is created. It initializes the object's state by assigning initial values to its fields.
+Here are some common ways to use the this keyword:<br>
+Referencing object attributes: When a method needs to access or modify an attribute (variable) of the current object, you can use this followed by a dot (.) and the attribute name. This helps avoid naming conflicts with local variables that might have the same name within the method.<br>
+Invoking current class methods: You can use this to call other methods defined within the same class. This can be helpful when a method needs to perform additional operations on the current object.<br>
+Calling current class constructor: Inside a constructor, you can use this() to call another constructor of the same class. This is useful for creating constructors with different parameter sets or for achieving specific initialization logic.<br>
+Passing the current object as an argument: In some cases, you might want to pass the current object instance as an argument to another method. You can use this to achieve this.<br>
+Understanding Constructors and Their Role in Object Initialization:<br>
+A constructor is a special type of method that is automatically called when an object is created. It initializes the object's state by assigning initial values to its fields.<br>
 Constructors have the same name as the class and do not have a return type, not even void.
 In Java, if you don't explicitly define a constructor for a class, Java provides a default constructor with no arguments.
 Constructors can be overloaded, meaning a class can have multiple constructors with different parameter lists. This allows for flexibility in object initialization.
 Constructors play a crucial role in ensuring that objects are properly initialized before they are used, which is essential for maintaining the integrity and correctness of the program's logic.
 
-
-
-
 <h2>Constructor</h2>
-Constructors are special methods in object-oriented programming that are used to initialize objects. When you create an object of a class using the new keyword, the constructor is automatically invoked to perform any necessary setup for the object.
-Initializing object attributes: Constructors are typically used to assign initial values to an object's attributes. This ensures that objects are created in a consistent state.
-Performing validation checks: Constructors can be used to validate the data that is being used to create an object. This can help to prevent errors in your program.
+Constructors are special methods in object-oriented programming that are used to initialize objects. When you create an object of a class using the new keyword, the constructor is automatically invoked to perform any necessary setup for the object.<br>
+Initializing object attributes: Constructors are typically used to assign initial values to an object's attributes. This ensures that objects are created in a consistent state.<br>
+Performing validation checks: Constructors can be used to validate the data that is being used to create an object. This can help to prevent errors in your program.<br>
 Controlling object creation: Constructors can be used to control how objects are created. For example, you can create a constructor that takes arguments, which allows you to specify the initial state of the object.
 <h1>OOP's</h1>
 <h2>what is Array?</h2>
 An array is a data structure that can hold a fixed number of elements, typically of the same data type, in a specific order. 
 Arrays are used in programming to store multiple values in a single variable, and they allow for efficient access and manipulation of the elements based on their index positions.
-Characteristics of Arrays:
-Fixed Size: The size of an array is determined when it is created and cannot be changed.
-Indexed: Each element in an array can be accessed using its index, which is a number representing its position in the array. Indexing typically starts from 0.
-Homogeneous Elements: All elements in an array are of the same type (e.g., all integers, all strings).
+Characteristics of Arrays<br>
+Fixed Size: The size of an array is determined when it is created and cannot be changed.<br>
+Indexed: Each element in an array can be accessed using its index, which is a number representing its position in the array. Indexing typically starts from 0.<br>
+Homogeneous Elements: All elements in an array are of the same type (e.g., all integers, all strings).<br>
 Efficient Access: Arrays allow for constant time complexity O(1)O(1) for accessing elements using their index.
 
 <h2>Types of Arrays</h2>
-*One-dimensional Array: A single row of elements. Example arr = [1, 2, 3, 4]
-*Multi-dimensional Array: Arrays of arrays, such as two-dimensional (2D) arrays, which can be thought of as tables or matrices. Example:matrix = [[1, 2], [3, 4]]
+One-dimensional Array: A single row of elements. Example arr = [1, 2, 3, 4]<br>
+Multi-dimensional Array: Arrays of arrays, such as two-dimensional (2D) arrays, which can be thought of as tables or matrices. Example:matrix = [[1, 2], [3, 4]]
 
 <h2>Classses and Objects</h2>
 Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects," 
@@ -242,8 +238,8 @@ interface help us to multiple inheritence
 <h2>Inheritance</h2>
 is a fundamental concept in object-oriented programming (OOP) that allows a new class (called a subclass or derived class) to inherit properties and behaviors (methods) from an existing class (called a superclass or base class). This mechanism promotes code reusability, modularity, and the creation of hierarchical relationships between classes.
 <h2>Types of Inheritance in Java</h2>
-Single Inheritance: A subclass inherits from one superclass.
-Multilevel Inheritance: A subclass inherits from another subclass, forming a chain.
+Single Inheritance: A subclass inherits from one superclass.<br>
+Multilevel Inheritance: A subclass inherits from another subclass, forming a chain.<br>
 Hierarchical Inheritance: Multiple subclasses inherit from a single superclass.
 
 <h2>Polymorphism</h2>
@@ -257,7 +253,7 @@ Method Overloading allows methods in the same class to have the same name but di
 Signatures can differ by the number or type of input parameters, or a combination of both.
 It's also known as Compile-time Polymorphism, Static Polymorphism, or Early binding.
 In Method Overloading, the compiler selects the appropriate method based on the arguments provided during compile time.
-When calling an overloaded method, Java gives priority to the child argument over the parent argument.
+When calling an overloaded method, Java gives priority to the child argument over the parent argument.<br>
 
 Signatures can differ by the number or type of input parameters, or a combination of both.
 It's also known as Compile-time Polymorphism, Static Polymorphism, or Early binding.
@@ -265,11 +261,11 @@ In Method Overloading, the compiler selects the appropriate method based on the 
 When calling an overloaded method, Java gives priority to the child argument over the parent argument.
 
 <h2>advantages of method Overloading</h2>
-Readability and Reusability: Enhances code clarity and promotes reusability by using the same method name for different functionalities.
-Reduced Complexity: Simplifies code by eliminating the need for distinct method names, making program logic easier to manage.
-Efficient Execution: Implementations to specific scenarios, enabling efficient task execution.
-Flexible Access: Allows accessing methods with slight variations in arguments and types, enhancing flexibility.
-Diverse Initialization: Extends to constructors, enabling diverse object initialization, and enhancing object creation flexibility
+Readability and Reusability: Enhances code clarity and promotes reusability by using the same method name for different functionalities.<br>
+Reduced Complexity: Simplifies code by eliminating the need for distinct method names, making program logic easier to manage.<br>
+Efficient Execution: Implementations to specific scenarios, enabling efficient task execution.<br>
+Flexible Access: Allows accessing methods with slight variations in arguments and types, enhancing flexibility.<br>
+Diverse Initialization: Extends to constructors, enabling diverse object initialization, and enhancing object creation flexibility<br>
 
 
 
@@ -278,34 +274,34 @@ StringBuilder is a class used to create mutable (modifiable) sequences of charac
 <h2>Key Features of StringBuilder</h2>
 Mutable: Unlike String, StringBuilder objects can be modified after they are created.
 Efficient: More efficient for concatenating multiple strings compared to String due to reduced overhead from creating new objects.
-Not Thread-Safe: Methods in StringBuilder are not synchronized, meaning they are not thread-safe. Use StringBuffer if thread safety is required.
-Common Methods in StringBuilder
-append(): Adds a string representation of any data type to the current sequence.
-insert(): Inserts a string at the specified index.
-replace(): Replaces characters in a substring with another string.
-delete(): Removes characters from the sequence.
-reverse(): Reverses the sequence.
-toString(): Converts the sequence to a String object.
-Not thread safe 
-Not synchronised 
+Not Thread-Safe: Methods in StringBuilder are not synchronized, meaning they are not thread-safe. Use StringBuffer if thread safety is required.<br>
+Common Methods in StringBuilder<br>
+append(): Adds a string representation of any data type to the current sequence.<br>
+insert(): Inserts a string at the specified index.<br>
+replace(): Replaces characters in a substring with another string.<br>
+delete(): Removes characters from the sequence.<br>
+reverse(): Reverses the sequence.<br>
+toString(): Converts the sequence to a String object.<br>
+Not thread safe <br>
+Not synchronised <br>
 Faster
 
 <h2>what isStringBuffer</h2>
 StringBuffer is a class used for creating and manipulating sequences of characters. Like StringBuilder, StringBuffer is mutable, meaning its content can be modified after creation. However, StringBuffer is synchronized, making it thread-safe for use in concurrent programming environments.
 <h2>Key Features of StringBuffer</h2>
-Mutable: StringBuffer objects can be modified after they are created, unlike String.
-Thread-Safe: Methods in StringBuffer are synchronized, ensuring that it is safe to use in multi-threaded environments.
-Efficiency: More efficient for concatenating multiple strings compared to String due to reduced overhead from creating new objects.
+Mutable: StringBuffer objects can be modified after they are created, unlike String.<br>
+Thread-Safe: Methods in StringBuffer are synchronized, ensuring that it is safe to use in multi-threaded environments.<br>
+Efficiency: More efficient for concatenating multiple strings compared to String due to reduced overhead from creating new objects.<br>
 Common Methods in StringBuffer
-append(): Adds a string representation of any data type to the current sequence.
-insert(): Inserts a string at the specified index.
-replace(): Replaces characters in a substring with another string.
-delete(): Removes characters from the sequence.
-reverse(): Reverses the sequence.
-toString(): Converts the sequence to a String object.
-Thread safe
-Synchronised
-Slower
+append(): Adds a string representation of any data type to the current sequence.<br>
+insert(): Inserts a string at the specified index.<br>
+replace(): Replaces characters in a substring with another string.<br>
+delete(): Removes characters from the sequence.<br>
+reverse(): Reverses the sequence.<br>
+toString(): Converts the sequence to a String object.<br>
+Thread safe<br>
+Synchronised<br>
+Slower<br>
 
 <h2>Recursion </h2>
 Recursion is a programming technique where a function calls itself directly or indirectly to solve a problem. It's a fundamental concept in computer science and can be a powerful tool for solving problems that exhibit repetitive structures or can be broken down into smaller, similar sub-problems.
@@ -328,10 +324,10 @@ It is usually expressed using Big O notation, which describes the upper bound of
 Space complexity measures the amount of memory an algorithm uses as a function of the length of the input. It includes both the memory
 needed for the input data and any additional memory used by the algorithm. Space complexity is also expressed using Big O notation.
 
-3 Time Complexity- Best Ω (Omega), Average θ (Theta), Worst O (Big O)
-O(1): Constant time - the running time is independent of the input size.
-O(n): Linear time - the running time grows linearly with the input size.
-O(n^2): Quadratic time - the running time grows quadratically with the input size.
+3 Time Complexity- Best Ω (Omega), Average θ (Theta), Worst O (Big O)<br>
+O(1): Constant time - the running time is independent of the input size.<br>
+O(n): Linear time - the running time grows linearly with the input size.<br>
+O(n^2): Quadratic time - the running time grows quadratically with the input size.<br>
 O(log n): Logarithmic time - the running time grows logarithmically with the input size.
 
 
@@ -349,48 +345,43 @@ Doubly Linked List: Each node points to both the next and the previous node.<br>
 Circular Linked List: The last node points back to the first node, forming a circle.<br>
 
 <h2>Basic Operations</h2>
-○ Insertion: Adding a new node at the beginning, end, or middle of the list.
-○ Deletion: Removing a node from the list.
-○ Traversal: Iterating through the list to access or manipulate nodes.
+○ Insertion: Adding a new node at the beginning, end, or middle of the list.<br>
+○ Deletion: Removing a node from the list.<br>
+○ Traversal: Iterating through the list to access or manipulate nodes.<br>
 ○ Search: Finding a node with a specific value or index.
 
 <h2>Advantages</h2>
-○ Dynamic size: Linked lists can grow or shrink in size during execution.
-○ Ease of insertion and deletion: Adding or removing nodes doesn't require
-shifting elements, unlike arrays.
-○ Versatility: Different types of linked lists offer flexibility based on the
-application needs.
+○ Dynamic size: Linked lists can grow or shrink in size during execution.<br>
+○ Ease of insertion and deletion: Adding or removing nodes doesn't require shifting elements, unlike arrays.<br>
+○ Versatility: Different types of linked lists offer flexibility based on the application needs.
 
 <h2>Disadvantages</h2>
-○ Memory Overhead: Each node in a linked list requires extra memory for
-storing the link.
-○ Traversal: Sequential access is slower compared to arrays because
-elements are not stored contiguously in memory.
-○ No Random Access: Unlike arrays, accessing an element at a particular
-index requires traversing from the beginning.
+○ Memory Overhead: Each node in a linked list requires extra memory for storing the link.<br>
+○ Traversal: Sequential access is slower compared to arrays because elements are not stored contiguously in memory.<br>
+○ No Random Access: Unlike arrays, accessing an element at a particular index requires traversing from the beginning.
 
 
 <h2>Why Use Linked Lists</h2>
 
-1. Dynamic Size: Unlike arrays, linked lists can grow and shrink in size dynamically. This makes them suitable for situations where the number of elements is unknown or varies significantly.
-2. Efficient Insertions/Deletions: Insertions and deletions in a linked list are more efficient compared to arrays. Adding or removing elements can be done in constant time O(1) if the position is known, without the need to shift elements like in arrays.
-3. Memory Utilization: Linked lists do not require a contiguous block of memory. This can help in better memory utilization, especially in systems with limited memory or fragmented memory.
-4. Flexible Data Structures: Linked lists form the basis for implementing various other data structures such as stacks, queues, and graphs. They provide a flexible way to represent these structures.
+1. Dynamic Size: Unlike arrays, linked lists can grow and shrink in size dynamically. This makes them suitable for situations where the number of elements is unknown or varies significantly.<br>
+2. Efficient Insertions/Deletions: Insertions and deletions in a linked list are more efficient compared to arrays. Adding or removing elements can be done in constant time O(1) if the position is known, without the need to shift elements like in arrays.<br>
+3. Memory Utilization: Linked lists do not require a contiguous block of memory. This can help in better memory utilization, especially in systems with limited memory or fragmented memory.<br>
+4. Flexible Data Structures: Linked lists form the basis for implementing various other data structures such as stacks, queues, and graphs. They provide a flexible way to represent these structures.<br>
 5. Ease of Expansion: Adding new elements to a linked list does not require resizing or copying the existing elements, unlike dynamic arrays which might need to allocate new memory and copy old elements during resizing.
 
 
 <h2>A doubly linked list</h2>
 
-in Java is a data structure where each node contains references to both the next and the previous node in the sequence. This allows for traversal of the list in both directions. Here's a basic implementation:
+in Java is a data structure where each node contains references to both the next and the previous node in the sequence. This allows for traversal of the list in both directions.
 
 
 <h2>Notes</h2>
 
-*A DS in which elements are stored in non contiouos allocation memory | 
-Each element in LL is a node.
-*node is 2 types
-1. data types
-2. address which hold address of next node.
+*A DS in which elements are stored in non contiouos allocation memory <br>
+Each element in LL is a node.<br>
+*node is 2 types<br>
+1. data types<br>
+2. address which hold address of next node.<br>
 1st node called special node "head". 
 Last node callend "tail". having address null.
 insetion & deletion happens in constant time.
