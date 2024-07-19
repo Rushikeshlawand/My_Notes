@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "stackImplementation",
+            "request": "launch",
+            "mainClass": "stackImplementation",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
             "name": "LL",
             "request": "launch",
             "mainClass": "LL",
