@@ -1,4 +1,4 @@
-package HomeWork;
+
 
 public class HWReverseArray {
     public static void main(String[] args) {

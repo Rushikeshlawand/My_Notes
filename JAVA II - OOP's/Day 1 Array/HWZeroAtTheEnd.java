@@ -1,4 +1,4 @@
-package HomeWork;
+
 
 public class HWZeroAtTheEnd {
     public static void main(String[] args) {

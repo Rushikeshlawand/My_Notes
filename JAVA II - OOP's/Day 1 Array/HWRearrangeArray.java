@@ -1,4 +1,4 @@
-package HomeWork;
+
 public class HWRearrangeArray {
     public static void main(String[] args) {
 

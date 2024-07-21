@@ -1,4 +1,4 @@
-package HomeWork;
+
 
 public class HWMaxLeader {
     public static void main(String[] args) {
