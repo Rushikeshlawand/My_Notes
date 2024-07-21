@@ -1,4 +1,4 @@
-public class A_solid_rectangle {
+public class patternSolidrectangleOfNumber {
     public static void main(String args[]){
 
         for (int i=1; i<=5; i++){

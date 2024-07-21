@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "A_solid_rectangle",
+            "request": "launch",
+            "mainClass": "A_solid_rectangle",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
             "name": "removeElement",
             "request": "launch",
             "mainClass": "removeElement",

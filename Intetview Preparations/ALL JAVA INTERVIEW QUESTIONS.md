@@ -198,6 +198,8 @@ Constructors are special methods in object-oriented programming that are used to
 Initializing object attributes: Constructors are typically used to assign initial values to an object's attributes. This ensures that objects are created in a consistent state.<br>
 Performing validation checks: Constructors can be used to validate the data that is being used to create an object. This can help to prevent errors in your program.<br>
 Controlling object creation: Constructors can be used to control how objects are created. For example, you can create a constructor that takes arguments, which allows you to specify the initial state of the object.
+
+
 <h1>OOP's</h1>
 <h2>what is Array?</h2>
 An array is a data structure that can hold a fixed number of elements, typically of the same data type, in a specific order. 
