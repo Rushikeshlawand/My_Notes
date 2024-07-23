@@ -1,4 +1,5 @@
 import java.util.Stack;
+
 public class BalanceParentheses {
 
     public static boolean isBalanc(String s) {
@@ -18,6 +19,7 @@ public class BalanceParentheses {
         }
         return stack.isEmpty();
     }
+
     public static void main(String[] args) {
         String s = "()[]{()}}}";
         System.out.println(isBalanc(s));

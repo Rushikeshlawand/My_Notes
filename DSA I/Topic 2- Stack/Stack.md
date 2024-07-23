@@ -1,5 +1,10 @@
-<h1>Stack</h1>
-A stack in Java is a basic data structure that adheres to the Last-In-First-Out (LIFO) concept. It may be pictured as a stack of things, with the most recent item added being the initial one to be taken away. By allowing actions like push (including an element to the top) and pop (by eliminating and restoring the top element), stacks offer an effective approach to organizing and altering data.
+<h2>Stack</h2>
+Stack is a linear data structure based on based on LIFO(Last In First Out) principle in which the insertion of a new element and removal of an existing element takes place at the same end represented as the top of the stack.
+To implement the stack, it is required to maintain the pointer to the top of the stack , which is the last element to be inserted because we can access the elements only on the top of the stack.
+
+<h2>LIFO(Last In First Out) Principle in Stack:</h2>
+
+This strategy states that the element that is inserted last will come out first. You can take a pile of plates kept on top of each other as a real-life example. The plate which we put last is on the top and since we remove the plate that is at the top, we can say that the plate that was put last comes out first.
 
 <h2>Methods in Stack Class</h2>
 
