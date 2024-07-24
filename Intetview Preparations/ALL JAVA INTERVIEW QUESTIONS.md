@@ -406,3 +406,26 @@ This strategy states that the element that is inserted last will come out first.
 Stacks check for balanced parentheses, match XML and HTML tags, and validate code syntax.<br>
 A stack allows the evaluation of expressions, especially infix, postfix, and prefix expressions. A stack can convert infix expressions to postfix or prefix forms.<br>
 Stacks are frequently used by backtracking algorithms, including depth-first search (DFS), to retain track of visited nodes and return to earlier stages during exploration.
+
+<h2>Queue</h2>
+Queue in Java is a data structure for handling collections of duplicate items. The elements are stored in first-in, first-out (FIFO) queues. The line begins at the front and extends to the rear. Each Queue method has an exception-throwing and a value-returning variant in case the former fails.<br>
+
+ Queue is a Linear Data Structure that works on First-in-First-Out (FIFO) principle.
+
+It has two pointers, 'Front' that points to the beginning of the queue and 'Rear' that points to the end of the queue.
+
+The 'Front' and 'Rear' pointers are manipulated constantly to always point to the beginning and end of queue.
+
+It can be implemented using Arrays and Linked Lists.
+
+<h2>operations</h2>
+Enqueue: 
+Add an element to the end of the queue
+Dequeue: 
+Remove an element from the front of the queue
+IsEmpty: 
+Check if the queue is empty
+IsFull: 
+Check if the queue is full
+Peek: 
+Get the value of the front of the queue without removing it

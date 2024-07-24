@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "QueueImplementation",
+            "request": "launch",
+            "mainClass": "QueueImplementation",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "arrayAddElementEnd",
+            "request": "launch",
+            "mainClass": "arrayAddElementEnd",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "arrayaddElementInArray",
+            "request": "launch",
+            "mainClass": "arrayaddElementInArray",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
             "name": "addElementInArray",
             "request": "launch",
             "mainClass": "addElementInArray",
