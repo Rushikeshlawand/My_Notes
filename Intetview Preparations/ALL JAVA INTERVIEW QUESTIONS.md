@@ -428,4 +428,6 @@ Check if the queue is empty
 IsFull: 
 Check if the queue is full
 Peek: 
-Get the value of the front of the queue without removing it
+Get the value of the front of the queue without removing it<br>
+note:
+the remove() method throws an exception, while the poll() method returns null
