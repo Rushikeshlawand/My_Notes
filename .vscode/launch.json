@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ReverseString",
+            "request": "launch",
+            "mainClass": "Module.ReverseString",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "PeakElement",
+            "request": "launch",
+            "mainClass": "Module.PeakElement",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "arrayMaxMinElement",
+            "request": "launch",
+            "mainClass": "arrayMaxMinElement",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "MaxOrMinElement",
+            "request": "launch",
+            "mainClass": "Module.MaxOrMinElement",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "arrayAscendingOrder",
+            "request": "launch",
+            "mainClass": "arrayAscendingOrder",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "ascendingOrder",
+            "request": "launch",
+            "mainClass": "Module.ascendingOrder",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
             "name": "sortTheStack",
             "request": "launch",
             "mainClass": "sortTheStack",
