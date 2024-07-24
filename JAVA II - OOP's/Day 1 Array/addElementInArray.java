@@ -1,13 +1,15 @@
 import java.util.Arrays;
+
 public class addElementInArray {
     public static void main(String[] args) {
-        int[]array={1,2,3,4,5,6};
-        int index=2;
-        int addEle=98;
-        for (int i= array.length;i< index;i++) {
-            array[i] = array[i - 1];
+        int[]array={124,24,3,5,67,6,433,35,6,788};
+        int[]newArray=new int[array.length+1];
+        int value=0;
+       // int index=1;
+        for(int i=0;i<array.length;i++){
+            newArray[i]=array[i];
         }
-        array[index]=addEle;
-        System.out.println(Arrays.toString(array));
+        newArray[array.length]=value;
+        System.out.println(Arrays.toString(newArray));
     }
 }
