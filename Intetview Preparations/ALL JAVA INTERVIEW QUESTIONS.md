@@ -29,16 +29,25 @@ Distributed: feature of Java makes us able to access files by calling the method
 Multithreaded: deal with multiple tasks at once by defining multiple threads<br>
 Architecture Neutral: it is not dependent on the architecture.<br>
 
+<h2>TYPES OF JAVA APPLICATIONS</h2>
+Console-Based Applications
+GUI Applications
+Web Applications (Servlet-based)
+Desktop Applications
+Mobile Applications
+DATABASE APPLICATIONS (JDBC)
+MULTITHREADED APPLICATIONS
+NETWORK APPLICATIONS (SERVER-CLIENT)
+
+<h2>COMPONENTS OF JAVA</h2>
 <h2>Introduction to JDK</h2>
-The Java Development Kit (JDK) is a comprehensive software package provided by Oracle Corporation for Java development.
-It serves as an essential toolkit for developers to write, compile, debug, and run Java applications.
-The JDK includes various tools, libraries, and utilities necessary for Java development, making it a fundamental component of the Java ecosystem
+JDK (Java Development Kit) is a comprehensive software development kit that includes all the essential tools, libraries, and documentation for Java development. It provides a complete development environment, including the JRE and additional tools like the Java compiler (javac), debugger (jdb), and various utilities.
+
+<h2>JRE</h2>
+JRE (Java Runtime Environment) is a software bundle encompassing the necessary runtime libraries, class libraries, and JVM implementation. It offers the runtime environment required to execute Java applications, ensuring their proper functioning. However, JRE does not include the tools needed for Java development.
 
 <h2>What is JVM?</h2>
-JVM stands for Java Virtual Machine it is a Java interpreter. 
-It is responsible for loading, verifying, and executing the bytecode created in Java.
-Although it is platform dependent which means the software of JVM is different for different Operating Systems
-it plays a vital role in making Java platform Independent.
+JVM (Java Virtual Machine) is a crucial element of the Java platform. It is a virtual machine that executes compiled Java bytecode, enabling Java programs to run independently across different hardware and operating systems. JVM handles essential tasks like memory management, garbage collection, and bytecode interpretation or just-in-time (JIT) compilation.
 
 <h2>What is JIT?</h2>
 JIT stands for (Just-in-Time) compiler is a part of JRE, it is used for better performance of the Java applications during run-time. The use of JIT is mentioned in step by step process mentioned below:
@@ -47,13 +56,6 @@ JIT is a part of JVM, JIT is responsible for compiling bytecode into native mach
 The JIT compiler is enabled throughout, while it gets activated when a method is invoked. For a compiled method, the JVM directly calls the compiled code, instead of interpreting it.
 As JVM calls the compiled code that increases the performance and speed of the execution.
 
-<h2>What are Memory storages available with JVM?</h2>
-c:\Users\rushi\AppData\Local\Temp\JVM-Areas-768.png
-Class(Method) Area: stores class-level data of every class such as the runtime constant pool, field, and method data, and the code for methods.<br>
-Heap: Objects are created or objects are stored. It is used to allocate memory to objects during run time.<br>
-Stack: stores data and partial results which will be needed while returning value for method and performing dynamic linking<br>
-Program Counter Register: stores the address of the Java virtual machine instruction currently being executed.<br>
-Native Method Stack: stores all the native methods used in the application.<br>
 
 <h2>What is a classloader?</h2>
 Classloader is the part of JRE(Java Runtime Environment), during the execution of the bytecode or created .class file 
@@ -65,6 +67,23 @@ JVM: JVM also known as Java Virtual Machine is a part of JRE. JVM is a type of i
 JVM itself is platform dependent but it interprets the bytecode which is the platform-independent reason why Java is platform-independent. <br>
 JRE: JRE stands for Java Runtime Environment, it is an installation package that provides an environment to run the Java program or application on any machine.<br>
 JDK: JDK stands for Java Development Kit which provides the environment to develop and execute Java programs. JDK is a package that includes two things Development Tools to provide an environment to develop your Java programs and, JRE to execute Java programs or applications.<br>
+
+<h2>Java Terminology</h2>
+
+Class: A class can be defined as a template or blueprint that defines the properties (data fields) and behaviors (methods) of objects. Classes serve as blueprints for creating multiple instances (objects) of the same type.<br>
+
+Object: An object is an instance of a class. It represents a real-world entity or concept and encapsulates data (properties) and behavior (methods).<br>
+Method: A method is a block of code that performs a specific task. It is defined within a class and can be called (invoked) to execute its functionality. Methods may have parameters (input) and may return a value.<br>
+
+Inheritance: Inheritance is a mechanism in Java that allows a class (subclass) to inherit the properties and behaviors of another class (superclass). It enables code reuse and supports the concept of a hierarchical relationship between classes.<br>
+
+Interface: An interface is a collection of abstract methods. It defines a contract that classes can implement, specifying the methods they must provide. Interfaces allow for multiple inheritances in Java.<br>
+
+Package: A package is a way to organize related classes and interfaces. It provides a namespace to avoid naming conflicts. Packages help in modularizing and organizing code.<br>
+
+Exception: An exception is an event that occurs during the execution of a program, resulting in the disruption of the normal flow. Java provides a robust exception-handling mechanism to catch and handle such exceptions, preventing program crashes.<br>
+
+Static: The static keyword is used to declare a member (variable or method) that belongs to the class rather than the class's instances (objects). Static members are shared among all instances of the class.
 
 <h2>Explain public static void main(String args[]) in Java.</h2>
 Main_function

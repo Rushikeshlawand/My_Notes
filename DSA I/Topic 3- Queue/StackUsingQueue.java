@@ -11,9 +11,18 @@ public class StackUsingQueue {
         qe.add(40);
         qe.add(50);
 
-        while (!qe.isEmpty()) {
-            
+        // push
+        for (int i = 0; i < qe.size(); i++) {
+            qe.add(qe.poll());
+            System.out.print(qe.peek() + " ");
         }
+        // pop
+        System.out.println(qe.poll());
 
+        //Top
+        System.out.println(qe.peek());
+
+        //Empty
+        System.out.println(qe.isEmpty());
     }
 }
