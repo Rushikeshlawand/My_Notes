@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SearchIndex",
+            "request": "launch",
+            "mainClass": "SearchIndex",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "Isomorphic",
+            "request": "launch",
+            "mainClass": "Isomorphic",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "Isomorphic",
+            "request": "launch",
+            "mainClass": "String.Isomorphic",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "arrayMerged",
+            "request": "launch",
+            "mainClass": "arrayMerged",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
             "name": "QueueImplementation",
             "request": "launch",
             "mainClass": "QueueImplementation",

@@ -5,7 +5,7 @@ public class arrayAddElementEnd {
         int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         int[] newArray = new int[array.length + 1];
         int value = 0;
-        //int index=7;
+        // int index=7;
         for (int i = 0; i < array.length; i++) {
             newArray[i] = array[i];
         }
