@@ -1,12 +1,12 @@
-class node {
-    int data;
-    node next;
+// class node {
+//     int data;
+//     node next;
 
-    node(int data) {
-        this.data = data;
-        next = null;
-    }
-}
+//     node(int data) {
+//         this.data = data;
+//         next = null;
+//     }
+// }
 
 public class identicalOrNot {
 

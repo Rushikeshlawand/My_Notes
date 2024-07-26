@@ -1,12 +1,12 @@
-class node {
-    int data;
-    node next;
+// class node {
+//     int data;
+//     node next;
 
-   public node(int data) {
-        this.data = data;
-        this.next = null;
-    }
-}
+//    public node(int data) {
+//         this.data = data;
+//         this.next = null;
+//     }
+// }
 
 public class linkedList {
     node head;
