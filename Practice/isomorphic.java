@@ -1,4 +1,4 @@
-package Practice;
+
 public class isomorphic {
 
     public static boolean isIsomorphic(String str1, String str2) {

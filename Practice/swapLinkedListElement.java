@@ -1,4 +1,4 @@
-package Practice;
+
 public class swapLinkedListElement {
 
     class Node {

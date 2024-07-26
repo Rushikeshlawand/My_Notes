@@ -1,4 +1,4 @@
-package Practice;
+
 // 1. Minimum number of deletions to make a string palindrome
 // Given a string of size ‘n’. The task is to remove or delete the minimum
 // number of characters from the string so that the resultant string is a
