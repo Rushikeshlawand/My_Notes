@@ -84,6 +84,5 @@ public class magicSquare {
         check = 0;
 
         System.out.println(ans);
-
     }
 }
