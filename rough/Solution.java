@@ -1,33 +1,20 @@
-package rough;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class Solution {
+    void frq(int[] nums) {
+        int num=0;
 
-    public static int strstr(int[] nums, int target) {
-        int n = nums.length;
-        int[] array = new int[n + 1];
-        int i;
-        for (i = 0; i < n + 1; i++) {
-            array[i] = nums[i];
-
-        }
-        array[n] = target;
-        Arrays.sort(array);
-        for (i = 0; i < array.length; i++) {
-            if (array[i] == target) {
-                return i;
+        for(int  i=0;i<nums.length-1;i++){
+            for(int j=i+1;i<nums.length;j++){
+                if (nums[i]==nums[i]) {
+                    num=nums[i];
+                  }
             }
         }
-        return -1;
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        int[] nums = { 1, 3, 5, 6 };
-        int target = 5;
-        int index = solution.strstr(nums, target);
-        System.out.println("Index of target " + target + " is: " + index);
+        int[] nums = { 2, 2, 1, 1, 1, 2, 2 };
+        Solution obj=new  Solution();
+        obj.frq(nums);
+        System.out.println(obj.frq(num));
     }
 }
