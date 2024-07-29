@@ -18,15 +18,10 @@ public class magicSquare {
 //        row and each column and diagonals sum is
 //        same = 15.
 
-
         Scanner sc = new Scanner(System.in);
-
         int n = sc.nextInt();
-
         int[][] arr = new int[n][n];
-
         boolean ans = true;
-
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
@@ -36,7 +31,6 @@ public class magicSquare {
 
             }
         }
-
 // Checking for rows;
         int check = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -45,44 +39,32 @@ public class magicSquare {
             }
         if(check != sum)
             ans = false;
-
         check = 0;
         }
-
         // checking for column
-
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 check += arr[j][i];
             }
             if(check != sum)
                 ans = false;
-
             check = 0;
         }
-
         // checking for diagonal
-
-
         for(int i = 0 ; i < arr.length ; i++){
             check += arr[i][i];
         }
-
         if(check != sum){
             ans = false;
         }
         check = 0;
-
-
         for(int i = 0 ; i < arr.length ; i++){
             check += arr[i][arr.length - 1 - i];
         }
-
         if(check != sum){
             ans = false;
         }
         check = 0;
-
         System.out.println(ans);
     }
 }
