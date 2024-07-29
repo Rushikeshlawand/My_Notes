@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "LongestValidParentheses",
+            "request": "launch",
+            "mainClass": "LongestValidParentheses",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "Paranthesis",
+            "request": "launch",
+            "mainClass": "Paranthesis",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
             "name": "MedianOfMatrix",
             "request": "launch",
             "mainClass": "MedianOfMatrix",
