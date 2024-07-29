@@ -1,3 +1,10 @@
+// Given a string, find the count of distinct subsequences of it.
+// Examples:Input: str = “gfg”
+// Output: 7
+// Explanation: The seven distinct subsequences are “”, “g”, “f”, “gf”, “fg”, “gg” and “gfg”
+// Input: str = “ggg”
+// Output: 4
+// Explanation: The four distinct subsequences are “”, “g”, “gg” and “ggg”
 
 import java.util.ArrayList;
 
@@ -9,7 +16,7 @@ public class distinctSubsequence {
             return 2;
 
         if (str.isEmpty())
-            return 0;
+            return 1;
 
         ArrayList<String> subString = new ArrayList<>();
 
@@ -36,7 +43,7 @@ public class distinctSubsequence {
     }
 
     public static void main(String[] args) {
-        String str = "gfg";
+        String str = "ggg";
         int result = distinctSubsequences(str);
         System.out.println("Number of distinct subsequences: " + result);
     }

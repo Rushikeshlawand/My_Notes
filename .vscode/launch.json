@@ -6,6 +6,69 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MedianOfMatrix",
+            "request": "launch",
+            "mainClass": "MedianOfMatrix",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "CountSortedRows",
+            "request": "launch",
+            "mainClass": "CountSortedRows",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "MergeLinkedList",
+            "request": "launch",
+            "mainClass": "MergeLinkedList",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "swapLinkedListElement",
+            "request": "launch",
+            "mainClass": "swapLinkedListElement",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "rotateLinkedList",
+            "request": "launch",
+            "mainClass": "rotateLinkedList",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "MargeLinkedList",
+            "request": "launch",
+            "mainClass": "MargeLinkedList",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "distinctSubsequence",
+            "request": "launch",
+            "mainClass": "distinctSubsequence",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "IsomorphicEx",
+            "request": "launch",
+            "mainClass": "IsomorphicEx",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "StringDeletion",
+            "request": "launch",
+            "mainClass": "StringDeletion",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
             "name": "Solution",
             "request": "launch",
             "mainClass": "rough.Solution",
