@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GFG",
+            "request": "launch",
+            "mainClass": "GFG",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "subString",
+            "request": "launch",
+            "mainClass": "subString",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
             "name": "reverseQueue",
             "request": "launch",
             "mainClass": "reverseQueue",

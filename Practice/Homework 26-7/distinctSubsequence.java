@@ -38,7 +38,6 @@ public class distinctSubsequence {
                 }
             }
         }
-
         return subString.size() + 1;
     }
 
