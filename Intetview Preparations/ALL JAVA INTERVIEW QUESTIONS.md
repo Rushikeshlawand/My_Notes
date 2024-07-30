@@ -450,3 +450,58 @@ Peek:
 Get the value of the front of the queue without removing it<br>
 note:
 the remove() method throws an exception, while the poll() method returns null
+
+<h2>HashMap</h2>
+HashMap in Java is an integral part of the collections framework. It is located in the java.util package. It implements the Java Map interface in its most basic form. It saves the data as a key-value mapping, where each key corresponds to exactly one data type value. Here is a tutorial blog on how to use HashMap in Java.<br>
+
+Hashing is a technique that gives you a convenient way to store and
+search for elements in large datasets.
+
+<h2>Advantages of HashMap</h2>
+
+Fast retrieval: HashMap provides constant-time access to elements. This means the time to retrieve or insert elements remains constant, even as the size of the HashMap increases.<br>
+Efficient storage: HashMap uses a hashing function to map keys to indices in an underlying array, allowing a fast lookup of values based on keys. The hashing function distributes the entries across different buckets, ensuring efficient data storage and retrieval.<br>
+Flexibility: HashMap allows for storing null keys and values, offering flexibility in handling data. Additionally, HashMap can store key-value pairs of any data type. This provides versatility in its usage.<br>
+Easy to use: HashMap has a straightforward and user-friendly interface. This makes it easy to understand and implement in Java.
+
+<h2>Disadvantages of HashMap</h2>
+Unordered: HashMaps do not preserve the order of elements.<br>
+Not thread-safe: HashMaps are not inherently thread-safe.<br>
+Performance degradation: In certain situations, the performance of HashMap can degrade.<br>
+Complexity: The concept of hashing, collision resolution, and understanding the intricacies of the equals and hashCode methods can be challenging and complex.<br>
+Higher memory usage: HashMaps use an underlying array to store key-value pairs, which can result in higher memory usage than other data structures like arrays or lists.<br>
+
+<h2>Collision resolution techniques</h2>
+
+1. Separate Chaining (Open Hashing)<br>
+In separate chaining (also known as open hashing), each slot in the hash table holds a reference to a linked list (or another data structure like a binary search tree) that contains all the elements that hash to the same index. When a collision occurs, the new element is simply added to the linked list at that index.<br>
+
+
+2. Open Addressing (Closed Hashing)<br>
+In open addressing (also known as closed hashing), all elements are stored directly in the hash table. When a collision occurs, open addressing searches for another open slot within the hash table according to a specific probing sequence.<br>
+
+<h2>Probing Techniques:</h2>
+• Linear Probing: Check the next slot in a sequential manner. If it's occupied, continue to the next slot until an open slot is found<br>
+• Quadratic Probing: Use a quadratic function to find the next slot (e.g., (index + i*2) % tableSize).<br>
+• Double Hashing: Use a second hash function to determine the step size for probing<br>
+
+<h2>Advantages</h2>:
+• No additional memory is needed for pointers or linked lists.<br>
+• Generally faster access times for cache-friendly access patters.
+
+<h2>Disadvantages</h2>
+• Performance degrades as the hash table becomes full, leading to clustering (where nearby slots become occupied).<br>
+• Deletion can be complex because simply removing an element can disrupt the probing sequence.
+
+<h2>A. Linear Probing</h2>
+In linear probing, if a slot is occupied, the hash table checks the next slot in a linear sequence until an empty slot is found.
+
+<h2>B. Quadratic Probing</h2>
+In quadratic probing, if a slot is occupied, the hash table probes the next slot using a quadratic function<br>
+Formula: hash(x, i) = (hash(x) + i^2) % table_size, where i is the probe number.
+
+<h2>C. Double Hashing</h2>
+In double hashing, a second hash function is used to determine the step size for probing <br>
+Formula: hash(x, i) = (hash1(x) + i * hash2(x)) % table _size, where hash1(x) is the primary hash function and hash2(x) is the secondary hash function.
+
+
