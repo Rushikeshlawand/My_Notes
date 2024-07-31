@@ -485,7 +485,7 @@ In open addressing (also known as closed hashing), all elements are stored direc
 • Quadratic Probing: Use a quadratic function to find the next slot (e.g., (index + i*2) % tableSize).<br>
 • Double Hashing: Use a second hash function to determine the step size for probing<br>
 
-<h2>Advantages</h2>:
+<h2>Advantages</h2>
 • No additional memory is needed for pointers or linked lists.<br>
 • Generally faster access times for cache-friendly access patters.
 
