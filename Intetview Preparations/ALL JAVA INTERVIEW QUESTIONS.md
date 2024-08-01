@@ -503,5 +503,3 @@ Formula: hash(x, i) = (hash(x) + i^2) % table_size, where i is the probe number.
 <h2>C. Double Hashing</h2>
 In double hashing, a second hash function is used to determine the step size for probing <br>
 Formula: hash(x, i) = (hash1(x) + i * hash2(x)) % table _size, where hash1(x) is the primary hash function and hash2(x) is the secondary hash function.
-
-
