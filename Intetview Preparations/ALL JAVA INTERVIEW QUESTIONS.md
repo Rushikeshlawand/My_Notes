@@ -4,8 +4,6 @@ Java is like a magic recipe book for programming, enabling developers to create 
 It's a popular computer language used to build various kinds of programs,from phone apps to website platforms to corporate software.
 Java's versatility shines as it runs smoothly on different devices without needing any adjustments, making it incredibly convenient.
 Understanding Java is like teaching instructions to a robot, where programmers use Java to communicate with computers effectively.
-
-<h2>Who Developed Java</h2>
 James Gosling is the main brain behind Java. Initially developed by Sun Microsystems, Java is now maintained by Oracle Corporation's oversight in 1995.
 
 <h2>Java Platform Independent if then how?</h2>
