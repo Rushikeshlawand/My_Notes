@@ -15,3 +15,6 @@ A tree is a hierarchical data structure consisting of nodes, with a single node 
 7. **Subtree**: A tree consisting of a node and its descendants.
 8. **Height**: The length of the longest path from the root to a leaf.
 9. **Depth**: The length of the path from the root to a specific node.
+
+Why Tree is considered a non-linear data structure?
+The data in a tree are not stored in a sequential manner i.e., they are not stored linearly. Instead, they are arranged on multiple levels or we can say it is a hierarchical structure. For this reason, the tree is considered to be a non-linear data structure.
