@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "treeStructure",
+            "request": "launch",
+            "mainClass": "treeStructure",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
             "name": "sumOfTwoElements",
             "request": "launch",
             "mainClass": "sumOfTwoElements",
