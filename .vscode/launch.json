@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "leveltreeUsingQueue",
+            "request": "launch",
+            "mainClass": "leveltreeUsingQueue",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
             "name": "treeUsingQueue",
             "request": "launch",
             "mainClass": "treeUsingQueue",
