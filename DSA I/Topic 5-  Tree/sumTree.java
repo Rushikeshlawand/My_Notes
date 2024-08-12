@@ -1,47 +1,47 @@
-// import java.util.LinkedList;
-// import java.util.Queue;
+public class sumTree {
+    static void postOrder(Node root) {
+        if (root == null) {
+            return;
+        }
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.print(root.data + " ");
+    }
 
-// class Node {
-//     int data;
-//     Node left;
-//     Node right;
+    static int isSumTree(Node root) {
+        if (root == null)
+            return 0;
 
-//     Node(int data) {
-//         this.data = data;
-//         this.left = null;
-//         this.right = null;
-//     }
-// }
+        if (root.left == null && root.right == null)
+            return root.data;
 
-// public class sumTree {
+        int leftSum = isSumTree(root.left);
+        int rightSum = isSumTree(root.right);
 
+        if (leftSum == -1 || rightSum == -1 || root.data != leftSum + rightSum)
+            return -1;
 
+        return root.data + leftSum + rightSum;
+    }
 
-//     static int sum(Node dt) {
-//         if (dt == null) {
-//             return 0;
-//             return dt.data + sum(dt.left) + sum(dt.right);
-//         }
+    public static void main(String[] args) {
+        Node root = new Node(26);
+        root.left = new Node(16);
+        root.right = new Node(6);
+        root.left.left = new Node(2);
+        root.left.right = new Node(2);
+//        root.right.right = new node(3);
+//        root.left.right.left = new node(3);
+//        root.left.right.right= new node(3);
 
-//     }
+        System.out.print("Post-order: ");
+        postOrder(root);
+        System.out.println();
 
-//     static boolean isSunTree(Node dt){
-        
-//         if(dt==null || (dt.left==null && dt.right==null))
-//         return true;
-//         int lTreeSum=Sum(dt.left);
-//         int rTreeSum-Sum(dt.right) ;
-//         Af(dt.data==lTreeSum+rTreeSun && isSumTree(dt.left) 66 isSunTree(dt.right))
-//         return true;
-//         return false;
-//         }
-//     public static void main(String[] args) {
-//         Node root = new Node(1);
-//         root.left = new Node(2);
-//         root.right = new Node(3);
-//         root.left.right = new Node(4);
-//         root.right.left = new Node(5);
-//         root.left.left = new Node(6);
-
-//     }
-// }
+        if (isSumTree(root) != -1) {
+            System.out.println("sum tree.");
+        } else {
+            System.out.println("not a sum tree.");
+        }
+    }
+}
