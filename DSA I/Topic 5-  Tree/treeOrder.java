@@ -9,7 +9,7 @@ class Node {
         this.right = null;
     }
 }
-public class treeStructure {
+public class treeOrder {
     static void preorder(Node root) {
         if (root == null) {
             return;
