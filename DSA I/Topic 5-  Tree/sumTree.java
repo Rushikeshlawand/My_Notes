@@ -1,12 +1,13 @@
-public class sumTree {
-    static void postOrder(Node root) {
-        if (root == null) {
-            return;
-        }
-        postOrder(root.left);
-        postOrder(root.right);
-        System.out.print(root.data + " ");
+class Node {
+    int data;
+    Node left, right;
+
+    Node(int item) {
+        data = item;
+        left = right = null;
     }
+}
+public class sumTree {
 
     static int isSumTree(Node root) {
         if (root == null)
@@ -30,13 +31,9 @@ public class sumTree {
         root.right = new Node(6);
         root.left.left = new Node(2);
         root.left.right = new Node(2);
-//        root.right.right = new node(3);
-//        root.left.right.left = new node(3);
-//        root.left.right.right= new node(3);
-
-        System.out.print("Post-order: ");
-        postOrder(root);
-        System.out.println();
+        // root.right.right = new node(3);
+        // root.left.right.left = new node(3);
+        // root.left.right.right= new node(3);
 
         if (isSumTree(root) != -1) {
             System.out.println("sum tree.");
