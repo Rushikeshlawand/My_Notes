@@ -72,3 +72,22 @@ postorder
 2.BFS:
 Level order
 
+Types of Trees
+Binary Tree
+
+A binary tree is a tree where each node has at most two children, referred to as the left child and the right child.
+Properties
+
+    Full Binary Tree: Every node has 0 or 2 children.
+    Perfect Binary Tree: All internal nodes have two children and all leaves are at the same level.
+    Complete Binary Tree: All levels are completely filled except possibly the last level, and the last level has all nodes as left as possible.
+    Balanced Binary Tree: The height of the left and right subtrees of any node differ by at most one.
+
+    Binary Search Tree (BST)
+
+A binary search tree (BST) is a binary tree with an additional property:
+
+    For each node, the value of all the nodes in the left subtree is less than the node’s value, and the value of all the nodes in the right subtree is greater than the node’s value.
+
+    
+
