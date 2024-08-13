@@ -62,3 +62,13 @@ The data in a tree are not stored in a sequential manner, i.e., they are not sto
 3. **Trie (Prefix Tree)**: Efficient information retrieval, such as autocomplete and spell-checking.
 4. **Decision Trees**: Used in machine learning for classification and regression tasks.
 5. **Syntax Trees**: Used in compilers to parse expressions and statements.
+
+
+treaversal:
+1.DFS:
+preorder
+inorder
+postorder
+2.BFS:
+Level order
+
