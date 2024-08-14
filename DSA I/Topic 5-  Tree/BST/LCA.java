@@ -10,10 +10,10 @@ class Node {
     }
 }
 
-public class BSTimplementation {
+public class LCA {
     Node root;
 
-    BSTimplementation() {
+    LCA() {
         root = null;
     }
 
@@ -37,13 +37,25 @@ public class BSTimplementation {
         return root;
     }
 
+    void leaf(Node root) {
+        if (root == null) {
+            return;
+        }
+        if (root.left == null && root.right == null) {
+            System.out.println(root.data);
+        }
+        leaf(root.left);
+    }
+
     public static void main(String[] args) {
-        BSTimplementation rt = new BSTimplementation();
+        LCA rt = new LCA();
         rt.bstt(10);
         rt.bstt(5);
         rt.bstt(3);
         rt.bstt(8);
         rt.bstt(9);
+        System.out.println();
+        rt.leaf(rt.root);
 
     }
 }
