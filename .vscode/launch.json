@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "deleteElement",
+            "request": "launch",
+            "mainClass": "BST.deleteElement",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "bottomView",
+            "request": "launch",
+            "mainClass": "BST.bottomView",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "spiralOrder",
+            "request": "launch",
+            "mainClass": "BST.spiralOrder",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "allLeafNode",
+            "request": "launch",
+            "mainClass": "BST.allLeafNode",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
             "name": "LCA",
             "request": "launch",
             "mainClass": "BST.LCA",

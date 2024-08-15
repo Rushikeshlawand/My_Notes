@@ -22,16 +22,13 @@ public class LCA {
     }
 
     static Node bst(Node root, int data) {
-        Node newnode = new Node(data);
-
         if (root == null) {
-            root = newnode;
+            root = new Node(data);
             return root;
         }
-        if (root.data > data) {
-            root.left = bst(newnode, data);
-
-        } else {
+        if (data < root.data) {
+            root.left = bst(root.left, data);
+        } else if (data > root.data) {
             root.right = bst(root.right, data);
         }
         return root;
@@ -45,6 +42,25 @@ public class LCA {
             System.out.println(root.data);
         }
         leaf(root.left);
+        leaf(root.right);
+    }
+
+    Node findLCA(Node root, int n1, int n2) {
+        if (root == null) {
+            return null;
+        }
+
+     
+        if (root.data > n1 && root.data > n2) {
+            return findLCA(root.left, n1, n2);
+        }
+
+     
+        if (root.data < n1 && root.data < n2) {
+            return findLCA(root.right, n1, n2);
+        }
+
+        return root;
     }
 
     public static void main(String[] args) {
@@ -54,8 +70,14 @@ public class LCA {
         rt.bstt(3);
         rt.bstt(8);
         rt.bstt(9);
-        System.out.println();
+        rt.bstt(15);
+        rt.bstt(12);
+        rt.bstt(18);
+
+        System.out.println("Leaf nodes:");
         rt.leaf(rt.root);
 
+        System.out.println("\nLCA of 3 and 9: " + rt.findLCA(rt.root, 3, 9).data);
+        System.out.println("LCA of 3 and 12: " + rt.findLCA(rt.root, 3, 12).data);
     }
 }
