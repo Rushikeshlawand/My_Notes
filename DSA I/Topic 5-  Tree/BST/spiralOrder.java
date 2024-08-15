@@ -84,7 +84,7 @@ public class spiralOrder {
         tree.insert(12);
         tree.insert(18);
 
-        System.out.println("Spiral order traversal:");
+        System.out.println("Spiral order ");
         tree.printSpiralOrder(tree.root);
     }
 }
