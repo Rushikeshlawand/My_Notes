@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "selectionSort",
+            "request": "launch",
+            "mainClass": "selectionSort",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "bubbleSort",
+            "request": "launch",
+            "mainClass": "bubbleSort",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
+            "name": "Search",
+            "request": "launch",
+            "mainClass": "Search",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
             "name": "search",
             "request": "launch",
             "mainClass": "search",
