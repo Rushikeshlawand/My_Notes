@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "heap",
+            "request": "launch",
+            "mainClass": "heap",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
             "name": "Insertionsort",
             "request": "launch",
             "mainClass": "Insertionsort",
