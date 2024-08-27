@@ -13,7 +13,7 @@ Imagine a pill with a coating that prevents it from dissolving until it reaches 
 Encapsulation is implemented by:
 1. **Declaring Variables as Private**: This restricts direct access to the data members of the class from outside its scope, ensuring that the data is protected.
 2. **Providing Public Getter and Setter Methods**: These methods allow controlled access to the private data. Getters retrieve the value of private variables, and setters modify them while ensuring that any required validation is performed.
-
+```plaintext
 +--------------------+
 |    Person          |
 +--------------------+
@@ -25,7 +25,7 @@ Encapsulation is implemented by:
 | + getAge(): int    |
 | + setAge(age: int): void       |
 +--------------------+
-
+```
 ### Code Example
 
 ```java
@@ -74,11 +74,6 @@ Inheritance is a fundamental concept in OOP that allows a new class (child or su
    Subclass
 ```
 
-
-### Example of Inheritance
-
-#### Single Inheritance Example
-
 ```java
 // Parent class
 public class Animal {
@@ -102,16 +97,11 @@ public class Main {
     }
 }
 ```
-
-
-
-
 2. **Multiple Inheritance** (not supported in java but through interfaces we can implement)
    - **Description**: A subclass can inherit from multiple interfaces. Java supports multiple inheritance through interfaces but not through classes.
    - **Example**: A `Smartphone` class implements both `Phone` and `Camera` interfaces.
-
 ```plaintext
-      Superclass1
+ Superclass1
        |      
        |      
    Superclass2
@@ -119,7 +109,6 @@ public class Main {
        |
    Subclass
 ```
-### Example 
 
 ```java
 // First interface
@@ -158,7 +147,7 @@ public class MultipleInheritanceExample {
    - **Example**: A `GoldenRetriever` class inherits from a `Dog` class, which inherits from an `Animal` class.
 
 ```plaintext
-      Grandparent
+Grandparent
        |
        |
    Parent
@@ -166,7 +155,7 @@ public class MultipleInheritanceExample {
        |
    Child
    ```
-### Example of Inheritance
+
 ```java
 // Grandparent class
 class Animal {
@@ -205,15 +194,15 @@ public class MultilevelInheritanceExample {
    - **Example**: `Cat` and `Dog` classes both inherit from an `Animal` class.
 
 ```plaintext
-          Superclass
-       /    \
-      /      \
+    Superclass
+       /         \
+     /             \
  Subclass1  Subclass2
       \
-       \
+        \
     Subclass3
 ```
-### Example of Inheritance
+
 ```java
 // Superclass
 class Animal {
@@ -255,16 +244,16 @@ public class HierarchicalInheritanceExample {
    - **Example**: A `FlyingCar` class inherits from both `Car` and `FlyingVehicle` interfaces.
 
 ```plaintext
-       ClassA
-      / \
-     /   \
-    /     \
+    ClassA
+      /  \
+     /     \
+    /       \
  ClassB  ClassC
-     \    /
-      \  /
+     \          /
+      \       /
        ClassD
 ```
-### Example of Inheritance
+
 ```java
 // Interface 1
 interface Animal {
