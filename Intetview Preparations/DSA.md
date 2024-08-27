@@ -320,28 +320,267 @@ Imagine a playlist in a music player app. Each song in the playlist can be thoug
 6. **Reversing**
    - **Reverse the List**: Change the direction of the links to reverse the order of nodes in the list.
 
+# Stack Data Structure
+
+## Definition
+
+A stack is a linear data structure that follows the Last In, First Out (LIFO) principle. This means that the most recently added item is the first to be removed. Stacks are used to store data in a specific order and are often implemented using arrays or linked lists.
+
+## Example
+
+Imagine a stack of plates in a cafeteria. You place a plate on top of the stack, and when you need a plate, you take the one on the top. The plate you added last is the first one you take out. This is analogous to how a stack data structure works in computing.
+
+## Types of Operations
+
+1. **Push**: Add an item to the top of the stack.
+2. **Pop**: Remove the item from the top of the stack.
+3. **Peek/Top**: View the item at the top of the stack without removing it.
+4. **IsEmpty**: Check if the stack is empty.
+
+## Diagram
+
+### Stack Operations
+
+```markdown
+      +-----+
+      |  3  |  <- Top
+      +-----+
+      |  2  |
+      +-----+
+      |  1  |
+      +-----+
+```
+
+# Stack Overflow
+
+## Definition
+
+A stack overflow occurs when a program tries to use more stack space than is available. The stack is a region of memory that stores function calls, local variables, and control flow information. When a stack overflow happens, it generally results in a program crash or abnormal termination.
+
+## Causes of Stack Overflow
+
+1. **Deep Recursion**: If a function calls itself too many times without an adequate base case or termination condition, it can exhaust the stack space.
+2. **Infinite Recursion**: A recursive function that doesn't have a proper termination condition will keep calling itself indefinitely, eventually causing a stack overflow.
+3. **Excessive Stack Allocation**: Allocating too much memory for local variables or function calls within the stack can lead to overflow.
+
+## Real-Time Example
+
+Imagine a stack of plates in a cafeteria. If you keep adding plates to the stack without removing any, eventually the stack will reach its physical limit and collapse. Similarly, in programming, if the stack grows beyond its allocated space due to excessive function calls or large local variable allocations, it will cause a stack overflow.
+
+# Stack Underflow
+
+## Definition
+
+A stack underflow occurs when an attempt is made to pop an element from an empty stack. Since a stack operates on a Last In, First Out (LIFO) principle, there must be at least one element in the stack to remove. When the stack is empty and a pop operation is performed, it leads to a stack underflow condition.
+
+## Causes of Stack Underflow
+
+1. **Empty Stack Pop Operation**: Trying to remove an item from a stack that is already empty.
+2. **Improper Stack Management**: Errors in stack operations where the stack's state is not properly managed or updated.
+
+## Real-Time Example
+
+Consider a stack of plates in a cafeteria. If the stack is empty and you try to remove a plate, there's nothing to remove, which is similar to a stack underflow in programming. The action is invalid because there are no plates (or elements) left to handle.
+
+# Queue
+
+## Definition
+
+A queue is a linear data structure that follows the First In, First Out (FIFO) principle. This means that the first element added to the queue will be the first one to be removed. Queues are used to manage data in a way that the earliest added item is processed first.
+
+## Real-Time Example
+
+A real-world example of a queue is a line of people waiting at a checkout counter in a store. The person who arrives first at the counter is the first one to be served and checked out. Similarly, in a queue data structure, the first element added is the first one to be removed.
 
 
+### Queue Diagram
+
+```plaintext
+       +-----+
+       |  1  |  <- Front
+       +-----+
+       |  2  |
+       +-----+
+       |  3  |
+       +-----+
+       | Rear |
+       +-----+
+```
+
+## Types of Queues
+
+1. **Simple Queue:** The basic queue structure where elements are added at the rear and removed from the front.
+2. **Circular Queue:** A queue in which the last position is connected back to the first position to form a circle. It helps in utilizing the memory more efficiently.
+3. **Priority Queue:** A queue where each element has a priority. Elements with higher priority are served before those with lower priority.
+4. **Double-Ended Queue (Deque):** A queue that allows insertion and deletion of elements from both ends.
+
+## Advantages
+
+- **Order Preservation:** Maintains the order of elements, which is useful in various applications like scheduling and buffering.
+- **Efficiency:** Provides efficient ways to add and remove elements, typically with constant time complexity for enqueue and dequeue operations.
+- **Flexibility:** Various types of queues (e.g., circular, priority) can be used to address specific needs and optimize performance.
+
+## Limitations
+
+- **Fixed Size:** Like stacks, queues can have a fixed size, leading to overflow if the queue reaches its capacity.
+- **Limited Access:** Elements can only be accessed from the front or the rear, not from arbitrary positions within the queue.
+
+## Operations
+
+### Enqueue
+
+Adds an element to the rear of the queue.
+
+### Dequeue
+
+Removes the element from the front of the queue.
+
+### Peek/Front
+
+Returns the front element of the queue without removing it.
+
+### IsEmpty
+
+Checks if the queue is empty.
+
+# HashMap, HashSet, and Hashtable
+
+## HashMap
+
+### Definition
+`HashMap` is a collection that implements the `Map` interface. It stores key-value pairs and uses a hash table for storage. Keys are hashed to compute an index where values are stored.
+
+### Real-Time Example
+In an online e-commerce application, a `HashMap` can be used to store user session data. The session ID can be the key, and the session details (such as user information and cart contents) can be the value.
+
+### Advantages and Limitations
+
+| **Aspect**         | **HashMap**                                               |
+|--------------------|------------------------------------------------------------|
+| **Advantages**     | - Fast performance for basic operations (O(1) on average).<br>- Allows one null key and multiple null values. |
+| **Limitations**    | - Does not maintain any order.<br>- Not synchronized. |
+
+### Important Considerations
+- **Hash Function**: Crucial for performance; affects how keys are distributed.
+- **Load Factor**: Affects the balance between time and space cost.
+- **Resizing**: Involves rehashing keys when the capacity is exceeded.
+
+---
+
+## HashSet
+
+### Definition
+`HashSet` is a collection that implements the `Set` interface, backed by a hash table. It does not allow duplicate elements and does not maintain any order of elements.
+
+### Real-Time Example
+In a recommendation system, a `HashSet` can be used to store unique tags or keywords associated with user preferences to avoid duplication.
+
+### Advantages and Limitations
+
+| **Aspect**         | **HashSet**                                               |
+|--------------------|------------------------------------------------------------|
+| **Advantages**     | - Ensures no duplicate elements.<br>- Provides fast operations for basic operations (O(1) on average). |
+| **Limitations**    | - Does not maintain order.<br>- Not synchronized. |
+
+### Important Considerations
+- **Hash Function**: Essential for performance and ensuring uniqueness.
+- **Null Elements**: Allows one null element.
+- **Performance**: Depends on the quality of the hash function and load factor.
+
+---
+
+## Hashtable
+
+### Definition
+`Hashtable` is a collection that implements the `Map` interface. It is similar to `HashMap` but is synchronized, meaning it is thread-safe and can be used in concurrent environments. It does not allow null keys or values.
+
+### Real-Time Example
+In a multi-threaded server application, a `Hashtable` can be used to store configuration settings that are accessed and modified by multiple threads concurrently.
+
+### Advantages and Limitations
+
+| **Aspect**         | **Hashtable**                                            |
+|--------------------|-----------------------------------------------------------|
+| **Advantages**     | - Thread-safe and synchronized.<br>- Ensures data consistency in multi-threaded environments. |
+| **Limitations**    | - Slower performance compared to `HashMap` due to synchronization.<br>- Does not allow null keys or values. |
+
+### Important Considerations
+- **Synchronization**: Ensures thread safety but can lead to performance overhead.
+- **Null Elements**: Does not support null keys or values.
+- **Performance**: Generally slower due to synchronization.
+
+---
+
+## Comparison Summary
+
+| **Collection** | **Allows Null Keys** | **Allows Null Values** | **Thread-Safe** | **Maintains Order** |
+|----------------|-----------------------|------------------------|-----------------|---------------------|
+| **HashMap**    | Yes                   | Yes                    | No              | No                  |
+| **HashSet**    | Yes                   | Yes                    | No              | No                  |
+| **Hashtable**  | No                    | No                     | Yes             | No                  |
+
+Each of these collections serves different needs depending on the use case, whether it’s for performance, thread safety, or specific requirements regarding null values and ordering.
+
+# Tree
+
+## Definition
+A tree is a hierarchical data structure consisting of nodes, where each node contains a value and links to child nodes. The top node is known as the root, and each node can have zero or more child nodes. Trees are used to represent hierarchical relationships and are fundamental in various algorithms and data structures.
+
+## Real-Time Example
+A common real-time example of a tree is a **file system** on a computer. In a file system, directories (folders) are nodes that can contain files or other directories, forming a hierarchical structure. 
+
+## Types of Trees
+
+### 1. Binary Tree
+- **Definition**: A tree where each node has at most two children (left and right).
+- **Types**:
+  - **Full Binary Tree**: Every node has either 0 or 2 children.
+  - **Complete Binary Tree**: All levels, except possibly the last, are completely filled, and all nodes are as left as possible.
+
+### 2. Binary Search Tree (BST)
+- **Definition**: A binary tree where each node has a value greater than all values in its left subtree and less than all values in its right subtree.
+
+### 3. AVL Tree
+- **Definition**: A self-balancing binary search tree where the difference in heights of left and right subtrees (balance factor) is at most 1.
+
+### 4. Red-Black Tree
+- **Definition**: A self-balancing binary search tree where nodes are colored red or black to ensure the tree remains balanced.
+
+### 5. B-Tree
+- **Definition**: A self-balancing tree data structure that maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time. Commonly used in databases and file systems.
 
 
+## Advantages
 
+- **Hierarchical Representation**: Trees are excellent for representing hierarchical relationships such as organizational structures, file systems, and XML documents.
+- **Efficient Searching**: Data structures like Binary Search Trees (BST) and their balanced variants (AVL and Red-Black Trees) allow for efficient searching, insertion, and deletion operations.
+- **Ordered Data**: Trees such as BSTs and Tries can maintain data in a sorted order, facilitating quick access and retrieval.
+- **Flexibility**: Trees can be adapted to various needs, such as managing hierarchical data (e.g., file systems) or indexing (e.g., B-Trees in databases).
 
+## Limitations
 
+- **Complexity**: Tree structures can become complex to implement and manage, especially for self-balancing trees like AVL or Red-Black Trees.
+- **Memory Usage**: Trees require additional memory for pointers or references, which can be significant for large trees.
+- **Balancing Overhead**: Self-balancing trees (AVL, Red-Black) involve additional overhead for balancing, which can impact performance.
 
+## Important Aspects
 
+1. **Traversal**: Common tree traversal techniques include:
+   - **In-order**: Left, Root, Right (used for binary search trees to get sorted order).
+   - **Pre-order**: Root, Left, Right.
+   - **Post-order**: Left, Right, Root.
+   - **Level-order**: Breadth-first traversal using a queue.
 
+2. **Balancing**: For binary search trees, maintaining balance is crucial for ensuring efficient operations. Self-balancing trees like AVL and Red-Black Trees automatically handle balancing.
 
+3. **Height and Depth**: The height of a tree is the number of edges on the longest path from the root to a leaf. The depth of a node is the number of edges from the root to that node.
 
+4. **Applications**:
+   - **File Systems**: Organize files and directories.
+   - **Databases**: Indexing with B-Trees and Red-Black Trees.
+   - **Networking**: Routing protocols and network multicast trees.
 
-
-
-
-
-
-
-
-
-
+# Algorithms
 ```plaintext
 Algorithms
     |
@@ -387,39 +626,116 @@ Algorithms
           +-- Subset Sum Problem
 ```
 
-<h2>what is StringBuilder</h2>
-StringBuilder is a class used to create mutable (modifiable) sequences of characters. Unlike String, which is immutable, StringBuilder allows you to modify the content without creating a new object for each modification, making it more efficient for scenarios where frequent modifications are required.
-<h2>Key Features of StringBuilder</h2>
-Mutable: Unlike String, StringBuilder objects can be modified after they are created.
-Efficient: More efficient for concatenating multiple strings compared to String due to reduced overhead from creating new objects.
-Not Thread-Safe: Methods in StringBuilder are not synchronized, meaning they are not thread-safe. Use StringBuffer if thread safety is required.<br>
-Common Methods in StringBuilder<br>
-append(): Adds a string representation of any data type to the current sequence.<br>
-insert(): Inserts a string at the specified index.<br>
-replace(): Replaces characters in a substring with another string.<br>
-delete(): Removes characters from the sequence.<br>
-reverse(): Reverses the sequence.<br>
-toString(): Converts the sequence to a String object.<br>
-Not thread safe <br>
-Not synchronised <br>
-Faster
 
-<h2>what isStringBuffer</h2>
-StringBuffer is a class used for creating and manipulating sequences of characters. Like StringBuilder, StringBuffer is mutable, meaning its content can be modified after creation. However, StringBuffer is synchronized, making it thread-safe for use in concurrent programming environments.
-<h2>Key Features of StringBuffer</h2>
-Mutable: StringBuffer objects can be modified after they are created, unlike String.<br>
-Thread-Safe: Methods in StringBuffer are synchronized, ensuring that it is safe to use in multi-threaded environments.<br>
-Efficiency: More efficient for concatenating multiple strings compared to String due to reduced overhead from creating new objects.<br>
-Common Methods in StringBuffer
-append(): Adds a string representation of any data type to the current sequence.<br>
-insert(): Inserts a string at the specified index.<br>
-replace(): Replaces characters in a substring with another string.<br>
-delete(): Removes characters from the sequence.<br>
-reverse(): Reverses the sequence.<br>
-toString(): Converts the sequence to a String object.<br>
-Thread safe<br>
-Synchronised<br>
-Slower<br>
+# Sorting Algorithms
+
+Sorting algorithms are fundamental in computer science, used to reorder items in a list or array according to a specific order, usually ascending or descending. Different algorithms offer various trade-offs in terms of efficiency and complexity.
+
+## Bubble Sort
+
+### Definition
+Bubble Sort is a simple comparison-based sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
+
+### How It Works
+1. **Compare Adjacent Elements**: Start with the first element and compare it to the next element.
+2. **Swap if Needed**: If the current element is greater than the next element, swap them.
+3. **Repeat**: Continue this process for each element until the end of the list.
+4. **Passes**: Repeat the above steps for the remaining unsorted portion of the list until no swaps are needed.
+
+### Complexity
+- **Time Complexity**: O(n^2) (worst and average case)
+- **Space Complexity**: O(1)
+
+---
+
+## Selection Sort
+
+### Definition
+Selection Sort is an in-place comparison-based sorting algorithm that divides the input list into a sorted and an unsorted region. It repeatedly selects the smallest (or largest) element from the unsorted region and moves it to the end of the sorted region.
+
+### How It Works
+1. **Find Minimum**: Find the minimum element in the unsorted region of the list.
+2. **Swap**: Swap the minimum element with the first element of the unsorted region.
+3. **Move Boundary**: Move the boundary between the sorted and unsorted regions one element to the right.
+4. **Repeat**: Repeat until the entire list is sorted.
+
+### Complexity
+- **Time Complexity**: O(n^2) (worst and average case)
+- **Space Complexity**: O(1)
+
+---
+
+## Insertion Sort
+
+### Definition
+Insertion Sort is a simple comparison-based sorting algorithm that builds the final sorted list one item at a time. It takes each element from the input list and inserts it into its correct position in the already sorted part of the list.
+
+### How It Works
+1. **Iterate**: Start with the second element and compare it with the elements before it.
+2. **Shift**: Shift all elements that are greater than the current element to the right.
+3. **Insert**: Insert the current element into its correct position.
+4. **Repeat**: Continue until the entire list is sorted.
+
+### Complexity
+- **Time Complexity**: O(n^2) (worst case), O(n) (best case)
+- **Space Complexity**: O(1)
+
+---
+
+## Merge Sort
+
+### Definition
+Merge Sort is a divide-and-conquer comparison-based sorting algorithm. It divides the list into two halves, sorts each half, and then merges the sorted halves.
+
+### How It Works
+1. **Divide**: Divide the list into two halves recursively until each sublist contains a single element.
+2. **Merge**: Merge the sublists to produce sorted sublists until the entire list is sorted.
+
+### Complexity
+- **Time Complexity**: O(n log n) (worst, average, and best case)
+- **Space Complexity**: O(n)
+
+---
+
+## Quick Sort
+
+### Definition
+Quick Sort is a divide-and-conquer comparison-based sorting algorithm. It selects a 'pivot' element from the list, partitions the other elements into those less than and greater than the pivot, and recursively sorts the partitions.
+
+### How It Works
+1. **Choose Pivot**: Select a pivot element from the list.
+2. **Partition**: Rearrange the list so that elements less than the pivot come before it and elements greater than the pivot come after it.
+3. **Recursively Apply**: Apply the above steps recursively to the sublists.
+
+### Complexity
+- **Time Complexity**: O(n^2) (worst case), O(n log n) (average case)
+- **Space Complexity**: O(log n) (average case)
+
+---
+
+## Heap Sort
+
+### Definition
+Heap Sort is a comparison-based sorting algorithm that uses a binary heap data structure. It first builds a max heap (or min heap) from the input data and then repeatedly extracts the maximum (or minimum) element from the heap and reconstructs the heap.
+
+### How It Works
+1. **Build Heap**: Convert the list into a max heap (or min heap).
+2. **Extract Maximum**: Remove the maximum element from the heap and place it at the end of the list.
+3. **Rebuild Heap**: Rebuild the heap from the remaining elements.
+4. **Repeat**: Repeat the extraction and rebuilding steps until the heap is empty.
+
+### Complexity
+- **Time Complexity**: O(n log n) (worst, average, and best case)
+- **Space Complexity**: O(1)
+
+
+
+
+
+
+
+
+
 
 <h2>Recursion </h2>
 Recursion is a programming technique where a function calls itself directly or indirectly to solve a problem. It's a fundamental concept in computer science and can be a powerful tool for solving problems that exhibit repetitive structures or can be broken down into smaller, similar sub-problems.
@@ -448,155 +764,3 @@ O(n): Linear time - the running time grows linearly with the input size.<br>
 O(n^2): Quadratic time - the running time grows quadratically with the input size.<br>
 O(log n): Logarithmic time - the running time grows logarithmically with the input size.
 
-
-<h1> DSA </h2>
-
-<h2>Linked List </h2>
-
-A LinkedList in Java is a linear and fundamental data structure that stores the Java components. It offers Java users an efficient, flexible way to store and work with various Java elements.
-Java LinkedList allows dynamic size adjustment as and when elements are subtracted or added. Here in this tutorial, you will learn what is LinkedList, its needs, its operation, demonstration, LinkedList in a data structure, and much more.
-A linked list is a linear data structure where elements are stored in nodes, and each node points to the next node in the sequence.
-
-<h2>Types of Linked Lists</h2>
-Singly Linked List: Each node points to the next node.<br>
-Doubly Linked List: Each node points to both the next and the previous node.<br>
-Circular Linked List: The last node points back to the first node, forming a circle.<br>
-
-<h2>Basic Operations</h2>
-○ Insertion: Adding a new node at the beginning, end, or middle of the list.<br>
-○ Deletion: Removing a node from the list.<br>
-○ Traversal: Iterating through the list to access or manipulate nodes.<br>
-○ Search: Finding a node with a specific value or index.
-
-<h2>Advantages</h2>
-○ Dynamic size: Linked lists can grow or shrink in size during execution.<br>
-○ Ease of insertion and deletion: Adding or removing nodes doesn't require shifting elements, unlike arrays.<br>
-○ Versatility: Different types of linked lists offer flexibility based on the application needs.
-
-<h2>Disadvantages</h2>
-○ Memory Overhead: Each node in a linked list requires extra memory for storing the link.<br>
-○ Traversal: Sequential access is slower compared to arrays because elements are not stored contiguously in memory.<br>
-○ No Random Access: Unlike arrays, accessing an element at a particular index requires traversing from the beginning.
-
-
-<h2>Why Use Linked Lists</h2>
-
-1. Dynamic Size: Unlike arrays, linked lists can grow and shrink in size dynamically. This makes them suitable for situations where the number of elements is unknown or varies significantly.<br>
-2. Efficient Insertions/Deletions: Insertions and deletions in a linked list are more efficient compared to arrays. Adding or removing elements can be done in constant time O(1) if the position is known, without the need to shift elements like in arrays.<br>
-3. Memory Utilization: Linked lists do not require a contiguous block of memory. This can help in better memory utilization, especially in systems with limited memory or fragmented memory.<br>
-4. Flexible Data Structures: Linked lists form the basis for implementing various other data structures such as stacks, queues, and graphs. They provide a flexible way to represent these structures.<br>
-5. Ease of Expansion: Adding new elements to a linked list does not require resizing or copying the existing elements, unlike dynamic arrays which might need to allocate new memory and copy old elements during resizing.
-
-
-<h2>A doubly linked list</h2>
-
-in Java is a data structure where each node contains references to both the next and the previous node in the sequence. This allows for traversal of the list in both directions.
-
-
-<h2>Notes</h2>
-
-*A DS in which elements are stored in non contiouos allocation memory <br>
-Each element in LL is a node.<br>
-*node is 2 types<br>
-1. data types<br>
-2. address which hold address of next node.<br>
-1st node called special node "head". 
-Last node callend "tail". having address null.
-insetion & deletion happens in constant time.
-
-<h2>Stack</h2>
-Stack is a linear data structure based on based on LIFO(Last In First Out) principle in which the insertion of a new element and removal of an existing element takes place at the same end represented as the top of the stack.
-To implement the stack, it is required to maintain the pointer to the top of the stack , which is the last element to be inserted because we can access the elements only on the top of the stack.
-
-<h2>LIFO(Last In First Out) Principle in Stack:</h2>
-
-This strategy states that the element that is inserted last will come out first. You can take a pile of plates kept on top of each other as a real-life example. The plate which we put last is on the top and since we remove the plate that is at the top, we can say that the plate that was put last comes out first.
-
-<h2>Methods in Stack Class</h2>
-1. push(element): Adds a new element to the stack's top.
-2. pop(): Removes and returns the topmost element in the stack.
-3. peek(): Returns the topmost stack element without deleting it.
-4. empty(): Returns a boolean result that determines if the stack is empty.
-5. size(): Gives the stack's element count.
-<h2>Applications of Stack in Java</h2>
-Stacks check for balanced parentheses, match XML and HTML tags, and validate code syntax.<br>
-A stack allows the evaluation of expressions, especially infix, postfix, and prefix expressions. A stack can convert infix expressions to postfix or prefix forms.<br>
-Stacks are frequently used by backtracking algorithms, including depth-first search (DFS), to retain track of visited nodes and return to earlier stages during exploration.
-
-<h2>Queue</h2>
-Queue in Java is a data structure for handling collections of duplicate items. The elements are stored in first-in, first-out (FIFO) queues. The line begins at the front and extends to the rear. Each Queue method has an exception-throwing and a value-returning variant in case the former fails.<br>
-
- Queue is a Linear Data Structure that works on First-in-First-Out (FIFO) principle.
-
-It has two pointers, 'Front' that points to the beginning of the queue and 'Rear' that points to the end of the queue.
-
-The 'Front' and 'Rear' pointers are manipulated constantly to always point to the beginning and end of queue.
-
-It can be implemented using Arrays and Linked Lists.
-
-<h2>operations</h2>
-Enqueue: 
-Add an element to the end of the queue
-Dequeue: 
-Remove an element from the front of the queue
-IsEmpty: 
-Check if the queue is empty
-IsFull: 
-Check if the queue is full
-Peek: 
-Get the value of the front of the queue without removing it<br>
-note:
-the remove() method throws an exception, while the poll() method returns null
-
-<h2>HashMap</h2>
-HashMap in Java is an integral part of the collections framework. It is located in the java.util package. It implements the Java Map interface in its most basic form. It saves the data as a key-value mapping, where each key corresponds to exactly one data type value. Here is a tutorial blog on how to use HashMap in Java.<br>
-
-Hashing is a technique that gives you a convenient way to store and
-search for elements in large datasets.
-
-<h2>Advantages of HashMap</h2>
-
-Fast retrieval: HashMap provides constant-time access to elements. This means the time to retrieve or insert elements remains constant, even as the size of the HashMap increases.<br>
-Efficient storage: HashMap uses a hashing function to map keys to indices in an underlying array, allowing a fast lookup of values based on keys. The hashing function distributes the entries across different buckets, ensuring efficient data storage and retrieval.<br>
-Flexibility: HashMap allows for storing null keys and values, offering flexibility in handling data. Additionally, HashMap can store key-value pairs of any data type. This provides versatility in its usage.<br>
-Easy to use: HashMap has a straightforward and user-friendly interface. This makes it easy to understand and implement in Java.
-
-<h2>Disadvantages of HashMap</h2>
-Unordered: HashMaps do not preserve the order of elements.<br>
-Not thread-safe: HashMaps are not inherently thread-safe.<br>
-Performance degradation: In certain situations, the performance of HashMap can degrade.<br>
-Complexity: The concept of hashing, collision resolution, and understanding the intricacies of the equals and hashCode methods can be challenging and complex.<br>
-Higher memory usage: HashMaps use an underlying array to store key-value pairs, which can result in higher memory usage than other data structures like arrays or lists.<br>
-
-<h2>Collision resolution techniques</h2>
-
-1. Separate Chaining (Open Hashing)<br>
-In separate chaining (also known as open hashing), each slot in the hash table holds a reference to a linked list (or another data structure like a binary search tree) that contains all the elements that hash to the same index. When a collision occurs, the new element is simply added to the linked list at that index.<br>
-
-
-2. Open Addressing (Closed Hashing)<br>
-In open addressing (also known as closed hashing), all elements are stored directly in the hash table. When a collision occurs, open addressing searches for another open slot within the hash table according to a specific probing sequence.<br>
-
-<h2>Probing Techniques:</h2>
-• Linear Probing: Check the next slot in a sequential manner. If it's occupied, continue to the next slot until an open slot is found<br>
-• Quadratic Probing: Use a quadratic function to find the next slot (e.g., (index + i*2) % tableSize).<br>
-• Double Hashing: Use a second hash function to determine the step size for probing<br>
-
-<h2>Advantages</h2>
-• No additional memory is needed for pointers or linked lists.<br>
-• Generally faster access times for cache-friendly access patters.
-
-<h2>Disadvantages</h2>
-• Performance degrades as the hash table becomes full, leading to clustering (where nearby slots become occupied).<br>
-• Deletion can be complex because simply removing an element can disrupt the probing sequence.
-
-<h2>A. Linear Probing</h2>
-In linear probing, if a slot is occupied, the hash table checks the next slot in a linear sequence until an empty slot is found.
-
-<h2>B. Quadratic Probing</h2>
-In quadratic probing, if a slot is occupied, the hash table probes the next slot using a quadratic function<br>
-Formula: hash(x, i) = (hash(x) + i^2) % table_size, where i is the probe number.
-
-<h2>C. Double Hashing</h2>
-In double hashing, a second hash function is used to determine the step size for probing <br>
-Formula: hash(x, i) = (hash1(x) + i * hash2(x)) % table _size, where hash1(x) is the primary hash function and hash2(x) is the secondary hash function.
