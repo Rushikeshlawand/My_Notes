@@ -33,6 +33,42 @@ Although the JVM is platform-dependent, the bytecode can be created on one syste
 - **Multithreaded:** Java can manage multiple tasks simultaneously by using multiple threads.
 - **Architecture Neutral:** Java is not dependent on the underlying hardware architecture.
 
+# Different Data Types in Java
+
+## Primitive Data Types
+
+Primitive data types are basic types that hold single values and have no special methods or properties. There are 8 primitive data types in Java:
+
+| **Data Type** | **Description**                              | **Size** | **Range**                                             |
+|---------------|----------------------------------------------|----------|-------------------------------------------------------|
+| `boolean`     | Stores a value of `true` or `false`          | N/A      | `true` or `false`                                     |
+| `byte`        | Stores an 8-bit signed two’s complement integer | 1 byte   | -128 to 127                                           |
+| `char`        | Stores a single 16-bit Unicode character      | 2 bytes  | 0 to 65,535 (Unicode values)                         |
+| `short`       | Stores a 16-bit signed two’s complement integer | 2 bytes  | -32,768 to 32,767                                     |
+| `int`         | Stores a 32-bit signed two’s complement integer | 4 bytes  | -2,147,483,648 to 2,147,483,647                       |
+| `long`        | Stores a 64-bit signed two’s complement integer | 8 bytes  | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
+| `float`       | Stores a single-precision 32-bit IEEE 754 floating-point | 4 bytes  | Approximately ±3.40282347E+38 (6-7 decimal places)   |
+| `double`      | Stores a double-precision 64-bit IEEE 754 floating-point | 8 bytes  | Approximately ±1.79769313486231570E+308 (15-16 decimal places) |
+
+## Non-Primitive Data Types
+
+Non-primitive data types are reference types that hold references to objects rather than the actual values. They include:
+
+| **Data Type** | **Description**                              |
+|---------------|----------------------------------------------|
+| `String`      | Represents a sequence of characters.        |
+| `Array`       | Holds multiple values of the same type.     |
+| `Class`       | Defines a blueprint for objects.            |
+| `Object`      | The base class for all classes.              |
+| `Interface`   | Defines methods that can be implemented by classes. |
+
+### Explanation
+
+- **Primitive Data Types:** They are predefined by the language and are not objects. They store data directly and have fixed sizes and ranges.
+  
+- **Non-Primitive Data Types:** They are created by the user and can store complex data. They hold references to objects and can have methods and properties.
+
+
 ## Types of Java Applications
 
 - **Console-Based Applications:** Applications that run in a command-line interface (CLI) without a graphical user interface (GUI). They interact with users through text-based input and output.
@@ -138,11 +174,12 @@ public class Example {
     public void main(String[] args) {
         System.out.println("This will not be the entry point.");
     }
-}
+} 
+```
 
 ## What Are Packages in Java?
 
-Packages in Java are used to group related classes, interfaces, and other types into a single namespace. This organization provides access protection and helps manage namespaces effectively. 
+Packages in Java are used to group related classes, interfaces, and other types into a single namespace. This organization provides access protection and helps manage namespaces effectively.
 
 - **Purpose of Packages:**
   - **Prevent Naming Conflicts:** By grouping related types, packages help avoid naming collisions.
@@ -173,26 +210,6 @@ Packages in Java are used to group related classes, interfaces, and other types 
    - Provided by the Java Standard Library.
    - Examples include `java.lang`, `java.util`, `java.io`, etc.
    - These packages come with Java and offer a wide range of pre-defined classes and interfaces.
-
-
-
-<h2>Explain different data types in Java.</h2>
-Primitive Data Type: Primitive data are single values with no special capabilities. There are 8 primitive data types:
-boolean: stores value true or false<br>
-byte: stores an 8-bit signed two’s complement integer<br>
-char: stores a single 16-bit Unicode character<br>
-short: stores a 16-bit signed two’s complement integer
-int: stores a 32-bit signed two’s complement integer
-long: stores a 64-bit two’s complement integer
-float: stores a single-precision 32-bit IEEE 754 floating-point
-double: stores a double-precision 64-bit IEEE 754 floating-point
-
-Non-Primitive Data Type: Reference Data types will contain a memory address of the variable’s values because it is not able to directly store the values in the memory.
-Strings
-Array
-Class
-Object
-Interface
 
 <h2>Can we declare Pointer in Java?</h2>
 No, Java doesn’t provide the support of Pointer. As Java needed to be more secure because which feature of the pointer is not provided in Java
