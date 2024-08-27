@@ -123,22 +123,58 @@ In Java, the entry point of a program is the `main` method, declared as `public 
 
 - **String args[]:** This is an array of `java.lang.String` objects that stores command-line arguments passed to the program. It allows the program to accept input from the command line when it is executed.
 
-<h2>What will happen if we declare don’t declare the main as static?</h2>
-We can declare the main method without using static and without getting any errors. But, the main method will not be treated as the entry point to the application or the program.
+## What Will Happen if We Don't Declare the `main` Method as `static`?
 
-<h2>What are Packages in Java?</h2>
-Packages in Java can be defined as the grouping of related types of classes, interfaces, etc providing access to protection and namespace management.
-Packages are used in Java in order to prevent naming conflicts, control access, and make searching/locating and usage of classes, interfaces, etc easier.
+If you declare the `main` method without using the `static` keyword, the program will not behave as expected. Here’s why:
 
-<h2>What are the advantages of Packages in Java?</h2>
-Packages avoid name clashes.
-The Package provides easier access control.
-We can also have the hidden classes that are not visible outside and are used by the package.
-It is easier to locate the related classes.
+- **Non-Static Main Method:** If the `main` method is not declared as `static`, it will not be recognized as the entry point of the Java application by the JVM (Java Virtual Machine). As a result, the JVM will not be able to invoke this method to start the execution of the program.
+  
+- **Compilation:** You can declare the `main` method without `static` and compile it without errors. However, you won’t be able to run the program as expected because the JVM relies on the `main` method being `static` to start the program.
 
-<h2>How many types of packages are there in Java?</h2>
-User-defined packages<br>
-Build In packages
+### Example
+
+```java
+public class Example {
+    public void main(String[] args) {
+        System.out.println("This will not be the entry point.");
+    }
+}
+
+## What Are Packages in Java?
+
+Packages in Java are used to group related classes, interfaces, and other types into a single namespace. This organization provides access protection and helps manage namespaces effectively. 
+
+- **Purpose of Packages:**
+  - **Prevent Naming Conflicts:** By grouping related types, packages help avoid naming collisions.
+  - **Access Control:** Packages control access to classes and their members, allowing for more secure code.
+  - **Easier Organization:** Packages make it easier to locate and use related classes and interfaces.
+
+## What Are the Advantages of Packages in Java?
+
+1. **Avoid Name Clashes:** Packages help in preventing naming conflicts by grouping related classes and interfaces into distinct namespaces.
+2. **Easier Access Control:** Packages allow control over access to classes and members, providing better encapsulation and security.
+3. **Hidden Classes:** Packages can include classes that are not visible outside the package, which helps in encapsulating implementation details.
+4. **Improved Organization:** It becomes easier to locate and manage related classes and interfaces, enhancing code organization and maintainability.
+
+## How Many Types of Packages Are There in Java?
+
+1. **User-Defined Packages:**
+   - Created by developers to organize their own classes and interfaces.
+   - Example:
+     ```java
+     package com.example.myapp;
+     
+     public class MyClass {
+         // Class contents
+     }
+     ```
+
+2. **Built-In Packages:**
+   - Provided by the Java Standard Library.
+   - Examples include `java.lang`, `java.util`, `java.io`, etc.
+   - These packages come with Java and offer a wide range of pre-defined classes and interfaces.
+
+
 
 <h2>Explain different data types in Java.</h2>
 Primitive Data Type: Primitive data are single values with no special capabilities. There are 8 primitive data types:
