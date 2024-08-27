@@ -59,51 +59,69 @@ Although the JVM is platform-dependent, the bytecode can be created on one syste
 | **JVM**       | The Java Virtual Machine (JVM) is a virtual machine that executes compiled Java bytecode, allowing Java programs to run independently across different hardware and operating systems. It handles memory management, garbage collection, and bytecode interpretation or JIT compilation.  |
 
 
-<h2>What is JIT?</h2>
-JIT stands for (Just-in-Time) compiler is a part of JRE, it is used for better performance of the Java applications during run-time. The use of JIT is mentioned in step by step process mentioned below:
-Source code is compiled with javac compiler to form bytecode, Bytecode is further passed on to JVM 
-JIT is a part of JVM, JIT is responsible for compiling bytecode into native machine code at run time.
-The JIT compiler is enabled throughout, while it gets activated when a method is invoked. For a compiled method, the JVM directly calls the compiled code, instead of interpreting it.
-As JVM calls the compiled code that increases the performance and speed of the execution.
+## What is JIT?
+
+**JIT (Just-in-Time) Compiler** is a part of the JRE (Java Runtime Environment) designed to enhance the performance of Java applications during runtime. Here’s how it works:
+
+1. **Source Code Compilation:** The Java source code is first compiled into bytecode using the `javac` compiler.
+2. **Bytecode Processing:** The bytecode is then passed to the JVM (Java Virtual Machine).
+3. **JIT Compilation:** JIT, which is a part of the JVM, compiles the bytecode into native machine code at runtime.
+4. **Method Invocation:** JIT is activated when a method is invoked. Once a method is compiled by JIT, the JVM directly calls the compiled machine code instead of interpreting the bytecode.
+5. **Performance Improvement:** By calling the compiled code directly, JIT increases the performance and speed of Java applications.
+
+This process allows Java applications to run faster and more efficiently by reducing the overhead of interpreting bytecode during execution.
+
+## What is a Classloader?
+
+A **classloader** is a component of the JRE (Java Runtime Environment). Its primary function is to dynamically load Java classes and interfaces into the JVM (Java Virtual Machine) during the execution of bytecode or .class files. 
+
+### Key Points:
+- **Dynamic Loading:** Classloaders load classes and interfaces at runtime, rather than at compile-time.
+- **Independence from Files:** The Java runtime system does not need to know about the underlying files and file systems due to the classloading mechanism.
 
 
-<h2>What is a classloader?</h2>
-Classloader is the part of JRE(Java Runtime Environment), during the execution of the bytecode or created .class file 
-classloader is responsible for dynamically loading the java classes and interfaces to JVM(Java Virtual Machine). 
-Because of classloaders Java run time system does not need to know about files and file systems.
+## Comparison of Java Access Modifiers
 
-<h2>Difference between JVM, JRE, and JDK.</h2>
-JVM: JVM also known as Java Virtual Machine is a part of JRE. JVM is a type of interpreter responsible for converting bytecode into machine-readable code.<br>
-JVM itself is platform dependent but it interprets the bytecode which is the platform-independent reason why Java is platform-independent. <br>
-JRE: JRE stands for Java Runtime Environment, it is an installation package that provides an environment to run the Java program or application on any machine.<br>
-JDK: JDK stands for Java Development Kit which provides the environment to develop and execute Java programs. JDK is a package that includes two things Development Tools to provide an environment to develop your Java programs and, JRE to execute Java programs or applications.<br>
+| **Modifier** | **Same Class** | **Same Package** | **Subclass** | **Different Package** |
+|--------------|----------------|------------------|--------------|-----------------------|
+| **public**   | Yes            | Yes              | Yes          | Yes                   |
+| **protected**| Yes            | Yes              | Yes          | No                    |
+| **default**  | Yes            | Yes              | No           | No                    |
+| **private**  | Yes            | No               | No           | No                    |
 
-<h2>Java Terminology</h2>
+### Explanation
 
-Class: A class can be defined as a template or blueprint that defines the properties (data fields) and behaviors (methods) of objects. Classes serve as blueprints for creating multiple instances (objects) of the same type.<br>
+- **`public`**: 
+  - Accessible from any class, regardless of package.
+  - Used when you want the member to be accessible from anywhere.
 
-Object: An object is an instance of a class. It represents a real-world entity or concept and encapsulates data (properties) and behavior (methods).<br>
-Method: A method is a block of code that performs a specific task. It is defined within a class and can be called (invoked) to execute its functionality. Methods may have parameters (input) and may return a value.<br>
+- **`protected`**: 
+  - Accessible within the same package and by subclasses (even if they are in different packages).
+  - Used when you want the member to be accessible within the package and by subclasses.
 
-Inheritance: Inheritance is a mechanism in Java that allows a class (subclass) to inherit the properties and behaviors of another class (superclass). It enables code reuse and supports the concept of a hierarchical relationship between classes.<br>
+- **`default`** (no modifier): 
+  - Also known as package-private.
+  - Accessible only within the same package.
+  - Used when you want the member to be accessible only within the package.
 
-Interface: An interface is a collection of abstract methods. It defines a contract that classes can implement, specifying the methods they must provide. Interfaces allow for multiple inheritances in Java.<br>
+- **`private`**: 
+  - Accessible only within the same class.
+  - Used when you want to restrict access to the member from outside the class.
 
-Package: A package is a way to organize related classes and interfaces. It provides a namespace to avoid naming conflicts. Packages help in modularizing and organizing code.<br>
 
-Exception: An exception is an event that occurs during the execution of a program, resulting in the disruption of the normal flow. Java provides a robust exception-handling mechanism to catch and handle such exceptions, preventing program crashes.<br>
+## Explain `public static void main(String args[])` in Java
 
-Static: The static keyword is used to declare a member (variable or method) that belongs to the class rather than the class's instances (objects). Static members are shared among all instances of the class.
+In Java, the entry point of a program is the `main` method, declared as `public static void main(String args[])`. Each part of this declaration has a specific meaning:
 
-<h2>Explain public static void main(String args[]) in Java.</h2>
-Main_function
-Unlike any other programming language like C, C++, etc. In Java, we declared the main function as a public static void main (String args[]). The meanings of the terms are mentioned below:<br>
-public: the public is the access modifier responsible for mentioning who can access the element or the method and what is the limit.  It is responsible for making the main function globally available. <br>
-It is made public so that JVM can invoke it from outside the class as it is not present in the current class.
-static: static is a keyword used so that we can use the element without initiating the class so to avoid the unnecessary allocation of the memory. <br>
-void: void is a keyword and is used to specify that a method doesn’t return anything. As the main function doesn’t return anything we use void.<br>
-main: main represents that the function declared is the main function. It helps JVM to identify that the declared function is the main function.<br>
-String args[]: It stores Java command-line arguments and is an array of type java.lang.String class.
+- **public:** This is an access modifier that makes the `main` method accessible from outside the class. It is necessary for the Java Virtual Machine (JVM) to invoke the `main` method from outside the class, as it is not called by other methods within the class.
+
+- **static:** This keyword means that the `main` method can be called without creating an instance of the class. This is important because the JVM needs to call the `main` method directly, without needing to instantiate the class first, thus avoiding unnecessary memory allocation.
+
+- **void:** This keyword specifies that the `main` method does not return any value. The `main` method is designed to execute the program and does not need to return anything to the caller.
+
+- **main:** This is the name of the method and signifies that it is the main entry point of the program. The JVM looks for this specific method signature to start the execution of the program.
+
+- **String args[]:** This is an array of `java.lang.String` objects that stores command-line arguments passed to the program. It allows the program to accept input from the command line when it is executed.
 
 <h2>What will happen if we declare don’t declare the main as static?</h2>
 We can declare the main method without using static and without getting any errors. But, the main method will not be treated as the entry point to the application or the program.
