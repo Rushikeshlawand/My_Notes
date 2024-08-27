@@ -1,3 +1,360 @@
+# Object-Oriented Programming (OOP) in Java
+
+Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects," which are instances of classes. OOP helps in organizing and structuring code in a way that promotes reusability, maintainability, and scalability. The core principles of OOP include Encapsulation, Inheritance, Polymorphism, and Abstraction.
+## 1. Encapsulation
+
+### Definition
+Encapsulation is the concept of wrapping data (attributes) and methods (functions) into a single unit, called a class. It helps in hiding the internal state of an object and only exposing the necessary parts. This principle is similar to how a pill is wrapped in a protective coating. The pill itself (data) is concealed within the coating, which controls how and when it interacts with the body (methods).
+
+### Example
+Imagine a pill with a coating that prevents it from dissolving until it reaches the right part of the digestive system. Similarly, in encapsulation, the internal details of a class (such as its data and how it is manipulated) are hidden from the outside world. Users of the class interact with it through well-defined methods, just as a pill's coating ensures that the medicine is released in a controlled manner.
+
+### Implementation
+Encapsulation is implemented by:
+1. **Declaring Variables as Private**: This restricts direct access to the data members of the class from outside its scope, ensuring that the data is protected.
+2. **Providing Public Getter and Setter Methods**: These methods allow controlled access to the private data. Getters retrieve the value of private variables, and setters modify them while ensuring that any required validation is performed.
+
++--------------------+
+|    Person          |
++--------------------+
+| - name: String     |
+| - age: int         |
++--------------------+
+| + getName(): String|
+| + setName(name: String): void |
+| + getAge(): int    |
+| + setAge(age: int): void       |
++--------------------+
+
+### Code Example
+
+```java
+public class Person {
+    // Private variables (data hiding)
+    private String name;
+    private int age;
+
+    // Public getter and setter methods (access control)
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if (age > 0) {
+            this.age = age;
+        }
+    }
+}
+```
+
+# Inheritance in Object-Oriented Programming (OOP)
+
+## Definition
+
+Inheritance is a fundamental concept in OOP that allows a new class (child or subclass) to inherit attributes and methods from an existing class (parent or superclass). This mechanism promotes code reusability and establishes a hierarchical relationship between classes.
+
+### Types of Inheritance
+
+1. **Single Inheritance**
+   - **Description**: A subclass inherits from a single superclass.
+   - **Example**: A `Dog` class inherits from an `Animal` class.
+
+```plaintext
+   Superclass
+       |
+       |
+   Subclass
+```
+
+
+### Example of Inheritance
+
+#### Single Inheritance Example
+
+```java
+// Parent class
+public class Animal {
+    public void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+// Child class inheriting from Animal
+public class Dog extends Animal {
+    public void bark() {
+        System.out.println("The dog barks.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat(); // Method inherited from Animal class
+        myDog.bark(); // Method from Dog class
+    }
+}
+```
+
+
+
+
+2. **Multiple Inheritance** (not supported in java but through interfaces we can implement)
+   - **Description**: A subclass can inherit from multiple interfaces. Java supports multiple inheritance through interfaces but not through classes.
+   - **Example**: A `Smartphone` class implements both `Phone` and `Camera` interfaces.
+
+```plaintext
+      Superclass1
+       |      
+       |      
+   Superclass2
+       |
+       |
+   Subclass
+```
+### Example 
+
+```java
+// First interface
+interface Animal {
+    void eat();
+}
+
+// Second interface
+interface Pet {
+    void play();
+}
+
+// Class implementing both interfaces
+class Dog implements Animal, Pet {
+    public void eat() {
+        System.out.println("The dog eats food.");
+    }
+
+    public void play() {
+        System.out.println("The dog plays with a ball.");
+    }
+}
+
+public class MultipleInheritanceExample {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat(); // Interface method
+        dog.play(); // Interface method
+    }
+}
+```
+
+
+3. **Multilevel Inheritance**
+   - **Description**: A subclass inherits from another subclass, creating a chain of inheritance.
+   - **Example**: A `GoldenRetriever` class inherits from a `Dog` class, which inherits from an `Animal` class.
+
+```plaintext
+      Grandparent
+       |
+       |
+   Parent
+       |
+       |
+   Child
+   ```
+### Example of Inheritance
+```java
+// Grandparent class
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+// Parent class
+class Mammal extends Animal {
+    void breathe() {
+        System.out.println("This mammal breathes air.");
+    }
+}
+
+// Child class
+class Dog extends Mammal {
+    void bark() {
+        System.out.println("The dog barks.");
+    }
+}
+
+public class MultilevelInheritanceExample {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat(); // Inherited from Animal
+        dog.breathe(); // Inherited from Mammal
+        dog.bark(); // Specific to Dog
+    }
+}
+
+```
+
+4. **Hierarchical Inheritance**
+   - **Description**: Multiple subclasses inherit from a single superclass.
+   - **Example**: `Cat` and `Dog` classes both inherit from an `Animal` class.
+
+```plaintext
+          Superclass
+       /    \
+      /      \
+ Subclass1  Subclass2
+      \
+       \
+    Subclass3
+```
+### Example of Inheritance
+```java
+// Superclass
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+// Subclass 1
+class Dog extends Animal {
+    void bark() {
+        System.out.println("The dog barks.");
+    }
+}
+
+// Subclass 2
+class Cat extends Animal {
+    void meow() {
+        System.out.println("The cat meows.");
+    }
+}
+
+public class HierarchicalInheritanceExample {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat(); // Inherited from Animal
+        dog.bark(); // Specific to Dog
+
+        Cat cat = new Cat();
+        cat.eat(); // Inherited from Animal
+        cat.meow(); // Specific to Cat
+    }
+}
+
+```
+
+5. **Hybrid Inheritance**
+   - **Description**: A combination of two or more types of inheritance, typically achieved through interfaces.
+   - **Example**: A `FlyingCar` class inherits from both `Car` and `FlyingVehicle` interfaces.
+
+```plaintext
+       ClassA
+      / \
+     /   \
+    /     \
+ ClassB  ClassC
+     \    /
+      \  /
+       ClassD
+```
+### Example of Inheritance
+```java
+// Interface 1
+interface Animal {
+    void eat();
+}
+
+// Interface 2
+interface Pet {
+    void play();
+}
+
+// Class inheriting from interfaces and another class
+class Mammal {
+    void breathe() {
+        System.out.println("This mammal breathes air.");
+    }
+}
+
+// Class implementing both interfaces and extending a class
+class Dog extends Mammal implements Animal, Pet {
+    public void eat() {
+        System.out.println("The dog eats food.");
+    }
+
+    public void play() {
+        System.out.println("The dog plays with a ball.");
+    }
+}
+
+public class HybridInheritanceExample {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat(); // From Animal interface
+        dog.play(); // From Pet interface
+        dog.breathe(); // From Mammal class
+    }
+}
+```
+# Benefits of Inheritance
+
+Inheritance provides several advantages that contribute to a more efficient and organized codebase. Here are the key benefits:
+
+## Code Reusability
+
+Inheritance allows the reuse of existing code by creating new classes based on existing ones. This reduces redundancy and avoids code duplication. Instead of rewriting the same methods and attributes, you can extend a class and inherit its features, making development faster and more maintainable.
+
+## Method Overriding
+
+Inheritance enables method overriding, where a subclass provides a specific implementation of a method that is already defined in its superclass. This allows subclasses to modify or extend the behavior of inherited methods to suit their needs, promoting flexibility and customization.
+
+## Hierarchical Classification
+
+Inheritance supports hierarchical classification, where classes are organized into a hierarchy. This hierarchical structure helps in organizing and managing code more effectively, making it easier to understand and maintain. It also facilitates the creation of a logical relationship between classes, improving code readability and structure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <h1>OOP's</h1>
