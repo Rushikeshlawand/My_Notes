@@ -512,7 +512,6 @@ public class BasicExceptionHandling {
 
 ### Multithreading and Concurrency
 
-```markdown
 # Multithreading and Concurrency
 
 ## Definition
