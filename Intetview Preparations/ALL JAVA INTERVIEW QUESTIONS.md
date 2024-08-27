@@ -144,6 +144,34 @@ A **classloader** is a component of the JRE (Java Runtime Environment). Its prim
   - Accessible only within the same class.
   - Used when you want to restrict access to the member from outside the class.
 
+# Types of Operators in Java
+
+Java provides various types of operators to perform different operations. Here’s a breakdown of the different operators available:
+
+| **Operator Type**      | **Operators**                                | **Description**                                      |
+|------------------------|----------------------------------------------|------------------------------------------------------|
+| **Arithmetic Operators** | `+`, `-`, `*`, `/`, `%`                     | Used for mathematical operations.                    |
+| **Unary Operators**    | `+`, `-`, `++`, `--`, `!`                   | Operates on a single operand to perform operations such as increment, decrement, and logical negation. |
+| **Assignment Operator**| `=`, `+=`, `-=`, `*=`, `/=`, `%=`           | Used to assign values to variables. Includes compound assignment operators. |
+| **Relational Operators** | `==`, `!=`, `<`, `>`, `<=`, `>=`           | Used to compare values and determine relational conditions. |
+| **Logical Operators**  | `&&`, `||`, `!`, `&`, `^`                   | Used to perform logical operations. `&&` and `||` are logical AND and OR, while `&` and `^` are bitwise operations that can also act as logical operators. |
+| **Ternary Operator**   | `? :`                                       | A shorthand for `if-else` statement. It evaluates a boolean expression and returns one of two values based on the result. |
+| **Bitwise Operators**  | `&`, `|`, `^`, `~`, `<<`, `>>`, `>>>`       | Used for operations on bits and binary numbers. Includes bitwise AND, OR, XOR, NOT, and shift operations. |
+| **Shift Operators**    | `<<`, `>>`, `>>>`                           | Used to shift bits to the left or right. |
+| **Instanceof Operator**| `instanceof`                                | Tests whether an object is an instance of a specific class or subclass. |
+
+### Summary
+
+- **Arithmetic Operators** perform basic mathematical operations.
+- **Unary Operators** operate on a single operand to perform increment, decrement, and logical negation.
+- **Assignment Operators** assign values to variables and include compound assignment operators.
+- **Relational Operators** compare two values and return a boolean result.
+- **Logical Operators** perform logical operations on boolean values and bits.
+- **Ternary Operator** provides a concise way to perform conditional expressions.
+- **Bitwise Operators** manipulate individual bits of integer types.
+- **Shift Operators** shift bits to the left or right.
+- **Instanceof Operator** checks the type of an object at runtime.
+
 
 ## Explain `public static void main(String args[])` in Java
 
@@ -211,93 +239,627 @@ Packages in Java are used to group related classes, interfaces, and other types 
    - Examples include `java.lang`, `java.util`, `java.io`, etc.
    - These packages come with Java and offer a wide range of pre-defined classes and interfaces.
 
-<h2>Can we declare Pointer in Java?</h2>
-No, Java doesn’t provide the support of Pointer. As Java needed to be more secure because which feature of the pointer is not provided in Java
+# Can We Declare Pointers in Java?
 
-<h2>What is the Wrapper class in Java?</h2>
-Wrapper, in general, is referred to a larger entity that encapsulates a smaller entity. Here in Java, the wrapper class is an object class that encapsulates the primitive data types. 
-The primitive data types are the ones from which further data types could be created. For example, integers can further lead to the construction of long, byte, short, etc. On the other hand, the string cannot, hence it is not primitive. 
-Getting back to the wrapper class, Java contains 8 wrapper classes. They are Boolean, Byte, Short, Integer, Character, Long, Float, and Double. Further, custom wrapper classes can also be created in Java which is similar to the concept of Structure in the C programming language. We create our own wrapper class with the required data types.
+No, Java does not support pointers. Unlike languages such as C and C++, Java does not allow direct manipulation of memory addresses through pointers. This design decision enhances the security and stability of Java applications.
 
-<h2>Why do we need wrapper classes?</h2>
-The wrapper class is an object class that encapsulates the primitive data types, and we need them for the following reasons:
-Wrapper classes are final and immutable
-Provides methods like valueOf(), parseInt(), etc.
-It provides the feature of autoboxing and unboxing.
+## Reasons for Lack of Pointer Support in Java
 
-<h2>What is a Class Variable?</h2>
-In Java, a class variable (also known as a static variable) is a variable that is declared within a class but outside of any method, constructor, or block. 
-Class variables are declared with the static keyword, and they are shared by all instances (objects) of the class as well as by the class itself. 
-No matter how many objects are derived from a class, each class variable would only exist once.
+- **Security:** Pointers can lead to security vulnerabilities such as buffer overflows and unauthorized memory access. By not supporting pointers, Java reduces the risk of such security issues.
+  
+- **Memory Management:** Java provides automatic memory management through garbage collection. This eliminates the need for direct memory manipulation, which is handled by the Java Virtual Machine (JVM).
 
-<h2>What is a static variable?</h2>
-The static keyword is used to share the same variable or method of a given class. Static variables are the variables 
-that once declared then a single copy of the variable is created and shared among all objects at the class level.
+- **Simplicity and Safety:** By abstracting away memory management and avoiding pointers, Java simplifies programming and reduces the likelihood of errors that can arise from manual memory management.
 
-<h2>Difference in the use of print, println, and printf.</h2>
-print, println, and printf all are used for printing the elements but print prints all the elements and the cursor remains in the same line. 
-println shifts the cursor to next line. And with printf we can use format identifiers too.
+In summary, the absence of pointers in Java contributes to its robustness, security, and ease of use.
 
-<h2>How many types of operators are available in Java? </h2>
-Arithmetic Operators: +,-,*,/,%.
-Unary Operators
-Assignment Operator: ==,=.
-Relational Operators: <,>,>=,<=,!.
-Logical Operators: &&, ||, &.
-Ternary Operator
-Bitwise Operators
-Shift Operators
-instance of operator
 
-<h2>What is the default value of elements in a newly created array in Java?</h2>
-For numeric types (int, float, etc.), the default value is 0.
-For boolean, the default value is false.
-For object references, the default value is null.
+# What Is a Static Variable?
 
-<h2>What is Methods?</h2>
-Methods are like mini-programs within a program. It is a set of codes that perform a particular task and return the result to the caller.
-They help organize code, making it more readable, reusable, and modular. 
-Understanding methods is essential for writing efficient and maintainable Java code. 
-It is used to expose the behavior of an object. 
-advantages:
-Reusability: Methods enable writing code once and using it multiple times, enhancing modularity and maintenance.
-Abstraction: Methods hide complex logic, offering a simpler interface for better readability and comprehension.
-Improved readability: Breaking code into named methods enhances readability and understanding.
-Encapsulation: Methods encapsulate complex logic and data for easier management.
+In Java, the `static` keyword is used to declare variables and methods that are shared among all instances of a class. A static variable is a class-level variable that is common to all objects of the class. This means that only one copy of the static variable is created, and it is shared among all instances of the class.
 
-<h2>Declare of methods</h2>
-public int add(int a,int b)
-modifier-return type-method name-parameter list.
+## Characteristics of Static Variables
 
-<h2>Modifier: Defines access level: public, protected, private, or default (no modifier). (Optional) </h2>
-Return Type: Data type of the value returned by the method, or void if no value is returned. (Mandatory) <br>
-Method Name: Identifier for the method, following naming conventions. (Mandatory) <br>
-Parameter List: Data type and name of input parameters, separated by commas and enclosed in parentheses. (Optional) <br>
-Exception List: Specifies exceptions the method may throw. (Optional) <br>
-Method Body: Enclosed code block where operations are performed. (Optional)
+- **Shared Among All Instances:** All instances of the class share the same static variable. Any changes made to the static variable by one instance will be reflected in all other instances.
 
-<h2>Final</h2>
-it used in various contexts to define constants and to ensure that certain variables, methods, and classes are not modified.
+- **Class-Level Variable:** Static variables are associated with the class itself rather than any particular instance. They can be accessed using the class name or through an instance of the class.
 
-<h2>This Keyword</h2>
-In object-oriented programming, the this keyword is a special reference that refers to the current object instance. It's particularly useful within methods and constructors of a class to interact with the object's own properties and methods.
-Here are some common ways to use the this keyword:<br>
-Referencing object attributes: When a method needs to access or modify an attribute (variable) of the current object, you can use this followed by a dot (.) and the attribute name. This helps avoid naming conflicts with local variables that might have the same name within the method.<br>
-Invoking current class methods: You can use this to call other methods defined within the same class. This can be helpful when a method needs to perform additional operations on the current object.<br>
-Calling current class constructor: Inside a constructor, you can use this() to call another constructor of the same class. This is useful for creating constructors with different parameter sets or for achieving specific initialization logic.<br>
-Passing the current object as an argument: In some cases, you might want to pass the current object instance as an argument to another method. You can use this to achieve this.<br>
-Understanding Constructors and Their Role in Object Initialization:<br>
-A constructor is a special type of method that is automatically called when an object is created. It initializes the object's state by assigning initial values to its fields.<br>
-Constructors have the same name as the class and do not have a return type, not even void.
-In Java, if you don't explicitly define a constructor for a class, Java provides a default constructor with no arguments.
-Constructors can be overloaded, meaning a class can have multiple constructors with different parameter lists. This allows for flexibility in object initialization.
-Constructors play a crucial role in ensuring that objects are properly initialized before they are used, which is essential for maintaining the integrity and correctness of the program's logic.
+- **Initialization:** Static variables are initialized only once when the class is first loaded. They retain their values across all instances of the class.
 
-<h2>Constructor</h2>
-Constructors are special methods in object-oriented programming that are used to initialize objects. When you create an object of a class using the new keyword, the constructor is automatically invoked to perform any necessary setup for the object.<br>
-Initializing object attributes: Constructors are typically used to assign initial values to an object's attributes. This ensures that objects are created in a consistent state.<br>
-Performing validation checks: Constructors can be used to validate the data that is being used to create an object. This can help to prevent errors in your program.<br>
-Controlling object creation: Constructors can be used to control how objects are created. For example, you can create a constructor that takes arguments, which allows you to specify the initial state of the object.
+## Example
+
+Here’s an example demonstrating the use of a static variable in Java:
+
+```java
+public class Example {
+    // Static variable
+    static int count = 0;
+
+    // Constructor
+    public Example() {
+        count++;
+    }
+
+    public static void main(String[] args) {
+        Example obj1 = new Example();
+        Example obj2 = new Example();
+        Example obj3 = new Example();
+
+        System.out.println("Number of instances created: " + Example.count);
+    }
+}
+```
+
+# Constructor
+
+Constructors are special methods in object-oriented programming used to initialize objects. When you create an object of a class using the `new` keyword, the constructor is automatically invoked to perform any necessary setup for the object.
+
+## Types of Constructors
+
+1. **Default Constructor**
+   - **Definition:** A constructor that takes no arguments and initializes the object with default values.
+   - **Use:** Automatically provided by Java if no other constructors are defined. It initializes object attributes with default values (e.g., `null` for objects, `0` for numeric types, `false` for boolean).
+
+2. **Parameterized Constructor**
+   - **Definition:** A constructor that takes one or more arguments to initialize the object with specific values.
+   - **Use:** Allows you to create an object with an initial state defined by the arguments passed to the constructor.
+
+## Purpose of Constructors
+
+- **Initializing Object Attributes:** Constructors are typically used to assign initial values to an object's attributes. This ensures that objects are created in a consistent state.
+  
+- **Performing Validation Checks:** Constructors can be used to validate the data used to create an object. This helps prevent errors and ensures that objects are always in a valid state.
+  
+- **Controlling Object Creation:** Constructors can be designed to take arguments, allowing you to specify the initial state of the object and control how objects are created.
+
+## Example
+
+Here is an example demonstrating the use of both default and parameterized constructors in Java:
+
+```java
+public class Person {
+    // Attributes
+    String name;
+    int age;
+
+    // Parameterized Constructor
+    public Person(String name, int age) {
+        // Initialize attributes
+        this.name = name;
+        this.age = age;
+    }
+
+    // Default Constructor
+    public Person() {
+        // Initialize with default values
+        this.name = "Unknown";
+        this.age = 0;
+    }
+
+    // Method to display person details
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+
+    public static void main(String[] args) {
+        // Creating objects using different constructors
+        Person person1 = new Person("Alice", 30);
+        Person person2 = new Person();
+
+        // Displaying information
+        person1.displayInfo();
+        person2.displayInfo();
+    }
+}
+```
+# This Keyword
+
+In object-oriented programming, the `this` keyword is a special reference that refers to the current object instance. It's particularly useful within methods and constructors of a class to interact with the object's own properties and methods.
+
+## Common Uses of the `this` Keyword
+
+- **Referencing Object Attributes:** When a method needs to access or modify an attribute (variable) of the current object, you can use `this` followed by a dot (`.`) and the attribute name. This helps avoid naming conflicts with local variables that might have the same name within the method.
+
+- **Invoking Current Class Methods:** You can use `this` to call other methods defined within the same class. This can be helpful when a method needs to perform additional operations on the current object.
+
+- **Calling Current Class Constructor:** Inside a constructor, you can use `this()` to call another constructor of the same class. This is useful for creating constructors with different parameter sets or for achieving specific initialization logic.
+
+- **Passing the Current Object as an Argument:** In some cases, you might want to pass the current object instance as an argument to another method. You can use `this` to achieve this.
+
+
+# `final`, `finally`, `finalize`
+
+In Java, `final`, `finally`, and `finalize` serve different purposes and are used in various contexts:
+
+## `final`
+
+The `final` keyword is used to define constants and to prevent modification of variables, methods, and classes.
+
+- **Final Variables:** Once a variable is declared as `final`, its value cannot be changed after initialization. This is used to define constants.
+
+-**Final Methods:** A method declared as final cannot be overridden by subclasses. This ensures that the method's behavior remains consistent. & A class declared as final cannot be subclassed. This is used to prevent inheritance.
+
+  ```java
+  public class Constants {
+      public static final int MAX_VALUE = 100;
+
+      public static void main(String[] args) {
+          System.out.println("Max Value: " + MAX_VALUE);
+          // MAX_VALUE = 200; // This will cause a compilation error
+      }
+  }
+```
+
+-**finally:** The finally block is used in exception handling to ensure that a block of code is executed after a try block, regardless of whether an exception is thrown or not. It's typically used to release resources or perform cleanup.
+
+  ```java
+
+public class FinallyExample {
+    public static void main(String[] args) {
+        try {
+            System.out.println("In try block.");
+            int result = 10 / 0; // This will throw an ArithmeticException
+        } catch (ArithmeticException e) {
+            System.out.println("Exception caught: " + e.getMessage());
+        } finally {
+            System.out.println("This block always executes.");
+        }
+    }
+}
+```
+
+-**finalize:** The finalize method is part of the Object class and is used to perform cleanup before an object is garbage collected. It is called by the garbage collector before an object’s memory is reclaimed. However, it is not recommended for general resource management because its execution is not guaranteed.
+
+  ```java
+
+public class FinallyExample {
+    public static void main(String[] args) {
+        try {
+            System.out.println("In try block.");
+            int result = 10 / 0; // This will throw an ArithmeticException
+        } catch (ArithmeticException e) {
+            System.out.println("Exception caught: " + e.getMessage());
+        } finally {
+            System.out.println("This block always executes.");
+        }
+    }
+}
+```
+
+
+## What is Methods?
+
+Methods are like mini-programs within a program. They are a set of codes that perform a particular task and return the result to the caller. They help organize code, making it more readable, reusable, and modular. Understanding methods is essential for writing efficient and maintainable Java code. Methods are used to expose the behavior of an object.
+
+### Advantages:
+- **Reusability:** Methods enable writing code once and using it multiple times, enhancing modularity and maintenance.
+- **Abstraction:** Methods hide complex logic, offering a simpler interface for better readability and comprehension.
+- **Improved Readability:** Breaking code into named methods enhances readability and understanding.
+- **Encapsulation:** Methods encapsulate complex logic and data for easier management.
+
+# Exception Handling in Java
+
+## Definition
+
+Exception handling in Java is a mechanism to handle runtime errors, ensuring that the normal flow of the application is maintained. An exception is an event that disrupts the normal flow of the program. When an exception occurs, Java creates an exception object, which contains information about the error and then hands it off to the runtime system to handle.
+
+### Types of Exceptions
+
+1. **Checked Exceptions**: Exceptions that are checked at compile-time.
+   - Example: `IOException`, `SQLException`.
+
+2. **Unchecked Exceptions**: Exceptions that occur at runtime and are not checked at compile-time.
+   - Example: `ArithmeticException`, `NullPointerException`.
+
+3. **Error**: Indicates serious problems that a reasonable application should not try to catch.
+   - Example: `OutOfMemoryError`, `StackOverflowError`.
+
+## Real-Time Examples
+
+### Example 1: Division by Zero
+
+In a banking application, if you try to calculate the interest rate using a division operation, and the divisor is zero, it will throw an `ArithmeticException`.
+
+```java
+public class BankApplication {
+    public static void main(String[] args) {
+        try {
+            int result = 10 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero: " + e.getMessage());
+        }
+    }
+}
+```
+# Implementation
+
+## Basic Exception Handling with `try-catch`
+
+### 1. `try` Block
+
+The code that might throw an exception is enclosed in a `try` block.
+
+### 2. `catch` Block
+
+This block catches and handles the exception. It can also provide custom error messages.
+
+### 3. `finally` Block
+
+This block is always executed, whether an exception is thrown or not. It is generally used for cleanup code, such as closing files or releasing resources.
+
+### 4. `throw` Keyword
+
+This keyword is used to explicitly throw an exception from a method or any block of code.
+
+### 5. `throws` Keyword
+
+This keyword indicates that a method might throw an exception, alerting the caller to handle it.
+
+```java
+
+public class BasicExceptionHandling {
+    public static void main(String[] args) {
+        try {
+            int data = 50 / 0; // This will throw an exception
+        } catch (ArithmeticException e) {
+            System.out.println("Exception caught: " + e.getMessage());
+        }
+        System.out.println("Rest of the code executes...");
+    }
+}
+```
+
+### Multithreading and Concurrency
+
+```markdown
+# Multithreading and Concurrency
+
+## Definition
+Multithreading in Java is a process of executing multiple threads simultaneously. Each thread runs independently, allowing efficient utilization of the CPU. Concurrency refers to the ability of a program to make progress on multiple tasks at the same time, improving performance and responsiveness.
+
+## Real-Time Example
+Consider a server handling multiple client requests simultaneously. If the server processes requests one at a time, it becomes slow and unresponsive. By using multithreading, the server can handle multiple requests concurrently, improving user experience.
+
+## Implementation
+### 1. Extending the `Thread` class
+One way to create a thread is by extending the `Thread` class and overriding its `run` method.
+
+### 2. Implementing the `Runnable` interface
+Another way is to implement the `Runnable` interface and pass an instance of the implementing class to a `Thread` object.
+
+### 3. Using the `ExecutorService`
+The `ExecutorService` is a higher-level replacement for managing and executing threads. It provides thread pooling and better control over thread execution.
+
+### Example: Extending `Thread` Class
+```java
+class MyThread extends Thread {
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+public class ThreadExample {
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        t1.start();
+    }
+}
+```
+
+# Memory Management in Java
+
+## Garbage Collection
+
+Java's garbage collection (GC) mechanism automatically manages memory allocation and deallocation, helping to prevent memory leaks and optimize resource usage.
+
+### Understanding Java’s Garbage Collection Mechanism
+
+1. **Automatic Memory Management**: Java automatically allocates and deallocates memory, reducing the need for manual memory management by the programmer.
+   
+2. **Heap Memory**: Java applications use heap memory for object allocation. The heap is divided into the Young Generation (where new objects are allocated) and the Old Generation (where long-lived objects are moved).
+
+3. **Garbage Collection Algorithms**:
+   - **Mark and Sweep**: This algorithm marks objects that are still in use and then sweeps away objects that are no longer reachable.
+   - **Generational Garbage Collection**: This method divides the heap into different generations (Young, Old) and applies different GC strategies to each generation. Young Generation uses minor GC, while Old Generation uses major GC.
+   - **Garbage-First (G1) Collector**: A low-latency garbage collector that divides the heap into regions and aims to achieve predictable pause times.
+
+4. **GC Tuning**: Java provides various JVM options to tune garbage collection, such as `-Xms` for initial heap size and `-Xmx` for maximum heap size.
+
+### Example
+
+Here’s a simple example demonstrating how garbage collection works:
+
+```java
+public class GarbageCollectionExample {
+    public static void main(String[] args) {
+        GarbageCollectionExample obj1 = new GarbageCollectionExample();
+        obj1 = null; // obj1 is no longer reachable
+
+        // Request garbage collection
+        System.gc(); // Suggests the JVM to perform garbage collection
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Finalize method called.");
+        super.finalize();
+    }
+}
+```
+
+# Memory Leaks in Java
+
+## Definition
+
+Memory leaks occur when an application retains references to objects that are no longer needed, preventing them from being garbage collected. This can lead to increased memory usage and eventually cause the application to run out of memory.
+
+## How to Avoid Memory Leaks in Java Applications
+
+1. **Avoid Long-Lived References**
+
+   Ensure that objects are no longer referenced after their use. For example, avoid keeping references to large data structures if they are no longer needed.
+
+```java
+   // Example of avoiding long-lived references
+   List<Object> largeList = new ArrayList<>();
+   // Use the list
+   largeList = null; // Allow the garbage collector to reclaim the memory
+```
+# JDBC (Java Database Connectivity)
+
+JDBC (Java Database Connectivity) is an API in Java that allows Java applications to interact with relational databases. It provides a standard interface for connecting to databases, executing SQL queries, and handling results.
+
+# File Handling in Java
+
+File handling in Java allows you to read from and write to files. Java provides various classes for file operations, including `FileReader`, `FileWriter`, `BufferedReader`, and `BufferedWriter`. These classes are part of the `java.io` package.
+
+## Reading Files
+
+### Using `FileReader` and `BufferedReader`
+
+- **FileReader**: Used to read the contents of a file in a character stream.
+- **BufferedReader**: Reads text from a character-based input stream, buffering characters for efficient reading.
+
+### Example: Reading a File
+
+```java
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FileReadingExample {
+    public static void main(String[] args) {
+        String filePath = "example.txt";
+        
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+# Annotations in Java
+
+Annotations in Java are metadata that provide data about a program but are not part of the program itself. They are used to give instructions to the compiler, provide information to tools, or help during runtime.
+
+## Built-in Annotations
+
+### `@Override`
+
+- **Purpose**: Indicates that a method is intended to override a method in a superclass.
+- **Usage**: Helps the compiler detect errors if the method does not correctly override a method in the superclass.
+
+```java
+public class Animal {
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+public class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+```
+
+# Generics in Java
+
+Generics in Java enable you to write flexible and reusable code while providing type safety. They allow you to define classes, methods, and interfaces that can operate on various types while still enforcing type constraints.
+
+## Generic Classes
+
+A generic class is a class that can work with any data type. It is defined with a type parameter that can be specified when creating an instance of the class.
+
+# Java Enums
+
+Enums (short for enumerations) in Java are a special data type that enables a variable to be a set of predefined constants. They provide a way to define and use a fixed set of constants, which can make your code more readable and maintainable.
+
+## Declaring and Using Enums
+
+Enums are declared using the `enum` keyword. Each constant in the enum is a public static final instance of the enum type. Enums can be used in switch statements, loops, and other constructs.
+
+### Example: Basic Enum Declaration
+
+```java
+public enum Day {
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
+}
+
+public class EnumExample {
+    public static void main(String[] args) {
+        Day today = Day.MONDAY;
+
+        switch (today) {
+            case MONDAY:
+                System.out.println("Start of the work week!");
+                break;
+            case FRIDAY:
+                System.out.println("Almost weekend!");
+                break;
+            case SATURDAY: case SUNDAY:
+                System.out.println("Weekend!");
+                break;
+            default:
+                System.out.println("Midweek days.");
+        }
+    }
+}
+```
+# Enum Constructors, Methods, and Fields
+
+Enums in Java can have fields, methods, and constructors. However, there are specific rules and practices associated with each:
+
+## Fields
+
+Enums can have fields to store data associated with each constant. Fields are used to hold information that can vary between different constants.
+
+### Example: Enum with Fields
+
+```java
+public enum Planet {
+    MERCURY(3.303e+23, 2.4397e6),
+    VENUS(4.869e+24, 6.0518e6),
+    EARTH(5.976e+24, 6.37814e6),
+    MARS(6.421e+23, 3.3972e6),
+    JUPITER(1.9e+27, 6.9911e7),
+    SATURN(5.688e+26, 5.8232e7),
+    URANUS(8.681e+25, 2.5362e7),
+    NEPTUNE(1.024e+26, 2.4622e7);
+
+    private final double mass; // in kilograms
+    private final double radius; // in meters
+
+    // Constructor
+    Planet(double mass, double radius) {
+        this.mass = mass;
+        this.radius = radius;
+    }
+
+    // Getter methods
+    public double getMass() {
+        return mass;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+}
+```
+
+# Inner Classes in Java
+
+Inner classes in Java are classes defined within another class. They allow for logically grouping classes that are only used in one place, improving encapsulation and readability. Java provides several types of inner classes, each serving a specific purpose.
+
+## Types of Inner Classes
+
+### 1. Static Nested Classes
+
+- **Definition**: Static nested classes are nested classes that are declared with the `static` keyword. They do not have access to the instance variables and methods of the outer class but can access its static members.
+- **Usage**: Use static nested classes when you want to group classes that are logically related but do not need access to the instance members of the outer class.
+
+#### Example
+
+```java
+public class OuterClass {
+    private static String outerStaticField = "Static Field";
+
+    static class StaticNestedClass {
+        void display() {
+            System.out.println("Accessing from StaticNestedClass: " + outerStaticField);
+        }
+    }
+
+    public static void main(String[] args) {
+        StaticNestedClass nestedClass = new StaticNestedClass();
+        nestedClass.display();
+    }
+}
+```
+# Immutable Classes in Java
+
+Immutable classes are a core concept in Java programming, ensuring that objects cannot be modified once they are created. Immutability provides various benefits, including simplicity, thread-safety, and reliability.
+
+## Understanding the Concept of Immutability
+
+An immutable object is one whose state cannot be modified after it is created. Once an instance of an immutable class is initialized, its fields cannot be changed. This makes immutable objects inherently thread-safe since their state remains constant.
+
+## How to Create Immutable Classes in Java
+
+To create an immutable class in Java, follow these steps:
+
+1. **Declare the Class as `final`**: Prevents the class from being subclassed.
+2. **Make All Fields `private` and `final`**: Ensures that fields can only be assigned once.
+3. **Provide No Setter Methods**: Prevents modification of fields.
+4. **Initialize All Fields via Constructor**: Ensure that fields are initialized only once during object creation.
+5. **Provide a Public Getter Method for Each Field**: Allows read-only access to the fields.
+6. **Ensure Proper Handling of Mutable Objects**: If your class contains mutable objects (e.g., arrays), ensure that they are not modified after initialization.
+
+### Example of an Immutable Class
+
+```java
+public final class ImmutableClass {
+    private final int value;
+    private final String name;
+
+    // Constructor to initialize fields
+    public ImmutableClass(int value, String name) {
+        this.value = value;
+        this.name = name;
+    }
+
+    // Getter methods
+    public int getValue() {
+        return value;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+```
+# File Handling in Java
+
+File handling in Java allows you to read from and write to files. Java provides various classes for file operations, including `FileReader`, `FileWriter`, `BufferedReader`, and `BufferedWriter`. These classes are part of the `java.io` package.
+
+## Reading Files
+
+### Using `FileReader` and `BufferedReader`
+
+- **FileReader**: Used to read the contents of a file in a character stream.
+- **BufferedReader**: Reads text from a character-based input stream, buffering characters for efficient reading.
+
+### Example: Reading a File
+
+```java
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FileReadingExample {
+    public static void main(String[] args) {
+        String filePath = "example.txt";
+        
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
 
 
 <h1>OOP's</h1>
