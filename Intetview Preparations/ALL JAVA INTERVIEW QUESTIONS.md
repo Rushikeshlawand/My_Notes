@@ -33,25 +33,31 @@ Although the JVM is platform-dependent, the bytecode can be created on one syste
 - **Multithreaded:** Java can manage multiple tasks simultaneously by using multiple threads.
 - **Architecture Neutral:** Java is not dependent on the underlying hardware architecture.
 
-<h2>TYPES OF JAVA APPLICATIONS</h2>
-Console-Based Applications
-GUI Applications
-Web Applications (Servlet-based)
-Desktop Applications
-Mobile Applications
-DATABASE APPLICATIONS (JDBC)
-MULTITHREADED APPLICATIONS
-NETWORK APPLICATIONS (SERVER-CLIENT)
+## Types of Java Applications
 
-<h2>COMPONENTS OF JAVA</h2>
-<h2>Introduction to JDK</h2>
-JDK (Java Development Kit) is a comprehensive software development kit that includes all the essential tools, libraries, and documentation for Java development. It provides a complete development environment, including the JRE and additional tools like the Java compiler (javac), debugger (jdb), and various utilities.
+- **Console-Based Applications:** Applications that run in a command-line interface (CLI) without a graphical user interface (GUI). They interact with users through text-based input and output.
 
-<h2>JRE</h2>
-JRE (Java Runtime Environment) is a software bundle encompassing the necessary runtime libraries, class libraries, and JVM implementation. It offers the runtime environment required to execute Java applications, ensuring their proper functioning. However, JRE does not include the tools needed for Java development.
+- **GUI Applications:** Applications with a graphical user interface (GUI) that allow users to interact with the software through graphical elements like windows, buttons, and icons. Java provides libraries like Swing and JavaFX for building GUI applications.
 
-<h2>What is JVM?</h2>
-JVM (Java Virtual Machine) is a crucial element of the Java platform. It is a virtual machine that executes compiled Java bytecode, enabling Java programs to run independently across different hardware and operating systems. JVM handles essential tasks like memory management, garbage collection, and bytecode interpretation or just-in-time (JIT) compilation.
+- **Web Applications (Servlet-Based):** Applications that run on a web server and are accessed through a web browser. Java Servlets and JavaServer Pages (JSP) are commonly used for developing web applications.
+
+- **Desktop Applications:** Standalone applications that run on a desktop or laptop computer. They can be developed using Java Swing, JavaFX, or other GUI libraries.
+
+- **Mobile Applications:** Applications designed to run on mobile devices, such as smartphones and tablets. Java is used for Android app development.
+
+- **Database Applications (JDBC):** Applications that interact with databases using Java Database Connectivity (JDBC). JDBC provides a standard API for connecting to and manipulating databases from Java applications.
+
+- **Multithreaded Applications:** Applications that perform multiple tasks simultaneously by utilizing threads. Java's built-in support for multithreading allows developers to create applications that can handle concurrent operations.
+
+- **Network Applications (Server-Client):** Applications that communicate over a network, where one application acts as a server and another as a client. Java provides libraries and APIs for network programming to create server-client applications.
+## Components of Java
+
+| **Component** | **Description**                                                                                                                                                                                                                                                                     |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **JDK**       | The Java Development Kit (JDK) is a comprehensive development environment that includes all essential tools, libraries, and documentation for Java development. It encompasses the JRE and additional tools like the Java compiler (`javac`), debugger (`jdb`), and various utilities. |
+| **JRE**       | The Java Runtime Environment (JRE) is a software bundle that provides the necessary runtime libraries, class libraries, and JVM implementation to execute Java applications. It offers the runtime environment required for running Java programs but lacks development tools.         |
+| **JVM**       | The Java Virtual Machine (JVM) is a virtual machine that executes compiled Java bytecode, allowing Java programs to run independently across different hardware and operating systems. It handles memory management, garbage collection, and bytecode interpretation or JIT compilation.  |
+
 
 <h2>What is JIT?</h2>
 JIT stands for (Just-in-Time) compiler is a part of JRE, it is used for better performance of the Java applications during run-time. The use of JIT is mentioned in step by step process mentioned below:
