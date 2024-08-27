@@ -856,3 +856,76 @@ public class FileReadingExample {
     }
 }
 ```
+
+# Object and Class in Java
+
+## Class
+
+### Definition
+A class in Java is a blueprint for creating objects. It defines a data structure that encapsulates data and methods to operate on that data. A class serves as a template from which objects are instantiated.
+
+### Components of a Class
+1. **Fields**: Variables that hold the data of an object.
+2. **Methods**: Functions that define the behavior of an object.
+3. **Constructors**: Special methods used to initialize objects.
+4. **Access Modifiers**: Keywords that specify the visibility of class members (e.g., `public`, `private`, `protected`).
+
+### Example
+
+```java
+public class Person {
+    // Fields
+    private String name;
+    private int age;
+
+    // Constructor
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Method
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+
+    // Getter for name
+    public String getName() {
+        return name;
+    }
+
+    // Setter for name
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+```
+
+# Object in Java
+
+## Definition
+
+An object is an instance of a class. It represents a specific entity with attributes and behaviors defined by its class. Objects hold the state and can invoke methods to perform actions.
+
+## Creating an Object
+
+Objects are created using the `new` keyword followed by the class constructor.
+
+### Example
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        // Creating an object of the Person class
+        Person person1 = new Person("Alice", 30);
+        
+        // Accessing methods of the object
+        person1.displayInfo();
+        
+        // Modifying object fields using setters
+        person1.setName("Bob");
+        System.out.println("Updated Name: " + person1.getName());
+    }
+}
+```

@@ -1,3 +1,37 @@
+```plaintext
+Object-Oriented Programming (OOP)
+               |
+    +----------+----------+
+    |          |          |
+Abstraction  Encapsulation  Inheritance
+               |               |
+    +----------+----------+    |
+    |          |          |    |
+Polymorphism  Association  Aggregation
+               |
+    +----------+
+    |          
+Types of Polymorphism
+    |
+    +-- Compile-Time Polymorphism
+    |   - Method Overloading
+    |
+    +-- Runtime Polymorphism
+        - Method Overriding
+               
+Types of Inheritance
+    |
+    +-- Single Inheritance
+    |
+    +-- Multiple Inheritance
+    |
+    +-- Hierarchical Inheritance
+    |
+    +-- Multilevel Inheritance
+    |
+    +-- Hybrid Inheritance
+```
+
 # Object-Oriented Programming (OOP) in Java
 
 Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects," which are instances of classes. OOP helps in organizing and structuring code in a way that promotes reusability, maintainability, and scalability. The core principles of OOP include Encapsulation, Inheritance, Polymorphism, and Abstraction.
@@ -60,6 +94,25 @@ public class Person {
 ## Definition
 
 Inheritance is a fundamental concept in OOP that allows a new class (child or subclass) to inherit attributes and methods from an existing class (parent or superclass). This mechanism promotes code reusability and establishes a hierarchical relationship between classes.
+
+```plaintext
+Inheritance
+    |
+    +-- Single Inheritance
+    |   - A single parent class is inherited by a single child class.
+    |
+    +-- Multiple Inheritance
+    |   - A child class inherits from more than one parent class.
+    |
+    +-- Hierarchical Inheritance
+    |   - Multiple child classes inherit from a single parent class.
+    |
+    +-- Multilevel Inheritance
+    |   - A class inherits from another class which is also a subclass of another class.
+    |
+    +-- Hybrid Inheritance
+        - A combination of two or more types of inheritance.
+```
 
 ### Types of Inheritance
 
@@ -195,8 +248,8 @@ public class MultilevelInheritanceExample {
 
 ```plaintext
     Superclass
-       /         \
-     /             \
+       /       \
+     /          \
  Subclass1  Subclass2
       \
         \
@@ -246,11 +299,11 @@ public class HierarchicalInheritanceExample {
 ```plaintext
     ClassA
       /  \
-     /     \
-    /       \
+     /    \
+    /      \
  ClassB  ClassC
-     \          /
-      \       /
+     \        /
+      \     /
        ClassD
 ```
 
@@ -308,19 +361,244 @@ Inheritance enables method overriding, where a subclass provides a specific impl
 
 Inheritance supports hierarchical classification, where classes are organized into a hierarchy. This hierarchical structure helps in organizing and managing code more effectively, making it easier to understand and maintain. It also facilitates the creation of a logical relationship between classes, improving code readability and structure.
 
+# Polymorphism in Java
 
+**Definition:**
+Polymorphism is a core concept in object-oriented programming that allows objects to be treated as instances of their parent class rather than their actual class. The term polymorphism means "many forms," and it allows one interface to be used for a general class of actions. The specific action is determined by the exact nature of the situation.
 
+```plaintext
+Polymorphism
+    |
+    +-- Compile-Time Polymorphism
+    |   - Achieved through method overloading (same method name with different parameters).
+    |
+    +-- Runtime Polymorphism
+        - Achieved through method overriding (overriding methods in subclasses with the same name as in parent class).
+```
 
+Polymorphism in Java can be achieved through:
 
+1. **Compile-Time Polymorphism (Method Overloading)**
+2. **Runtime Polymorphism (Method Overriding)**
 
+## Compile-Time Polymorphism (Method Overloading)
 
+**Definition:**
+Compile-time polymorphism, also known as method overloading, allows a class to have multiple methods with the same name but different parameter lists (different type, number, or both). This is resolved during the compilation of the program.
 
+### How It Works:
+- **Method Signature:** The method signature consists of the method name and the parameter list.
+- **Method Resolution:** The appropriate method is chosen based on the method signature during compile-time.
 
+### Example:
 
+```java
+class MathOperations {
+    // Method to add two integers
+    int add(int a, int b) {
+        return a + b;
+    }
 
+    // Overloaded method to add two doubles
+    double add(double a, double b) {
+        return a + b;
+    }
 
+    // Overloaded method to add three integers
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
 
+public class CompileTimePolymorphismExample {
+    public static void main(String[] args) {
+        MathOperations mathOps = new MathOperations();
 
+        // Calling the method with two integer parameters
+        System.out.println("Sum (int): " + mathOps.add(10, 20));
+
+        // Calling the overloaded method with two double parameters
+        System.out.println("Sum (double): " + mathOps.add(10.5, 20.5));
+
+        // Calling the overloaded method with three integer parameters
+        System.out.println("Sum (int, int, int): " + mathOps.add(10, 20, 30));
+    }
+}
+```
+## Runtime Polymorphism (Method Overriding)
+
+**Definition:**  
+Runtime polymorphism, also known as method overriding, allows a subclass to provide a specific implementation for a method that is already defined in its superclass. The decision about which method to execute is made at runtime based on the object's actual class.
+
+### How It Works:
+
+1. **Method Inheritance:** The subclass inherits the method from the superclass.
+
+2. **Method Override:** The subclass provides a specific implementation for the inherited method.
+
+3. **Dynamic Method Dispatch:** The JVM determines the actual method to be called based on the object's runtime type.
+
+```java
+// Superclass
+class Animal {
+    // Method in the superclass
+    void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+// Subclass
+class Dog extends Animal {
+    // Method overridden in the subclass
+    @Override
+    void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+
+// Another subclass
+class Cat extends Animal {
+    // Method overridden in the subclass
+    @Override
+    void makeSound() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class RuntimePolymorphismExample {
+    public static void main(String[] args) {
+        // Creating objects of subclasses
+        Animal myDog = new Dog();
+        Animal myCat = new Cat();
+
+        // Method calls
+        myDog.makeSound(); // Output: Dog barks
+        myCat.makeSound(); // Output: Cat meows
+    }
+}
+```
+# Abstraction
+
+## Definition
+Abstraction is the concept of hiding the complex implementation details of an object and exposing only the essential features or functionalities to the user. It allows the user to focus on what an object does rather than how it does it. This is one of the four pillars of Object-Oriented Programming (OOP) and is crucial for reducing complexity and increasing efficiency in software development.
+
+### Key Points:
+- **Focus on Essential Features**: Abstraction highlights only the necessary details, allowing users to interact with a simplified model of the system.
+- **Hiding Complexity**: By hiding the underlying implementation details, abstraction prevents users from getting overwhelmed by the internal workings of the system.
+
+## How It Works
+Abstraction in Java is typically achieved through abstract classes and interfaces.
+
+- **Abstract Classes**: These classes cannot be instantiated on their own and can contain both abstract methods (without implementation) and concrete methods (with implementation). Subclasses of an abstract class must provide implementations for all abstract methods.
+- **Interfaces**: Interfaces define a contract that implementing classes must follow. All methods in an interface are abstract by default (until Java 8, which introduced default methods).
+
+## Example 1: Abstract Class in Java
+
+### Code Example
+
+```java
+abstract class Vehicle {
+    abstract void start(); // Abstract method
+
+    void stop() { // Concrete method
+        System.out.println("The vehicle is stopped.");
+    }
+}
+
+class Car extends Vehicle {
+    @Override
+    void start() {
+        System.out.println("The car is starting.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car();
+        car.start(); // Outputs: The car is starting.
+        car.stop();  // Outputs: The vehicle is stopped.
+    }
+}
+```
+# Benefits of Abstraction
+
+Abstraction is a fundamental concept in object-oriented programming that brings several advantages to software development. Here are the key benefits of using abstraction:
+
+## Simplicity
+By hiding unnecessary details, abstraction makes it easier to work with complex systems. It simplifies the user interface by exposing only the essential features, making the system more user-friendly and easier to understand.
+
+## Modularity
+Abstraction encourages the division of code into smaller, manageable parts. Each part or module of the code focuses on a specific aspect of the system, which makes the codebase more organized and easier to maintain.
+
+## Maintainability
+Abstracted code is easier to modify or extend since the details are hidden from the user. Changes made to the internal implementation of an abstracted module do not affect other parts of the system, reducing the risk of introducing errors and improving code maintainability.
+
+## Security
+Abstraction allows developers to expose only the essential parts of the code while keeping critical implementation details secure. This helps protect sensitive information and prevents unauthorized access to the underlying logic, enhancing the security of the application.
+
+# Interfaces in Java
+
+## Definition
+
+An interface in Java is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types. Interfaces are used to specify a set of methods that implementing classes must provide. They help in defining a contract for what a class can do, without specifying how it does it.
+
+## Key Points
+
+- **Abstract Methods**: Interfaces primarily contain abstract methods (methods without a body). These methods must be implemented by any class that implements the interface.
+- **Default Methods**: Interfaces can also include default methods with an implementation. These methods provide a default behavior that can be overridden by implementing classes.
+- **Static Methods**: Interfaces can define static methods that are associated with the interface itself rather than any instance of a class.
+- **Constants**: Interfaces can contain constants (public static final variables).
+
+## Types of Interfaces
+
+1. **Marker Interface**: An interface with no methods or fields. It is used to mark a class with some property.
+   - Example: `Serializable`, `Cloneable`.
+
+2. **Functional Interface**: An interface with exactly one abstract method. It can have multiple default or static methods.
+   - Example: `Runnable`, `Callable`.
+
+3. **Normal Interface**: An interface with multiple abstract methods.
+   - Example: `List`, `Comparable`.
+
+## Usage
+
+- **Defining Contracts**: Interfaces are used to define a contract that other classes must adhere to.
+- **Multiple Inheritance**: Java supports multiple inheritance through interfaces, allowing a class to implement multiple interfaces.
+- **Loose Coupling**: Interfaces help in achieving loose coupling by decoupling the implementation from the interface.
+
+## Example
+```java
+@FunctionalInterface
+public interface Calculator {
+    int calculate(int a, int b);
+
+    // Default method
+    default int add(int a, int b) {
+        return a + b;
+    }
+
+    // Static method
+    static int multiply(int a, int b) {
+        return a * b;
+    }
+}
+
+public class CalculatorImpl implements Calculator {
+    @Override
+    public int calculate(int a, int b) {
+        return a - b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = new CalculatorImpl();
+        System.out.println("Result: " + calc.calculate(10, 5));
+        System.out.println("Addition: " + calc.add(10, 5));
+        System.out.println("Multiplication: " + Calculator.multiply(10, 5));
+    }
+}
+```
 
 
 
