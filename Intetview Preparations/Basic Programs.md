@@ -1,3 +1,67 @@
+## Even or odd
+```java
+if(num%2==0){
+            System.out.println("Even");
+        }else{
+            System.out.println("odd");
+        }
+```
+## Even or odd without %
+```java
+if((num&1)==0){
+            System.out.println("Even");
+        }else{
+            System.out.println("odd");
+        }
+```
+```java
+String numstr=Integer.toString(num);
+char lastchar=numstr.charAt(numstr.length()-1);
+
+        if(lastchar=='0' || lastchar=='2' ||lastchar=='4' ||lastchar=='6' ||lastchar=='8'  ){
+            System.out.println("Even");
+        }else{
+            System.out.println("odd");
+        }
+```
+## Prime Number
+### the number who divisible by 1 & the number itself
+```java
+if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Reverse an Array: Write a Java program to reverse the elements of an array.
 
         int[] numbers = {1, 2, 3, 4, 5};
