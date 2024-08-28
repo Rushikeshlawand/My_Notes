@@ -1,57 +1,96 @@
 ## Even or odd
+
 ```java
 if(num%2==0){
-            System.out.println("Even");
-        }else{
-            System.out.println("odd");
-        }
+    System.out.println("Even");
+}else{
+    System.out.println("odd");
+}
 ```
+
 ## Even or odd without %
+
 ```java
 if((num&1)==0){
-            System.out.println("Even");
-        }else{
-            System.out.println("odd");
-        }
+    System.out.println("Even");
+}else{
+    System.out.println("odd");
+}
 ```
+
 ```java
 String numstr=Integer.toString(num);
 char lastchar=numstr.charAt(numstr.length()-1);
 
-        if(lastchar=='0' || lastchar=='2' ||lastchar=='4' ||lastchar=='6' ||lastchar=='8'  ){
-            System.out.println("Even");
-        }else{
-            System.out.println("odd");
-        }
+if(lastchar=='0' || lastchar=='2' ||lastchar=='4' ||lastchar=='6' ||lastchar=='8'  ){
+    System.out.println("Even");
+}else{
+    System.out.println("odd");
+}
 ```
+
 ## Prime Number
+
 ### the number who divisible by 1 & the number itself
+
 ```java
 if (num <= 1) {
-            return false;
-        }
-        for (int i = 2; i <= Math.sqrt(num); i++) {
-            if (num % i == 0) {
-                return false;
-            }
-        }
-        return true;
-    
+    return false;
+}
+for (int i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i == 0) {
+        return false;
+    }
+}
+return true;
 ```
+## Reverse a String
+```java
+String s = sc.nextLine();
+String ans="";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+for (int i = s.length()-1;i>=0; i--) {
+    ans+=s.charAt(i);
+}
+```
+## Palindrome a String
+```java
+if(s.equals(ans)){
+    System.out.println("palidrome")
+}else{
+    System.out.println("not palidrome")
+}
+```
+## Factorial of a Number
+```java
+int num = sc.nextInt();
+int factorial=1;
+for (int i =1;i<=num; i++) {
+    factorial*=i;
+}
+```
+## Fibonacci Series up to N Terms
+```java
+int num = sc.nextInt();
+int first=0,second=1;
+System.out.print(first+" "+second);
+for (int i =3;i<=num; i++) {
+    int next=first+second;
+    System.out.print(", "+next);
+    first=second;
+    second=next;
+}
+```
+## Max Element in array
+```java
+int[] arr = {2, 5, 7, 9, 3, 6};
+int max = arr[0];
+for (int i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+        max = arr[i];
+    }
+}
+```
 
 
 
@@ -71,7 +110,6 @@ Reverse an Array: Write a Java program to reverse the elements of an array.
             reversed[i] = numbers[numbers.length - 1 - i];
         }
 
-
 int[] numbers = {1, 2, 3, 4, 5};
 
         int start = 0;
@@ -85,7 +123,6 @@ int[] numbers = {1, 2, 3, 4, 5};
             start++;
             end--;
         }
-
 
 Rotate an Array to the Right by a Given Number of Steps
 
@@ -121,7 +158,7 @@ int[] numbers = {10, 20, 4, 45, 99, 6};
                 secondLargest = largest;
                 // Update largest to be the current number
                 largest = num;
-            } 
+            }
             // If current number is not the largest but greater than the second largest
             else if (num > secondLargest && num != largest) {
                 // Update second largest to be the current number
@@ -129,10 +166,9 @@ int[] numbers = {10, 20, 4, 45, 99, 6};
             }
         }
 
-
 public class ThirdFourthLargest {
-    public static void main(String[] args) {
-        int[] numbers = {10, 20, 4, 45, 99, 6, 78, 33, 50};
+public static void main(String[] args) {
+int[] numbers = {10, 20, 4, 45, 99, 6, 78, 33, 50};
 
         // If the array has fewer than 4 elements, we can't find the third and fourth largest elements
         if (numbers.length < 4) {
@@ -174,6 +210,7 @@ public class ThirdFourthLargest {
         System.out.println("Third Largest Element: " + thirdLargest);
         System.out.println("Fourth Largest Element: " + fourthLargest);
     }
+
 }
 
 Finding the First Unique Element in an Array
@@ -191,11 +228,10 @@ int[] numbers = {4, 5, 1, 2, 0, 4};
                 }
             }
 
-
 Find All Pairs with a Given Sum
 
 int[] numbers = {1, 4, 3, 2, 5, 6};
-        int targetSum = 7;
+int targetSum = 7;
 
         // Flag to check if any pairs are found
         boolean foundPair = false;
@@ -227,4 +263,3 @@ int[] numbers = {1, 4, 3, 2, 5, 6};
 
         // Find the missing number
         int missingNumber = expectedSum - actualSum;
-  
