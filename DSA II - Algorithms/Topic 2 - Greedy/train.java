@@ -28,7 +28,6 @@ public class train {
         System.out.println(max_platforms);
         return max_platforms;
     }
-
     public static void main(String[] args) {
         train obj = new train();
         int incoming[] = { 10, 12, 15, 20, 30 };
