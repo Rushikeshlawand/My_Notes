@@ -2,7 +2,6 @@ import java.util.Arrays;
 
 public class train {
     int countPlatform(int[] incoming, int[] outgoing) {
-
         Arrays.sort(incoming);
         Arrays.sort(outgoing);
 
@@ -12,7 +11,6 @@ public class train {
         int j = 0;
 
         while (i < incoming.length && j < outgoing.length) {
-
             if (incoming[i] <= outgoing[j]) {
                 platform_needed++;
                 i++;
@@ -27,7 +25,6 @@ public class train {
                 max_platforms = platform_needed;
             }
         }
-
         System.out.println(max_platforms);
         return max_platforms;
     }
