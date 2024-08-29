@@ -91,175 +91,34 @@ for (int i = 1; i < arr.length; i++) {
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-
-Reverse an Array: Write a Java program to reverse the elements of an array.
-
-        int[] numbers = {1, 2, 3, 4, 5};
-        int[] reversed = new int[numbers.length];
-
-        for (int i = 0; i < numbers.length; i++) {
-            reversed[i] = numbers[numbers.length - 1 - i];
-        }
-
-int[] numbers = {1, 2, 3, 4, 5};
-
-        int start = 0;
-        int end = numbers.length - 1;
-
-        while (start < end) {
-            int temp = numbers[start];
-            numbers[start] = numbers[end];
-            numbers[end] = temp;
-
-            start++;
-            end--;
-        }
-
-Rotate an Array to the Right by a Given Number of Steps
-
-        int[] numbers = {1, 2, 3, 4, 5};
-        int k = 2; // Number of steps to rotate
-
-        int n = numbers.length;
-        int[] rotated = new int[n];
-
-        for (int i = 0; i < n; i++) {
-            rotated[(i + k) % n] = numbers[i]; 	//0+2%5=2
-        }
-
-Find the Second Largest Element in an Array
-
-int[] numbers = {10, 20, 4, 45, 99, 6};
-
-        // If the array has fewer than 2 elements, there can't be a second largest element
-        if (numbers.length < 2) {
-            System.out.println("Array is too small to have a second largest element.");
-            return;
-        }
-
-        // Initialize the largest and second largest to the smallest possible integer value
-        int largest = Integer.MIN_VALUE;
-        int secondLargest = Integer.MIN_VALUE;
-
-        // Traverse through the array
-        for (int num : numbers) {
-            // If current number is greater than the largest found so far
-            if (num > largest) {
-                // Update second largest to be the previous largest
-                secondLargest = largest;
-                // Update largest to be the current number
-                largest = num;
-            }
-            // If current number is not the largest but greater than the second largest
-            else if (num > secondLargest && num != largest) {
-                // Update second largest to be the current number
-                secondLargest = num;
-            }
-        }
-
-public class ThirdFourthLargest {
-public static void main(String[] args) {
-int[] numbers = {10, 20, 4, 45, 99, 6, 78, 33, 50};
-
-        // If the array has fewer than 4 elements, we can't find the third and fourth largest elements
-        if (numbers.length < 4) {
-            System.out.println("Array is too small to have third and fourth largest elements.");
-            return;
-        }
-
-        // Initialize the largest, second largest, third largest, and fourth largest
-        int largest = Integer.MIN_VALUE;
-        int secondLargest = Integer.MIN_VALUE;
-        int thirdLargest = Integer.MIN_VALUE;
-        int fourthLargest = Integer.MIN_VALUE;
-
-        // Traverse through the array
-        for (int num : numbers) {
-            if (num > largest) {
-                // Shift down
-                fourthLargest = thirdLargest;
-                thirdLargest = secondLargest;
-                secondLargest = largest;
-                largest = num;
-            } else if (num > secondLargest && num != largest) {
-                // Shift down
-                fourthLargest = thirdLargest;
-                thirdLargest = secondLargest;
-                secondLargest = num;
-            } else if (num > thirdLargest && num != secondLargest && num != largest) {
-                // Shift down
-                fourthLargest = thirdLargest;
-                thirdLargest = num;
-            } else if (num > fourthLargest && num != thirdLargest && num != secondLargest && num != largest) {
-                fourthLargest = num;
-            }
-        }
-
-        // Print the results
-        System.out.println("Largest Element: " + largest);
-        System.out.println("Second Largest Element: " + secondLargest);
-        System.out.println("Third Largest Element: " + thirdLargest);
-        System.out.println("Fourth Largest Element: " + fourthLargest);
-    }
-
+## Sum of Digits of a Number
+```java
+ int num = sc.nextInt();
+int sum=0;
+while(num>0){
+    sum+=num%10;
+    num/=10;
 }
+```
+## Swap Two Numbers Without Using a Temporary Variable
 
-Finding the First Unique Element in an Array
-int[] numbers = {4, 5, 1, 2, 0, 4};
+```java
+int a = 5;
+int b = 3;
+a = a + b;
+b = a - b;
+a = a - b;
+```
+## Find the GCD (Greatest Common Divisor) of Two Numbers
 
-        // Traverse each element of the array
-        for (int i = 0; i < numbers.length; i++) {
-            boolean isUnique = true;
+```java
+int a=54;
+int b=24;
+int gcd=1;
 
-            // Check if the current element is unique
-            for (int j = 0; j < numbers.length; j++) {
-                if (i != j && numbers[i] == numbers[j]) {
-                    isUnique = false;
-                    break;
-                }
-            }
-
-Find All Pairs with a Given Sum
-
-int[] numbers = {1, 4, 3, 2, 5, 6};
-int targetSum = 7;
-
-        // Flag to check if any pairs are found
-        boolean foundPair = false;
-
-        // Traverse each element of the array
-        for (int i = 0; i < numbers.length; i++) {
-            for (int j = i + 1; j < numbers.length; j++) {
-                // Check if the sum of the current pair equals the target sum
-                if (numbers[i] + numbers[j] == targetSum) {
-                    System.out.println("Pair with sum " + targetSum + ": (" + numbers[i] + ", " + numbers[j] + ")");
-                    foundPair = true;
-                }
-            }
-        }
-
-        Find the Missing Number in a Range
-
-      int[] numbers = {1, 2, 4, 5, 6}; // Example array with a missing number
-        int n = numbers.length + 1; // Total count including the missing number
-
-        // Calculate the expected sum of numbers from 1 to n
-        int expectedSum = n * (n + 1) / 2;
-
-        // Calculate the actual sum of the array elements
-        int actualSum = 0;
-        for (int num : numbers) {
-            actualSum += num;
-        }
-
-        // Find the missing number
-        int missingNumber = expectedSum - actualSum;
+for(int i=1;i<=a && i<=b;i++){
+    if (a%i==0 && b%i==0) {
+        gcd=i;
+    }
+}
+```

@@ -728,8 +728,9 @@ Heap Sort is a comparison-based sorting algorithm that uses a binary heap data s
 - **Time Complexity**: O(n log n) (worst, average, and best case)
 - **Space Complexity**: O(1)
 
+# Greedy Algorithm
 
-
+A greedy algorithm is a problem-solving approach that builds up a solution piece by piece, always choosing the next piece that offers the most immediate benefit or is the most optimal according to some criterion. The key idea is to make a series of choices that seem best at each step with the hope that these local optimal will lead to a global optimum.
 
 
 
