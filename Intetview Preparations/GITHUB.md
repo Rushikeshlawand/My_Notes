@@ -1,6 +1,6 @@
 ## GitHub Commands
-git init
-git add <filename>
-git commit -m "Initial commit"
-git remote add origin <repository-url>
+git init <br>
+git add <filename> <br>
+git commit -m "Initial commit" <br>
+git remote add origin <repository-url><br>
 git push -u origin master
