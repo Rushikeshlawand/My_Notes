@@ -729,7 +729,6 @@ Heap Sort is a comparison-based sorting algorithm that uses a binary heap data s
 - **Space Complexity**: O(1)
 
 # Greedy Algorithm
-
 A greedy algorithm is a problem-solving approach that builds up a solution piece by piece, always choosing the next piece that offers the most immediate benefit or is the most optimal according to some criterion. The key idea is to make a series of choices that seem best at each step with the hope that these local optimal will lead to a global optimum.
 
 
@@ -765,3 +764,16 @@ O(n): Linear time - the running time grows linearly with the input size.<br>
 O(n^2): Quadratic time - the running time grows quadratically with the input size.<br>
 O(log n): Logarithmic time - the running time grows logarithmically with the input size.
 
+# Dynamic Programming in Java
+
+## Definition
+Dynamic Programming (DP) is a technique used to solve problems by breaking them down into smaller subproblems, solving each of those subproblems just once, and storing their solutions. The stored solutions are then reused (memoized) to solve the larger problem efficiently. DP is particularly effective for problems with overlapping subproblems and optimal substructure.
+
+## Key Concepts
+- **Overlapping Subproblems**: The problem can be broken down into smaller, reusable subproblems.
+- **Optimal Substructure**: The optimal solution to the problem can be constructed from optimal solutions of its subproblems.
+- **Memoization**: Storing the results of expensive function calls and reusing them when the same inputs occur again.
+
+## Example: Fibonacci Series
+
+The Fibonacci series is a classic example of a problem that can be efficiently solved using dynamic programming.

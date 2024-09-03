@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "fibonacci",
+            "request": "launch",
+            "mainClass": "fibonacci",
+            "projectName": "Notes_8278a671"
+        },
+        {
+            "type": "java",
             "name": "EquilibriumIndex",
             "request": "launch",
             "mainClass": "EquilibriumIndex",
