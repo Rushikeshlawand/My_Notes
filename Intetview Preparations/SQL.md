@@ -92,6 +92,56 @@ CREATE TABLE Orders (
     order_status VARCHAR(20) DEFAULT 'Pending'
 );
 ```
+# Keys in SQL
 
+In SQL, keys are crucial for defining relationships between tables and ensuring data integrity. Below are the different types of keys used in SQL:
+
+## 1. Primary Key
+
+The **Primary Key** is a unique identifier for each record in a table. It ensures that each record can be uniquely identified. A table can have only one primary key, and it must contain unique values. The primary key column(s) cannot contain `NULL` values.
+
+### Example:
+In an "Employees" table, the "employee_id" could be the primary key since it uniquely identifies each employee.
+
+```sql
+CREATE TABLE Employees (
+    employee_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    department VARCHAR(50)
+);
+```
+## 2.Foreign Key
+
+The Foreign Key is a column (or a set of columns) in one table that uniquely identifies rows in another table. It establishes a relationship between two tables. The foreign key in the child table references the primary key in the parent table.
+#### Example:
+
+If you have an "Orders" table that references an "Employees" table, the "employee_id" in the "Orders" table would be a foreign key.
+
+```sql
+
+CREATE TABLE Orders (
+    order_id INT PRIMARY KEY,
+    order_date DATE,
+    employee_id INT,
+    FOREIGN KEY (employee_id) REFERENCES Employees(employee_id)
+);
+```
+## 3. Unique Key
+
+The Unique Key constraint ensures that all values in a column are different. It is similar to the primary key, except a table can have multiple unique keys, and they can contain NULL values (but each NULL is considered unique).
+#### Example:
+
+In an "Employees" table, the "email" column could be set as a unique key to ensure no two employees have the same email address.
+
+```sql
+
+CREATE TABLE Employees (
+    employee_id INT PRIMARY KEY,
+    email VARCHAR(100) UNIQUE,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50)
+);
+```
 
 
