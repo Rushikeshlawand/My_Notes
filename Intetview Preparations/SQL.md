@@ -29,6 +29,19 @@ A Database is defined as a structured form of data storage in a computer or a co
 # Does SQL support programming language features?
 
 It is true that SQL is a language, but it does not support programming as it is not a programming language; it is a command language. We do not have conditional statements in SQL like for loops or if..else; we only have commands that we can use to query, update, delete, etc., data in the database. SQL allows us to manipulate data in a database.
+
+| Data Type  | Description                                             | Example                 |
+|------------|---------------------------------------------------------|-------------------------|
+| INT        | Integer value                                           | 123                     |
+| VARCHAR(n) | Variable-length character string with a maximum of 'n' characters | 'John Doe'              |
+| DATE       | Date value                                              | '2021-10-15'            |
+| FLOAT      | Floating-point number                                   | 3.14                    |
+| BOOLEAN    | Logical value (True/False)                              | True                    |
+| CHAR(n)    | Fixed-length character string with a length of 'n' characters | 'ABC'                   |
+| TEXT       | Variable-length text data                               | 'Lorem ipsum...'        |
+| DECIMAL(p, s) | Exact numeric value with a precision of 'p' total digits and 's' digits after the decimal point | 12.345                  |
+
+
 # Difference between CHAR and VARCHAR2 datatype in SQL
 
 | Feature                  | CHAR                                     | VARCHAR2                                      |
