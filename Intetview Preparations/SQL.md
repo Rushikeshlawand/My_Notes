@@ -29,6 +29,7 @@ A Database is defined as a structured form of data storage in a computer or a co
 # Does SQL support programming language features?
 
 It is true that SQL is a language, but it does not support programming as it is not a programming language; it is a command language. We do not have conditional statements in SQL like for loops or if..else; we only have commands that we can use to query, update, delete, etc., data in the database. SQL allows us to manipulate data in a database.
+# Data Types in SQL
 
 | Data Type  | Description                                             | Example                 |
 |------------|---------------------------------------------------------|-------------------------|
@@ -50,9 +51,19 @@ It is true that SQL is a language, but it does not support programming as it is 
 | Usage                    | Used for character strings of fixed length | Used for character strings of variable length |
 | Storage Example          | If defined as `CHAR(5)`, only strings of exactly 5 characters can be stored | If defined as `VARCHAR2(5)`, strings of length 1 to 5 can be stored |
 
-# What do you mean by Data Definition Language?
+# Types of SQL Commands
+ 
+SQL commands can be categorized into the following types:
 
-Data Definition Language or DDL allows the execution of queries like CREATE, DROP, and ALTER. These are the queries that define the data.
+1. **Data Definition Language (DDL)**: DDL commands are used to define the structure of database objects such as tables, indexes, and views. Examples of DDL commands include CREATE, RENAME, TRUNCATE, ALTER, and DROP.
+
+2. **Data Manipulation Language (DML)**: DML commands are used to manipulate data stored in the database. These commands include SELECT, INSERT, UPDATE, and DELETE.
+
+3. **Data Control Language (DCL)**: DCL commands are used to control access to data stored in the database. Commands like GRANT and REVOKE fall under this category.
+
+4. **Transaction Control Language (TCL)**: TCL commands are used to manage transactions within a database. Commands like COMMIT, ROLLBACK, and SAVEPOINT are part of TCL.
+
+5. **Data Query Language (DQL)**: DQL commands are used to retrieve data from the database. The most common DQL command is SELECT.
 
 # What do you mean by Data Manipulation Language?
 
