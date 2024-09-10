@@ -731,6 +731,46 @@ Heap Sort is a comparison-based sorting algorithm that uses a binary heap data s
 # Greedy Algorithm
 A greedy algorithm is a problem-solving approach that builds up a solution piece by piece, always choosing the next piece that offers the most immediate benefit or is the most optimal according to some criterion. The key idea is to make a series of choices that seem best at each step with the hope that these local optimal will lead to a global optimum.
 
+# Graph Data Structure and Algorithms
+
+A **graph** is a collection of nodes (also called vertices) and edges that connect pairs of nodes. Graphs are used to model relationships between objects in a wide range of applications, such as social networks, maps, web pages, or circuits.
+
+## Graph Components:
+- **Nodes/Vertices (V):** Represent the entities (e.g., people, places, or objects).
+- **Edges (E):** Represent connections or relationships between pairs of nodes.
+
+## Types of Graphs:
+- **Directed Graphs (Digraphs):** Edges have a direction, meaning the relationship goes one way (from one vertex to another).
+- **Undirected Graphs:** Edges have no direction, meaning the relationship is bidirectional.
+- **Weighted Graphs:** Edges have weights (representing costs, distances, or capacities).
+- **Unweighted Graphs:** All edges have the same weight or no weight at all.
+
+## Applications:
+1. Social Networks
+2. Web Page Ranking (Google PageRank Algorithm)
+3. Navigation and Maps (GPS, Google Maps)
+4. Network Routing (Internet)
+5. Biology (Protein Interaction Networks, Gene Sequencing)
+6. Transportation Networks
+7. Electrical Circuits
+8. Image Processing and Computer Vision
+
+## Advantages:
+1. Social Networks
+2. Web Page Ranking (Google PageRank Algorithm)
+3. Navigation and Maps (GPS, Google Maps)
+4. Network Routing (Internet)
+5. Biology (Protein Interaction Networks, Gene Sequencing)
+6. Transportation Networks
+7. Electrical Circuits
+8. Image Processing and Computer Vision
+
+## Disadvantages:
+1. Memory and Space Complexity
+2. Computation Time for Large Graphs
+3. Difficulties in Visualizing Large Graphs
+4. Handling Dynamic Graphs
+5. Scalability Issues
 
 
 
