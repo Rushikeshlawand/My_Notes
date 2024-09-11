@@ -1,5 +1,9 @@
 # SQL Interview Questions and Answers for Freshers
 
+# What is a Database?
+
+A Database is defined as a structured form of data storage in a computer or a collection of data in an organized manner and can be accessed in various ways. It is also the collection of schemas, tables, queries, views, etc. Databases help us with easily storing, accessing, and manipulating data held on a computer. The Database Management System allows a user to interact with the database.
+
 ## 1. What is SQL?
 
 SQL stands for Structured Query Language. It is a language used to interact with the database, i.e., to create a database, create a table in the database, retrieve data or update a table in the database, etc. SQL is an ANSI (American National Standards Institute) standard. Using SQL, we can do many things. For example, we can execute queries, insert records into a table, update records, create a database, create a table, delete a table, etc.
@@ -23,12 +27,11 @@ SQL stands for Structured Query Language. It is a language used to interact with
   | Table     |  | Records   |  | Table    |
   +-----------+  +-----------+  +----------+
 ```
-# What is a Database?
 
-A Database is defined as a structured form of data storage in a computer or a collection of data in an organized manner and can be accessed in various ways. It is also the collection of schemas, tables, queries, views, etc. Databases help us with easily storing, accessing, and manipulating data held on a computer. The Database Management System allows a user to interact with the database.
 # Does SQL support programming language features?
 
 It is true that SQL is a language, but it does not support programming as it is not a programming language; it is a command language. We do not have conditional statements in SQL like for loops or if..else; we only have commands that we can use to query, update, delete, etc., data in the database. SQL allows us to manipulate data in a database.
+
 # Data Types in SQL
 
 | Data Type  | Description                                             | Example                 |
