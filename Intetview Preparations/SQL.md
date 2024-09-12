@@ -28,6 +28,18 @@ SQL stands for Structured Query Language. It is a language used to interact with
   +-----------+  +-----------+  +----------+
 ```
 
+# SQL vs NoSQL
+
+| **Feature**             | **SQL**                                            | **NoSQL**                                          |
+|-------------------------|----------------------------------------------------|----------------------------------------------------|
+| **Data Model**           | Relational (tables with rows and columns)          | Non-relational (key-value, document, graph, etc.)  |
+| **Schema**               | Fixed schema with a predefined structure           | Schema-less or dynamic schema                      |
+| **Scalability**          | Vertical scalability (adding power to a single server) | Horizontal scalability (adding more servers)        |
+| **Query Language**       | Structured Query Language (SQL)                    | Varies (e.g., JSON, query APIs, etc.)              |
+| **Data Integrity**       | Strong ACID properties (Atomicity, Consistency, Isolation, Durability) | BASE properties (Basically Available, Soft state, Eventual consistency) |
+| **Examples**             | MySQL, PostgreSQL, Oracle                          | MongoDB, Cassandra, Redis                          |
+| **Use Cases**            | Complex queries, multi-row transactions            | Big data, real-time applications, distributed data |
+
 # Does SQL support programming language features?
 
 It is true that SQL is a language, but it does not support programming as it is not a programming language; it is a command language. We do not have conditional statements in SQL like for loops or if..else; we only have commands that we can use to query, update, delete, etc., data in the database. SQL allows us to manipulate data in a database.
@@ -127,48 +139,31 @@ In SQL, keys are crucial for defining relationships between tables and ensuring 
 
 The **Primary Key** is a unique identifier for each record in a table. It ensures that each record can be uniquely identified. A table can have only one primary key, and it must contain unique values. The primary key column(s) cannot contain `NULL` values.
 
-### Example:
-In an "Employees" table, the "employee_id" could be the primary key since it uniquely identifies each employee.
 
-```sql
-CREATE TABLE Employees (
-    employee_id INT PRIMARY KEY,
-    first_name VARCHAR(50),
-    last_name VARCHAR(50),
-    department VARCHAR(50)
-);
-```
 ## 2.Foreign Key
 
 The Foreign Key is a column (or a set of columns) in one table that uniquely identifies rows in another table. It establishes a relationship between two tables. The foreign key in the child table references the primary key in the parent table.
-#### Example:
 
-If you have an "Orders" table that references an "Employees" table, the "employee_id" in the "Orders" table would be a foreign key.
+# SQL Table Example with Foreign Key
 
-```sql
+## **Users Table**
 
-CREATE TABLE Orders (
-    order_id INT PRIMARY KEY,
-    order_date DATE,
-    employee_id INT,
-    FOREIGN KEY (employee_id) REFERENCES Employees(employee_id)
-);
-```
+| **Column**   | **Data Type** | **Description**        |
+|--------------|---------------|------------------------|
+| `user_id`    | INT           | Primary Key, Auto Increment |
+| `username`   | VARCHAR(50)   | Username of the user   |
+| `email`      | VARCHAR(100)  | Email address          |
+| `created_at` | TIMESTAMP     | Account creation date  |
+
+## **Orders Table**
+
+| **Column**    | **Data Type** | **Description**               |
+|---------------|---------------|-------------------------------|
+| `order_id`    | INT           | Primary Key, Auto Increment    |
+| `user_id`     | INT           | Foreign Key (References `user_id` in Users table) |
+| `order_date`  | TIMESTAMP     | Date of the order             |
+| `total_amount`| DECIMAL(10, 2)| Total amount of the order     |
+
 ## 3. Unique Key
 
 The Unique Key constraint ensures that all values in a column are different. It is similar to the primary key, except a table can have multiple unique keys, and they can contain NULL values (but each NULL is considered unique).
-#### Example:
-
-In an "Employees" table, the "email" column could be set as a unique key to ensure no two employees have the same email address.
-
-```sql
-
-CREATE TABLE Employees (
-    employee_id INT PRIMARY KEY,
-    email VARCHAR(100) UNIQUE,
-    first_name VARCHAR(50),
-    last_name VARCHAR(50)
-);
-```
-
-
