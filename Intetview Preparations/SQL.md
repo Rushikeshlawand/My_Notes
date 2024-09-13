@@ -89,6 +89,10 @@ Data Manipulation Language or DML is used to access or manipulate data in the da
 - Retrieve or fetch data
 - Update data in a database
 
+# **What is a Schema?**
+
+A schema in the context of a database is a blueprint or structure that defines the organization of data within the database. 
+
 # What is a View in SQL?
 
 A **View** in SQL is a virtual table that represents the result of a stored query. Unlike a real table, a view does not store data itself but rather provides a way to look at data from one or more tables in a structured and filtered manner. 
