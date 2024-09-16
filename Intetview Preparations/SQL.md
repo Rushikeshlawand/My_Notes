@@ -172,6 +172,68 @@ The Foreign Key is a column (or a set of columns) in one table that uniquely ide
 
 The Unique Key constraint ensures that all values in a column are different. It is similar to the primary key, except a table can have multiple unique keys, and they can contain NULL values (but each NULL is considered unique).
 
+# SQL Operators
+
+## 1. `=` (Equal)
+- Checks if the values of two expressions are equal.
+
+## 2. `!=` or `<>` (Not Equal)
+- Checks if the values of two expressions are not equal.
+
+## 3. `>` (Greater Than)
+- Checks if the value on the left is greater than the value on the right.
+
+## 4. `<` (Less Than)
+- Checks if the value on the left is less than the value on the right.
+
+## 5. `>=` (Greater Than or Equal To)
+- Checks if the value on the left is greater than or equal to the value on the right.
+
+## 6. `<=` (Less Than or Equal To)
+- Checks if the value on the left is less than or equal to the value on the right.
+
+## 7. `AND`
+- Combines two conditions and returns TRUE if both conditions are TRUE.
+
+## 8. `OR`
+- Combines two conditions and returns TRUE if at least one of the conditions is TRUE.
+
+## 9. `NOT`
+- Negates a condition, returning TRUE if the condition is FALSE.
+
+## 10. `BETWEEN`
+- Selects values within a specified range (inclusive of the start and end values).
+
+## 11. `IN`
+- Checks if a value matches any value in a list of values.
+
+## 12. `LIKE`
+- Searches for a specified pattern in a column (often used with `%` and `_` wildcards).
+
+## 13. `IS NULL`
+- Checks if a column contains a NULL value.
+
+## 14. `IS NOT NULL`
+- Checks if a column does not contain a NULL value.
+
+## 15. `+` (Addition)
+- Adds two numbers.
+
+## 16. `-` (Subtraction)
+- Subtracts the second number from the first.
+
+## 17. `*` (Multiplication)
+- Multiplies two numbers.
+
+## 18. `/` (Division)
+- Divides the first number by the second.
+
+## 19. `%` (Modulo)
+- Returns the remainder when dividing two numbers.
+
+## 20. `||` or `+` (Concatenation)
+- Concatenates two or more strings into one string (syntax varies between SQL dialects).
+
 # SQL Functions
 
 ## 1. COUNT()
