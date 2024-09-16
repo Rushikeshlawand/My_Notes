@@ -171,3 +171,86 @@ The Foreign Key is a column (or a set of columns) in one table that uniquely ide
 ## 3. Unique Key
 
 The Unique Key constraint ensures that all values in a column are different. It is similar to the primary key, except a table can have multiple unique keys, and they can contain NULL values (but each NULL is considered unique).
+
+# SQL Functions
+
+## 1. COUNT()
+- Returns the total number of rows in a table or the number of non-NULL values in a specific column.
+
+## 2. SUM()
+- Returns the total sum of a numeric column.
+
+## 3. AVG()
+- Returns the average value of a numeric column.
+
+## 4. MIN()
+- Returns the smallest value in a column.
+
+## 5. MAX()
+- Returns the largest value in a column.
+
+## 6. ROUND()
+- Rounds a numeric value to a specified number of decimal places.
+
+## 7. LENGTH()
+- Returns the length of a string (in characters).
+
+## 8. CONCAT()
+- Concatenates two or more strings into one string.
+
+## 9. NOW()
+- Returns the current date and time.
+
+## 10. UPPER()
+- Converts all characters in a string to uppercase.
+
+## 11. LOWER()
+- Converts all characters in a string to lowercase.
+
+## 12. COALESCE()
+- Returns the first non-NULL value from a list of expressions.
+
+## 13. ISNULL()
+- Checks if an expression is NULL and returns a specified value if it is.
+
+## 14. LEFT() / RIGHT()
+- Returns a specified number of characters from the left or right side of a string.
+
+## 15. SUBSTRING()
+- Extracts a portion of a string based on position and length.
+
+## 16. REPLACE()
+- Replaces all occurrences of a specified substring within a string with another substring.
+
+## 17. ABS()
+- Returns the absolute (positive) value of a number.
+
+## 18. FLOOR() / CEIL()
+- `FLOOR()` rounds a number down to the nearest integer, while `CEIL()` rounds it up to the nearest integer.
+
+
+# SQL Constraints
+
+## 1. PRIMARY KEY
+- Ensures that a column or combination of columns has unique values and cannot contain NULL. It uniquely identifies each record in a table.
+
+## 2. FOREIGN KEY
+- A column (or combination of columns) that creates a relationship between two tables. It enforces referential integrity by ensuring that the value in the foreign key column must exist in the referenced table.
+
+## 3. UNIQUE
+- Ensures that all values in a column are distinct, preventing duplicate values in the column.
+
+## 4. NOT NULL
+- Prevents NULL values from being inserted into a column, ensuring that a field always contains a value.
+
+## 5. CHECK
+- Ensures that all values in a column satisfy a specific condition or expression.
+
+## 6. DEFAULT
+- Assigns a default value to a column if no value is provided during the insertion of a new record.
+
+## 7. AUTO_INCREMENT
+- Automatically generates a unique number for the column, usually used for primary keys.
+
+## 8. INDEX
+- Improves the speed of data retrieval operations on a table by creating an index on one or more columns.
