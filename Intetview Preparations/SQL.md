@@ -316,3 +316,62 @@ The Unique Key constraint ensures that all values in a column are different. It 
 
 ## 8. INDEX
 - Improves the speed of data retrieval operations on a table by creating an index on one or more columns.
+
+# SQL Joins
+
+SQL Joins are a fundamental concept in database management that allows you to combine rows from two or more tables based on a related column between them. Understanding joins is crucial for retrieving meaningful data from a relational database.
+
+## Types of Joins
+
+1. **INNER JOIN**
+An INNER JOIN is a type of join that combines rows from two or more tables based on a related column between them. It returns only the rows where there is a match in both tables.
+
+## Key Points:
+Combines Rows: It pulls data from two tables where conditions are met.
+Returns Matches Only: If there is no matching row in either table, that row will not appear in the results.
+Common Use Case: Often used when you want to retrieve data that is related across different tables.
+
+2. **LEFT JOIN (or LEFT OUTER JOIN)**
+A LEFT JOIN is a type of join in SQL (Structured Query Language) that allows you to combine rows from two tables based on a related column. It includes all the records from the left table and the matched records from the right table. If there’s no match, NULL values are returned for columns from the right table.
+
+## Key Points:
+Left Table: The first (or left) table from which you want to retrieve all rows.
+Right Table: The second (or right) table from which you want to retrieve matching rows.
+NULL Values: If there's no match in the right table, the result will show NULL for those columns.
+
+3. **RIGHT JOIN (or RIGHT OUTER JOIN)**
+type of SQL operation that combines rows from two tables based on a related column between them, returning all the rows from the right table and the matched rows from the left table. If there is no match, NULL values are returned for columns from the left table.
+
+## Key Points:
+Tables Involved: You need two tables to perform a RIGHT JOIN.
+Right Table: The table from which you want all rows.
+Left Table: The table that may or may not have matching records.
+
+4. **FULL JOIN (or FULL OUTER JOIN)**
+A FULL JOIN (or FULL OUTER JOIN) is a type of join in SQL that combines the results of both a LEFT JOIN and a RIGHT JOIN. It returns all records from both tables, along with matched records where available. If there is no match, the result will contain NULLs for missing values.
+
+## Key Points
+Purpose: To retrieve all records from two tables, showing all matches and filling in gaps with NULLs.
+
+5. **CROSS JOIN**
+A CROSS JOIN is a type of join operation in SQL that combines every row from one table with every row from another table. This results in a Cartesian product of the two tables. Here’s a simple breakdown of what that means and how to use it:
+
+## Key Points:
+
+A CROSS JOIN produces a set that contains all possible combinations of rows from the tables involved.
+If Table A has m rows and Table B has n rows, the result will have m * n rows.
+Use Case:
+
+CROSS JOIN is often used when you need to combine every record from one table with every record from another. This is less common than other types of joins but can be useful in specific scenarios, like creating combinations or in analyses involving every possible pair of entities.
+
+6. **SELF JOIN**
+A self join is a type of join in SQL where a table is joined with itself. This is useful when you want to compare rows within the same table or when the data is hierarchical. Here's how it works, step by step:
+
+## Key Points to Understand Self Joins
+Same Table: In a self join, you reference a single table twice, giving each instance a different alias. This allows you to treat it like two separate tables.
+
+Use Cases: Common use cases include:
+
+Finding relationships within the same dataset.
+Hierarchical data, like employees and their managers.
+Comparing rows for data integrity checks.
