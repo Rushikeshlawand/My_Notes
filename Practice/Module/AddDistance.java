@@ -1,5 +1,3 @@
-package Module;
-
 public class AddDistance {
     private int feet;
     private int inches;

@@ -646,6 +646,37 @@ Bubble Sort is a simple comparison-based sorting algorithm that repeatedly steps
 - **Time Complexity**: O(n^2) (worst and average case)
 - **Space Complexity**: O(1)
 
+
+```plaintext
+Initial array: [5, 3, 8, 4, 2]
+
+1st Pass:
+[5, 3, 8, 4, 2]  -> Compare 5 and 3, Swap -> [3, 5, 8, 4, 2]
+[3, 5, 8, 4, 2]  -> Compare 5 and 8, No Swap
+[3, 5, 8, 4, 2]  -> Compare 8 and 4, Swap -> [3, 5, 4, 8, 2]
+[3, 5, 4, 8, 2]  -> Compare 8 and 2, Swap -> [3, 5, 4, 2, 8]
+
+2nd Pass:
+[3, 5, 4, 2, 8]  -> Compare 3 and 5, No Swap
+[3, 5, 4, 2, 8]  -> Compare 5 and 4, Swap -> [3, 4, 5, 2, 8]
+[3, 4, 5, 2, 8]  -> Compare 5 and 2, Swap -> [3, 4, 2, 5, 8]
+[3, 4, 2, 5, 8]  -> Compare 5 and 8, No Swap
+
+3rd Pass:
+[3, 4, 2, 5, 8]  -> Compare 3 and 4, No Swap
+[3, 4, 2, 5, 8]  -> Compare 4 and 2, Swap -> [3, 2, 4, 5, 8]
+[3, 2, 4, 5, 8]  -> Compare 4 and 5, No Swap
+[3, 2, 4, 5, 8]  -> Compare 5 and 8, No Swap
+
+4th Pass:
+[3, 2, 4, 5, 8]  -> Compare 3 and 2, Swap -> [2, 3, 4, 5, 8]
+[2, 3, 4, 5, 8]  -> Compare 3 and 4, No Swap
+[2, 3, 4, 5, 8]  -> Compare 4 and 5, No Swap
+[2, 3, 4, 5, 8]  -> Compare 5 and 8, No Swap
+
+Sorted array: [2, 3, 4, 5, 8]
+
+```
 ---
 
 ## Selection Sort
@@ -662,7 +693,31 @@ Selection Sort is an in-place comparison-based sorting algorithm that divides th
 ### Complexity
 - **Time Complexity**: O(n^2) (worst and average case)
 - **Space Complexity**: O(1)
+```plaintext
+Initial array: [5, 3, 8, 4, 2]
 
+1st Pass:
+[5, 3, 8, 4, 2]  -> Find the smallest element (2), swap with 5
+[2, 3, 8, 4, 5]  -> 2 is placed at the first position
+
+2nd Pass:
+[2, 3, 8, 4, 5]  -> Find the smallest element in the unsorted part (3), no swap needed
+[2, 3, 8, 4, 5]  -> 3 is already in the correct position
+
+3rd Pass:
+[2, 3, 8, 4, 5]  -> Find the smallest element in the unsorted part (4), swap with 8
+[2, 3, 4, 8, 5]  -> 4 is placed at the third position
+
+4th Pass:
+[2, 3, 4, 8, 5]  -> Find the smallest element in the unsorted part (5), swap with 8
+[2, 3, 4, 5, 8]  -> 5 is placed at the fourth position
+
+5th Pass:
+[2, 3, 4, 5, 8]  -> Only one element left, it's already in the correct position
+
+Sorted array: [2, 3, 4, 5, 8]
+
+```
 ---
 
 ## Insertion Sort
@@ -680,6 +735,34 @@ Insertion Sort is a simple comparison-based sorting algorithm that builds the fi
 - **Time Complexity**: O(n^2) (worst case), O(n) (best case)
 - **Space Complexity**: O(1)
 
+```plaintext
+Initial array: [5, 3, 8, 4, 2]
+
+1st Pass:
+[5, 3, 8, 4, 2]  -> Compare 3 with 5, insert 3 before 5
+[3, 5, 8, 4, 2]  -> First two elements are sorted
+
+2nd Pass:
+[3, 5, 8, 4, 2]  -> Compare 8 with 5, no change needed
+[3, 5, 8, 4, 2]  -> First three elements are sorted
+
+3rd Pass:
+[3, 5, 8, 4, 2]  -> Compare 4 with 8, shift 8 right
+[3, 5, 8, 8, 2]  -> Compare 4 with 5, shift 5 right
+[3, 5, 5, 8, 2]  -> Insert 4 between 3 and 5
+[3, 4, 5, 8, 2]  -> First four elements are sorted
+
+4th Pass:
+[3, 4, 5, 8, 2]  -> Compare 2 with 8, shift 8 right
+[3, 4, 5, 8, 8]  -> Compare 2 with 5, shift 5 right
+[3, 4, 5, 5, 8]  -> Compare 2 with 4, shift 4 right
+[3, 4, 4, 5, 8]  -> Compare 2 with 3, shift 3 right
+[3, 3, 4, 5, 8]  -> Insert 2 at the start
+[2, 3, 4, 5, 8]  -> The entire array is now sorted
+
+Sorted array: [2, 3, 4, 5, 8]
+
+```
 ---
 
 ## Merge Sort
@@ -695,6 +778,31 @@ Merge Sort is a divide-and-conquer comparison-based sorting algorithm. It divide
 - **Time Complexity**: O(n log n) (worst, average, and best case)
 - **Space Complexity**: O(n)
 
+```plaintext
+Initial array: [5, 3, 8, 4, 2]
+
+1st Step: Divide the array
+[5, 3, 8, 4, 2]
+  /          \
+[5, 3, 8]   [4, 2]
+  /   \       /  \
+[5]  [3, 8]  [4]  [2]
+     /   \         /  \
+   [3]   [8]     [2]  [4]
+
+2nd Step: Merge step-by-step
+Merge [3] and [8] -> [3, 8]
+Merge [2] and [4] -> [2, 4]
+
+Merge [5] and [3, 8] -> [3, 5, 8]
+Merge [2, 4] -> already merged
+
+3rd Step: Final merge
+Merge [3, 5, 8] and [2, 4] -> [2, 3, 4, 5, 8]
+
+Sorted array: [2, 3, 4, 5, 8]
+
+```
 ---
 
 ## Quick Sort
@@ -711,6 +819,49 @@ Quick Sort is a divide-and-conquer comparison-based sorting algorithm. It select
 - **Time Complexity**: O(n^2) (worst case), O(n log n) (average case)
 - **Space Complexity**: O(log n) (average case)
 
+```plaintext
+Initial array: [5, 3, 8, 4, 2]
+
+1st Step: Choose a pivot (last element in this case)
+Pivot = 2
+[5, 3, 8, 4, 2] -> Partition around 2
+
+Partition: 
+- Elements less than 2 -> []
+- Elements greater than 2 -> [5, 3, 8, 4]
+
+After partition: 
+[2] (pivot in correct position)
+
+Left part to sort: [5, 3, 8, 4]
+
+2nd Step: Choose a new pivot (4)
+Pivot = 4
+[5, 3, 8, 4] -> Partition around 4
+
+Partition:
+- Elements less than 4 -> [3]
+- Elements greater than 4 -> [5, 8]
+
+After partition:
+[3, 4] (pivot in correct position)
+
+Left parts to sort: [3] and [5, 8]
+
+3rd Step: Sort [5, 8] by choosing a pivot
+Pivot = 8
+[5, 8] -> Partition around 8
+
+Partition:
+- Elements less than 8 -> [5]
+- Elements greater than 8 -> []
+
+Final sorted order:
+[2, 3, 4, 5, 8]
+
+Sorted array: [2, 3, 4, 5, 8]
+
+```
 ---
 
 ## Heap Sort
@@ -728,6 +879,49 @@ Heap Sort is a comparison-based sorting algorithm that uses a binary heap data s
 - **Time Complexity**: O(n log n) (worst, average, and best case)
 - **Space Complexity**: O(1)
 
+```plaintext
+Initial array: [5, 3, 8, 4, 2]
+
+Step 1: Build a max heap from the array.
+[5, 3, 8, 4, 2] -> Create max heap
+
+Max Heap:
+        8
+      /   \
+     5     3
+    / \
+   4   2
+
+Step 2: Swap the root (largest element) with the last element, and heapify the remaining heap.
+[8, 5, 3, 4, 2] -> Swap 8 with 2 -> [2, 5, 3, 4, 8]
+Heapify [2, 5, 3, 4]:
+        5
+      /   \
+     4     3
+    /
+   2
+
+Step 3: Repeat the process for the remaining heap.
+[2, 5, 3, 4, 8] -> Swap 5 with 2 -> [2, 4, 3, 5, 8]
+Heapify [2, 4, 3]:
+        4
+      /   \
+     2     3
+
+[2, 4, 3, 5, 8] -> Swap 4 with 2 -> [2, 3, 4, 5, 8]
+Heapify [2, 3]:
+        3
+      /
+     2
+
+[2, 3, 4, 5, 8] -> Swap 3 with 2 -> [2, 3, 4, 5, 8]
+Heapify [2]:
+(No changes needed)
+
+Final sorted array: [2, 3, 4, 5, 8]
+
+
+```
 # Greedy Algorithm
 A greedy algorithm is a problem-solving approach that builds up a solution piece by piece, always choosing the next piece that offers the most immediate benefit or is the most optimal according to some criterion. The key idea is to make a series of choices that seem best at each step with the hope that these local optimal will lead to a global optimum.
 
