@@ -375,3 +375,31 @@ Use Cases: Common use cases include:
 Finding relationships within the same dataset.
 Hierarchical data, like employees and their managers.
 Comparing rows for data integrity checks.
+
+# ACID Properties in SQL Databases
+
+ACID is an acronym that describes the key properties of database transactions. Each property ensures the reliability and integrity of the database.
+
+## 1. Atomicity
+- **Definition**: A transaction is treated as a single, indivisible unit.
+- **Explanation**: This means that either all operations within the transaction are completed successfully, or none are. If any operation fails, the entire transaction is rolled back.
+- **Example**: If a bank transfer involves subtracting money from one account and adding it to another, both actions must succeed or fail together. 
+
+## 2. Consistency
+- **Definition**: A transaction must leave the database in a valid state.
+- **Explanation**: It ensures that any transaction will bring the database from one valid state to another, maintaining all predefined rules, such as constraints and cascades.
+- **Example**: If a transaction violates a constraint (like attempting to insert a duplicate key), it will not complete, keeping the database consistent.
+
+## 3. Isolation
+- **Definition**: Transactions are executed in isolation from one another.
+- **Explanation**: This ensures that transactions do not interfere with each other. Even if transactions are run concurrently, it will appear as if they are executed one after the other.
+- **Example**: If two transactions are trying to read and write to the same data at the same time, isolation ensures that one transaction completes its process before the other begins.
+
+## 4. Durability
+- **Definition**: Once a transaction is committed, it will remain so, even in the event of a system failure.
+- **Explanation**: This property ensures that completed transactions are saved permanently in the database.
+- **Example**: After a successful transaction, even if there’s a power failure, the changes made by that transaction will persist in the database.
+
+## Summary
+Understanding ACID properties is crucial for designing reliable and robust database systems. Each property plays a significant role in maintaining the integrity of transactions, thereby enhancing data reliability.
+

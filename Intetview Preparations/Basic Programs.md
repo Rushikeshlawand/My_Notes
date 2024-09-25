@@ -34,6 +34,13 @@ if(lastchar=='0' || lastchar=='2' ||lastchar=='4' ||lastchar=='6' ||lastchar=='8
 ### the number who divisible by 1 & the number itself
 
 ```java
+for (int i = 2; i < n; i++) {
+            if (n % i == 0) {
+                return false; // n is divisible by i, so it's not prime
+            }
+        }
+return true;
+-------------------------
 if (num <= 1) {
     return false;
 }
