@@ -176,63 +176,124 @@ The Unique Key constraint ensures that all values in a column are different. It 
 
 ## 1. `=` (Equal)
 - Checks if the values of two expressions are equal.
+```sql
+SELECT * FROM employees WHERE salary = 50000;
+```
 
 ## 2. `!=` or `<>` (Not Equal)
 - Checks if the values of two expressions are not equal.
+```sql
+SELECT * FROM employees WHERE salary != 50000;
+```
 
 ## 3. `>` (Greater Than)
 - Checks if the value on the left is greater than the value on the right.
+```sql
+SELECT * FROM employees WHERE salary > 50000;
+
 
 ## 4. `<` (Less Than)
 - Checks if the value on the left is less than the value on the right.
+```sql
+SELECT * FROM employees WHERE salary < 50000;
 
+```
 ## 5. `>=` (Greater Than or Equal To)
 - Checks if the value on the left is greater than or equal to the value on the right.
+```sql
+SELECT * FROM employees WHERE salary >= 50000;
 
+```
 ## 6. `<=` (Less Than or Equal To)
 - Checks if the value on the left is less than or equal to the value on the right.
+```sql
+SELECT * FROM employees WHERE salary <= 50000;
 
+```
 ## 7. `AND`
 - Combines two conditions and returns TRUE if both conditions are TRUE.
+```sql
+SELECT * FROM employees WHERE salary > 50000 AND department = 'HR';
 
+```
 ## 8. `OR`
 - Combines two conditions and returns TRUE if at least one of the conditions is TRUE.
+```sql
+SELECT * FROM employees WHERE salary > 50000 OR department = 'HR';
 
+```
 ## 9. `NOT`
 - Negates a condition, returning TRUE if the condition is FALSE.
+```sql
+SELECT * FROM employees WHERE NOT salary > 50000;
 
+```
 ## 10. `BETWEEN`
 - Selects values within a specified range (inclusive of the start and end values).
+```sql
+SELECT * FROM employees WHERE salary BETWEEN 40000 AND 60000;
 
+```
 ## 11. `IN`
 - Checks if a value matches any value in a list of values.
+```sql
+SELECT * FROM employees WHERE department IN ('HR', 'Finance', 'IT');
 
+```
 ## 12. `LIKE`
 - Searches for a specified pattern in a column (often used with `%` and `_` wildcards).
+```sql
+SELECT * FROM employees WHERE name LIKE 'J%';
 
+```
 ## 13. `IS NULL`
 - Checks if a column contains a NULL value.
+```sql
+SELECT * FROM employees WHERE phone_number IS NULL;
 
+```
 ## 14. `IS NOT NULL`
 - Checks if a column does not contain a NULL value.
+```sql
+SELECT * FROM employees WHERE phone_number IS NOT NULL;
 
+```
 ## 15. `+` (Addition)
 - Adds two numbers.
 
+```sql
+SELECT name, salary + 5000 AS total_salary FROM employees;
+
+```
 ## 16. `-` (Subtraction)
 - Subtracts the second number from the first.
+```sql
+SELECT name, salary - 2000 AS net_salary FROM employees;
 
+```
 ## 17. `*` (Multiplication)
 - Multiplies two numbers.
+```sql
+SELECT name, salary * 1.10 AS increased_salary FROM employees;
 
+```
 ## 18. `/` (Division)
 - Divides the first number by the second.
+```sql
+SELECT name, salary / 2 AS part_time_salary FROM employees;
 
+```
 ## 19. `%` (Modulo)
 - Returns the remainder when dividing two numbers.
+```sql
+SELECT * FROM employees WHERE employee_id % 2 != 0;
 
+```
 ## 20. `||` or `+` (Concatenation)
 - Concatenates two or more strings into one string (syntax varies between SQL dialects).
+```sql
+SELECT first_name || ' ' || last_name AS full_name FROM employees;
+```
 
 # SQL Functions
 
@@ -403,3 +464,60 @@ ACID is an acronym that describes the key properties of database transactions. E
 ## Summary
 Understanding ACID properties is crucial for designing reliable and robust database systems. Each property plays a significant role in maintaining the integrity of transactions, thereby enhancing data reliability.
 
+
+# Understanding SQL Views
+
+SQL Views are virtual tables that allow you to present data in a specific way without storing it physically in the database. They can simplify complex queries, improve security by restricting access to a subset of data, and encapsulate complex logic.
+
+## Key Points
+
+- **Virtual Table**: A view does not store data itself; it derives the data from the tables in the database.
+- **Simplicity**: A view can encapsulate complex SQL logic, making it easier to retrieve data.
+- **Security**: By using views, you can restrict access to certain data while allowing users to access the view.
+- **Updatable Views**: Some views are updatable, meaning you can modify the underlying data through the view.
+
+## Creating a View
+
+To create a view, you use the `CREATE VIEW` statement followed by the view name and the SQL query that defines the view.
+
+### Syntax
+
+```sql
+CREATE VIEW view_name AS
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+```
+
+# Stored Procedure in SQL
+
+## What is a Stored Procedure?
+
+A **Stored Procedure** is a precompiled collection of SQL statements stored in a database, which can be executed as a single unit. Stored procedures can accept parameters, execute SQL logic, and return results, making them highly useful for repetitive tasks or complex operations.
+
+Stored procedures help in modularizing code, improving performance by reducing the need to compile SQL statements multiple times, and enhancing security by limiting direct access to tables.
+
+## Key Characteristics of Stored Procedures:
+1. **Precompiled**: Stored procedures are compiled and stored in the database, improving performance when executed multiple times.
+2. **Reusable**: Once written, a stored procedure can be executed as many times as needed without having to rewrite the SQL queries.
+3. **Parameter Support**: They can accept input parameters and provide output parameters, making them flexible for different inputs.
+4. **Security**: Stored procedures provide better control over data access. Users can be given permission to execute procedures without accessing the underlying tables directly.
+5. **Modularization**: Procedures help in organizing database operations into separate logical units, improving code readability and maintainability.
+
+## Advantages of Stored Procedures:
+- **Improved Performance**: SQL code inside the procedure is compiled once and can be executed multiple times without recompiling.
+- **Reduced Network Traffic**: Instead of sending multiple queries over the network, only a call to the procedure is made.
+- **Enhanced Security**: By encapsulating the SQL logic, stored procedures can protect against SQL injection attacks.
+- **Code Reusability**: Complex queries can be reused without rewriting.
+
+---
+
+## Syntax for Creating a Stored Procedure
+
+```sql
+CREATE PROCEDURE procedure_name
+    [ (parameter datatype [IN | OUT | INOUT], ...) ]
+BEGIN
+    -- SQL statements
+END;
+```
