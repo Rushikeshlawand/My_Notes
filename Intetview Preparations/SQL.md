@@ -1,5 +1,100 @@
 # SQL Interview Questions and Answers for Freshers
 
+# Important MySQL Topics for Interviews
+
+## 1. SQL Basics
+- **DDL (Data Definition Language)** – `CREATE`, `ALTER`, `DROP`, `TRUNCATE`
+- **DML (Data Manipulation Language)** – `INSERT`, `UPDATE`, `DELETE`
+- **DQL (Data Query Language)** – `SELECT`, `JOIN`, `GROUP BY`, `ORDER BY`
+- **DCL (Data Control Language)** – `GRANT`, `REVOKE`
+- **TCL (Transaction Control Language)** – `COMMIT`, `ROLLBACK`, `SAVEPOINT`
+
+## 2. Data Types
+- Numeric, String, Date and Time data types
+- Difference between `CHAR` and `VARCHAR`
+- Use of `TEXT`, `BLOB`
+
+## 3. Joins and Unions
+- Inner Join, Left Join, Right Join, Full Outer Join(not in SQL)
+- Self Join
+- Cross Join
+- UNION and UNION ALL
+
+## 4. Indexes
+- Types of Indexes – Primary Key, Unique, Composite, Full-Text
+- Index Performance, Advantages and Disadvantages
+
+## 5. Normalization and Denormalization
+- Normal Forms (1NF, 2NF, 3NF, BCNF)
+- Advantages and use cases of normalization
+- When to denormalize a database
+
+## 6. Subqueries and Nested Queries
+- Single Row Subquery vs Multiple Row Subquery
+- Correlated Subqueries
+- EXISTS and NOT EXISTS
+
+## 7. Stored Procedures and Functions
+- Syntax and differences between stored procedures and functions
+- Use of `IN`, `OUT`, `INOUT` parameters
+- Error Handling in Stored Procedures
+
+## 8. Views
+- Creating, Modifying, and Dropping Views
+- Indexed Views
+- View limitations
+
+## 9. Triggers
+- BEFORE and AFTER triggers
+- Triggers for `INSERT`, `UPDATE`, `DELETE`
+- Trigger limitations
+
+## 10. Transactions
+- **ACID Properties** (Atomicity, Consistency, Isolation, Durability)
+- Transaction control with `COMMIT`, `ROLLBACK`, `SAVEPOINT`
+- **Isolation Levels** – Read Uncommitted, Read Committed, Repeatable Read, Serializable
+- **Locking mechanisms** – Shared Lock, Exclusive Lock
+
+## 11. Optimization
+- Query Optimization using `EXPLAIN`
+- Index Optimization
+- Query Caching
+- Partitioning (Range, List, Hash, Key)
+
+## 12. Database Design
+- Primary Key vs Foreign Key
+- Composite Keys
+- One-to-One, One-to-Many, Many-to-Many relationships
+- **Cascading Actions** (`ON DELETE CASCADE`, `ON UPDATE CASCADE`)
+
+## 13. Security
+- User Management (Creating Users, Granting Privileges, and Roles)
+- Encryption techniques
+- SQL Injection Prevention
+
+## 14. Backup and Recovery
+- Types of Backups – Logical (mysqldump), Physical
+- Point-in-time Recovery
+- Database Replication for High Availability
+
+## 15. Replication
+- Master-Slave Replication
+- Multi-Master Replication
+- Replication Failover and Delays
+
+## 16. JSON Support in MySQL
+- Storing and querying JSON data
+- JSON functions (`JSON_EXTRACT`, `JSON_OBJECT`, etc.)
+
+## 17. Full-Text Search
+- `MATCH()` and `AGAINST()` functions
+- Full-Text Index limitations
+
+## 18. Common Interview Questions
+- Complex queries (e.g., Find nth highest salary)
+- Use of Window Functions (`RANK()`, `ROW_NUMBER()`, `LEAD()`, `LAG()`)
+
+
 # What is a Database?
 
 A Database is defined as a structured form of data storage in a computer or a collection of data in an organized manner and can be accessed in various ways. It is also the collection of schemas, tables, queries, views, etc. Databases help us with easily storing, accessing, and manipulating data held on a computer. The Database Management System allows a user to interact with the database.

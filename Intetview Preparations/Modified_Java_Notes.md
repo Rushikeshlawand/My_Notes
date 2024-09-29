@@ -1,3 +1,36 @@
+
+# Java
+# Important Java Topics for Interview Preparation
+
+## 1. Core Java
+[Definition](#definition)
+[Features](#top-java-features)
+[Platform Independence](#top-java-features)
+- **Data Types, Variables, and Operators**
+[Classloader](#classloader)
+[Access Modifiers (public, private, protected)](#access-modifiers)
+[Static keyword](#what-is-a-static-variable), 
+  - and [`super` keyword](#super-keyword-in-java)
+
+[Constructor](#constructor)
+[this](#this-keyword-in-java)
+[final, finally, finalize](#final-finally-finalize)
+[Methods](#methods)
+- **Exception Handling**:
+  - [Try-catch](#exception-handling), [Finally](#finally-block), [Throw](#throw-keyword), [Throws](#throws-keyword)
+  - [Checked vs Unchecked exceptions](#checked-vs-unchecked-exceptions)
+  [Garbage Collection](#garbage-collection),
+  [Memory Leaks](#memory-leaks)
+  - [Stack vs Heap](#stack-vs-heap-memory-in-java)
+
+- **Memory Management**:
+  - [Stack vs Heap](#stack-vs-heap-memory-in-java),  [Finalize Method](#finalize-method)
+- **String Handling**:
+  - [String](#string), [StringBuffer](#stringbuffer), [StringBuilder](#stringbuilder), [String immutability](#string-immutability)
+- **Multithreading**:
+  - [Thread Lifecycle](#thread-lifecycle), [Creating Threads](#creating-threads), [Runnable Interface](#runnable-interface)
+  - [Synchronization](#synchronization), [Volatile](#volatile-keyword), `wait()`, `notify()`, and `notifyAll()`
+
 # Java
 # Important Java Topics for Interview Preparation
 

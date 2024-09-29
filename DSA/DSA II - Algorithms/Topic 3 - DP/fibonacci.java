@@ -5,12 +5,14 @@ public class fibonacci {
         } else if (n == 1) {
             return 1;
         } else {
-            return fibonacciS(n - 1) + fibonacciS(n - 2);
+            return fibonacciS(n - 1) +fibonacciS(n-2);
         }
     }
 
     public static void main(String[] args) {
-        int n = 13;
+        int n = 10;
+        int n=11;
+
         for (int i = 0; i < n; i++) {
             System.out.print(fibonacciS(i) + " ");
         }
