@@ -32,6 +32,164 @@ Types of Inheritance
     +-- Hybrid Inheritance
 ```
 
+# Coding Implementation 
+```Java
+
+// Abstract class representing a general Animal
+abstract class Animal {
+    // Encapsulated fields
+    private String name;
+    private int age;
+
+    // Constructor to initialize Animal
+    public Animal(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Getter and Setter for 'name'
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    
+    // Getter and Setter for 'age'
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if(age > 0){
+            this.age = age;
+        } else {
+            System.out.println("Age must be positive.");
+        }
+    }
+
+    // Abstract method to be implemented by subclasses
+    public abstract void makeSound();
+
+    // Concrete method
+    public void sleep() {
+        System.out.println(name + " is sleeping.");
+    }
+}
+
+// Derived class Dog inheriting from Animal
+class Dog extends Animal {
+    private String breed;
+
+    // Constructor
+    public Dog(String name, int age, String breed) {
+        super(name, age); // Calling superclass constructor
+        this.breed = breed;
+    }
+
+    // Getter and Setter for 'breed'
+    public String getBreed() {
+        return breed;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+
+    // Overriding the abstract method
+    @Override
+    public void makeSound() {
+        System.out.println(getName() + " says: Woof!");
+    }
+
+    // Overloading method
+    public void makeSound(String sound) {
+        System.out.println(getName() + " says: " + sound);
+    }
+}
+
+// Derived class Cat inheriting from Animal
+class Cat extends Animal {
+    private String color;
+
+    // Constructor
+    public Cat(String name, int age, String color) {
+        super(name, age); // Calling superclass constructor
+        this.color = color;
+    }
+
+    // Getter and Setter for 'color'
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    // Overriding the abstract method
+    @Override
+    public void makeSound() {
+        System.out.println(getName() + " says: Meow!");
+    }
+}
+
+// Interface demonstrating Abstraction
+interface Pet {
+    void play();
+}
+
+// Dog class implementing Pet interface
+class PetDog extends Dog implements Pet {
+
+    public PetDog(String name, int age, String breed) {
+        super(name, age, breed);
+    }
+
+    // Implementing play method from Pet interface
+    @Override
+    public void play() {
+        System.out.println(getName() + " is playing fetch.");
+    }
+
+    // Overriding to demonstrate polymorphism
+    @Override
+    public void makeSound() {
+        System.out.println(getName() + " says: Bark Bark!");
+    }
+}
+
+// Main class to demonstrate OOP concepts
+public class OOPSDemo {
+    public static void main(String[] args) {
+        // Encapsulation: Accessing private fields via getters and setters
+        Dog dog = new Dog("Buddy", 3, "Golden Retriever");
+        dog.setAge(4); // Setting age using setter
+        System.out.println(dog.getName() + " is " + dog.getAge() + " years old and is a " + dog.getBreed());
+
+        Cat cat = new Cat("Whiskers", 2, "Black");
+        System.out.println(cat.getName() + " is " + cat.getAge() + " years old and has " + cat.getColor() + " color.");
+
+        // Inheritance and Polymorphism
+        Animal[] animals = {dog, cat, new PetDog("Max", 5, "Bulldog")};
+        for(Animal animal : animals){
+            animal.makeSound(); // Dynamic method dispatch
+            animal.sleep();
+            System.out.println();
+        }
+
+        // Using overloaded method
+        dog.makeSound("Woof Woof!");
+
+        // Using interface method
+        Pet petDog = new PetDog("Rocky", 6, "German Shepherd");
+        petDog.play();
+    }
+}
+
+```
 # Object-Oriented Programming (OOP) in Java
 
 Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects," which are instances of classes. OOP helps in organizing and structuring code in a way that promotes reusability, maintainability, and scalability. The core principles of OOP include Encapsulation, Inheritance, Polymorphism, and Abstraction.
