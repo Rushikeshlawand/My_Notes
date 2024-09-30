@@ -112,6 +112,13 @@ Imagine a pill with a coating that prevents it from dissolving until it reaches 
 Encapsulation is implemented by:
 1. **Declaring Variables as Private**: This restricts direct access to the data members of the class from outside its scope, ensuring that the data is protected.
 2. **Providing Public Getter and Setter Methods**: These methods allow controlled access to the private data. Getters retrieve the value of private variables, and setters modify them while ensuring that any required validation is performed.
+
+### Practical Benefits of Encapsulation:
+
+- **Data Integrity**: Encapsulation ensures that object data is not directly exposed or modified, which reduces the risk of invalid data being set.
+- **Controlled Access**: By providing getter and setter methods, you can control how the internal state of the object is accessed and updated. You can add validation, logging, or other logic inside these methods without changing the interface.
+- **Modularity and Maintenance**: Since the data is hidden behind methods, changes in the data structure (e.g., changing the data types) do not affect other parts of the code that rely on the class, as long as the public methods remain consistent.
+
 ```plaintext
 +--------------------+
 |    Person          |
@@ -128,12 +135,10 @@ Encapsulation is implemented by:
 ### Code Example
 
 ```java
-public class Person {
-    // Private variables (data hiding)
+public class encapsulation {
     private String name;
     private int age;
 
-    // Public getter and setter methods (access control)
     public String getName() {
         return name;
     }
@@ -149,9 +154,21 @@ public class Person {
     public void setAge(int age) {
         if (age > 0) {
             this.age = age;
+        } else {
+            System.out.println("Age must be positive.");
         }
     }
+
+    public static void main(String[] args) {
+        encapsulation person = new encapsulation();
+        person.setName("John Doe");
+        person.setAge(25);
+
+        System.out.println("Name: " + person.getName());
+        System.out.println("Age: " + person.getAge());
+    }
 }
+
 ```
 
 # Inheritance in Object-Oriented Programming (OOP)
@@ -160,25 +177,53 @@ public class Person {
 
 Inheritance is a fundamental concept in OOP that allows a new class (child or subclass) to inherit attributes and methods from an existing class (parent or superclass). This mechanism promotes code reusability and establishes a hierarchical relationship between classes.
 
-```plaintext
-Inheritance
-    |
-    +-- Single Inheritance
-    |   - A single parent class is inherited by a single child class.
-    |
-    +-- Multiple Inheritance
-    |   - A child class inherits from more than one parent class.
-    |
-    +-- Hierarchical Inheritance
-    |   - Multiple child classes inherit from a single parent class.
-    |
-    +-- Multilevel Inheritance
-    |   - A class inherits from another class which is also a subclass of another class.
-    |
-    +-- Hybrid Inheritance
-        - A combination of two or more types of inheritance.
-```
+```java
+// Base class (Parent)
+class Vehicle {
+    private String brand;
 
+    public Vehicle(String brand) {
+        this.brand = brand;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void honk() {
+        System.out.println("Beep beep!");
+    }
+}
+
+// Derived class (Child)
+class Car extends Vehicle {
+    private int doors;
+
+    public Car(String brand, int doors) {
+        super(brand); // Call the parent class constructor
+        this.doors = doors;
+    }
+
+    public int getDoors() {
+        return doors;
+    }
+
+    public void displayInfo() {
+        System.out.println("Brand: " + getBrand());
+        System.out.println("Doors: " + getDoors());
+    }
+}
+
+// Main class to test inheritance
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car("Toyota", 4);
+        car.honk(); // Method inherited from Vehicle class
+        car.displayInfo(); // Method in Car class
+    }
+}
+
+```
 ### Types of Inheritance
 
 1. **Single Inheritance**
@@ -411,9 +456,6 @@ public class HybridInheritanceExample {
 }
 ```
 # Benefits of Inheritance
-
-Inheritance provides several advantages that contribute to a more efficient and organized codebase. Here are the key benefits:
-
 ## Code Reusability
 
 Inheritance allows the reuse of existing code by creating new classes based on existing ones. This reduces redundancy and avoids code duplication. Instead of rewriting the same methods and attributes, you can extend a class and inherit its features, making development faster and more maintainable.
@@ -431,14 +473,57 @@ Inheritance supports hierarchical classification, where classes are organized in
 **Definition:**
 Polymorphism is a core concept in object-oriented programming that allows objects to be treated as instances of their parent class rather than their actual class. The term polymorphism means "many forms," and it allows one interface to be used for a general class of actions. The specific action is determined by the exact nature of the situation.
 
-```plaintext
-Polymorphism
-    |
-    +-- Compile-Time Polymorphism
-    |   - Achieved through method overloading (same method name with different parameters).
-    |
-    +-- Runtime Polymorphism
-        - Achieved through method overriding (overriding methods in subclasses with the same name as in parent class).
+```java
+// Base class
+class Animal {
+    public void sound() {
+        System.out.println("The animal makes a sound");
+    }
+}
+
+// Derived class (Overriding)
+class Dog extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("The dog barks");
+    }
+}
+
+// Derived class (Overriding)
+class Cat extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("The cat meows");
+    }
+}
+
+// Polymorphism with method overloading
+class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public double add(double a, double b) {
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Method overriding: runtime polymorphism
+        Animal myDog = new Dog(); // Dog is a subclass of Animal
+        Animal myCat = new Cat(); // Cat is a subclass of Animal
+
+        myDog.sound(); // Outputs: The dog barks
+        myCat.sound(); // Outputs: The cat meows
+
+        // Method overloading: compile-time polymorphism
+        Calculator calc = new Calculator();
+        System.out.println("Sum of integers: " + calc.add(5, 10));        // Outputs: 15
+        System.out.println("Sum of doubles: " + calc.add(5.5, 10.2));     // Outputs: 15.7
+    }
+}
+
 ```
 
 Polymorphism in Java can be achieved through:
@@ -601,10 +686,15 @@ Abstracted code is easier to modify or extend since the details are hidden from 
 ## Security
 Abstraction allows developers to expose only the essential parts of the code while keeping critical implementation details secure. This helps protect sensitive information and prevents unauthorized access to the underlying logic, enhancing the security of the application.
 
+### Key Points:
+
+- **Abstraction**: Abstraction in Java is achieved using abstract classes and methods. It allows you to define methods that must be implemented by any concrete subclass, without specifying the exact implementation in the abstract class itself.
+- **Abstract Classes**: Abstract classes cannot be instantiated directly and are used as templates for other classes. They can contain both abstract methods (without implementation) and non-abstract methods (with implementation).
+- **Concrete Subclasses**: Subclasses of an abstract class must implement all abstract methods of the parent class.
+
+
 # Interfaces in Java
-
 ## Definition
-
 An interface in Java is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types. Interfaces are used to specify a set of methods that implementing classes must provide. They help in defining a contract for what a class can do, without specifying how it does it.
 
 ## Key Points
@@ -630,6 +720,13 @@ An interface in Java is a reference type, similar to a class, that can contain o
 - **Defining Contracts**: Interfaces are used to define a contract that other classes must adhere to.
 - **Multiple Inheritance**: Java supports multiple inheritance through interfaces, allowing a class to implement multiple interfaces.
 - **Loose Coupling**: Interfaces help in achieving loose coupling by decoupling the implementation from the interface.
+
+### Key Points:
+
+- **Interfaces**: Interfaces in Java define a contract that implementing classes must fulfill by providing concrete implementations for the methods declared in the interface.
+- **Multiple Inheritance**: A class can implement multiple interfaces, allowing Java to support a form of multiple inheritance, which is not possible with classes.
+- **Polymorphism**: Interfaces allow for polymorphism by letting you use interface references to point to objects of any class that implements the interface.
+
 
 ## Example
 ```java
@@ -664,3 +761,10 @@ public class Main {
     }
 }
 ```
+| Feature                  | `extends`                           | `implements`                        |
+|--------------------------|-------------------------------------|-------------------------------------|
+| **Purpose**              | Used for class inheritance          | Used to implement an interface      |
+| **Inheritance Type**     | Single inheritance (one class)     | Multiple inheritance (multiple interfaces) |
+| **Usage**                | Used with classes                   | Used with interfaces                 |
+| **Access**               | Inherits properties and methods from the parent class | Must provide implementation for all methods defined in the interface |
+| **Syntax**               | `class ChildClass extends ParentClass { ... }` | `class SomeClass implements Interface1, Interface2 { ... }` |
