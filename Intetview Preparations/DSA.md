@@ -348,7 +348,18 @@ Returns the front element of the queue without removing it.
 
 Checks if the queue is empty.
 
-# HashMap, HashSet, and Hashtable
+
+# HashMap vs HashSet vs Hashtable in Java
+
+| **Feature**                | **HashMap**                                      | **HashSet**                                      | **Hashtable**                                    |
+|----------------------------|--------------------------------------------------|--------------------------------------------------|--------------------------------------------------|
+| **Underlying Data Structure** | Implements a hash table as a key-value pair mapping. | Implements a hash table to store unique elements. | Implements a hash table as a key-value pair mapping. |
+| **Thread Safety**          | Not thread-safe (use `ConcurrentHashMap` if needed). | Not thread-safe (use `ConcurrentHashSet` if needed). | Thread-safe (all methods are synchronized).        |
+| **Allows Null Keys/Values** | Allows one `null` key and multiple `null` values. | No null values are allowed.                      | Does not allow `null` keys or values.            |
+| **Performance**            | Faster because it is unsynchronized.             | Faster because it is unsynchronized.             | Slower due to synchronization overhead.           |
+| **Ordering**               | No ordering guarantee (for `LinkedHashMap`, order is maintained). | No ordering guarantee.                          | No ordering guarantee.                           |
+| **Use Case**               | Use when you need a key-value pair mapping with non-synchronized access. | Use when you need a collection of unique elements. | Use when you need a thread-safe key-value pair mapping. |
+| **Introduced in Java**     | Java 1.2                                         | Java 1.2                                         | Java 1.0                                         |
 
 ## HashMap
 
