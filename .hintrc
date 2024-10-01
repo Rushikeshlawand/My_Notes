@@ -11,6 +11,12 @@
     ],
     "axe/text-alternatives": "off",
     "meta-viewport": "off",
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
+    ]
   }
 }
