@@ -1,6 +1,21 @@
 # Object-Oriented Programming (OOP) in Java
 
 Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects," which are instances of classes. OOP helps in organizing and structuring code in a way that promotes reusability, maintainability, and scalability. The core principles of OOP include Encapsulation, Inheritance, Polymorphism, and Abstraction.
+# OOP vs POP
+
+| Feature                        | Object-Oriented Programming (OOP)                                  | Procedural-Oriented Programming (POP)                     |
+|--------------------------------|---------------------------------------------------------------------|----------------------------------------------------------|
+| **Paradigm**                  | Based on objects that encapsulate data and behavior                | Based on procedures or routines (functions)               |
+| **Data Handling**             | Data and methods are bundled together in classes                   | Data is separate from functions; functions operate on data |
+| **Code Reusability**          | Achieved through inheritance and polymorphism                      | Achieved through function reuse and modularity            |
+| **Abstraction**               | Achieved using classes and interfaces                               | Achieved using functions and modules                       |
+| **Encapsulation**             | Supports encapsulation through access modifiers                    | Lacks built-in encapsulation; relies on disciplined coding |
+| **Inheritance**               | Supports inheritance for extending class functionalities            | No inheritance; code is reused by calling functions       |
+| **Polymorphism**              | Supports polymorphism, allowing methods to do different things based on the object | No built-in polymorphism; functions can be overloaded but not overridden |
+| **State**                     | Objects maintain state through instance variables                   | Global variables maintain state, which can lead to side effects |
+| **Design Complexity**         | More complex due to the use of objects and classes                  | Simpler and easier to understand for small programs       |
+| **Examples**                  | Java, C++, Python, C#                                             | C, Pascal, BASIC                                         |
+
 
 ## 1. Encapsulation
 ### Definition
@@ -693,3 +708,15 @@ public class Main {
 | **Usage**            | Used with classes                                     | Used with interfaces                                                 |
 | **Access**           | Inherits properties and methods from the parent class | Must provide implementation for all methods defined in the interface |
 | **Syntax**           | `class ChildClass extends ParentClass { ... }`        | `class SomeClass implements Interface1, Interface2 { ... }`          |
+
+
+## What is the difference between an Abstract Class and an Interface?
+
+| Feature                          | Abstract Class                                      | Interface                                      |
+|----------------------------------|----------------------------------------------------|------------------------------------------------|
+| **Definition**                   | An abstract class can have both abstract methods (without implementation) and concrete methods (with implementation). | An interface can only declare methods without implementation (though default methods can have implementation in modern Java). |
+| **Inheritance**                  | A class can extend only one abstract class (single inheritance). | A class can implement multiple interfaces (multiple inheritance of types). |
+| **Access Modifiers**             | Can have access modifiers for its methods and fields (e.g., public, protected, private). | All methods in an interface are implicitly public and abstract. Fields are public, static, and final by default. |
+| **Purpose**                      | Used when classes share a common base but also have their specific implementations. | Used to define a contract that implementing classes must fulfill, promoting loose coupling. |
+| **Constructor**                  | Can have constructors to initialize fields. | Cannot have constructors since interfaces cannot be instantiated. |
+| **Field Definitions**            | Can have instance variables and static variables. | Cannot have instance variables; only static final variables are allowed. |
