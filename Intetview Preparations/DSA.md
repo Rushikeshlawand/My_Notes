@@ -45,23 +45,41 @@
 
 ## Advantages
 
-| **Advantage**   | **Description**                                        |
-|-----------------|--------------------------------------------------------|
-| **Efficiency**  | Arrays provide a way to efficiently store and access data. |
-| **Direct Access** | Elements can be accessed directly using their index. |
+| **Advantage**       | **Description**                                                                 |
+|---------------------|---------------------------------------------------------------------------------|
+| **Efficiency**      | Arrays provide a way to efficiently store and access data.                      |
+| **Direct Access**   | Elements can be accessed directly using their index.                            |
+| **Cache Friendly**  | Arrays have contiguous memory allocation, which improves cache performance.     |
+| **Simple Structure**| Easy to use for simple data storage and iteration over elements.                |
+| **Memory Management** | Arrays avoid the overhead of dynamic memory allocation, leading to lower memory use. |
 
 ## Limitations
 
-| **Limitation**    | **Description**                                    |
-|-------------------|----------------------------------------------------|
-| **Fixed Size**    | Once an array's size is defined, it cannot be changed. |
-| **Type Restriction** | Arrays can only hold elements of a single data type. |
+| **Limitation**       | **Description**                                                                |
+|----------------------|--------------------------------------------------------------------------------|
+| **Fixed Size**       | Once an array's size is defined, it cannot be changed.                          |
+| **Type Restriction** | Arrays can only hold elements of a single data type.                            |
+| **Insertion/Deletion Costs** | Inserting or deleting elements can be inefficient, requiring shifting of elements. |
+| **No Built-In Methods** | Arrays lack higher-level methods for operations like sorting and searching, unlike more complex data structures. |
+| **Inefficient Memory Usage** | If the array is not fully utilized, it leads to wasted memory space.    |
 
-# Strings in Java
+# Array vs ArrayList vs LinkedList in Java
 
-## Definition
+| **Feature**               | **Array**                                | **ArrayList**                             | **LinkedList**                            |
+|---------------------------|------------------------------------------|-------------------------------------------|-------------------------------------------|
+| **Size**                  | Fixed size at the time of creation.      | Dynamic size, resizes automatically.      | Dynamic size, grows as needed.            |
+| **Indexing (Access)**     | O(1) – Direct access via index.          | O(1) – Direct access via index.           | O(n) – Access requires traversal.         |
+| **Insertion**             | O(n) – Costly if elements need shifting. | O(n) – Costly if elements need shifting.  | O(1) – Efficient at head/tail (O(n) at random positions). |
+| **Deletion**              | O(n) – Costly due to shifting elements.  | O(n) – Costly due to shifting elements.   | O(1) – Efficient at head/tail (O(n) at random positions). |
+| **Memory Allocation**     | Contiguous block of memory.              | Dynamically resized array (reallocates more memory when needed). | Non-contiguous nodes with pointers.       |
+| **Memory Efficiency**     | Efficient (less overhead).               | Less efficient due to dynamic resizing.   | Less efficient due to node overhead (extra pointers). |
+| **Iteration**             | O(n) – Iteration over elements.          | O(n) – Iteration over elements.           | O(n) – Iteration over elements.           |
+| **Search (By Value)**     | O(n) – Linear search required.           | O(n) – Linear search required.            | O(n) – Linear search required.            |
+| **Random Access**         | O(1) – Direct index-based access.        | O(1) – Direct index-based access.         | O(n) – Requires traversal from the head.  |
+| **Data Structure Type**   | Basic, part of the language.             | Resizable array from Java Collections.    | Doubly linked list from Java Collections. |
+| **Usage Scenario**        | When fixed size is known and frequent access by index is needed. | When dynamic resizing is required and random access is frequent. | When frequent insertions and deletions at head/tail are required. |
+| **Thread Safety**         | Not thread-safe.                         | Not thread-safe (unless synchronized).    | Not thread-safe (unless synchronized).    |
 
-In Java, a `String` is a sequence of characters. It is used to represent textual data and is one of the most commonly used classes in Java. Strings are immutable, meaning once a `String` object is created, its value cannot be changed.
 
 # StringBuilder and StringBuffer
 
@@ -125,66 +143,7 @@ StringBuffer is similar to StringBuilder but is synchronized, which makes it thr
 | **Reverse**                | Reverse the sequence of characters.                          | `sb.reverse();`                                   |
 | **Length**                 | Get the length of the sequence.                              | `sb.length();`                                    |
 | **Char at Index**          | Get the character at a specific index.      
-
-
-# String vs. StringBuilder vs. StringBuffer
-
-## String
-
-`String` is immutable, meaning once a `String` object is created, it cannot be modified. All operations that seem to modify a `String` actually create a new `String` object.
-
-### Advantages
-
-| Advantage                  | Description                                             |
-|----------------------------|---------------------------------------------------------|
-| **Immutability**           | Provides security and thread safety due to immutability.|
-| **Thread-Safe**            | Since `String` objects are immutable, they are inherently thread-safe.|
-| **Simple API**             | Easy-to-use methods for common operations like concatenation and substring.|
-
-### Limitations
-
-| Limitation                 | Description                                             |
-|----------------------------|---------------------------------------------------------|
-| **Performance Overhead**   | Creating new `String` objects for every modification can lead to performance overhead in high-performance scenarios.|
-| **Memory Usage**           | Excessive creation of `String` objects can lead to increased memory usage and garbage collection overhead.|
-
-## StringBuilder
-
-`StringBuilder` is mutable, meaning it can be modified after its creation. It is designed for scenarios where you need to perform a lot of modifications to a string.
-
-### Advantages
-
-| Advantage                  | Description                                             |
-|----------------------------|---------------------------------------------------------|
-| **Performance**            | More efficient for concatenations and modifications compared to `String` due to its mutable nature.|
-| **Reduced Memory Usage**   | Since it modifies the same object, it can lead to reduced memory usage compared to `String`.|
-| **Flexible Operations**    | Provides a flexible and efficient way to perform multiple modifications. |
-
-### Limitations
-
-| Limitation                 | Description                                             |
-|----------------------------|---------------------------------------------------------|
-| **Not Thread-Safe**        | `StringBuilder` is not synchronized, so it's not thread-safe. Use `StringBuffer` if thread safety is required.|
-| **Less Safety**            | Mutable nature means that `StringBuilder` objects can be changed by other parts of the program, potentially leading to unexpected results.|
-
-## StringBuffer
-
-`StringBuffer` is similar to `StringBuilder` but is synchronized, making it thread-safe.
-
-### Advantages
-
-| Advantage                  | Description                                             |
-|----------------------------|---------------------------------------------------------|
-| **Thread-Safe**            | Synchronized methods make it safe to use in multi-threaded environments.|
-| **Efficient Modifications**| Provides efficient operations for modifying strings in a thread-safe manner.|
-
-### Limitations
-
-| Limitation                 | Description                                             |
-|----------------------------|---------------------------------------------------------|
-| **Performance Overhead**   | Synchronized methods can introduce performance overhead compared to `StringBuilder` in single-threaded scenarios.|
-| **Less Efficient**         | The overhead of synchronization can make `StringBuffer` less efficient for scenarios where thread safety is not a concern.|
-
+|
 # Linked List in Java
 
 ## Definition
