@@ -1,100 +1,46 @@
-# DSA
-```plaintext
-Data Structures
-    |
-    +-- Arrays
-    |     |
-    |     +-- 1D Arrays
-    |     +-- 2D Arrays
-    |
-    +--String
-    |   |
-    |   +-- StringBuilder
-    |   +-- StringBuffer
-    |
-    +-- Linked Lists
-    |     |
-    |     +-- Singly Linked List
-    |     +-- Doubly Linked List
-    |     +-- Circular Linked List
-    |
-    +-- Stacks
-    |     |
-    |     +-- Array-based Stack
-    |     +-- Linked List-based Stack
-    |
-    +-- Queues
-          |
-          +-- Array-based Queue
-          +-- Linked List-based Queue
-          +-- Circular Queue
-          +-- Priority Queue
-```
+# DSA 
+# Time and Space Complexities of Data Structures
 
-## Arrays in Java
+| Data Structure | Operation       | Average Time Complexity | Worst Time Complexity | Space Complexity |
+|----------------|-----------------|-------------------------|-----------------------|------------------|
+| **Array**      | Access          | O(1)                    | O(1)                  | O(n)             |
+|                | Search          | O(n)                    | O(n)                  | O(n)             |
+|                | Insertion       | O(n)                    | O(n)                  | O(n)             |
+|                | Deletion        | O(n)                    | O(n)                  | O(n)             |
+| **Stack**      | Push            | O(1)                    | O(1)                  | O(n)             |
+|                | Pop             | O(1)                    | O(1)                  | O(n)             |
+|                | Peek            | O(1)                    | O(1)                  | O(n)             |
+| **Queue**      | Enqueue         | O(1)                    | O(1)                  | O(n)             |
+|                | Dequeue         | O(1)                    | O(1)                  | O(n)             |
+| **Singly Linked List** | Access   | O(n)                    | O(n)                  | O(n)             |
+|                | Search          | O(n)                    | O(n)                  | O(n)             |
+|                | Insertion (Head)| O(1)                    | O(1)                  | O(n)             |
+|                | Deletion (Head) | O(1)                    | O(1)                  | O(n)             |
+| **Doubly Linked List** | Access   | O(n)                    | O(n)                  | O(n)             |
+|                | Search          | O(n)                    | O(n)                  | O(n)             |
+|                | Insertion (Head/Tail) | O(1)             | O(1)                  | O(n)             |
+|                | Deletion (Head/Tail)  | O(1)             | O(1)                  | O(n)             |
+| **Hash Table** | Access          | O(1)                    | O(n)                  | O(n)             |
+|                | Search          | O(1)                    | O(n)                  | O(n)             |
+|                | Insertion       | O(1)                    | O(n)                  | O(n)             |
+|                | Deletion        | O(1)                    | O(n)                  | O(n)             |
+| **Binary Search Tree** | Access  | O(log n)                | O(n)                  | O(n)             |
+|                | Search          | O(log n)                | O(n)                  | O(n)             |
+|                | Insertion       | O(log n)                | O(n)                  | O(n)             |
+|                | Deletion        | O(log n)                | O(n)                  | O(n)             |
+| **Heap**       | Access (Min/Max)| O(1)                    | O(1)                  | O(n)             |
+|                | Insertion       | O(log n)                | O(log n)              | O(n)             |
+|                | Deletion (Min/Max) | O(log n)             | O(log n)              | O(n)             |
+| **Graph (Adjacency Matrix)** | Access | O(1)              | O(1)                  | O(V^2)           |
+|                | Search (DFS/BFS)| O(V + E)                | O(V + E)              | O(V^2)           |
+| **Graph (Adjacency List)**   | Access | O(V + E)              | O(V + E)              | O(V + E)         |
+|                | Search (DFS/BFS)| O(V + E)                | O(V + E)              | O(V + E)         |
 
-## Definition
+**Notes:**
+- `n` is the number of elements in the data structure.
+- `V` is the number of vertices and `E` is the number of edges (for graphs).
+- The complexities are for standard operations; specific implementations might vary.
 
-An array is a data structure that allows you to store a fixed-size sequence of elements of the same type. Arrays are useful for storing collections of data and can be indexed to access individual elements.
-
-## Types of Arrays
-
-1. **Single-Dimensional Arrays**: An array with one index to access its elements.
-2. **Multi-Dimensional Arrays**: Arrays that have more than one index, such as 2D or 3D arrays.
-
-## Operations
-
-
-```plaintext
-Array Operations
-================
-
-1. Traversal
--------------
-[10] [20] [30] [40] [50]
-   ↑    ↑    ↑    ↑    ↑
-   Start   Iterate through each element
-
-2. Insertion
--------------
-Before Insertion:
-[10] [20] [30] [40] [50]
-           ↑
-           Insertion Point
-
-After Insertion:
-[10] [20] [30] [New] [40] [50]
-                    ↑
-                    Inserted Element
-
-3. Deletion
--------------
-Before Deletion:
-[10] [20] [30] [40] [50]
-                    ↑
-                    Deletion Point
-
-After Deletion:
-[10] [20] [30] [50]
-                ↑
-                Shift Elements Left
-
-4. Searching
--------------
-Array: [10] [20] [30] [40] [50]
-Search for 30:
-   ↑
-   Found Element
-
-5. Sorting
--------------
-Before Sorting:
-[40] [10] [50] [30] [20]
-
-After Sorting:
-[10] [20] [30] [40] [50]
-
-```
 # Arrays in Java
 
 ## Advantages
