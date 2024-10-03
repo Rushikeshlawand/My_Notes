@@ -835,8 +835,79 @@ Heapify [2]:
 (No changes needed)
 
 Final sorted array: [2, 3, 4, 5, 8]
+```
 
+# Linear Search vs Binary Search
 
+## Linear Search
+
+**Concept:**
+- Linear search is the simplest search algorithm.
+- It checks each element of a list or array sequentially until the desired element is found or the entire list has been searched.
+- It works on both **sorted** and **unsorted** arrays.
+
+**Time Complexity:** O(n)  
+**Space Complexity:** O(1)
+
+### How It Works:
+1. Start from the first element.
+2. Compare the element with the target value.
+3. If the element matches the target, return the index.
+4. If it doesn't match, move to the next element.
+5. Continue until the element is found or the list ends.
+
+### Example:
+```java
+public class LinearSearchExample {
+    public static int linearSearch(int[] array, int target) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == target) {
+                return i; // Target found at index i
+            }
+        }
+        return -1; // Target not found
+    }
+}
+```
+# Binary Search
+
+**Concept:**
+- Binary search is an efficient algorithm used to find the position of a target value within a **sorted** array.
+- It works by repeatedly dividing the search interval in half, eliminating half of the elements at each step.
+
+**Time Complexity:** O(log n)  
+**Space Complexity:** O(1)
+
+## How It Works:
+1. Start with the entire sorted array.
+2. Compare the target value with the middle element.
+3. If the target equals the middle element, return its index.
+4. If the target is less than the middle element, search the left half of the array.
+5. If the target is greater than the middle element, search the right half of the array.
+6. Repeat the process until the target is found or the search interval becomes empty.
+
+## Example Code:
+```java
+public class BinarySearchExample {
+    public static int binarySearch(int[] array, int target) {
+        int left = 0, right = array.length - 1;
+        
+        while (left <= right) {
+            int middle = left + (right - left) / 2;
+            
+            if (array[middle] == target) {
+                return middle; // Target found
+            }
+            
+            if (array[middle] < target) {
+                left = middle + 1; // Search the right half
+            } else {
+                right = middle - 1; // Search the left half
+            }
+        }
+        return -1; // Target not found
+    }
+}
 ```
 # Greedy Algorithm
 A greedy algorithm is a problem-solving approach that builds up a solution piece by piece, always choosing the next piece that offers the most immediate benefit or is the most optimal according to some criterion. The key idea is to make a series of choices that seem best at each step with the hope that these local optimal will lead to a global optimum.
