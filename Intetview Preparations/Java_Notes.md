@@ -1,47 +1,41 @@
 # Java
+
 # Important Java Topics for Interview Preparation
 
-## 1. Core Java 
--  Defination
--  features
--  platform independance
--  Data Types, Variables, and Operators
--  JDK
--  JIT
--  Classloader
--  Access Modifiers (public, private, protected)
--  operators
--  Main method
--  packages
--  pointers
--  Static keyword, 
--  `super` keywords
--   Constructor, 
--  this
--  final, finally, finalize
--  methods
--  Exception Handling
--  Try-catch, Finally, Throw, Throws
--  Checked vs Unchecked exceptions
--  Garbage Collection,
--  memory leaks
--  Stack vs. Heap
+## 1. Core Java
 
-- **Memory Management**:
-  - Stack vs. Heap,  Finalize Method
-- **String Handling**:
-  - String, StringBuffer, StringBuilder, String immutability
-- **Multithreading**:
-  - Thread Lifecycle, Creating Threads, Runnable Interface
-  - Synchronization, Volatile, `wait()`, `notify()`, and `notifyAll()`
-
-
-
-
+- Defination
+- features
+- platform independance
+- Data Types, Variables, and Operators
+- JDK
+- JIT
+- Classloader
+- Access Modifiers (public, private, protected)
+- operators
+- Main method
+- packages
+- pointers
+- Static keyword,
+- `super` keywords
+- Constructor,
+- this
+- final, finally, finalize
+- methods
+- Exception Handling
+- Try-catch, Finally, Throw, Throws
+- Checked vs Unchecked exceptions
+- Garbage Collection,
+- memory leaks
+- Stack vs. Heap
+- Finalize Method
+- String, StringBuffer, StringBuilder, String immutability
+- Thread Lifecycle, Creating Threads, Runnable Interface
+- Synchronization, Volatile, `wait()`, `notify()`, and `notifyAll()`
 
 ## Definition
-Java is a high-level, object-oriented programming language developed by James Gosling at Sun Microsystems and released in 1995. It is designed to have as few implementation dependencies as possible, making it a write-once, run-anywhere (WORA) language. This means compiled Java code can run on all platforms that support Java without the need for recompilation.
 
+Java is a high-level, object-oriented programming language developed by James Gosling at Sun Microsystems and released in 1995. It is designed to have as few implementation dependencies as possible, making it a write-once, run-anywhere (WORA) language. This means compiled Java code can run on all platforms that support Java without the need for recompilation.
 
 ## Top Java Features
 
@@ -57,13 +51,12 @@ Java is a high-level, object-oriented programming language developed by James Go
 - **Multithreaded:** Java can manage multiple tasks simultaneously by using multiple threads.
 - **Architecture Neutral:** Java is not dependent on the underlying hardware architecture.
 
-
 ## Real-Time Use
+
 - **Mobile Applications:** Java is the primary language for developing Android apps.
 - **Web Development:** Java is used for building server-side applications, handling requests, and managing databases. Frameworks like Spring and Hibernate make web development easier.
 - **Enterprise Software:** Java is widely used in large organizations for building enterprise-grade applications due to its stability and scalability. Examples include banking systems and inventory management software.
 - **Embedded Systems:** Java is also used in embedded systems, such as Blu-ray players and other consumer devices.
-
 
 ## Is Java Platform Independence
 
@@ -79,35 +72,33 @@ Although the JVM is platform-dependent, the bytecode can be created on one syste
 
 Primitive data types are basic types that hold single values and have no special methods or properties. There are 8 primitive data types in Java:
 
-| **Data Type** | **Description**                              | **Size** | **Range**                                             |
-|---------------|----------------------------------------------|----------|-------------------------------------------------------|
-| `boolean`     | Stores a value of `true` or `false`          | N/A      | `true` or `false`                                     |
-| `byte`        | Stores an 8-bit signed two’s complement integer | 1 byte   | -128 to 127                                           |
-| `char`        | Stores a single 16-bit Unicode character      | 2 bytes  | 0 to 65,535 (Unicode values)                         |
-| `short`       | Stores a 16-bit signed two’s complement integer | 2 bytes  | -32,768 to 32,767                                     |
-| `int`         | Stores a 32-bit signed two’s complement integer | 4 bytes  | -2,147,483,648 to 2,147,483,647                       |
-| `long`        | Stores a 64-bit signed two’s complement integer | 8 bytes  | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
-| `float`       | Stores a single-precision 32-bit IEEE 754 floating-point | 4 bytes  | Approximately ±3.40282347E+38 (6-7 decimal places)   |
+| **Data Type** | **Description**                                          | **Size** | **Range**                                                      |
+| ------------- | -------------------------------------------------------- | -------- | -------------------------------------------------------------- |
+| `boolean`     | Stores a value of `true` or `false`                      | N/A      | `true` or `false`                                              |
+| `byte`        | Stores an 8-bit signed two’s complement integer          | 1 byte   | -128 to 127                                                    |
+| `char`        | Stores a single 16-bit Unicode character                 | 2 bytes  | 0 to 65,535 (Unicode values)                                   |
+| `short`       | Stores a 16-bit signed two’s complement integer          | 2 bytes  | -32,768 to 32,767                                              |
+| `int`         | Stores a 32-bit signed two’s complement integer          | 4 bytes  | -2,147,483,648 to 2,147,483,647                                |
+| `long`        | Stores a 64-bit signed two’s complement integer          | 8 bytes  | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807        |
+| `float`       | Stores a single-precision 32-bit IEEE 754 floating-point | 4 bytes  | Approximately ±3.40282347E+38 (6-7 decimal places)             |
 | `double`      | Stores a double-precision 64-bit IEEE 754 floating-point | 8 bytes  | Approximately ±1.79769313486231570E+308 (15-16 decimal places) |
 
 ## Non-Primitive Data Types
 
 Non-primitive data types are reference types that hold references to objects rather than the actual values. They include:
 
-| **Data Type** | **Description**                              |
-|---------------|----------------------------------------------|
-| `String`      | Represents a sequence of characters.        |
-| `Array`       | Holds multiple values of the same type.     |
-| `Class`       | Defines a blueprint for objects.            |
-| `Object`      | The base class for all classes.              |
+| **Data Type** | **Description**                                     |
+| ------------- | --------------------------------------------------- |
+| `String`      | Represents a sequence of characters.                |
+| `Array`       | Holds multiple values of the same type.             |
+| `Class`       | Defines a blueprint for objects.                    |
+| `Object`      | The base class for all classes.                     |
 | `Interface`   | Defines methods that can be implemented by classes. |
 
 ### Explanation
 
 - **Primitive Data Types:** They are predefined by the language and are not objects. They store data directly and have fixed sizes and ranges.
-  
 - **Non-Primitive Data Types:** They are created by the user and can store complex data. They hold references to objects and can have methods and properties.
-
 
 ## Types of Java Applications
 
@@ -126,14 +117,14 @@ Non-primitive data types are reference types that hold references to objects rat
 - **Multithreaded Applications:** Applications that perform multiple tasks simultaneously by utilizing threads. Java's built-in support for multithreading allows developers to create applications that can handle concurrent operations.
 
 - **Network Applications (Server-Client):** Applications that communicate over a network, where one application acts as a server and another as a client. Java provides libraries and APIs for network programming to create server-client applications.
+
 ## Components of Java
 
-| **Component** | **Description**                                                                                                                                                                                                                                                                     |
-|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **JDK**       | The Java Development Kit (JDK) is a comprehensive development environment that includes all essential tools, libraries, and documentation for Java development. It encompasses the JRE and additional tools like the Java compiler (`javac`), debugger (`jdb`), and various utilities. |
-| **JRE**       | The Java Runtime Environment (JRE) is a software bundle that provides the necessary runtime libraries, class libraries, and JVM implementation to execute Java applications. It offers the runtime environment required for running Java programs but lacks development tools.         |
-| **JVM**       | The Java Virtual Machine (JVM) is a virtual machine that executes compiled Java bytecode, allowing Java programs to run independently across different hardware and operating systems. It handles memory management, garbage collection, and bytecode interpretation or JIT compilation.  |
-
+| **Component** | **Description**                                                                                                                                                                                                                                                                          |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **JDK**       | The Java Development Kit (JDK) is a comprehensive development environment that includes all essential tools, libraries, and documentation for Java development. It encompasses the JRE and additional tools like the Java compiler (`javac`), debugger (`jdb`), and various utilities.   |
+| **JRE**       | The Java Runtime Environment (JRE) is a software bundle that provides the necessary runtime libraries, class libraries, and JVM implementation to execute Java applications. It offers the runtime environment required for running Java programs but lacks development tools.           |
+| **JVM**       | The Java Virtual Machine (JVM) is a virtual machine that executes compiled Java bytecode, allowing Java programs to run independently across different hardware and operating systems. It handles memory management, garbage collection, and bytecode interpretation or JIT compilation. |
 
 ## What is JIT?
 
@@ -149,38 +140,41 @@ This process allows Java applications to run faster and more efficiently by redu
 
 ## What is a Classloader?
 
-A **classloader** is a component of the JRE (Java Runtime Environment). Its primary function is to dynamically load Java classes and interfaces into the JVM (Java Virtual Machine) during the execution of bytecode or .class files. 
+A **classloader** is a component of the JRE (Java Runtime Environment). Its primary function is to dynamically load Java classes and interfaces into the JVM (Java Virtual Machine) during the execution of bytecode or .class files.
 
 ### Key Points:
+
 - **Dynamic Loading:** Classloaders load classes and interfaces at runtime, rather than at compile-time.
 - **Independence from Files:** The Java runtime system does not need to know about the underlying files and file systems due to the classloading mechanism.
 
-
 ## Comparison of Java Access Modifiers
 
-| **Modifier** | **Same Class** | **Same Package** | **Subclass** | **Different Package** |
-|--------------|----------------|------------------|--------------|-----------------------|
-| **public**   | Yes            | Yes              | Yes          | Yes                   |
-| **protected**| Yes            | Yes              | Yes          | No                    |
-| **default**  | Yes            | Yes              | No           | No                    |
-| **private**  | Yes            | No               | No           | No                    |
+| **Modifier**  | **Same Class** | **Same Package** | **Subclass** | **Different Package** |
+| ------------- | -------------- | ---------------- | ------------ | --------------------- |
+| **public**    | Yes            | Yes              | Yes          | Yes                   |
+| **protected** | Yes            | Yes              | Yes          | No                    |
+| **default**   | Yes            | Yes              | No           | No                    |
+| **private**   | Yes            | No               | No           | No                    |
 
 ### Explanation
 
-- **`public`**: 
+- **`public`**:
+
   - Accessible from any class, regardless of package.
   - Used when you want the member to be accessible from anywhere.
 
-- **`protected`**: 
+- **`protected`**:
+
   - Accessible within the same package and by subclasses (even if they are in different packages).
   - Used when you want the member to be accessible within the package and by subclasses.
 
-- **`default`** (no modifier): 
+- **`default`** (no modifier):
+
   - Also known as package-private.
   - Accessible only within the same package.
   - Used when you want the member to be accessible only within the package.
 
-- **`private`**: 
+- **`private`**:
   - Accessible only within the same class.
   - Used when you want to restrict access to the member from outside the class.
 
@@ -188,17 +182,17 @@ A **classloader** is a component of the JRE (Java Runtime Environment). Its prim
 
 Java provides various types of operators to perform different operations. Here’s a breakdown of the different operators available:
 
-| **Operator Type**      | **Operators**                                | **Description**                                      |
-|------------------------|----------------------------------------------|------------------------------------------------------|
-| **Arithmetic Operators** | `+`, `-`, `*`, `/`, `%`                     | Used for mathematical operations.                    |
-| **Unary Operators**    | `+`, `-`, `++`, `--`, `!`                   | Operates on a single operand to perform operations such as increment, decrement, and logical negation. |
-| **Assignment Operator**| `=`, `+=`, `-=`, `*=`, `/=`, `%=`           | Used to assign values to variables. Includes compound assignment operators. |
-| **Relational Operators** | `==`, `!=`, `<`, `>`, `<=`, `>=`           | Used to compare values and determine relational conditions. |
-| **Logical Operators**  | `&&`, `||`, `!`, `&`, `^`                   | Used to perform logical operations. `&&` and `||` are logical AND and OR, while `&` and `^` are bitwise operations that can also act as logical operators. |
-| **Ternary Operator**   | `? :`                                       | A shorthand for `if-else` statement. It evaluates a boolean expression and returns one of two values based on the result. |
-| **Bitwise Operators**  | `&`, `|`, `^`, `~`, `<<`, `>>`, `>>>`       | Used for operations on bits and binary numbers. Includes bitwise AND, OR, XOR, NOT, and shift operations. |
-| **Shift Operators**    | `<<`, `>>`, `>>>`                           | Used to shift bits to the left or right. |
-| **Instanceof Operator**| `instanceof`                                | Tests whether an object is an instance of a specific class or subclass. |
+| **Operator Type**        | **Operators**                     | **Description**                                                                                                           |
+| ------------------------ | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | --- | ------------------------------------------------------------------------------------------------------ |
+| **Arithmetic Operators** | `+`, `-`, `*`, `/`, `%`           | Used for mathematical operations.                                                                                         |
+| **Unary Operators**      | `+`, `-`, `++`, `--`, `!`         | Operates on a single operand to perform operations such as increment, decrement, and logical negation.                    |
+| **Assignment Operator**  | `=`, `+=`, `-=`, `*=`, `/=`, `%=` | Used to assign values to variables. Includes compound assignment operators.                                               |
+| **Relational Operators** | `==`, `!=`, `<`, `>`, `<=`, `>=`  | Used to compare values and determine relational conditions.                                                               |
+| **Logical Operators**    | `&&`, `                           |                                                                                                                           | `, `!`, `&`, `^`                                                                                          | Used to perform logical operations. `&&` and ` |     | `are logical AND and OR, while`&`and`^` are bitwise operations that can also act as logical operators. |
+| **Ternary Operator**     | `? :`                             | A shorthand for `if-else` statement. It evaluates a boolean expression and returns one of two values based on the result. |
+| **Bitwise Operators**    | `&`, `                            | `, `^`, `~`, `<<`, `>>`, `>>>`                                                                                            | Used for operations on bits and binary numbers. Includes bitwise AND, OR, XOR, NOT, and shift operations. |
+| **Shift Operators**      | `<<`, `>>`, `>>>`                 | Used to shift bits to the left or right.                                                                                  |
+| **Instanceof Operator**  | `instanceof`                      | Tests whether an object is an instance of a specific class or subclass.                                                   |
 
 ### Summary
 
@@ -211,7 +205,6 @@ Java provides various types of operators to perform different operations. Here�
 - **Bitwise Operators** manipulate individual bits of integer types.
 - **Shift Operators** shift bits to the left or right.
 - **Instanceof Operator** checks the type of an object at runtime.
-
 
 ## Explain `public static void main(String args[])` in Java
 
@@ -232,7 +225,6 @@ In Java, the entry point of a program is the `main` method, declared as `public 
 If you declare the `main` method without using the `static` keyword, the program will not behave as expected. Here’s why:
 
 - **Non-Static Main Method:** If the `main` method is not declared as `static`, it will not be recognized as the entry point of the Java application by the JVM (Java Virtual Machine). As a result, the JVM will not be able to invoke this method to start the execution of the program.
-  
 - **Compilation:** You can declare the `main` method without `static` and compile it without errors. However, you won’t be able to run the program as expected because the JVM relies on the `main` method being `static` to start the program.
 
 ### Example
@@ -242,7 +234,7 @@ public class Example {
     public void main(String[] args) {
         System.out.println("This will not be the entry point.");
     }
-} 
+}
 ```
 
 ## What Are Packages in Java?
@@ -264,11 +256,13 @@ Packages in Java are used to group related classes, interfaces, and other types 
 ## How Many Types of Packages Are There in Java?
 
 1. **User-Defined Packages:**
+
    - Created by developers to organize their own classes and interfaces.
    - Example:
+
      ```java
      package com.example.myapp;
-     
+
      public class MyClass {
          // Class contents
      }
@@ -286,13 +280,11 @@ No, Java does not support pointers. Unlike languages such as C and C++, Java doe
 ## Reasons for Lack of Pointer Support in Java
 
 - **Security:** Pointers can lead to security vulnerabilities such as buffer overflows and unauthorized memory access. By not supporting pointers, Java reduces the risk of such security issues.
-  
 - **Memory Management:** Java provides automatic memory management through garbage collection. This eliminates the need for direct memory manipulation, which is handled by the Java Virtual Machine (JVM).
 
 - **Simplicity and Safety:** By abstracting away memory management and avoiding pointers, Java simplifies programming and reduces the likelihood of errors that can arise from manual memory management.
 
 In summary, the absence of pointers in Java contributes to its robustness, security, and ease of use.
-
 
 # What Is a Static Variable?
 
@@ -329,6 +321,7 @@ public class Example {
     }
 }
 ```
+
 # `super` Keyword in Java
 
 The `super` keyword in Java is used to refer to the immediate parent class of an object. It is mainly used in the context of inheritance and serves the following purposes:
@@ -336,12 +329,14 @@ The `super` keyword in Java is used to refer to the immediate parent class of an
 ## 1. Accessing Parent Class Constructors
 
 The `super()` keyword is used to call the constructor of the parent class from within the child class constructor. This ensures that the parent class constructor is executed before the child class constructor.
-## 2. Accessing  Parent  Class   Members
-The  `super` keyword can be used to access members of the parent class from within the child class.
+
+## 2. Accessing Parent Class Members
+
+The `super` keyword can be used to access members of the parent class from within the child class.
 
 ## 3. Overriding Methods in the Parent Class
-The `super` keyword can be used to call the overridden method of the parent class from within the  child class.
 
+The `super` keyword can be used to call the overridden method of the parent class from within the child class.
 
 # Constructor
 
@@ -350,6 +345,7 @@ Constructors are special methods in object-oriented programming used to initiali
 ## Types of Constructors
 
 1. **Default Constructor**
+
    - **Definition:** A constructor that takes no arguments and initializes the object with default values.
    - **Use:** Automatically provided by Java if no other constructors are defined. It initializes object attributes with default values (e.g., `null` for objects, `0` for numeric types, `false` for boolean).
 
@@ -360,9 +356,7 @@ Constructors are special methods in object-oriented programming used to initiali
 ## Purpose of Constructors
 
 - **Initializing Object Attributes:** Constructors are typically used to assign initial values to an object's attributes. This ensures that objects are created in a consistent state.
-  
 - **Performing Validation Checks:** Constructors can be used to validate the data used to create an object. This helps prevent errors and ensures that objects are always in a valid state.
-  
 - **Controlling Object Creation:** Constructors can be designed to take arguments, allowing you to specify the initial state of the object and control how objects are created.
 
 ## Example
@@ -406,6 +400,7 @@ public class Person {
     }
 }
 ```
+
 # This Keyword
 
 In object-oriented programming, the `this` keyword is a special reference that refers to the current object instance. It's particularly useful within methods and constructors of a class to interact with the object's own properties and methods.
@@ -420,7 +415,6 @@ In object-oriented programming, the `this` keyword is a special reference that r
 
 - **Passing the Current Object as an Argument:** In some cases, you might want to pass the current object instance as an argument to another method. You can use `this` to achieve this.
 
-
 # `final`, `finally`, `finalize`
 
 In Java, `final`, `finally`, and `finalize` serve different purposes and are used in various contexts:
@@ -433,59 +427,59 @@ The `final` keyword is used to define constants and to prevent modification of v
 
 -**Final Methods:** A method declared as final cannot be overridden by subclasses. This ensures that the method's behavior remains consistent. & A class declared as final cannot be subclassed. This is used to prevent inheritance.
 
-  ```java
-  public class Constants {
-      public static final int MAX_VALUE = 100;
+```java
+public class Constants {
+    public static final int MAX_VALUE = 100;
 
-      public static void main(String[] args) {
-          System.out.println("Max Value: " + MAX_VALUE);
-          // MAX_VALUE = 200; // This will cause a compilation error
-      }
-  }
+    public static void main(String[] args) {
+        System.out.println("Max Value: " + MAX_VALUE);
+        // MAX_VALUE = 200; // This will cause a compilation error
+    }
+}
 ```
 
 -**finally:** The finally block is used in exception handling to ensure that a block of code is executed after a try block, regardless of whether an exception is thrown or not. It's typically used to release resources or perform cleanup.
 
-  ```java
+```java
 
 public class FinallyExample {
-    public static void main(String[] args) {
-        try {
-            System.out.println("In try block.");
-            int result = 10 / 0; // This will throw an ArithmeticException
-        } catch (ArithmeticException e) {
-            System.out.println("Exception caught: " + e.getMessage());
-        } finally {
-            System.out.println("This block always executes.");
-        }
-    }
+  public static void main(String[] args) {
+      try {
+          System.out.println("In try block.");
+          int result = 10 / 0; // This will throw an ArithmeticException
+      } catch (ArithmeticException e) {
+          System.out.println("Exception caught: " + e.getMessage());
+      } finally {
+          System.out.println("This block always executes.");
+      }
+  }
 }
 ```
 
 -**finalize:** The finalize method is part of the Object class and is used to perform cleanup before an object is garbage collected. It is called by the garbage collector before an object’s memory is reclaimed. However, it is not recommended for general resource management because its execution is not guaranteed.
 
-  ```java
+```java
 
 public class FinallyExample {
-    public static void main(String[] args) {
-        try {
-            System.out.println("In try block.");
-            int result = 10 / 0; // This will throw an ArithmeticException
-        } catch (ArithmeticException e) {
-            System.out.println("Exception caught: " + e.getMessage());
-        } finally {
-            System.out.println("This block always executes.");
-        }
-    }
+  public static void main(String[] args) {
+      try {
+          System.out.println("In try block.");
+          int result = 10 / 0; // This will throw an ArithmeticException
+      } catch (ArithmeticException e) {
+          System.out.println("Exception caught: " + e.getMessage());
+      } finally {
+          System.out.println("This block always executes.");
+      }
+  }
 }
 ```
-
 
 ## What is Methods?
 
 Methods are like mini-programs within a program. They are a set of codes that perform a particular task and return the result to the caller. They help organize code, making it more readable, reusable, and modular. Understanding methods is essential for writing efficient and maintainable Java code. Methods are used to expose the behavior of an object.
 
 ### Advantages:
+
 - **Reusability:** Methods enable writing code once and using it multiple times, enhancing modularity and maintenance.
 - **Abstraction:** Methods hide complex logic, offering a simpler interface for better readability and comprehension.
 - **Improved Readability:** Breaking code into named methods enhances readability and understanding.
@@ -500,9 +494,11 @@ Exception handling in Java is a mechanism to handle runtime errors, ensuring tha
 ### Types of Exceptions
 
 1. **Checked Exceptions**: Exceptions that are checked at compile-time.
+
    - Example: `IOException`, `SQLException`.
 
 2. **Unchecked Exceptions**: Exceptions that occur at runtime and are not checked at compile-time.
+
    - Example: `ArithmeticException`, `NullPointerException`.
 
 3. **Error**: Indicates serious problems that a reasonable application should not try to catch.
@@ -525,6 +521,7 @@ public class BankApplication {
     }
 }
 ```
+
 # Implementation
 
 ## Basic Exception Handling with `try-catch`
@@ -566,22 +563,29 @@ public class BasicExceptionHandling {
 # Multithreading and Concurrency
 
 ## Definition
+
 Multithreading in Java is a process of executing multiple threads simultaneously. Each thread runs independently, allowing efficient utilization of the CPU. Concurrency refers to the ability of a program to make progress on multiple tasks at the same time, improving performance and responsiveness.
 
 ## Real-Time Example
+
 Consider a server handling multiple client requests simultaneously. If the server processes requests one at a time, it becomes slow and unresponsive. By using multithreading, the server can handle multiple requests concurrently, improving user experience.
 
 ## Implementation
+
 ### 1. Extending the `Thread` class
+
 One way to create a thread is by extending the `Thread` class and overriding its `run` method.
 
 ### 2. Implementing the `Runnable` interface
+
 Another way is to implement the `Runnable` interface and pass an instance of the implementing class to a `Thread` object.
 
 ### 3. Using the `ExecutorService`
+
 The `ExecutorService` is a higher-level replacement for managing and executing threads. It provides thread pooling and better control over thread execution.
 
 ### Example: Extending `Thread` Class
+
 ```java
 class MyThread extends Thread {
     public void run() {
@@ -608,10 +612,10 @@ Java's garbage collection (GC) mechanism automatically manages memory allocation
 ### Understanding Java’s Garbage Collection Mechanism
 
 1. **Automatic Memory Management**: Java automatically allocates and deallocates memory, reducing the need for manual memory management by the programmer.
-   
 2. **Heap Memory**: Java applications use heap memory for object allocation. The heap is divided into the Young Generation (where new objects are allocated) and the Old Generation (where long-lived objects are moved).
 
 3. **Garbage Collection Algorithms**:
+
    - **Mark and Sweep**: This algorithm marks objects that are still in use and then sweeps away objects that are no longer reachable.
    - **Generational Garbage Collection**: This method divides the heap into different generations (Young, Old) and applies different GC strategies to each generation. Young Generation uses minor GC, while Old Generation uses major GC.
    - **Garbage-First (G1) Collector**: A low-latency garbage collector that divides the heap into regions and aims to achieve predictable pause times.
@@ -658,6 +662,7 @@ Memory leaks occur when an application retains references to objects that are no
    // Use the list
    largeList = null; // Allow the garbage collector to reclaim the memory
 ```
+
 # JDBC (Java Database Connectivity)
 
 JDBC (Java Database Connectivity) is an API in Java that allows Java applications to interact with relational databases. It provides a standard interface for connecting to databases, executing SQL queries, and handling results.
@@ -683,7 +688,7 @@ import java.io.IOException;
 public class FileReadingExample {
     public static void main(String[] args) {
         String filePath = "example.txt";
-        
+
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -695,6 +700,7 @@ public class FileReadingExample {
     }
 }
 ```
+
 # Annotations in Java
 
 Annotations in Java are metadata that provide data about a program but are not part of the program itself. They are used to give instructions to the compiler, provide information to tools, or help during runtime.
@@ -720,15 +726,16 @@ public class Dog extends Animal {
     }
 }
 ```
+
 # Stack vs. Heap Memory in Java
 
-| Feature               | **Stack**                                              | **Heap**                                          |
-|-----------------------|--------------------------------------------------------|---------------------------------------------------|
-| **Memory Allocation**  | Static memory allocation. Stores local variables, references to objects. | Dynamic memory allocation. Stores objects themselves. |
-| **Lifetime**           | Automatically allocated/deallocated when method starts and ends. | Objects remain in heap until garbage collected. |
-| **Size**               | Typically smaller and limited. Each thread has its own stack. | Larger in size, shared among all threads. |
-| **Access Speed**       | Faster access due to LIFO (Last-In-First-Out) nature.  | Slower access because of global memory management. |
-| **Storage**            | Stores method call data, local variables, and object references. | Stores actual objects, class instances, arrays. |
-| **Thread Safety**      | Thread-safe; each thread has its own stack.            | Not thread-safe by default; needs synchronization. |
-| **Memory Management**  | Managed automatically by the program; memory is freed once the method completes. | Managed by the garbage collector; objects are freed when no longer referenced. |
-| **Best For**           | Primitive data types and method calls.                | Long-lived objects like data structures, objects, and classes. |
+| Feature               | **Stack**                                                                        | **Heap**                                                                       |
+| --------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| **Memory Allocation** | Static memory allocation. Stores local variables, references to objects.         | Dynamic memory allocation. Stores objects themselves.                          |
+| **Lifetime**          | Automatically allocated/deallocated when method starts and ends.                 | Objects remain in heap until garbage collected.                                |
+| **Size**              | Typically smaller and limited. Each thread has its own stack.                    | Larger in size, shared among all threads.                                      |
+| **Access Speed**      | Faster access due to LIFO (Last-In-First-Out) nature.                            | Slower access because of global memory management.                             |
+| **Storage**           | Stores method call data, local variables, and object references.                 | Stores actual objects, class instances, arrays.                                |
+| **Thread Safety**     | Thread-safe; each thread has its own stack.                                      | Not thread-safe by default; needs synchronization.                             |
+| **Memory Management** | Managed automatically by the program; memory is freed once the method completes. | Managed by the garbage collector; objects are freed when no longer referenced. |
+| **Best For**          | Primitive data types and method calls.                                           | Long-lived objects like data structures, objects, and classes.                 |

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link href="./Basic.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="form">
+      <form action="#" method="post">
+        <div class="one">
+          <label>username: </label>
+          <input
+            type="text"
+            name="username"
+            value=""
+            placeholder="Enter username"
+            required
+          />
+        </div>
+
+        <div class="one">
+          <label>password: </label>
+          <input
+            type="password"
+            name="password"
+            value=""
+            placeholder="Enter password"
+            required
+          />
+        </div>
+
+        <div class="one">
+          <label>Choose gender</label><br />
+          <input type="radio" name="gender" value="male" required />
+          <label>Male</label><br />
+          <input type="radio" name="gender" value="female" />
+          <label>Female</label><br />
+          <input type="radio" name="gender" value="other" />
+          <label>Other</label>
+        </div>
+
+        <div id="three">
+          <label>Choose Skills</label><br />
+          <input type="checkbox" name="skill" value="java" />
+          <label>Java</label><br />
+          <input type="checkbox" name="skill" value="javascript" />
+          <label>Javascript</label><br />
+          <input type="checkbox" name="skill" value="sql" />
+          <label>SQL</label><br />
+          <input type="checkbox" name="skill" value="react" />
+          <label>React</label>
+        </div>
+
+        <div class="one">
+          <label>Enter Your Address</label><br />
+          <textarea></textarea>
+        </div>
+
+        <div class="one">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="btn">
+      <button>Press me</button>
+    </div>
+  </body>
+</html>
