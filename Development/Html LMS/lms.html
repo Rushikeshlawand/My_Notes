@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      form {
+        margin-top: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input,
+      input[type="password"],
+      textarea,
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      button{
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Welcome to My Mini Project</h1>
+      <nav>
+        
+       <li> <a href="url">Section 1</a></li>
+       <li> <a href="url">Section 2</a></li>
+       <li> <a href="url">Section 3</a></li>
+      
+        </ul>
+      </nav>
+    </header>
+
+    <section id="section1">
+      <h2>Section 1</h2>
+      <article>
+        <p>This is the first section of the mini project.</p>
+        <table>
+          <tr>
+            <th>name</th>
+            <th>Age</th>
+          </tr>
+
+          <tr>
+            <td>John</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>Alice</td>
+            <td>25</td>
+          </tr>
+        </table>
+      </article>
+    </section>
+
+    <section id="section2">
+      <h2>Section 2</h2>
+      <article>
+        <p>This is the second section of the mini project.</p>
+        <form>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+          <br />
+          <label for="username">Password:</label>
+          <input type="text" id="username" name="username" required />
+          <br />
+          <label for="message">Message:</label>
+          <textarea></textarea>
+          <br />
+          <label for="gender">Gender:</label>
+          <select name="Gender">
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </form>
+      </article>
+    </section>
+    <button>Submit</button><br>
+    &copy;  2024 Mini Project. All rights reserved.
+  </body>
+</html>

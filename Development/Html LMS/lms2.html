@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Non-Semantic Webpage</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        padding: 20px;
+        text-align: center;
+      }
+      table {
+        margin: 0 auto;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+   
+
+    <!-- Navigation -->
+    <div class="container">
+      <ul style="list-style-type: none;">
+        <li style="display: inline; margin-right: 15px;"><a href="#">Home</a></li>
+        <li style="display: inline; margin-right: 15px;"><a href="#">Services</a></li>
+        <li style="display: inline; margin-right: 15px;"><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Table Example -->
+      <div>
+        <h2>Employee Data</h2>
+        <table>
+          <tr>
+            <th>Employee</th>
+            <th>Position</th>
+            <th>Age</th>
+          </tr>
+          <tr>
+            <td>Jane Smith</td>
+            <td>Developer</td>
+            <td>29</td>
+          </tr>
+          <tr>
+            <td>Michael Johnson</td>
+            <td>Designer</td>
+            <td>34</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+
+    <!-- Form Example -->
+    <div class="container">
+      <h2>Sign-Up Form</h2>
+      <form>
+        <div>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" /><br /><br />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" /><br /><br />
+        </div>
+        <div>
+          <input type="submit" value="Register" />
+        </div>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="container">
+      <span>&copy; 2024 My Company</span> | 
+      <span><a href="url">Instagram</a></span> | 
+      <span><a href="url">Facebook</a></span>
+    </div>
+  </body>
+</html>
