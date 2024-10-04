@@ -181,8 +181,10 @@ Ultimately, the choice between SQL and NoSQL depends on the specific requirement
 
 
 # What is a Database?
-
 A Database is defined as a structured form of data storage in a computer or a collection of data in an organized manner and can be accessed in various ways. It is also the collection of schemas, tables, queries, views, etc. Databases help us with easily storing, accessing, and manipulating data held on a computer. The Database Management System allows a user to interact with the database.
+
+# **What is a Schema?**
+A schema in the context of a database is a blueprint or structure that defines the organization of data within the database. 
 
 ## 1. What is SQL?
 
@@ -260,31 +262,6 @@ SQL commands can be categorized into the following types:
 
 5. **Data Query Language (DQL)**: DQL commands are used to retrieve data from the database. The most common DQL command is SELECT.
 
-# What do you mean by Data Manipulation Language?
-
-Data Manipulation Language or DML is used to access or manipulate data in the database. It allows us to perform the following functions:
-
-- Insert data or rows in a database
-- Delete data from the database
-- Retrieve or fetch data
-- Update data in a database
-
-# **What is a Schema?**
-
-A schema in the context of a database is a blueprint or structure that defines the organization of data within the database. 
-
-# What is a View in SQL?
-
-A **View** in SQL is a virtual table that represents the result of a stored query. Unlike a real table, a view does not store data itself but rather provides a way to look at data from one or more tables in a structured and filtered manner. 
-
-A view consists of rows and columns just like a regular table, but it is dynamically generated when queried. Views are particularly useful for:
-
-- Simplifying complex queries: By creating a view, you can encapsulate complex joins and conditions, making it easier to work with data.
-- Enhancing security: Views can restrict access to certain data by exposing only specific columns or rows based on conditions.
-- Providing a consistent interface: Even if the underlying table structures change, views can be maintained to provide a consistent data interface to users and applications.
-
-For example, you can create a view by selecting fields from one or more tables in the database. The view can include all the rows of a table or filter specific rows based on conditions. This allows you to tailor the data presentation according to your needs without altering the actual tables.
-
 # What are Table and Field?
 
 ## Table
@@ -299,266 +276,8 @@ A **Field** in a database management system (DBMS) refers to a single piece of i
 
 For instance, in an "Employees" table, the "Name" field would store the name of each employee, while the "Salary" field would store their respective salaries. Fields define the structure of the data stored in a table and are critical for organizing and retrieving data efficiently.
 
-# What is a Default Constraint?
-
-A **DEFAULT constraint** in SQL is used to automatically assign a predefined value to a column when a new record is inserted into a table, and no specific value is provided for that column. This ensures that a column has a default, consistent value even when it is left out during an INSERT operation.
-
-The DEFAULT constraint is particularly useful for setting up default values that should apply across all new records, such as assigning a default status, date, or other fixed values. 
-
-For example, if you have a table for orders and you want the "order_status" column to default to "Pending" when a new order is created without specifying a status, you would use the DEFAULT constraint:
-
-```sql
-CREATE TABLE Orders (
-    order_id INT,
-    customer_id INT,
-    order_date DATE,
-    order_status VARCHAR(20) DEFAULT 'Pending'
-);
-```
-# Keys in SQL
-
-In SQL, keys are crucial for defining relationships between tables and ensuring data integrity. Below are the different types of keys used in SQL:
-
-## 1. Primary Key
-
-The **Primary Key** is a unique identifier for each record in a table. It ensures that each record can be uniquely identified. A table can have only one primary key, and it must contain unique values. The primary key column(s) cannot contain `NULL` values.
-
-
-## 2.Foreign Key
-
-The Foreign Key is a column (or a set of columns) in one table that uniquely identifies rows in another table. It establishes a relationship between two tables. The foreign key in the child table references the primary key in the parent table.
-
-# SQL Table Example with Foreign Key
-
-## **Users Table**
-
-| **Column**   | **Data Type** | **Description**        |
-|--------------|---------------|------------------------|
-| `user_id`    | INT           | Primary Key, Auto Increment |
-| `username`   | VARCHAR(50)   | Username of the user   |
-| `email`      | VARCHAR(100)  | Email address          |
-| `created_at` | TIMESTAMP     | Account creation date  |
-
-## **Orders Table**
-
-| **Column**    | **Data Type** | **Description**               |
-|---------------|---------------|-------------------------------|
-| `order_id`    | INT           | Primary Key, Auto Increment    |
-| `user_id`     | INT           | Foreign Key (References `user_id` in Users table) |
-| `order_date`  | TIMESTAMP     | Date of the order             |
-| `total_amount`| DECIMAL(10, 2)| Total amount of the order     |
-
-## 3. Unique Key
-
-The Unique Key constraint ensures that all values in a column are different. It is similar to the primary key, except a table can have multiple unique keys, and they can contain NULL values (but each NULL is considered unique).
-
-# SQL Operators
-
-## 1. `=` (Equal)
-- Checks if the values of two expressions are equal.
-```sql
-SELECT * FROM employees WHERE salary = 50000;
-```
-
-## 2. `!=` or `<>` (Not Equal)
-- Checks if the values of two expressions are not equal.
-```sql
-SELECT * FROM employees WHERE salary != 50000;
-```
-
-## 3. `>` (Greater Than)
-- Checks if the value on the left is greater than the value on the right.
-```sql
-SELECT * FROM employees WHERE salary > 50000;
-
-
-## 4. `<` (Less Than)
-- Checks if the value on the left is less than the value on the right.
-```sql
-SELECT * FROM employees WHERE salary < 50000;
-
-```
-## 5. `>=` (Greater Than or Equal To)
-- Checks if the value on the left is greater than or equal to the value on the right.
-```sql
-SELECT * FROM employees WHERE salary >= 50000;
-
-```
-## 6. `<=` (Less Than or Equal To)
-- Checks if the value on the left is less than or equal to the value on the right.
-```sql
-SELECT * FROM employees WHERE salary <= 50000;
-
-```
-## 7. `AND`
-- Combines two conditions and returns TRUE if both conditions are TRUE.
-```sql
-SELECT * FROM employees WHERE salary > 50000 AND department = 'HR';
-
-```
-## 8. `OR`
-- Combines two conditions and returns TRUE if at least one of the conditions is TRUE.
-```sql
-SELECT * FROM employees WHERE salary > 50000 OR department = 'HR';
-
-```
-## 9. `NOT`
-- Negates a condition, returning TRUE if the condition is FALSE.
-```sql
-SELECT * FROM employees WHERE NOT salary > 50000;
-
-```
-## 10. `BETWEEN`
-- Selects values within a specified range (inclusive of the start and end values).
-```sql
-SELECT * FROM employees WHERE salary BETWEEN 40000 AND 60000;
-
-```
-## 11. `IN`
-- Checks if a value matches any value in a list of values.
-```sql
-SELECT * FROM employees WHERE department IN ('HR', 'Finance', 'IT');
-
-```
-## 12. `LIKE`
-- Searches for a specified pattern in a column (often used with `%` and `_` wildcards).
-```sql
-SELECT * FROM employees WHERE name LIKE 'J%';
-
-```
-## 13. `IS NULL`
-- Checks if a column contains a NULL value.
-```sql
-SELECT * FROM employees WHERE phone_number IS NULL;
-
-```
-## 14. `IS NOT NULL`
-- Checks if a column does not contain a NULL value.
-```sql
-SELECT * FROM employees WHERE phone_number IS NOT NULL;
-
-```
-## 15. `+` (Addition)
-- Adds two numbers.
-
-```sql
-SELECT name, salary + 5000 AS total_salary FROM employees;
-
-```
-## 16. `-` (Subtraction)
-- Subtracts the second number from the first.
-```sql
-SELECT name, salary - 2000 AS net_salary FROM employees;
-
-```
-## 17. `*` (Multiplication)
-- Multiplies two numbers.
-```sql
-SELECT name, salary * 1.10 AS increased_salary FROM employees;
-
-```
-## 18. `/` (Division)
-- Divides the first number by the second.
-```sql
-SELECT name, salary / 2 AS part_time_salary FROM employees;
-
-```
-## 19. `%` (Modulo)
-- Returns the remainder when dividing two numbers.
-```sql
-SELECT * FROM employees WHERE employee_id % 2 != 0;
-
-```
-## 20. `||` or `+` (Concatenation)
-- Concatenates two or more strings into one string (syntax varies between SQL dialects).
-```sql
-SELECT first_name || ' ' || last_name AS full_name FROM employees;
-```
-
-# SQL Functions
-
-## 1. COUNT()
-- Returns the total number of rows in a table or the number of non-NULL values in a specific column.
-
-## 2. SUM()
-- Returns the total sum of a numeric column.
-
-## 3. AVG()
-- Returns the average value of a numeric column.
-
-## 4. MIN()
-- Returns the smallest value in a column.
-
-## 5. MAX()
-- Returns the largest value in a column.
-
-## 6. ROUND()
-- Rounds a numeric value to a specified number of decimal places.
-
-## 7. LENGTH()
-- Returns the length of a string (in characters).
-
-## 8. CONCAT()
-- Concatenates two or more strings into one string.
-
-## 9. NOW()
-- Returns the current date and time.
-
-## 10. UPPER()
-- Converts all characters in a string to uppercase.
-
-## 11. LOWER()
-- Converts all characters in a string to lowercase.
-
-## 12. COALESCE()
-- Returns the first non-NULL value from a list of expressions.
-
-## 13. ISNULL()
-- Checks if an expression is NULL and returns a specified value if it is.
-
-## 14. LEFT() / RIGHT()
-- Returns a specified number of characters from the left or right side of a string.
-
-## 15. SUBSTRING()
-- Extracts a portion of a string based on position and length.
-
-## 16. REPLACE()
-- Replaces all occurrences of a specified substring within a string with another substring.
-
-## 17. ABS()
-- Returns the absolute (positive) value of a number.
-
-## 18. FLOOR() / CEIL()
-- `FLOOR()` rounds a number down to the nearest integer, while `CEIL()` rounds it up to the nearest integer.
-
-
-# SQL Constraints
-
-## 1. PRIMARY KEY
-- Ensures that a column or combination of columns has unique values and cannot contain NULL. It uniquely identifies each record in a table.
-
-## 2. FOREIGN KEY
-- A column (or combination of columns) that creates a relationship between two tables. It enforces referential integrity by ensuring that the value in the foreign key column must exist in the referenced table.
-
-## 3. UNIQUE
-- Ensures that all values in a column are distinct, preventing duplicate values in the column.
-
-## 4. NOT NULL
-- Prevents NULL values from being inserted into a column, ensuring that a field always contains a value.
-
-## 5. CHECK
-- Ensures that all values in a column satisfy a specific condition or expression.
-
-## 6. DEFAULT
-- Assigns a default value to a column if no value is provided during the insertion of a new record.
-
-## 7. AUTO_INCREMENT
-- Automatically generates a unique number for the column, usually used for primary keys.
-
-## 8. INDEX
-- Improves the speed of data retrieval operations on a table by creating an index on one or more columns.
-
 # SQL Joins
+
 
 SQL Joins are a fundamental concept in database management that allows you to combine rows from two or more tables based on a related column between them. Understanding joins is crucial for retrieving meaningful data from a relational database.
 
@@ -617,33 +336,56 @@ Finding relationships within the same dataset.
 Hierarchical data, like employees and their managers.
 Comparing rows for data integrity checks.
 
-# ACID Properties in SQL Databases
 
-ACID is an acronym that describes the key properties of database transactions. Each property ensures the reliability and integrity of the database.
+# What is an Index?
 
-## 1. Atomicity
-- **Definition**: A transaction is treated as a single, indivisible unit.
-- **Explanation**: This means that either all operations within the transaction are completed successfully, or none are. If any operation fails, the entire transaction is rolled back.
-- **Example**: If a bank transfer involves subtracting money from one account and adding it to another, both actions must succeed or fail together. 
+An **index** in SQL is a database object that improves the speed of data retrieval operations on a table. It works like the index of a book, allowing the database engine to find the desired data more quickly without scanning the entire table row by row. Indexes are created on columns of a table that are frequently used in `WHERE` clauses, joins, or sorting.
 
-## 2. Consistency
-- **Definition**: A transaction must leave the database in a valid state.
-- **Explanation**: It ensures that any transaction will bring the database from one valid state to another, maintaining all predefined rules, such as constraints and cascades.
-- **Example**: If a transaction violates a constraint (like attempting to insert a duplicate key), it will not complete, keeping the database consistent.
 
-## 3. Isolation
-- **Definition**: Transactions are executed in isolation from one another.
-- **Explanation**: This ensures that transactions do not interfere with each other. Even if transactions are run concurrently, it will appear as if they are executed one after the other.
-- **Example**: If two transactions are trying to read and write to the same data at the same time, isolation ensures that one transaction completes its process before the other begins.
+## How Indexes Work
 
-## 4. Durability
-- **Definition**: Once a transaction is committed, it will remain so, even in the event of a system failure.
-- **Explanation**: This property ensures that completed transactions are saved permanently in the database.
-- **Example**: After a successful transaction, even if there’s a power failure, the changes made by that transaction will persist in the database.
+When you create an index on a table, the database engine creates a **data structure** (usually a B-tree or hash) that holds the index information. This structure allows the database to quickly locate and retrieve data based on the indexed columns.
 
-## Summary
-Understanding ACID properties is crucial for designing reliable and robust database systems. Each property plays a significant role in maintaining the integrity of transactions, thereby enhancing data reliability.
+For example, when you query a table using an indexed column in the `WHERE` clause, the database engine uses the index to find the rows directly, instead of scanning every row in the table.
 
+### Example of Creating an Index
+```sql
+CREATE INDEX idx_lastname ON employees(last_name);
+```
+This creates an index named `idx_lastname` on the `last_name` column of the `employees
+
+## Types of Indexes
+1. **Primary Index (Primary Key)**
+   - Automatically created when a primary key is defined.
+   - Ensures that the column(s) are unique and not null.
+   - Provides fast access to the data using the primary key.
+
+2. **Unique Index**
+   - Enforces the uniqueness of the indexed column(s).
+   - Can be created manually to ensure no duplicate values are allowed in a column, except for `NULL` values.
+
+3. **Non-Unique Index**
+   - An index that allows duplicate values in the indexed column(s).
+   - Helps improve performance on columns used in queries but doesn't enforce uniqueness.
+
+4. **Clustered Index**
+   - Sorts and stores the rows of a table based on the indexed column(s).
+   - Each table can have only one clustered index because it physically rearranges the table data.
+   - Typically created by default on a primary key.
+
+5. **Non-Clustered Index**
+   - Does not alter the physical order of the table data.
+   - Creates a separate structure that points to the table rows.
+   - A table can have multiple non-clustered indexes.
+
+6. **Composite Index**
+   - An index that is created on multiple columns of a table.
+   - Useful when queries use multiple columns in the `WHERE` clause or for sorting.
+   - Example: `CREATE INDEX idx_name ON employees (first_name, last_name);`
+
+7. **Full-Text Index**
+   - Used for advanced text searching within columns that contain large textual data.
+   - Provides more powerful search capabilities like searching for words, phrases, or forms of words.
 
 # Understanding SQL Views
 
@@ -668,36 +410,490 @@ SELECT column1, column2, ...
 FROM table_name
 WHERE condition;
 ```
+## Benefits of Indexes
+### Improved Query Performance
+Indexes significantly speed up SELECT queries by reducing the amount of data scanned.
+### Efficient Sorting
+Indexes can help sort data more efficiently, improving query performance for ORDER BY clauses.
+### Faster Joins
+Indexes improve join performance, especially when joining large tables
 
-# Stored Procedure in SQL
 
-## What is a Stored Procedure?
+## What is a Constraint?
 
-A **Stored Procedure** is a precompiled collection of SQL statements stored in a database, which can be executed as a single unit. Stored procedures can accept parameters, execute SQL logic, and return results, making them highly useful for repetitive tasks or complex operations.
+A **constraint** in SQL is a rule enforced on a table's data to ensure its accuracy and integrity. Constraints are used to define specific rules for the data in a table. They help in maintaining the data quality by restricting the types of data that can be entered into a column. SQL constraints can be applied at the column or table level, and they ensure that data entered into the database meets certain criteria.
 
-Stored procedures help in modularizing code, improving performance by reducing the need to compile SQL statements multiple times, and enhancing security by limiting direct access to tables.
+### 1. **NOT NULL Constraint**
 
-## Key Characteristics of Stored Procedures:
-1. **Precompiled**: Stored procedures are compiled and stored in the database, improving performance when executed multiple times.
-2. **Reusable**: Once written, a stored procedure can be executed as many times as needed without having to rewrite the SQL queries.
-3. **Parameter Support**: They can accept input parameters and provide output parameters, making them flexible for different inputs.
-4. **Security**: Stored procedures provide better control over data access. Users can be given permission to execute procedures without accessing the underlying tables directly.
-5. **Modularization**: Procedures help in organizing database operations into separate logical units, improving code readability and maintainability.
-
-## Advantages of Stored Procedures:
-- **Improved Performance**: SQL code inside the procedure is compiled once and can be executed multiple times without recompiling.
-- **Reduced Network Traffic**: Instead of sending multiple queries over the network, only a call to the procedure is made.
-- **Enhanced Security**: By encapsulating the SQL logic, stored procedures can protect against SQL injection attacks.
-- **Code Reusability**: Complex queries can be reused without rewriting.
-
----
-
-## Syntax for Creating a Stored Procedure
+- Ensures that a column cannot have a `NULL` value.
+- It is used when a field is mandatory and must contain a valid value.
+- **Example**: Ensuring that a user’s email field is always filled.
 
 ```sql
-CREATE PROCEDURE procedure_name
-    [ (parameter datatype [IN | OUT | INOUT], ...) ]
+CREATE TABLE users (
+    user_id INT,
+    email VARCHAR(100) NOT NULL
+);
+```
+
+###  2. **UNIQUE Constraint**
+
+- Ensures that all the values in a column or set of columns are unique.
+- No duplicate values are allowed.
+- It can be applied to one or more columns.
+- Example: Ensuring that usernames are unique in a system.
+```sql
+CREATE TABLE users (
+    user_id INT,
+    username VARCHAR(50) UNIQUE
+);
+```
+
+###   3. **PRIMARY KEY Constraint**
+
+- A combination of NOT NULL and UNIQUE. It uniquely identifies each record in a table.
+- Each table can only have one primary key, which can consist of one or more columns.
+- Example: Creating a primary key on the user_id column.
+```sql
+CREATE TABLE users (
+    user_id INT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE
+);
+```
+
+###   4. **FOREIGN KEY Constraint**
+
+- Enforces a link between two tables by establishing a relationship between a column in one table and the primary key in another.
+- It maintains referential integrity between the two tables.
+- Example: Establishing a foreign key relationship between an orders table and a users table.
+```sql
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+```
+
+###    5. **CHECK Constraint**
+
+- Ensures that all values in a column satisfy a specific condition.
+- It is used to restrict the range of values for a column.
+- Example: Restricting age to be greater than or equal to 18.
+```sql
+CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,
+    age INT CHECK (age >= 18)
+);
+```
+
+###     6. **DEFAULT Constraint**
+
+- Assigns a default value to a column when no value is provided.
+- Helps ensure that columns have values when inserting data.
+- Example: Providing a default value for the status column.
+```sql
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    order_date DATE,
+    status VARCHAR(20) DEFAULT 'pending'
+);
+```
+
+### 7. AUTO_INCREMENT Constraint (MySQL specific)
+- Automatically generates a unique number for a column when a new record is inserted.
+- Typically used for primary key columns.
+- Example: Automatically generating a user_id for new records.
+```sql
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50)
+);
+```
+
+
+# Keys in MySQL
+
+Keys in MySQL are attributes or sets of attributes that help identify and maintain relationships between records in database tables. They ensure that data remains organized and helps in efficient data retrieval.
+
+## 1. **Primary Key**
+
+- A **primary key** is a unique identifier for each record in a table.
+- It must contain unique values and cannot contain `NULL` values.
+- Each table can only have one primary key, which may consist of a single column or multiple columns (composite key).
+- **Example**:
+
+```sql
+CREATE TABLE users (
+    user_id INT PRIMARY KEY,
+    username VARCHAR(50)
+);
+```
+## 2. Composite Key
+- A composite key is a primary key made up of two or more columns. It uniquely identifies a record using a combination of values from multiple columns.
+- It is useful when a single column is not sufficient to uniquely identify records.
+-  **Example**:
+
+```sql
+CREATE TABLE orders (
+    order_id INT,
+    product_id INT,
+    PRIMARY KEY (order_id, product_id)
+);
+```
+## 3. Foreign Key
+- A foreign key establishes a relationship between two tables by linking a column in one table to the primary key in another.
+- It ensures referential integrity, meaning values in the foreign key column must match values in the primary key column of the referenced table.
+- Example:
+```sql
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+```
+## 4. Unique Key
+- A unique key ensures that all values in a column or group of columns are unique across the table.
+- Unlike primary keys, a table can have multiple unique keys.
+- It allows NULL values, but each non-null value must be unique.
+- Example:
+```sql
+CREATE TABLE users (
+    user_id INT,
+    email VARCHAR(100) UNIQUE
+);
+```
+## 5. Candidate Key
+- A candidate key is a column or set of columns that can uniquely identify records in a table.
+- Every table can have multiple candidate keys, but only one of them is selected as the primary key.
+- Example: In a table, both user_id and email can be candidate keys because both uniquely identify records.
+
+## 6. Alternate Key
+- An alternate key is any candidate key that is not selected as the primary key.
+- It still uniquely identifies records but is not used as the primary identifier.
+- Example: If user_id is the primary key, then email can be an alternate key.
+
+## 7. Super Key
+- A super key is a set of one or more columns that can uniquely identify records in a table.
+- A super key can include additional attributes beyond what is necessary to uniquely identify a record.
+- Example: If a table has a user_id and email, then both user_id, or the combination of user_id and email, are super keys.
+
+
+
+## What is Normalization?
+
+**Normalization** is the process of structuring a relational database to reduce data redundancy and improve data integrity. It involves decomposing a database into smaller, manageable tables and establishing relationships among them to ensure efficient and consistent data storage.
+
+## Types of Normal Forms
+### 1. **First Normal Form (1NF)**
+
+- A table is in **1NF** if:
+  - All columns contain atomic (indivisible) values.
+  - Each column must contain values of a single type.
+  - Each column must have a unique name.
+  - The order of the data does not matter.
+
+### 2. **Second Normal Form (2NF)**
+- A table is in **2NF** if:
+  - It is already in 1NF.
+  - All non-key attributes are fully functionally dependent on the primary key (no partial dependency).
+
+### 3. **Third Normal Form (3NF)**
+
+- A table is in **3NF** if:
+  - It is already in 2NF.
+  - There are no transitive dependencies (non-key attributes do not depend on other non-key attributes).
+
+### 4. **Boyce-Codd Normal Form (BCNF)**
+
+- A table is in **BCNF** if:
+  - It is already in 3NF.
+  - For every functional dependency (X → Y), X should be a super key.
+
+### 5. **Fourth Normal Form (4NF)**
+
+- A table is in **4NF** if:
+  - It is already in BCNF.
+  - It has no multi-valued dependencies (no attribute in a table should depend on another attribute).
+
+### 6. **Fifth Normal Form (5NF)**
+
+- A table is in **5NF** if:
+  - It is already in 4NF.
+  - It cannot be decomposed into any smaller tables without losing data.
+
+### 7. **Domain-Key Normal Form (DKNF)**
+
+- A table is in **DKNF** if:
+  - It is based on the principle of constraints and domain integrity.
+  - It requires that all constraints in the table be a consequence of the domain and key constraints.
+
+
+# Aggregate Functions in SQL
+
+Aggregate functions are used to perform calculations on multiple rows of a dataset and return a single value. They are often used in conjunction with the `GROUP BY` clause to summarize data. Here are some commonly used aggregate functions:
+
+## Common Aggregate Functions
+
+1. **COUNT()**
+   - Counts the number of rows that match a specified condition.
+   - **Example**:
+     ```sql
+     SELECT COUNT(*) AS total_users
+     FROM users;
+     ```
+     This query returns the total number of users in the `users` table.
+
+2. **SUM()**
+   - Calculates the total sum of a numeric column.
+   - **Example**:
+     ```sql
+     SELECT SUM(salary) AS total_salary
+     FROM employees;
+     ```
+     This query returns the total salary of all employees in the `employees` table.
+
+3. **AVG()**
+   - Calculates the average value of a numeric column.
+   - **Example**:
+     ```sql
+     SELECT AVG(age) AS average_age
+     FROM users;
+     ```
+     This query returns the average age of users in the `users` table.
+
+4. **MAX()**
+   - Returns the maximum value from a column.
+   - **Example**:
+     ```sql
+     SELECT MAX(price) AS highest_price
+     FROM products;
+     ```
+     This query returns the highest price of products in the `products` table.
+
+5. **MIN()**
+   - Returns the minimum value from a column.
+   - **Example**:
+     ```sql
+     SELECT MIN(order_date) AS earliest_order
+     FROM orders;
+     ```
+     This query returns the date of the earliest order in the `orders` table.
+
+## Using Aggregate Functions with GROUP BY
+
+Aggregate functions can be used with the `GROUP BY` clause to group rows that have the same values in specified columns.
+
+### Example:
+```sql
+SELECT department_id, COUNT(*) AS total_employees, AVG(salary) AS average_salary
+FROM employees
+GROUP BY department_id;
+```
+
+# SQL Clauses
+
+SQL clauses are components of SQL statements that specify conditions, filters, and operations on data. They play a crucial role in retrieving, modifying, and managing data in a database.
+
+## Common SQL Clauses
+
+### 1. **SELECT Clause**
+
+- Used to specify the columns to be retrieved from a table.
+- You can use it to select one or more columns.
+
+**Example**:
+```sql
+SELECT column1, column2 FROM table_name;
+```
+
+### 2. FROM Clause
+- Specifies the table from which to retrieve the data.
+- It can include joins to combine data from multiple tables.
+- Example:
+```sql
+SELECT * FROM employees;
+```
+
+### 3. WHERE Clause
+- Filters the results based on specified conditions.
+- Only rows that meet the conditions will be returned.
+- Example:
+```sql
+SELECT * FROM employees WHERE department = 'Sales';
+```
+
+### 4. ORDER BY Clause
+- Sorts the result set based on one or more columns.
+- You can specify ascending (ASC) or descending (DESC) order.
+- Example:
+```sql
+SELECT * FROM employees ORDER BY last_name ASC;
+```
+### 5. GROUP BY Clause
+- Groups rows that have the same values in specified columns into summary rows.
+- Often used with aggregate functions like COUNT(), SUM(), etc.
+- Example:
+```sql
+SELECT department, COUNT(*) FROM employees GROUP BY department;
+```
+### 6. HAVING Clause
+- Filters groups created by the GROUP BY clause based on specified conditions.
+- It is used in conjunction with aggregate functions.
+- Example:
+```sql
+SELECT department, COUNT(*) AS employee_count 
+FROM employees 
+GROUP BY department 
+HAVING COUNT(*) > 5;
+```
+### 8. LIMIT Clause
+- Specifies the maximum number of records to return in the result set.
+- Useful for pagination and controlling the amount of data retrieved.
+- Example:
+``` sql
+SELECT * FROM employees LIMIT 10;
+```
+# Set Operations in SQL
+
+Set operations in SQL are used to combine the results of two or more `SELECT` statements. The most commonly used set operations are `UNION`, `INTERSECT`, and `EXCEPT`. These operations help to manipulate and analyze data from multiple tables or queries.
+
+## Common Set Operations
+
+### 1. **UNION**
+
+- Combines the results of two or more `SELECT` statements and removes duplicate rows.
+- All `SELECT` statements must have the same number of columns with similar data types.
+
+**Example**:
+```sql
+SELECT city FROM customers
+UNION
+SELECT city FROM suppliers;
+```
+This query returns a distinct list of cities from both the customers and suppliers tables.
+
+### 2. UNION ALL
+- Similar to UNION, but includes all duplicates in the result set.
+- It is faster than UNION because it does not remove duplicates.
+- Example:
+```sql
+SELECT city FROM customers
+UNION ALL
+SELECT city FROM suppliers;
+```
+This query returns a list of all cities from both tables, including duplicates.
+
+### 3. INTERSECT
+- Returns only the rows that are common to both SELECT statements.
+- Both SELECT statements must have the same number of columns with similar data types.
+- Example:
+```sql
+SELECT city FROM customers
+INTERSECT
+SELECT city FROM suppliers;
+```
+This query returns a list of cities that are present in both the customers and suppliers tables.
+
+
+# Triggers in SQL
+
+A **trigger** in SQL is a special type of stored procedure that automatically executes (or "fires") in response to specific events on a particular table or view. Triggers are commonly used to enforce business rules, maintain data integrity, and automatically perform actions based on data changes.
+
+## Key Aspects of Triggers
+
+### Types of Triggers
+
+1. **BEFORE Triggers**
+   - Executes before an `INSERT`, `UPDATE`, or `DELETE` operation on a table.
+   - Used to validate or modify data before it is committed to the database.
+
+   **Example**:
+   ```sql
+   CREATE TRIGGER before_insert_user
+   BEFORE INSERT ON users
+   FOR EACH ROW
+   BEGIN
+       SET NEW.created_at = NOW();
+   END;
+    ```
+2.   **AFTER Triggers**
+
+- Executes after an INSERT, UPDATE, or DELETE operation on a table.
+- Used for auditing, logging changes, or performing additional actions after data modification.
+- Example:
+```sql
+CREATE TRIGGER after_update_user
+AFTER UPDATE ON users
+FOR EACH ROW
 BEGIN
-    -- SQL statements
+    INSERT INTO user_logs (user_id, action, timestamp)
+    VALUES (NEW.id, 'Updated', NOW());
 END;
 ```
+This trigger logs each update to the users table in a separate user_logs table.
+## When to Use Triggers
+- Data Validation: Ensure that data meets specific criteria before being inserted or updated.
+- Auditing: Automatically log changes to important tables for tracking purposes.
+- Enforcing Business Rules: Implement complex business logic that cannot be easily expressed using constraints.
+
+# Stored Procedures in SQL
+
+A **stored procedure** is a set of precompiled SQL statements that can be executed as a single unit. Stored procedures are stored in the database and can be invoked by applications or users, making them an essential part of database management and application development.
+
+### Benefits of Using Stored Procedures
+
+1. **Modularity**
+   - Stored procedures promote modular programming by allowing you to encapsulate complex SQL logic into a single callable routine. This makes code easier to read and maintain.
+
+2. **Performance**
+   - Since stored procedures are precompiled, they can execute faster than individual SQL statements sent to the database server. This reduces the amount of information sent over the network.
+
+3. **Security**
+   - Stored procedures can enhance security by restricting direct access to the underlying tables. Users can be granted permission to execute the stored procedure without needing access to the actual tables.
+
+4. **Code Reusability**
+   - Stored procedures allow you to write SQL code once and reuse it in multiple applications or modules, reducing redundancy.
+
+5. **Transaction Management**
+   - They can handle transactions more effectively, allowing for operations to be rolled back in case of an error.
+
+### Creating a Stored Procedure
+
+To create a stored procedure, you use the `CREATE PROCEDURE` statement. Here’s the syntax:
+
+
+```sql
+CREATE PROCEDURE GetUserInfo(IN user_id INT)
+BEGIN
+    SELECT * FROM users WHERE id = user_id;
+END;
+```
+- To execute a stored procedure, you use the CALL statement:
+
+```sql
+CALL GetUserInfo(1);
+```
+
+# ACID
+- ACID is an acronym that describes the key properties of database transactions. Each property ensures the reliability and integrity of the database.
+
+## 1. Atomicity
+- **Definition**: A transaction is treated as a single, indivisible unit.
+- **Explanation**: This means that either all operations within the transaction are completed successfully, or none are. If any operation fails, the entire transaction is rolled back.
+- **Example**: If a bank transfer involves subtracting money from one account and adding it to another, both actions must succeed or fail together. 
+
+## 2. Consistency
+- **Definition**: A transaction must leave the database in a valid state.
+- **Explanation**: It ensures that any transaction will bring the database from one valid state to another, maintaining all predefined rules, such as constraints and cascades.
+- **Example**: If a transaction violates a constraint (like attempting to insert a duplicate key), it will not complete, keeping the database consistent.
+
+## 3. Isolation
+- **Definition**: Transactions are executed in isolation from one another.
+- **Explanation**: This ensures that transactions do not interfere with each other. Even if transactions are run concurrently, it will appear as if they are executed one after the other.
+- **Example**: If two transactions are trying to read and write to the same data at the same time, isolation ensures that one transaction completes its process before the other begins.
+
+## 4. Durability
+- **Definition**: Once a transaction is committed, it will remain so, even in the event of a system failure.
+- **Explanation**: This property ensures that completed transactions are saved permanently in the database.
+- **Example**: After a successful transaction, even if there’s a power failure, the changes made by that transaction will persist in the database.
+
