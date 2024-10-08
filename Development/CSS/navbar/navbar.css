@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar styling */
+  nav {
+    background-color: rgb(75, 141, 37);
+    color: wheat;
+    font-size: 1.1rem;
+    padding: 10px 20px;  /* Added padding for better spacing */
+  }
+  
+  /* Flex container for navbar content */
+  .nav-container {
+    display: flex;
+    justify-content: space-between;  /* Ensures logo and links are aligned */
+    align-items: center;             /* Aligns items vertically in the center */
+  }
+  
+  /* Logo styling */
+  .logo a {
+    color: wheat;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Navigation links styling */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Adds space between each navigation link */
+   
+  }
+  
+  .nav-links li a {
+    color: wheat;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .card{
+    display: inline;
+    height: 30px;
+    width: 30px;
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: row;    /* Stack the elements vertically on small screens */
+      align-items: flex-start;
+    }
+  
+    .nav-links {
+      flex-direction: row;
+      width: 100%;
+    }
+  
+    .nav-links li {
+      width: 100%;
+      padding: 10px 0;
+    }
+  
+    .nav-links li a {
+      display: block;
+      width: 100%;
+    }
+  }
+  
