@@ -37,3 +37,12 @@ color: aliceblue !important;
     margin-top: 20px;
     background-color: rgb(16, 172, 26);
 }
+@media screen and (max-width:600px){
+    
+        .f1{
+            flex-direction: column;
+            gap: 20px;
+            width: 70px;
+            background-color: white;
+    }
+}

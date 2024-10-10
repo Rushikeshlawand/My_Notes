@@ -63,6 +63,25 @@
 | **No Built-In Methods** | Arrays lack higher-level methods for operations like sorting and searching, unlike more complex data structures. |
 | **Inefficient Memory Usage** | If the array is not fully utilized, it leads to wasted memory space.    |
 
+# ArrayList in Java
+
+An **ArrayList** in Java is part of the Java Collections Framework and is a resizable array implementation of the List interface. Unlike arrays, which have a fixed size, ArrayList can grow and shrink dynamically as elements are added or removed. It allows duplicate elements and maintains the insertion order.
+
+## Key Characteristics of ArrayList
+
+- **Resizable**: 
+  - It can automatically resize itself as elements are added or removed.
+
+- **Non-synchronized**: 
+  - By default, ArrayList is not synchronized, meaning it is not thread-safe.
+
+- **Random Access**: 
+  - Provides fast access to elements via the `get(int index)` method.
+
+- **Allows Null Values**: 
+  - ArrayList can contain null elements.
+
+
 # Array vs ArrayList vs LinkedList in Java
 
 | **Feature**               | **Array**                                | **ArrayList**                             | **LinkedList**                            |
@@ -88,7 +107,7 @@
 ## StringBuilder
 
 ### Definition
-`StringBuilder` is a class that provides an API for creating and manipulating mutable sequences of characters. It is designed for single-threaded environments and is generally preferred for performance efficiency.
+`StringBuilder` is a class used for creating and manipulating mutable sequences of characters. It is designed for single-threaded environments and is generally preferred for performance efficiency.
 
 ## StringBuffer
 
@@ -563,35 +582,19 @@ Bubble Sort is a simple comparison-based sorting algorithm that repeatedly steps
 - **Space Complexity**: O(1)
 
 
-```plaintext
-Initial array: [5, 3, 8, 4, 2]
-
-1st Pass:
-[5, 3, 8, 4, 2]  -> Compare 5 and 3, Swap -> [3, 5, 8, 4, 2]
-[3, 5, 8, 4, 2]  -> Compare 5 and 8, No Swap
-[3, 5, 8, 4, 2]  -> Compare 8 and 4, Swap -> [3, 5, 4, 8, 2]
-[3, 5, 4, 8, 2]  -> Compare 8 and 2, Swap -> [3, 5, 4, 2, 8]
-
-2nd Pass:
-[3, 5, 4, 2, 8]  -> Compare 3 and 5, No Swap
-[3, 5, 4, 2, 8]  -> Compare 5 and 4, Swap -> [3, 4, 5, 2, 8]
-[3, 4, 5, 2, 8]  -> Compare 5 and 2, Swap -> [3, 4, 2, 5, 8]
-[3, 4, 2, 5, 8]  -> Compare 5 and 8, No Swap
-
-3rd Pass:
-[3, 4, 2, 5, 8]  -> Compare 3 and 4, No Swap
-[3, 4, 2, 5, 8]  -> Compare 4 and 2, Swap -> [3, 2, 4, 5, 8]
-[3, 2, 4, 5, 8]  -> Compare 4 and 5, No Swap
-[3, 2, 4, 5, 8]  -> Compare 5 and 8, No Swap
-
-4th Pass:
-[3, 2, 4, 5, 8]  -> Compare 3 and 2, Swap -> [2, 3, 4, 5, 8]
-[2, 3, 4, 5, 8]  -> Compare 3 and 4, No Swap
-[2, 3, 4, 5, 8]  -> Compare 4 and 5, No Swap
-[2, 3, 4, 5, 8]  -> Compare 5 and 8, No Swap
-
-Sorted array: [2, 3, 4, 5, 8]
-
+```java
+public static void bubbleSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    // Swap arr[j] and arr[j+1]
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
 ```
 ---
 
@@ -609,30 +612,22 @@ Selection Sort is an in-place comparison-based sorting algorithm that divides th
 ### Complexity
 - **Time Complexity**: O(n^2) (worst and average case)
 - **Space Complexity**: O(1)
-```plaintext
-Initial array: [5, 3, 8, 4, 2]
-
-1st Pass:
-[5, 3, 8, 4, 2]  -> Find the smallest element (2), swap with 5
-[2, 3, 8, 4, 5]  -> 2 is placed at the first position
-
-2nd Pass:
-[2, 3, 8, 4, 5]  -> Find the smallest element in the unsorted part (3), no swap needed
-[2, 3, 8, 4, 5]  -> 3 is already in the correct position
-
-3rd Pass:
-[2, 3, 8, 4, 5]  -> Find the smallest element in the unsorted part (4), swap with 8
-[2, 3, 4, 8, 5]  -> 4 is placed at the third position
-
-4th Pass:
-[2, 3, 4, 8, 5]  -> Find the smallest element in the unsorted part (5), swap with 8
-[2, 3, 4, 5, 8]  -> 5 is placed at the fourth position
-
-5th Pass:
-[2, 3, 4, 5, 8]  -> Only one element left, it's already in the correct position
-
-Sorted array: [2, 3, 4, 5, 8]
-
+```java
+public static void selectionSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            int minIdx = i;
+            for (int j = i + 1; j < n; j++) {
+                if (arr[j] < arr[minIdx]) {
+                    minIdx = j;
+                }
+            }
+            // Swap the found minimum element with the first element
+            int temp = arr[minIdx];
+            arr[minIdx] = arr[i];
+            arr[i] = temp;
+        }
+    }
 ```
 ---
 
