@@ -1,3 +1,5 @@
-console.log("Hi");
-document.write("I am rushikesh");
-document.getElementById("one").innerHTML = "hello";
+let num = 234;
+
+while(num!=0){
+    
+}
