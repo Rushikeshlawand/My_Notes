@@ -1,5 +1,3 @@
-let num = 234;
-
-while(num!=0){
-    
-}
+(function dp(){
+    console.log("Hii");
+})();

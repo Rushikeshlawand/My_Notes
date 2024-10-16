@@ -41,6 +41,157 @@
 - `V` is the number of vertices and `E` is the number of edges (for graphs).
 - The complexities are for standard operations; specific implementations might vary.
 
+Week 1: Analysis of Algorithm, Mathematics, Bit Manipulation & Arrays
+
+Class 1:  Analysis of Algorithm, Mathematics & Bit Manipulation
+
+    Asymptotic Analysis 
+    Time and Space Complexity
+    Masters Theorem
+    Bitwise Operators (Bitwise AND, Bitwise OR, Bitwise XOR, Left Shift, Right Shift, etc )
+    Problems: GCD and LCM, Iterative Power, Generate Power Set, etc
+
+Class 2:  Arrays
+
+    Arrays - Introduction and Advantages
+    Types of Arrays
+    Operations of Arrays - Searching, Insertion, and Deletion
+    Sliding Window Technique 
+    Problems: Largest Element in an Array, Leaders in an Array Problem, Maximum Subarray Sum, etc
+
+02Week 2: Recursion, Backtracking & Searching
+
+Class 1: Recursion and Backtracking
+
+    Introduction to Recursion
+    Writing Base Cases in Recursion
+    Tail Recursion
+    Introduction to Backtracking
+    Problems: Print 1 to N Using Recursion, Rope Cutting Problem, Rat in a Maze, etc
+
+Class 2: Searching
+
+    Linear Search
+    Binary Search - Iterative and Recursive Approach
+    Analysis of Binary Search
+    Two Pointer Approach
+    Problems: Index of the first Occurrence in SortedArray, Count 1s in a Sorted Binary Array, Square root of a number, etc
+
+03Week 3: Sorting, Matrix & Hashing
+
+Class 1: Sorting
+
+    Overview of the Sorting Algorithm
+    Sorting Algorithms e.g. Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort with Analysis
+    Stability of Sorting Algorithms
+    Problems: Minimum Difference in an Array, Chocolate Distribution Problem, etc
+
+Class 2: Matrix and Hashing
+
+    Multidimensional Array
+    Passing 2D Arrays as an argument
+    Hashing Introduction, applications, and analysis
+    Collision Handling
+    Hashing Function
+    Problems: Transpose of a Matrix, Matrix in Snake Pattern, Count Distinct Elements, Frequencies of Array Elements, etc
+
+04Week 4: Strings and Linked List
+
+Class 1: Strings
+
+    String Introduction 
+    Overview of Pattern Searching Algorithm
+    Naive and Improved Naive Pattern Searching
+    Rabin Karp Algorithm
+    KMP Algorithm (Constructing LPS Array and Complete Algorithms)
+    Problems: Palindrome Check, Reverse words in a string, Anagram Search, etc
+
+Class 2: Linked List
+
+    Introduction to Linked List
+    Traversing a Linked List 
+    Insertion and Deletion of Node in Linked List
+    Doubly Linked List and Circular Linked List
+    Problems: Middle of Linked List, Deleting a Node without accessing Head pointer of Linked List, etc
+
+05Week 5: Stack, Queue & Deque
+
+Class 1: Stack
+
+    Stack - Introduction and Applications
+    Stack Operations (e.g. push, pop, etc)
+    Array Implementation of Stack 
+    Linked List Implementation of Stack 
+    Problems: Balanced Parenthesis, Next Greater Element, etc
+
+Class 2: Queue and Deque
+
+    Queue - Introduction and Application
+    Implementation of Queue using Array 
+    Implementation of Queue using Linked List
+    Deque - Introduction and Application
+    Problems: Generate Numbers with Gven Dgits, First Circular Tour, etc
+
+06Week 6: Tree and Binary Search Tree
+
+Class 1: Tree
+
+    Tree - Introduction and Application
+    Introduction to Binary Tree
+    Tree Traversal - Inorder, Preorder, and Postorder with Implementation
+    Level Order Traversal
+    Lowest Common Ancestor of a Binary Tree
+    Serialize and Deserialize a Binary Tree
+    Problems: Height of a Binary Tree, Diameter of a Binary Tree, etc
+
+Class 2: Binary Search Tree
+
+    BST - Introduction and Application
+    Search in BST with Implementation
+    Insert in BST with Implementation
+    Deletion in BST with Implementation
+    Self Balancing BST - AVL Tree, Red Black Tree
+    Problems: Find Kth Smallest in BST, Vertical Sum in Binary Tree, Floor in BST, etc
+
+07Week 7: Greedy, Heap and Graph
+
+Class 1: Greedy and Heap
+
+    Introduction to Greedy Algorithm
+    Binary Heap - Introduction
+    Binary Heap - Insertion, Heapify, and Extract
+    Binary Heap - Decrease, Delete and Build Heap
+    Heap Sort
+    Priority Queue
+    Problems: Activity Selection Problem, Job Sequencing Problem, Sort K Sorted Arrays, etc
+
+Class 2: Graph
+
+    Introduction to Graph
+    Graph Representation(Adjacency List and Matrix)
+    Adjacency Matrix and List Comparison
+    Breadth First Search - Introduction and Implementation
+    Depth First Search - Introduction and Implementation
+    Prims Algorithm - Introduction and Implementation
+    Dijkstra Algorithm - Introduction and Implementation
+    Problems: Bridges in Graph, Detect Cycle in a Directed Graph, etc
+
+08Week 8: Graph(Advanced) and Dynamic Programming
+
+Class 1: Graph (Advanced)
+
+    Kruskal's Algorithm
+    Bellman-Ford Algorithm
+    Ford-Fulkerson Algorithm
+    Problems: Strongly Connected Components, Find the No. of Islands, etc
+
+Class 2: Dynamic Programming
+
+    Introduction to Dynamic Programming
+    Dynamic Programming Approach vs Greedy Approach
+    How to approach a DP Problem
+    Memoization and Tabulation methods
+    Problems: Coin Change Problem, Longest Common Subsequence, Subset Sum Problem, etc
 # Arrays in Java
 
 ## Advantages
