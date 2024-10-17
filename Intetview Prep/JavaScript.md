@@ -663,3 +663,9 @@ The basic syntax of an IIFE is:
   // code to be executed immediately
 })();
 ```
+
+obj
+obj.props
+obj methods
+display obj 
+
