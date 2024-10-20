@@ -669,3 +669,41 @@ obj.props
 obj methods
 display obj 
 
+The DOM is a programming interface for web documents. It represents the page so that
+programs can change the document structure, style, and content. The DOM represents
+the document as a tree of nodes.
+• The DOM is the programming interface for HTML and XML documents
+DOM also defines how HTML elements are structured
+The DOM is a way to represent HTML elements in a hierarchical manner so that it
+can be easily accessed and can help in manipulating DOM elements and their
+stylings
+• The DOM is an API. It represents and helps you interact with HTML/XML documents
+
+dom can change html page,can add css to page,add some contain dynamically
+
+document.getElementsByTagName
+document.getElementsByClassName
+document.getElementById
+
+
+change 
+Element.innerHTML
+Element.attribute
+Element.style.property
+Element.serAtrribute("attribute, value")
+
+create Element
+document.createElement(Element)
+
+
+document.removeChild
+document.appendChild
+
+event
+onClick
+onHover
+onMouseOver
+onMouseOut
+onChange
+onLoad
+onkeydown

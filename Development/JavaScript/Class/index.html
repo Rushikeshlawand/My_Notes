@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class FSD_2 </title>
-</head>
-<body>
-    <h1 id="one"></h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class FSD_2</title>
+  </head>
+  <body>
+    <form id="registrationForm"> 
+      Name: <input type="text" id="name" placeholder="Enter Name" /> <br /><br />
+      <h3 id="demo"></h3>
+      Number: <input type="text" id="number" placeholder="Enter Number" /> <br /><br />
+      Email: <input type="text" id="mail" placeholder="Enter Email" /> <br /><br />
+      Password: <input type="password" id="pass" placeholder="Enter Password" /><br /><br />
+      Confirm Password: <input type="password" id="cpass" placeholder="Confirm Password" /><br/><br/>
+      <button type="button" onclick="validateUserInputs()">Submit</button>
+    </form>
+
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
