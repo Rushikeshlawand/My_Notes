@@ -1,0 +1,19 @@
+.top {
+  background-color: bisque;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.form {
+  background-color: aquamarine;
+  border-color: black;
+  text-align: center;
+  width: 300px;
+  margin-top: 50px;
+  margin-left: 130px;
+  padding: 2px;
+  padding-bottom: 10px;
+}
+.middle {
+  padding-top: 10px;
+}
