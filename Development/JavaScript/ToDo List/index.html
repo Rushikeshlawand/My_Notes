@@ -1,34 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ToDO</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" />
+    <title>ToDo</title>
   </head>
   <body>
-    <form>
-      <div class="form">
-        <div class="top">
-          Movies for everyone<br /><br />
-          <input type="search" placeholder="Search Movies" />
+    <div id="wrapper">
+      <header>
+        <div id="page-banner">
+          <p>Movies for everyone</p>
+          <form id="search-movies">
+            <input type="text" placeholder="Search Movies" />
+          </form>
         </div>
-        <div class="middle">Movies to watch</div>
-        <br /><br />
-        <br />
-        <label id="list"></label>
-
-        <div class="bottom">
-          <input type="checkbox" />Hide the list<br /><br />
-          <input
-            type="text"
-            placeholder="Add a movie"
-            id="userinput"
-          /><br /><br />
-          <button type="submit" id="submit" onclick="">Add</button>
-        </div>
+      </header>
+      <div id="movie-list">
+        <h2 class="title">Movies to watch</h2>
+        <ul>
+          <li>
+            <span class="name">Fight Club</span>
+            <span class="delete">delete</span>
+          </li>
+          <li>
+            <span class="name">Shawshank Redemption</span>
+            <span class="delete">delete</span>
+          </li>
+          <li>
+            <span class="name">Dilwale</span>
+            <span class="delete">delete</span>
+          </li>
+          <li>
+            <span class="name">Dark Knight</span>
+            <span class="delete">delete</span>
+          </li>
+          <li>
+            <span class="name">Dark Knight1</span>
+            <span class="delete">delete</span>
+          </li>
+        </ul>
       </div>
-    </form>
+      <form id="add-movie">
+        <input type="checkbox" id="hide" />
+        <label for="hide">Hide the List</label>
+        <input type="text" placeholder="Add a movie" />
+        <button>Add</button>
+      </form>
+    </div>
+
     <script src="index.js"></script>
   </body>
 </html>
