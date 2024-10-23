@@ -707,3 +707,11 @@ onMouseOut
 onChange
 onLoad
 onkeydown
+
+
+to make js Asynchrnous =>
+1. callback- callback hell
+2. promise - has 3 states => pending,fulfilled,rejected. [fetch-axios-ajax]
+
+3. async/await -  simple syntax
+
