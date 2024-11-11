@@ -9,6 +9,7 @@ let promise = new Promise((resolve, reject) => {
 });
 promise.then((data) => console.log(data)).catch((err) => console.log(err));
 
+<<<<<<< HEAD
 
 
 
@@ -38,3 +39,5 @@ function Display() {
     return (pData.innerHTML = ele.userId + " " + ele.title);
   });
 }
+=======
+>>>>>>> 6a0390ad599572dca88e24fed4791c50ff771b3f

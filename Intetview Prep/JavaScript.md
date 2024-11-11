@@ -711,7 +711,11 @@ onkeydown
 
 to make js Asynchrnous =>
 1. callback- callback hell
+<<<<<<< HEAD
 2. promise - has 3 states => pending,fulfilled,rejected. [fetch-axios-ajax]
 
+=======
+2. promise - has 3 states => pending,fulfilled,rejected.
+>>>>>>> 6a0390ad599572dca88e24fed4791c50ff771b3f
 3. async/await -  simple syntax
 
