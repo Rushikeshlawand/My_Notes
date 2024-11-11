@@ -105,7 +105,9 @@ Non-primitive data types are reference types that hold references to objects rat
 
 ## What is JIT?
 
-**JIT (Just-in-Time) Compiler** is a part of the JRE (Java Runtime Environment) designed to enhance the performance of Java applications during runtime. Here’s how it works:
+**JIT (Just-in-Time) Compiler** is a part of the JRE (Java Runtime Environment) designed to enhance the performance of Java applications during runtime.
+
+**JIT (Just-in-Time) Compiler** It is used to improve the performance. JIT compiles parts of the bytecode that have similar functionality at the same time, and hence reduces the amount of time needed for compilation. Here the term “compiler” refers to a translator from the instruction set of a Java virtual machine (JVM) to the instruction set of a specific CPU. 
 
 1. **Source Code Compilation:** The Java source code is first compiled into bytecode using the `javac` compiler.
 2. **Bytecode Processing:** The bytecode is then passed to the JVM (Java Virtual Machine).
@@ -118,6 +120,7 @@ This process allows Java applications to run faster and more efficiently by redu
 ## What is a Classloader?
 
 A **classloader** is a component of the JRE (Java Runtime Environment). Its primary function is to dynamically load Java classes and interfaces into the JVM (Java Virtual Machine) during the execution of bytecode or .class files.
+Classloader is a subsystem of JVM which is used to load class files. Whenever we run the java program, it is loaded first by the classloader.
 
 ### Key Points:
 
@@ -125,6 +128,7 @@ A **classloader** is a component of the JRE (Java Runtime Environment). Its prim
 - **Independence from Files:** The Java runtime system does not need to know about the underlying files and file systems due to the classloading mechanism.
 
 ## Comparison of Java Access Modifiers
+access specifiers are the keywords which are used to define the access scope of the method, class, or a variable.
 
 | **Modifier**  | **Same Class** | **Same Package** | **Subclass** | **Different Package** |
 | ------------- | -------------- | ---------------- | ------------ | --------------------- |
@@ -133,11 +137,11 @@ A **classloader** is a component of the JRE (Java Runtime Environment). Its prim
 | **default**   | Yes            | Yes              | No           | No                    |
 | **private**   | Yes            | No               | No           | No                    |
 
-### Explanation
+### Explanation 
 
 - **`public`**:
 
-  - Accessible from any class, regardless of package.
+  - The classes, methods, or variables which are defined as public, can be accessed by any class or method.
   - Used when you want the member to be accessible from anywhere.
 
 - **`protected`**:
@@ -265,7 +269,9 @@ In summary, the absence of pointers in Java contributes to its robustness, secur
 
 # What Is a Static Variable?
 
-In Java, the `static` keyword is used to declare variables and methods that are shared among all instances of a class. A static variable is a class-level variable that is common to all objects of the class. This means that only one copy of the static variable is created, and it is shared among all instances of the class.
+The `static` keyword is used to declare variables and methods that are shared among all instances of a class. A static variable is a class-level variable that is common to all objects of the class. This means that only one copy of the static variable is created, and it is shared among all instances of the class.
+
+- The methods or variables defined as static are shared among all the objects of the class. The static is the part of the class and not of the object. The static variables are stored in the class area, and we do not need to create the object to access such variables. Therefore, static is used in the case, where we need to define variables or methods which are common to all the objects of the class.
 
 ## Characteristics of Static Variables
 
@@ -318,6 +324,8 @@ The `super` keyword can be used to call the overridden method of the parent clas
 # Constructor
 
 Constructors are special methods in object-oriented programming used to initialize objects. When you create an object of a class using the `new` keyword, the constructor is automatically invoked to perform any necessary setup for the object.
+
+- The constructor can be defined as the special type of method that is used to initialize the state of an object. It is invoked when the class is instantiated, and the memory is allocated for the object. Every time, an object is created using the new keyword, the default constructor of the class is called. The name of the constructor must be similar to the class name. The constructor must not have an explicit return type.
 
 ## Types of Constructors
 
