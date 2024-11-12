@@ -1,3 +1,111 @@
+1. JavaScript Basics
+
+    Data Types: Understanding primitive (String, Number, Boolean, Null, Undefined, Symbol) and non-primitive (Objects, Arrays).
+    Variables & Scope: var, let, const, hoisting, and variable shadowing.
+    Operators: Arithmetic, Comparison, Logical, Assignment, and Ternary operators.
+    Type Conversion: Implicit and explicit conversions, and understanding == vs ===.
+
+2. Control Structures
+
+    Conditional Statements: if, else, else if, and switch.
+    Loops: for, while, do...while, and the for...of and for...in loops.
+    Error Handling: try, catch, finally, and throw.
+
+3. Functions and Scope
+
+    Function Declarations vs Expressions
+    Arrow Functions and this behavior.
+    Higher-Order Functions: Functions that take other functions as arguments or return them (e.g., map, filter, reduce).
+    Closures: Scope chaining and understanding lexical scoping.
+    Callback Functions: Asynchronous programming using callbacks.
+
+4. Advanced Function Concepts
+
+    IIFE (Immediately Invoked Function Expressions)
+    Currying and Partial Application
+    Memoization for optimization.
+    Debouncing and Throttling for optimizing event handlers in the DOM.
+
+5. Asynchronous JavaScript
+
+    Promises: Understanding .then(), .catch(), .finally().
+    Async/Await: Writing asynchronous code with async/await syntax.
+    Event Loop & Call Stack: How JavaScript handles asynchronous code execution.
+    Fetch API and AJAX: Making HTTP requests using fetch and XMLHttpRequest.
+    Error Handling in Async Code
+
+6. Data Structures and Algorithms in JavaScript
+
+    Arrays: Built-in methods like push, pop, shift, unshift, map, filter, reduce, find, sort, every, some, includes.
+    Objects: Creation, manipulation, Object.keys(), Object.values(), Object.entries(), Object.assign().
+    Sets and Maps: Unique collections with fast lookups.
+    Strings: Methods like split, slice, substr, replace, toUpperCase, toLowerCase, includes, and regular expressions.
+    Algorithms: Sorting, searching, and traversing through arrays and objects.
+
+7. Object-Oriented Programming (OOP)
+
+    Prototypes and Inheritance: Prototype chain, prototype inheritance, and Object.create.
+    Classes and Constructors: ES6 classes, constructors, and methods.
+    Encapsulation, Abstraction, Inheritance, and Polymorphism: Core OOP principles.
+    this Keyword: How this behaves in different contexts (global, object methods, arrow functions).
+
+8. JavaScript Design Patterns
+
+    Module Pattern: Encapsulating code.
+    Singleton Pattern: Ensuring a class has only one instance.
+    Factory Pattern: Creating objects with shared properties or methods.
+    Observer Pattern: Event handling in JavaScript.
+
+9. Document Object Model (DOM) Manipulation
+
+    Selecting Elements: Using getElementById, getElementsByClassName, querySelector, and querySelectorAll.
+    Modifying Elements: Changing text, attributes, classes, and styles dynamically.
+    Event Handling: Attaching events with addEventListener, event delegation, and removing event listeners.
+    DOM Traversal: Navigating through elements (parentNode, childNodes, nextSibling, etc.).
+
+10. Browser APIs
+
+    Local Storage and Session Storage: Storing data in the browser.
+    Cookies: Setting, getting, and managing cookies.
+    Web APIs: Geolocation, Notification, WebSockets, and File API.
+    Timers: Using setTimeout and setInterval for delayed or repeated execution.
+
+11. ES6+ Features
+
+    Arrow Functions and concise syntax.
+    Destructuring: For arrays and objects.
+    Spread and Rest Operators: Working with arrays and objects.
+    Template Literals: Embedding expressions within strings.
+    Modules: import and export for modular code.
+    Default, Rest, and Spread Syntax
+
+12. Event-Driven Programming
+
+    Event Propagation: Bubbling, capturing, and stopping propagation.
+    Custom Events: Creating and dispatching custom events.
+    Event Delegation: Managing events efficiently by delegating to parent elements.
+
+13. Memory Management and Optimization
+
+    Memory Leaks: Identifying and avoiding memory leaks.
+    Garbage Collection: How JavaScript manages memory.
+    Performance Optimization: Tips for reducing computational and memory overhead.
+
+14. Testing and Debugging
+
+    Debugging in Console: console.log, console.error, console.warn, console.table.
+    Breakpoints and Watch Expressions: Using Developer Tools.
+    Unit Testing with Jest or Mocha/Chai
+    Common Debugging Patterns
+
+15. Miscellaneous and Best Practices
+
+    Coding Standards and Best Practices: Code readability, commenting, modularity.
+    Immutable vs Mutable Objects: Understanding and handling immutability.
+    Designing APIs and Writing Clean Code
+    Security in JavaScript: Common vulnerabilities like XSS, CSRF, and security best practices.
+    Big O Notation: Understanding time and space complexity.
+
 ES6 features
 
 rest & spread op
@@ -8,4 +116,3 @@ json
 arrow fun
 classes
 ajax
-
