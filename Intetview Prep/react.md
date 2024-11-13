@@ -1,7 +1,38 @@
+# React
+- What it is
+- How it works
+
+
+
+
+
 ## 1. What is React?
  React is a popular JavaScript library for building user interfaces, particularly single-page applications where data changes dynamically without requiring a page reload. It was developed by Facebook and is component-based, allowing developers to build reusable UI components.
 
 Example: In a social media application like Facebook, React might be used to display and update a list of posts without refreshing the page.
+
+## How does React Work?
+
+React creates a VIRTUAL DOM in memory.
+
+
+Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM.
+
+React only changes what needs to be changed!
+
+React finds out what changes have been made, and changes only what needs to be changed.
+
+## React uses ES6, and you should be familiar with some of the new features like:
+
+    Classes
+    Arrow Functions
+    Variables (let, const, var)
+    Array Methods like .map()
+    Destructuring
+    Modules
+    Ternary Operator
+    Spread Operator
+
 
 ## 2. What is JSX?
 
