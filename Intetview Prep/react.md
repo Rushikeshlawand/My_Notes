@@ -548,25 +548,24 @@ State in React refers to data or variables that belong to a component and can ch
 ```javascript
 const [count, setCount] = useState(0);
 ```
-2. Stateless Components
+### 2. Stateless Components
 A stateless component is a component that does not manage or maintain its own state. It only receives props and renders UI based on those props. Stateless components are also called dumb components because they don’t manage or hold any internal state and are purely presentational. They are often used for displaying UI without any interaction or internal logic.
 
 Example:
 
-javascript
-Copy code
+```javascript
 function StatelessComponent({ name }) {
   return <div>Hello, {name}!</div>;
 }
+```
 In this example, StatelessComponent receives a name prop and displays it without managing any internal state.
 
-3. Stateful Components
+### 3. Stateful Components
 A stateful component is a component that manages its own state. It can modify its state based on user interactions or other events, and React will re-render the component whenever the state changes. Stateful components are also called smart components because they manage their own state and can contain logic for updating it.
 
 Example:
 
-javascript
-Copy code
+```javascript
 function StatefulComponent() {
   const [count, setCount] = useState(0);
 
@@ -577,20 +576,20 @@ function StatefulComponent() {
     </div>
   );
 }
+```
 Here, StatefulComponent manages its state (count) and provides logic to update it.
 
-4. State Management
+### 4. State Management
 State Management refers to the management of the application's state across different components. It’s about how state is shared, updated, and synchronized across an application, especially in large or complex applications.
 
 In React, state management can be achieved in multiple ways:
 
-Local State: The state that is specific to a component (e.g., using useState in functional components or this.state in class components).
-Global State: The state that is shared across multiple components. React provides ways to manage global state using context (e.g., useContext or Context API).
-External State Management Libraries: Libraries like Redux, MobX, or Recoil help manage the global state and facilitate communication between different components without prop drilling (passing props down multiple levels).
+- Local State: The state that is specific to a component (e.g., using useState in functional components or this.state in class components).
+- Global State: The state that is shared across multiple components. React provides ways to manage global state using context (e.g., useContext or Context API).
+- External State Management Libraries: Libraries like Redux, MobX, or Recoil help manage the global state and facilitate communication between different components without prop drilling (passing props down multiple levels).
 Example (Context API for state management):
 
-javascript
-Copy code
+```javascript
 const MyContext = React.createContext();
 
 function ParentComponent() {
@@ -607,13 +606,14 @@ function ChildComponent() {
   const { user } = useContext(MyContext);
   return <div>User: {user.name}</div>;
 }
+```
 In this example, user is shared as global state through the Context API.
 
-Summary:
-State: Data specific to a component that can change over time and triggers re-rendering when modified.
-Stateless Components: Components that do not manage any state and only rely on props to render the UI.
-Stateful Components: Components that manage their own state and can update it, triggering re-renders.
-State Management: The process of managing the state across components, which can be done locally, globally, or with the help of external libraries like Redux or MobX.
+### Summary:
+- State: Data specific to a component that can change over time and triggers re-rendering when modified.
+- Stateless Components: Components that do not manage any state and only rely on props to render the UI.
+- Stateful Components: Components that manage their own state and can update it, triggering re-renders.
+- State Management: The process of managing the state across components, which can be done locally, globally, or with the help of external libraries like Redux or MobX.
 
 # Understanding Props in React
 
