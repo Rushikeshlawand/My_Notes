@@ -1,10 +1,12 @@
 import React from "react";
-const App = () => {
+import ColorSchemesExample from "./navbar";
+
+export default function App() {
   return (
-    <div>
-      {console.log("hiii")}
-      <h1>Hii i am developer ;)</h1> <h2>Hii i am Car Enthusiast</h2>
+    <div className="App">
+      <>
+        <ColorSchemesExample />
+      </>
     </div>
   );
-};
-export default App;
+}

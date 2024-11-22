@@ -1,0 +1,14 @@
+Hello, my name is Rushikesh Lawand, and I’m based in Pune, Maharashtra.
+Currently, I am pursuing a MERN Full Stack Development course from upGrad.
+I graduated with a Bachelor’s degree in Computer Science and Engineering from MIT College of Railway Engineering and Research, where I earned a CGPA of 9.07.
+I have hands-on experience in Java, JavaScript, SQL, and technologies like React, HTML, CSS, Bootstrap, Git, GitHub, as well as OOPs and DSA.
+
+During my internship at Sciqus Infotech, I worked as a Trainee Software Engineer where I gained valuable industry experience. I developed dynamic user interfaces with JavaScript, React.js, HTML, and CSS, focusing on improving user experience and engagement. I also optimized MySQL queries and worked on database operations, reducing data retrieval time and ensuring smooth integration of the front-end with back-end systems. My contributions helped improve user retention by 15% and query performance by 20%. This experience helped me understand the importance of clean, efficient code and strong teamwork.
+
+One of the key projects I’ve worked on is a Restaurant Management System, which I built using React.js with MySQL as the database. This system allows customers, admins, and chefs to manage restaurant operations seamlessly. I focused on optimizing performance and implementing role-based access control to ensure security and smooth user management.
+
+Another notable project is an Invoice Generator built using React and Bootstrap, where I created a user-friendly interface that allows small businesses to generate, edit, and download invoices effortlessly. I integrated PDF generation capabilities using the jsPDF library to streamline invoice management for users. This project helped improve efficiency in invoice creation by 25%.
+
+In addition to my technical skills, I’ve had the opportunity to manage social media content during my time at college, where I oversaw engagement and promotion strategies for college events, boosting visibility. Overall, I’m a quick learner with a keen interest in optimizing system performance, building scalable applications, and working collaboratively in a team environment.
+
+My hobbies include being a car enthusiast, which drives my passion for experiencing different cars. I also love traveling and exploring new places.

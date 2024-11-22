@@ -914,580 +914,369 @@ The `<Route>` component defines a specific path and the component to render when
 3. It renders the component specified in the `element` prop of the matching `<Route>`.
 
 ---
+# `<Switch>` Component in React Router (Prior to v6)
 
-## Example
+The `<Switch>` component was used in React Router (versions prior to v6) to manage routing and render only the first matching `<Route>` among its child components. It ensured exclusive route matching so that only one route would be displayed at a time, even if multiple routes matched the current URL.
 
-```jsx
-<Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/about" element={<About />} />
-  <Route path="/contact" element={<Contact />} />
-</Routes>
+## Key Roles of `<Switch>` in Routing
+
+- **Exclusive Route Matching**:  
+  `<Switch>` checks each `<Route>` in order and renders the first one that matches the current URL, skipping the rest. Without `<Switch>`, all matching routes could render, causing unexpected behavior.
+
+- **Optimization**:  
+  Prevents unnecessary rendering of multiple components when the URL matches more than one route, improving performance.
+
+- **Fallback Routes (`<Route>` Without a Path)**:  
+  A `<Route>` without a path (e.g., for a 404 "Not Found" page) would act as a fallback. The `<Switch>` ensures this route only renders if no other routes match.
+
+---
+
+## Why `<Switch>` is Replaced in React Router v6?
+
+- In React Router v6, `<Switch>` is replaced by `<Routes>`, which simplifies and improves route matching.  
+- `<Routes>` handles exclusive rendering by default (no need for a separate component like `<Switch>`).  
+- The `element` prop is now used instead of `component` to define what renders for a route.
+
+# React Hooks
+
+React Hooks are special functions introduced in React 16.8 that allow developers to use state and other React features in functional components without converting them into class components. They simplify component logic and enable the reuse of stateful logic.
+
+## Key Features of React Hooks:
+
+- **State Management in Functional Components**:  
+  Hooks like `useState` allow stateful logic in function components.
+  
+- **Side Effects**:  
+  Handle lifecycle-related tasks like fetching data or subscribing to events using `useEffect`.
+  
+- **Reusability**:  
+  Custom hooks enable sharing logic between components.
+  
+- **Simplified Code**:  
+  Reduces boilerplate code compared to class components.
+  
+- **No Breaking Changes**:  
+  Fully backward-compatible; class components can still be used.
+
+---
+
+## Top React Hooks
+
+| Hook               | Purpose                                                                                 |
+|--------------------|-----------------------------------------------------------------------------------------|
+| `useState`         | Adds local state to functional components. Returns a state variable and a function to update it. |
+| `useEffect`        | Handles side effects (e.g., data fetching, subscriptions). Replaces lifecycle methods like `componentDidMount`. |
+| `useContext`       | Allows access to context values without manually using the `Consumer` component.       |
+| `useReducer`       | Manages complex state logic (alternative to `useState`). Useful for scenarios with multiple state transitions. |
+| `useRef`           | Creates references to DOM elements or persists values across renders without re-rendering the component. |
+| `useMemo`          | Memoizes expensive calculations and prevents unnecessary re-computation on every render. |
+| `useCallback`      | Memoizes functions to prevent unnecessary re-creations on re-renders. Useful in child components. |
+| `useLayoutEffect`  | Similar to `useEffect` but fires synchronously after DOM updates. Used for layout measurement or DOM manipulation. |
+| `useImperativeHandle` | Customizes the instance value exposed by `useRef` when used with child components. |
+| `useDebugValue`    | Displays debug information for custom hooks in React DevTools.                         |
+| `useTransition`    | Manages transitions for state updates without blocking UI rendering (React 18+).       |
+| `useDeferredValue` | Defers rendering updates to improve UI responsiveness for heavy computations (React 18+). |
+
+---
+
+## Importance of React Hooks
+
+- **Stateful Logic in Functional Components**:  
+  Hooks eliminate the need for class components in most cases.
+
+- **Simplified Lifecycle Management**:  
+  `useEffect` handles component lifecycle events in a declarative way.
+
+- **Improved Code Reusability**:  
+  Custom hooks allow sharing logic without affecting component structure.
+
+- **Optimized Performance**:  
+  Hooks like `useMemo` and `useCallback` help avoid unnecessary renders.
+
+# Role of `useState()` Hook
+
+The `useState` hook in React is used to add state management to functional components. It enables components to store and manage dynamic data that can change over time, such as user input, API responses, or toggle states.
+
+## How `useState()` Works
+
+- **Initialization**:  
+  You call `useState` with an initial state value. This value can be a primitive (e.g., number, string, boolean) or a complex structure (e.g., array, object).
+
+- **Returns a Pair**:  
+  The `useState` function returns two values:  
+  - The current state variable (read-only).  
+  - A function to update the state.
+
+- **State Updates**:  
+  To update the state, you use the provided function. React re-renders the component when the state changes, ensuring the UI is in sync with the latest state.
+
+- **Reactivity**:  
+  When the state is updated, React triggers a re-render of the component, reflecting the updated state in the UI.
+
+---
+
+## Key Features
+
+- **State Management in Functional Components**:  
+  No need for class components to manage state.
+
+- **Asynchronous Updates**:  
+  State updates are batched and applied asynchronously during the rendering phase.
+
+- **Re-render Trigger**:  
+  Any state update triggers a re-render of the component to reflect the changes.
+
+---
+
+## Behavior Highlights
+
+- **Preserves State**:  
+  State is preserved across renders, unlike local variables.
+
+- **Initial Value**:  
+  The initial value is used only during the first render.
+
+- **State Update Function**:  
+  Accepts either a new value or a function that takes the current state and returns a new value.
+
+---
+
+## Common Use Cases
+
+- **Toggling a Boolean State**:  
+  Managing "on/off" states for modals or switches.
+
+- **Counter**:  
+  Keeping track of numeric state values.
+
+- **Form Inputs**:  
+  Handling user input in forms by storing field values.
+
+- **Dynamic Data**:  
+  Managing API response data or filtered lists.
+
+---
+
+## How It Works Internally
+
+- React maintains a state queue for every component.
+- When `setState` is called, the new state value is added to this queue.
+- During the rendering phase, React processes this queue and updates the component's state.
+- React then re-renders the component to display the updated state in the UI.
+
+---
+
+## Advantages of `useState()`
+
+- Simplifies state management in functional components.
+- Makes code more concise and easier to understand.
+- Encourages modular, reusable component logic.
+
+---
+
+## Syntax Example
+
+```javascript
+const [state, setState] = useState(initialValue);
 ```
 
 
+# Role of `useEffect()` Hook
 
+The `useEffect` hook in React allows you to perform side effects in functional components. Side effects include tasks that interact with the outside world or perform non-render logic, such as fetching data, directly manipulating the DOM, setting up subscriptions, or logging information.
 
- 
+---
 
+## Key Roles of `useEffect`
 
+- **Data Fetching**:  
+  Fetch data from APIs after a component renders.
 
+- **DOM Manipulation**:  
+  Interact with DOM elements, such as setting up event listeners or animations.
 
+- **Subscriptions and Cleanup**:  
+  Set up event listeners, timers, or subscriptions (e.g., WebSocket or Redux store listeners) and clean them up to avoid memory leaks.
 
+- **React to State/Prop Changes**:  
+  Perform actions when specific state or props change.
 
+- **Component Lifecycle Replacement**:  
+  Replaces lifecycle methods like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` from class components.
 
+---
 
+## How `useEffect` Works
 
+1. **Takes Two Arguments**:  
+   - **Callback Function**: Defines the side effect logic.  
+   - **Dependency Array (optional)**: Specifies dependencies that trigger the effect when they change.
 
+2. **Executed After Render**:  
+   By default, `useEffect` runs after the DOM is updated (post-render).
 
+3. **Cleanup Function (optional)**:  
+   If the effect sets up resources (e.g., subscriptions), it can return a cleanup function to free those resources when the component unmounts or before re-running the effect.
 
+---
 
+## Behavior Based on Dependency Array
 
+| Dependency Array          | Behavior                                                                 |
+|---------------------------|-------------------------------------------------------------------------|
+| No Dependency Array       | Effect runs after every render, including initial render and every state/prop change. |
+| Empty Dependency Array `[]` | Effect runs once, only after the initial render (mimics `componentDidMount`).        |
+| Specific Dependencies      | Effect runs only when specified dependencies change (mimics `componentDidUpdate`).   |
 
+---
 
+## Common Use Cases of `useEffect`
 
+- **Fetch Data After Mount**:  
+  Fetch and display API data when a component is first loaded.
 
+- **Update Document Title**:  
+  Dynamically update the browser tab title based on state or props.
 
+- **Event Listeners**:  
+  Add and remove event listeners like scroll or resize.
 
+- **Cleanup Operations**:  
+  Clear timers, cancel API requests, or unsubscribe from listeners.
 
+---
 
+## How `useEffect` Replaces Lifecycle Methods
 
+| Lifecycle Method      | Equivalent in `useEffect`                       |
+|-----------------------|------------------------------------------------|
+| `componentDidMount`    | Use `useEffect` with an empty dependency array `[]`. |
+| `componentDidUpdate`   | Use `useEffect` with specific dependencies.    |
+| `componentWillUnmount` | Use the cleanup function returned by `useEffect`. |
 
+---
 
+## Key Advantages of `useEffect`
 
+- Consolidates lifecycle logic into a single, functional component-friendly API.
+- Simplifies cleanup tasks with the cleanup function.
+- Prevents duplicate code for common patterns like data fetching and subscriptions.
 
+---
 
+## Important Notes
 
+- **Avoid Infinite Loops**:  
+  Not using a dependency array or improperly updating it can cause the effect to run indefinitely.
 
+- **Cleanup is Crucial**:  
+  Always clean up subscriptions, timers, or event listeners to prevent memory leaks.
 
+- **Optimized Re-runs**:  
+  Use specific dependencies to re-run the effect only when necessary.
 
+---
 
+`useEffect` is fundamental for handling side effects and integrating React components with external systems or data sources, ensuring functional components remain powerful and clean.
 
 
 
+# Role of `useContext()` Hook in React
 
+The `useContext` hook in React simplifies accessing context values in functional components without the need for manually using `<Context.Consumer>` components. It is used for state sharing or data flow between components, especially in scenarios where prop drilling becomes cumbersome.
 
+---
 
+## Key Roles of `useContext()`
 
+- **Access Shared Data**:  
+  Allows components to access data stored in a React context, such as user authentication, themes, or global state.
 
+- **Avoid Prop Drilling**:  
+  Eliminates the need to pass props through multiple layers of the component tree.
 
+- **Simplify Context API Usage**:  
+  Provides a cleaner and more readable way to consume context compared to the `<Consumer>` component.
 
+- **Global State Management**:  
+  Works well with state management libraries like Redux or custom solutions to manage global app state.
 
+---
 
+## How `useContext()` Works
 
+1. **Create a Context**:  
+   Use `React.createContext()` to define a context with a default value.
 
+2. **Provide Context Value**:  
+   Wrap components in a `<Provider>` component and pass the shared data as a value.
 
+3. **Consume Context Value**:  
+   Use `useContext` within any child component to directly access the context value.
 
+---
 
+## Common Use Cases of `useContext()`
 
+- **Theme Management**:  
+  Share a light/dark theme setting across components.
 
+- **User Authentication**:  
+  Provide user login status, roles, or tokens globally.
 
+- **Language or Locale Setting**:  
+  Manage translations or language preferences across the app.
 
-## How does React Work?
+- **State Sharing**:  
+  Pass state between deeply nested components without using props.
 
-React creates a VIRTUAL DOM in memory.
+---
 
+## Advantages of `useContext()`
 
-Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM.
+- **Simplifies Data Access**:  
+  Removes the need for multiple prop-passing layers.
 
-React only changes what needs to be changed!
+- **Improves Readability**:  
+  Cleaner code compared to older context API with `<Consumer>`.
 
-React finds out what changes have been made, and changes only what needs to be changed.
+- **Enhances Modularity**:  
+  Keeps components decoupled from their parents in terms of data dependencies.
 
-## React uses ES6, and you should be familiar with some of the new features like:
+---
 
-    Classes
-    Arrow Functions
-    Variables (let, const, var)
-    Array Methods like .map()
-    Destructuring
-    Modules
-    Ternary Operator
-    Spread Operator
+## Limitations
 
+- **Re-rendering**:  
+  All components consuming the context will re-render when the context value changes, which may lead to performance issues in large trees.
 
-4. What is the difference between functional and class components?
+- **Overuse**:  
+  Should not be used as a replacement for state management libraries in complex apps.
 
-Answer:
+- **Readability in Complex Contexts**:  
+  Managing multiple contexts in a single component can make the code harder to read.
 
-    Functional components are stateless and written as JavaScript functions. They can use React hooks (like useState, useEffect) to manage state and lifecycle.
-    Class components are stateful and written using ES6 classes. They have access to lifecycle methods like componentDidMount, shouldComponentUpdate.
+---
 
-Example:
+## Best Practices
 
-    Functional Component:
+- **Combine with `useReducer`**:  
+  Use `useReducer` with `useContext` for complex state management.
 
-    jsx
+- **Context Segregation**:  
+  Use multiple contexts for different types of data (e.g., one for themes, another for user data).
 
-function Welcome() {
-  return <h1>Welcome!</h1>;
-}
+- **Memoization**:  
+  Memoize context values to prevent unnecessary re-renders.
 
-Class Component:
+---
 
-jsx
+## Syntax Example
 
-    class Welcome extends React.Component {
-      render() {
-        return <h1>Welcome!</h1>;
-      }
-    }
-
-## 5. What are React hooks?
-
-Answer: Hooks are functions that let you "hook into" React features (such as state and lifecycle) in functional components. Common hooks include:
-
-    useState: for state management.
-    useEffect: for side effects like data fetching.
-
-Example:
-
-jsx
-
-function Counter() {
-    const [count, setCount] = useState(0);
-    return (
-        <div>
-            <p>You clicked {count} times</p>
-            <button onClick={() => setCount(count + 1)}>Click me</button>
-        </div>
-    );
-}
-
-## 6. What is state in React?`
-
-Answer: The state is an object that holds data that influences the output of a component. It can be updated and managed within the component, triggering a re-render whenever changed.
-
-Example:
-
-jsx
-
-class Counter extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { count: 0 };
-    }
-
-    increment = () => {
-        this.setState({ count: this.state.count + 1 });
-    };
-
-    render() {
-        return (
-            <div>
-                <p>{this.state.count}</p>
-                <button onClick={this.increment}>Increment</button>
-            </div>
-        );
-    }
-}
-
-## 7. What is the difference between state and props?
-
-Answer:
-
-    State: State is managed within a component, can change over time, and is mutable.
-    Props: Props (short for properties) are passed from a parent component to a child component. They are immutable and read-only.
-
-Example:
-
-    Props in a child component:
-
-    jsx
-
-function Greeting(props) {
-  return <h1>Hello, {props.name}</h1>;
-}
-
-Used in the parent:
-
-jsx
-
-    <Greeting name="Alice" />
-
-## 9. What is useEffect in React?
-
-Answer: The useEffect hook is used to perform side effects in functional components. This includes tasks like fetching data, updating the DOM, or setting up subscriptions. It runs after every render by default but can be optimized by specifying dependencies.
-
-Example:
-
-jsx
-
-useEffect(() => {
-    document.title = `You clicked ${count} times`;
-}, [count]);  // Only re-run the effect if 'count' changes
-
-## 10. What is Redux and how does it work with React?
-
-Answer: Redux is a predictable state management library that centralizes the state of your entire application. React can use Redux to manage complex state across multiple components using a single store. Redux follows three principles:
-
-    Single source of truth.
-    State is read-only.
-    Changes are made using pure functions called reducers.
-
-Example: In a shopping cart application, Redux can manage the cart state globally so any component in the app can access or modify it.
-
-Basic Redux setup:
-
-js
-
-// Action
-const addItem = (item) => ({ type: 'ADD_ITEM', payload: item });
-
-// Reducer
-const cartReducer = (state = [], action) => {
-    switch(action.type) {
-        case 'ADD_ITEM':
-            return [...state, action.payload];
-        default:
-            return state;
-    }
-};
-
-// Store
-const store = createStore(cartReducer);
-
-## 11. How does React handle forms?
-
-Answer: React handles forms using controlled components where form data is managed in the component's state. Input elements like <input>, <textarea>, and <select> maintain their value in the state and update based on user input.
-
-Example:
-
-jsx
-
-function MyForm() {
-    const [name, setName] = useState('');
-    const handleChange = (e) => setName(e.target.value);
-
-    return (
-        <form>
-            <input type="text" value={name} onChange={handleChange} />
-            <button type="submit">Submit</button>
-        </form>
-    );
-}
-
-## 12. What are higher-order components (HOCs)?
-
-Answer: A Higher-Order Component (HOC) is a function that takes a component and returns a new component. It’s used to reuse component logic across multiple components.
-
-Example:
-
-jsx
-
-function withAuth(Component) {
-    return function AuthComponent(props) {
-        const isAuthenticated = true; // Simplified for example
-        return isAuthenticated ? <Component {...props} /> : <Redirect to="/login" />;
-    };
-}
-
-## 13. What are pure components in React?
-
-Answer: A pure component in React is a component that implements the shouldComponentUpdate lifecycle method with a shallow comparison of props and state. It helps in improving performance by preventing unnecessary re-renders.
-
-Example:
-
-jsx
-
-class PureGreeting extends React.PureComponent {
-    render() {
-        return <h1>Hello, {this.props.name}</h1>;
-    }
-}
-
-## 14. What is the difference between useCallback and useMemo?
-
-Answer:
-
-    useCallback: It memoizes a callback function to prevent it from being recreated on every render, useful for optimizing child components that depend on functions.
-    useMemo: It memoizes the result of a computation and only recomputes it when dependencies change, preventing unnecessary calculations.
-
-Example:
-
-jsx
-
-const memoizedCallback = useCallback(() => {
-    doSomething(a, b);
-}, [a, b]);
-
-const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
-
-These questions cover a broad range of React fundamentals, helping you prepare for various interview scenarios!
-You said:
-more imp questions
-ChatGPT said:
-ChatGPT
-
-Here are additional important React interview questions, covering advanced topics, optimization, and ecosystem tools:
-## 15. What is the difference between useEffect and useLayoutEffect?
-
-Answer:
-
-    useEffect: Runs asynchronously after rendering, making it suitable for tasks like data fetching, timers, or updating the DOM after the render is painted.
-    useLayoutEffect: Runs synchronously after DOM mutations but before the browser repaints the screen. It's useful for measuring or modifying the layout (e.g., animations, measuring DOM elements).
-
-Example:
-
-jsx
-
-useEffect(() => {
-    console.log('useEffect: Runs after paint');
-});
-
-useLayoutEffect(() => {
-    console.log('useLayoutEffect: Runs before paint');
-});
-
-## 16. What is the Context API?
-
-Answer: The Context API allows you to pass data through the component tree without manually passing props at every level. It’s used for global state management in React applications to avoid "prop drilling."
-
-Example:
-
-jsx
-
-const ThemeContext = React.createContext('light');
-
-function App() {
-    return (
-        <ThemeContext.Provider value="dark">
-            <Toolbar />
-        </ThemeContext.Provider>
-    );
-}
-
-function Toolbar() {
-    return <ThemedButton />;
-}
-
-function ThemedButton() {
-    const theme = useContext(ThemeContext);
-    return <button>{theme}</button>;
-}
-
-## 17. What are React Portals?
-
-Answer: React Portals allow you to render a component outside of its parent DOM hierarchy. It is useful for rendering elements like modals, tooltips, or pop-ups where z-index or overflow might interfere with the layout.
-
-Example:
-
-jsx
-
-const modalRoot = document.getElementById('modal-root');
-
-function Modal({ children }) {
-    return ReactDOM.createPortal(children, modalRoot);
-}
-
-18. What is Prop Drilling and how can it be avoided?
-
-Answer: Prop drilling refers to passing data through multiple levels of components even if only the child component needs it. This makes the code harder to maintain and debug. It can be avoided using the Context API or state management libraries like Redux.
-
-Example: Instead of passing props down multiple levels:
-
-jsx
-
-<Parent>
-  <Child>
-    <Grandchild prop={value} />
-  </Child>
-</Parent>
-
-Use Context to provide value directly to Grandchild without drilling.
-19. What is the difference between React.memo and React.PureComponent?
-
-Answer:
-
-    React.memo: It is used to optimize functional components. It prevents unnecessary re-renders by memoizing the component and re-rendering only if the props change.
-    React.PureComponent: It’s used for class components. It performs a shallow comparison of props and state to avoid re-rendering unless there are changes.
-
-Example:
-
-    React.memo for functional components:
-
-    jsx
-
-    const MyComponent = React.memo(function MyComponent(props) {
-        return <div>{props.value}</div>;
-    });
-
-20. How does the React rendering process work?
-
-Answer: React uses a two-phase process:
-
-    Reconciliation: React builds a Virtual DOM to compare the old and new states. Only the differences are marked for update.
-    Commit Phase: After reconciliation, React updates the real DOM in a minimal and efficient way using a process called diffing.
-
-Example: If a component’s state changes, React compares the current state and props with the previous ones, calculates the minimal set of changes, and applies them to the real DOM.
-21. What are React fragments?
-
-Answer: Fragments allow you to group multiple elements without adding an extra DOM node (like a div). This helps keep the DOM structure clean.
-
-Example:
-
-jsx
-
-return (
-    <React.Fragment>
-        <h1>Hello</h1>
-        <p>World!</p>
-    </React.Fragment>
-);
-
-You can also use the shorthand:
-
-jsx
-
-return (
-    <>
-        <h1>Hello</h1>
-        <p>World!</p>
-    </>
-);
-
-22. What is lazy loading in React?
-
-Answer: Lazy loading is a technique to defer loading components until they are required, improving the initial loading performance of an app. React provides React.lazy() to achieve this in combination with Suspense.
-
-Example:
-
-jsx
-
-const LazyComponent = React.lazy(() => import('./MyComponent'));
-
-function App() {
-    return (
-        <Suspense fallback={<div>Loading...</div>}>
-            <LazyComponent />
-        </Suspense>
-    );
-}
-
-23. What is the useReducer hook and when should you use it?
-
-Answer: useReducer is an alternative to useState for managing complex state logic or multiple states that depend on each other. It allows state updates via a reducer function (similar to Redux).
-
-Example:
-
-jsx
-
-const initialState = { count: 0 };
-
-function reducer(state, action) {
-    switch (action.type) {
-        case 'increment':
-            return { count: state.count + 1 };
-        case 'decrement':
-            return { count: state.count - 1 };
-        default:
-            return state;
-    }
-}
-
-function Counter() {
-    const [state, dispatch] = useReducer(reducer, initialState);
-    return (
-        <div>
-            <p>{state.count}</p>
-            <button onClick={() => dispatch({ type: 'increment' })}>+</button>
-            <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
-        </div>
-    );
-}
-
-24. What are error boundaries in React?
-
-Answer: Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of crashing the entire application.
-
-Example:
-
-jsx
-
-class ErrorBoundary extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { hasError: false };
-    }
-
-    static getDerivedStateFromError(error) {
-        return { hasError: true };
-    }
-
-    componentDidCatch(error, info) {
-        console.log(error, info);
-    }
-
-    render() {
-        if (this.state.hasError) {
-            return <h1>Something went wrong.</h1>;
-        }
-        return this.props.children;
-    }
-}
-
-25. What is server-side rendering (SSR) in React, and how does it differ from client-side rendering (CSR)?
-
-Answer:
-
-    Server-Side Rendering (SSR): In SSR, the React components are rendered on the server and the complete HTML is sent to the client. This improves initial load time and SEO but increases server load.
-    Client-Side Rendering (CSR): In CSR, the components are rendered entirely in the browser after the initial HTML is loaded. This reduces server load but can result in slower initial load times.
-
-Example:
-
-    SSR in Next.js:
-
-    js
-
-export async function getServerSideProps() {
-    const res = await fetch('https://api.example.com/data');
-    const data = await res.json();
-    return { props: { data } };
-}
-
-CSR in traditional React:
-
-js
-
-    useEffect(() => {
-        fetch('https://api.example.com/data')
-            .then(res => res.json())
-            .then(setData);
-    }, []);
-
-26. What is the significance of keys in React?
-
-Answer: Keys help React identify which items have changed, are added, or are removed in lists. They are essential for efficiently updating the UI and maintaining component state across renders.
-
-Example:
-
-jsx
-
-const items = ['apple', 'banana', 'orange'];
-return (
-    <ul>
-        {items.map((item, index) => (
-            <li key={index}>{item}</li>
-        ))}
-    </ul>
-);
-
-27. What is reconciliation in React?
-
-Answer: Reconciliation is the process React uses to update the DOM. When the state or props of a component change, React compares the new Virtual DOM with the previous version. It then updates only the changed elements (this process is also called diffing).
-
-Example: When a list item is updated, React compares the new and old lists using keys and only updates the modified list item, rather than re-rendering the entire list.
-28. How does React handle events?
-
-Answer: React handles events using synthetic events, which are cross-browser wrappers around the browser’s native events. This ensures that events behave consistently across different browsers.
-
-Example:
-
-jsx
-
-function handleClick(e) {
-    e.preventDefault();
-    console.log('Link clicked');
-}
-
-return <a href="#" onClick={handleClick}>Click me</a>;
+```javascript
+const value = useContext(MyContext);
+```
+useRef Hooks
+useMemo - lets u cache result of calculation between re-renders.
+useCallback - lets u cache a function definition between re-renders
+useReducer - 

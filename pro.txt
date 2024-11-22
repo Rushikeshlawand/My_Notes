@@ -1,0 +1,16 @@
+Restaurant Management System is a web application built using React and CSS, aimed at streamlining restaurant operations. It consists of three distinct portals: Admin Portal, Chef Portal, and Customer Portal.
+
+Admin Portal:  manage restaurant operations by allowing them to add or update menu items, upload and manage homepage photos, and oversee customer information.
+Chef Portal:  to view and manage incoming orders in real-time and prepare food based on the orders placed by customers.
+Customer Portal: user-friendly interface where customers can log in, browse the menu, place orders, and track their orders.
+
+DB Connection:
+Install MySQL Driver First,  that allows Node.js to communicate with the MySQL database. 
+Create a Database Connection In your Node.js backend,
+can do this by using the mysql2 library and configuring the database connection parameters such as host, user, password, and database.
+This will establish a connection to the MySQL database. The connect method is used to verify whether the connection is successful or not.
+
+Handling SQL Queries Once the database is connected, you can perform various SQL operations, such as SELECT, INSERT, UPDATE, and DELETE. 
+The backend receives a GET request from the frontend on the /api/menu route.
+The SQL query SELECT * FROM menu_items fetches all menu items from the menu_items table.
+If the query is successful, the results are sent back to the frontend as a JSON response.
