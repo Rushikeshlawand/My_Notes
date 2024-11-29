@@ -2,9 +2,9 @@
 
 JavaScript is a high-level, lightweight, interpreted programming language. It is widely used to add interactivity and dynamic features to web pages. It is one of the core technologies of the web, alongside HTML and CSS.
 
-    Type: Client-side (runs in the browser) and server-side (using Node.js).
-    Paradigms: Supports event-driven, functional, and object-oriented programming.
-    Execution Environment: Runs in the browser or on servers via environments like Node.js.
+- Type: Client-side (runs in the browser) and server-side (using Node.js).
+- Paradigms: Supports event-driven, functional, and object-oriented programming.
+- Execution Environment: Runs in the browser or on servers via environments like Node.js.
 
 ## Why is JavaScript Used?
 
@@ -93,20 +93,22 @@ In web development, client-side and server-side refer to where code is executed:
 
 # What are let, var, and const in JavaScript?
 
-`let`, `var`, and `const` are keywords used to declare variables in JavaScript. They differ in scope, re-declaration, and mutability.
+`let`, `var`, and `const` are keywords used to declare variables in JavaScript. They differ in scope, re-declaration, and mutabilit
 
- 1. var
- Introduction: The oldest way to declare variables (ES5 and earlier).
- Scope: Function-scoped (not block-scoped).
- Re-declaration: Can be re-declared and updated in the same scope.
- Hoisting: Variables declared with var are hoisted but initialized as undefined.
-
+1. var
+Introduction: The oldest way to declare variables (ES5 and earlier).
+Scope: Function-scoped (not block-scoped).
+Re-declaration: Can be re-declared and updated in the same scope.
+Hoisting: Variables declared with var are hoisted but initialized as undefined.
+ 
+```javascript
 var x = 10;
 if (true) {
   var x = 20; // Updates the same variable
   console.log("Inside if block with var:", x); // 20
 }
 console.log("Outside if block with var:", x); // 20
+```
  2. let
  Introduction: Introduced in ES6 (2015).
  Scope: Block-scoped (only accessible within {}).
