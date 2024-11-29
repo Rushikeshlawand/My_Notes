@@ -1666,3 +1666,13 @@ Redux is a predictable state management library for JavaScript applications, pri
 - For large applications where state management becomes challenging with local component state.
 
 > **Note**: If the application is simple, using React’s Context API might be more suitable, as Redux introduces additional boilerplate.
+
+npx vs npm
+liabrary vs framework
+debouncing
+redux
+Rthunk
+Rtoolkit
+Rsaga
+Custom hooks
+lazy loading

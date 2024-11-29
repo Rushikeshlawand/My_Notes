@@ -387,13 +387,10 @@ console.log(increment()); // Output: 1 (Modifies `count` outside the function)
 3. **Functional Programming:** Pure functions are a core principle of functional programming, promoting immutability and stateless design.
 ---
 # What is a Callback in JavaScript?
-
 A callback is a function that is passed as an argument to another function and is executed after the completion of that function. It allows asynchronous or deferred execution in JavaScript.
 
 ## Purpose of Callbacks
-
 Callbacks are primarily used to:
-
 - Handle asynchronous operations, such as API calls or reading files.
 - Execute code sequentially, ensuring one function runs only after another has completed.
 - Reuse functionality by passing different callback functions to perform specific tasks.
@@ -427,8 +424,10 @@ greet("John", sayGoodbye);
 
 ## Limitations of Callbacks
 - **Callback Hell:** Nesting multiple callbacks can lead to messy, hard-to-read code.
-
 - Summary: A callback is a function passed into another function to be executed later. It's vital for handling asynchronous operations and making JavaScript non-blocking. While powerful, it’s important to manage them properly to avoid callback hell.
+
+## What is Callback Hell?
+Callback Hell refers to the situation where callbacks are nested within other callbacks multiple levels deep, making the code hard to read, understand, and maintain. It often occurs when handling asynchronous operations in JavaScript.
 ---
 ## What is Function Currying in JavaScript?
 Function currying is a technique in JavaScript where a function, instead of taking all its arguments at once, takes them one at a time. It transforms a function with multiple arguments into a sequence of nested functions, each taking a single argument.
@@ -465,28 +464,19 @@ function add(a) {
 
 console.log(add(1)(2)(3)); // Output: 6
 ```
-
+---
 ## What is a Higher-Order Function in JavaScript?
-
 A higher-order function is a function that can either:
-
 - **Take another function as an argument**, or
 - **Return a function as its result**.
-
 This makes higher-order functions a key feature of JavaScript's functional programming capabilities.
 
----
-
 ### Key Characteristics of Higher-Order Functions
-
 - **Accepts functions as input.**
 - **Returns a function as output.**
 - **Promotes reusability and clean code.**
 
----
-
 ### Why Use Higher-Order Functions?
-
 - **Code Reusability:**  
   Instead of repeating logic, we can pass different callbacks to a single higher-order function.
 
@@ -496,13 +486,11 @@ This makes higher-order functions a key feature of JavaScript's functional progr
 - **Functional Programming:**  
   Encourages immutability and declarative code.
 
----
-
 ### Summary
 
 A higher-order function is a function that takes another function as input or returns a function as output. It simplifies tasks, encourages reusable code, and is widely used in functional programming and array operations like `map`, `filter`, and `reduce`.
 
-# Array Methods in JavaScript
+## Array Methods in JavaScript
 
 1. **push()**
 
@@ -659,31 +647,7 @@ A higher-order function is a function that takes another function as input or re
     let arr = [1, 2, 3];
     console.log(arr.every(x => x > 0)); // Output: true
     ```
-
-# JavaScript Objects
-
-Objects are fundamental data structures used to store collections of related data and functionality. An object is a collection of properties, where each property has a key and a value. These properties can include strings, numbers, arrays, functions (methods), and even other objects.
-
-## Syntax of an Object:
-
-```javascript
-let person = {
-  name: "John",
-  age: 30,
-  isEmployed: true,
-  greet: function() {
-    console.log("Hello, " + this.name);
-  }
-};
-```
-### Key Concepts:
-- Properties: Each object has properties that consist of a key-value pair. The key is a string (or symbol), and the value can be any valid JavaScript data type.
-
-Example: name: "John" 
-- Methods: These are properties that contain functions, which can be used to perform specific tasks. Methods are invoked like regular functions, but they use this to refer to the object.
-
-Example: greet: function() { console.log("Hello, " + this.name); }
-
+---
 # Scope in JavaScript
 
 Scope refers to the context or visibility in which a variable or function is accessible in the code. It defines the area of the code where a particular variable or function can be accessed or modified.
@@ -691,33 +655,16 @@ Scope refers to the context or visibility in which a variable or function is acc
 In JavaScript, scope is crucial for managing the lifespan and visibility of variables, ensuring that variables do not interfere with each other in different parts of the program.
 
 ## Types of Scope:
-
 - **Global Scope**: Variables declared outside of any function or block.
-  
 - **Function Scope**: Variables declared inside a function.
-
 - **Block Scope**: Variables declared inside a block using `let` or `const`.
-
 - **Lexical Scope**: Inner functions can access variables from outer functions.
-
 - **Scope Chain**: The series of scopes JavaScript checks when looking for a variable.
-
-
-
-
-
-
-
-
-
-
-
+---
 # What is Hoisting in JavaScript?
-
 Hoisting is a JavaScript mechanism where declarations of variables and functions are moved to the top of their containing scope during the compile phase before the code is executed. This means that variables and functions can be referenced before they are declared in the code, though the way they are hoisted depends on whether they're declared using var, let, const, or as a function declaration.
 
 ## How Hoisting Works in JavaScript:
-
 - **Variables Declared with var**:
     With var, only the declaration is hoisted, not the initialization.  
     For example:
@@ -738,7 +685,6 @@ Hoisting is a JavaScript mechanism where declarations of variables and functions
     console.log(myLetVar); // Error: Cannot access 'myLetVar' before initialization
     let myLetVar = 10;
     ```
-
     This happens because let and const are hoisted, but JavaScript doesn't allow access to them until they are initialized.
 
 - **Function Declarations**:
@@ -752,7 +698,6 @@ Hoisting is a JavaScript mechanism where declarations of variables and functions
       console.log("Hello, World!");
     }
     ```
-
     Here, the entire function greet() is hoisted, so it can be called before its definition.
 
 - **Function Expressions**:
@@ -766,11 +711,9 @@ Hoisting is a JavaScript mechanism where declarations of variables and functions
       console.log("Hello, World!");
     };
     ```
-
     Here, the variable myFunc is hoisted, but the function body is not. Calling myFunc() before the assignment results in an error because myFunc is undefined at that point.
 
 ## Purpose of Hoisting
-
 - **Simplifies Code Structure**:
     Hoisting allows us to reference functions and variables before they are defined in the code. This can make code writing more flexible and allow for cleaner organization, especially when functions are defined at the end of the file.
 
@@ -781,12 +724,11 @@ Hoisting is a JavaScript mechanism where declarations of variables and functions
     Hoisting enables us to declare variables and functions at the top of the code while still using them later on, leading to better code organization and easier maintenance.
 
 ## Key Points to Remember:
-
 - var declarations are hoisted, but only the declaration is moved to the top, not the initialization.
 - let and const are hoisted too, but accessing them before their initialization leads to a ReferenceError due to the Temporal Dead Zone.
 - Function declarations are fully hoisted, meaning both the function signature and the body are available throughout the scope.
 - Function expressions are treated like variables and only the variable declaration is hoisted, not the function definition.
-
+---
 # What is Asynchronous Programming?
 
 Asynchronous programming in JavaScript is a method of handling tasks that take some time to complete, such as reading a file, making a network request, or querying a database, without blocking the execution of other code. In traditional, synchronous programming, code is executed line-by-line, meaning each task must complete before the next one can start. Asynchronous programming allows other code to run while waiting for a task to finish, which leads to more efficient and responsive applications.
@@ -1329,17 +1271,15 @@ console.log("End");
 ```
 #### Execution Order:
 
-    "Start" is printed first because it's the first log in the call stack.
-    setTimeout is asynchronous, so both timeouts are sent to the Web API (browser environment).
-    "End" is printed next, as it is executed before the setTimeout callback functions.
-    After the call stack is empty, the event loop picks up the callbacks from the callback queue and executes them.
-    Both timeouts are executed in order, printing "Timeout 1" and "Timeout 2".
+"Start" is printed first because it's the first log in the call stack.
+setTimeout is asynchronous, so both timeouts are sent to the Web API (browser environment).
+"End" is printed next, as it is executed before the setTimeout callback functions.
+After the call stack is empty, the event loop picks up the callbacks from the callback queue and executes them.
+Both timeouts are executed in order, printing "Timeout 1" and "Timeout 2".
 
 
-    ### Promises in JavaScript
-
+### Promises in JavaScript
 A **Promise** is an object that represents the eventual completion or failure of an asynchronous operation. It provides a cleaner and more manageable way to handle asynchronous operations compared to using callbacks.
-
 #### Promise States:
 1. **Pending**: 
    - The promise is in the initial state, meaning the asynchronous operation is still in progress.
@@ -1351,7 +1291,6 @@ A **Promise** is an object that represents the eventual completion or failure of
    - The operation failed, and the promise has a reason for the failure (typically an error).
 
 #### Creating a Promise:
-
 A promise is created using the `new Promise()` constructor, which takes a function (known as the executor) with two parameters: `resolve` and `reject`.
 
 ```javascript
@@ -1367,30 +1306,37 @@ let promise = new Promise(function(resolve, reject) {
 ```
 
 ### Async/Await in JavaScript
-
 `async`/`await` is a modern way of handling asynchronous code in JavaScript. It is syntactic sugar built on top of Promises that makes asynchronous code look and behave more like synchronous code, improving readability and reducing the complexity of promise chains.
 
 #### Key Points:
-
 1. **async**:
-   - Declares a function as asynchronous.
-   - An `async` function always returns a **Promise**.
-   - If the function explicitly returns a value, it is automatically wrapped in a resolved promise.
-   - If the function throws an error, it returns a rejected promise.
+- Declares a function as asynchronous.
+- An `async` function always returns a **Promise**.
+- If the function explicitly returns a value, it is automatically wrapped in a resolved promise.
+- If the function throws an error, it returns a rejected promise.
 
-   ```javascript
-   async function example() {
-     return "Hello, World!";
-   }
+```javascript
+async function example() {
+return "Hello, World!";
+}
 
-   example().then(result => console.log(result)); // "Hello, World!"
-  ```
-
-
-
+example().then(result => console.log(result)); // "Hello, World!"
+```
 
 #  topics
 featch api
 AJAX
 advance JavaScript
 closures
+
+session
+storage
+local storage
+coockies
+server side caching
+setTimeout
+1st class function
+callback-hell
+inversion control
+.then
+debouncing 
