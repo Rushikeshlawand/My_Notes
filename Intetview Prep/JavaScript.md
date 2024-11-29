@@ -95,11 +95,11 @@ In web development, client-side and server-side refer to where code is executed:
 
 `let`, `var`, and `const` are keywords used to declare variables in JavaScript. They differ in scope, re-declaration, and mutabilit
 
-1. var
-Introduction: The oldest way to declare variables (ES5 and earlier).
-Scope: Function-scoped (not block-scoped).
-Re-declaration: Can be re-declared and updated in the same scope.
-Hoisting: Variables declared with var are hoisted but initialized as undefined.
+### 1. var
+- Introduction: The oldest way to declare variables (ES5 and earlier).
+- Scope: Function-scoped (not block-scoped).
+- Re-declaration: Can be re-declared and updated in the same scope.
+- Hoisting: Variables declared with var are hoisted but initialized as undefined.
  
 ```javascript
 var x = 10;
@@ -109,34 +109,36 @@ if (true) {
 }
 console.log("Outside if block with var:", x); // 20
 ```
- 2. let
- Introduction: Introduced in ES6 (2015).
- Scope: Block-scoped (only accessible within {}).
- Re-declaration: Cannot be re-declared in the same scope, but can be updated.
- Hoisting: Variables declared with let are hoisted but not initialized (Temporal Dead Zone).
+ ### 2. let
+- Introduction: Introduced in ES6 (2015).
+- Scope: Block-scoped (only accessible within {}).
+- Re-declaration: Cannot be re-declared in the same scope, but can be updated.
+- Hoisting: Variables declared with let are hoisted but not initialized (Temporal Dead Zone).
 
+```javascript
 let y = 10;
 if (true) {
   let y = 20; // New variable, block-scoped
   console.log("Inside if block with let:", y); // 20
 }
 console.log("Outside if block with let:", y); // 10
+```
+### 3. const
+- Introduction: Introduced in ES6 (2015).
+- Scope: Block-scoped.
+- Re-declaration: Cannot be re-declared or updated in the same scope.
+- Mutability: Values themselves can’t be reassigned, but if it’s an object or array, properties or elements can be mutated.
+- Hoisting: Same as let, it has a Temporal Dead Zone.
 
-3. const
-Introduction: Introduced in ES6 (2015).
-Scope: Block-scoped.
-Re-declaration: Cannot be re-declared or updated in the same scope.
-Mutability: Values themselves can’t be reassigned, but if it’s an object or array, properties or elements can be mutated.
- Hoisting: Same as let, it has a Temporal Dead Zone.
-
+```javascript
 const z = 10;
 z = 20; // Error: Assignment to constant variable
-
 const obj = { name: "Alice" };
 obj.name = "Bob"; // Allowed: Object properties can be modified
 console.log("Modified object with const:", obj.name); // Bob
+```
 
- Differences Between var, let, and const:
+### Differences Between var, let, and const:
  | Aspect           | var                         | let                         | const                       |
  |-------------------|-----------------------------|-----------------------------|-----------------------------|
  | Scope            | Function-scoped            | Block-scoped                | Block-scoped                |
@@ -209,16 +211,6 @@ Selectors are methods provided by the DOM that allow developers to select and ma
 | `document.querySelector()`       | Selects the first element that matches a CSS selector (can target id, class, or other CSS). | `document.querySelector(".myClass")`     |
 | `document.querySelectorAll()`    | Selects all elements that match a CSS selector (returns a NodeList).      | `document.querySelectorAll("div.myClass")` |
 
-## Comparison Between Selectors
-
-| Method                    | Scope            | Return Type                 | Example                                   |
-|---------------------------|------------------|-----------------------------|-------------------------------------------|
-| `getElementById`          | Single Element   | Single Element (null if not found) | `document.getElementById("id")`         |
-| `getElementsByClassName`  | Multiple Elements| HTMLCollection              | `document.getElementsByClassName("class")` |
-| `getElementsByTagName`    | Multiple Elements| HTMLCollection              | `document.getElementsByTagName("tag")`  |
-| `querySelector`           | Single Element   | Single Element (null if not found) | `document.querySelector("selector")`    |
-| `querySelectorAll`        | Multiple Elements| NodeList                    | `document.querySelectorAll("selector")` |
-
 
 # What are Data Types in JavaScript?
 
@@ -262,27 +254,17 @@ Data types define the type of values that can be stored and manipulated in JavaS
 | **Mutability**         | Immutable (cannot change the value).     | Mutable (can modify the content).        |
 
 # What are Functions in JavaScript?
-
-
-
 A function in JavaScript is a reusable block of code designed to perform a specific task. Functions take inputs (parameters), process them, and return an output. They help organize code, make it reusable, and improve readability.
 
----
-
 ## Types of Functions in JavaScript
-
 - **Named Functions**: Functions with a name for reuse.
 - **Anonymous Functions**: Functions without a name, often used as arguments or callbacks.
 - **Function Expressions**: Functions defined as expressions and assigned to a variable.
 - **Arrow Functions**: A shorthand syntax for writing functions introduced in ES6.
 - **Pure Functions**: Functions that always produce the same output for the same input without side effects.
 
----
-
 ### 1. Named Functions
-
 A function with a defined name.
-
 #### Characteristics:
 - Reusable.
 - Can be called before or after declaration due to hoisting.
@@ -295,10 +277,7 @@ function greet(name) {
 console.log(greet("Rushikesh")); // Output: Hello, Rushikesh!
 ```
 
----
-
 ### 2. Anonymous Functions
-
 A function without a name. Commonly used as:
 - Callbacks
 - Arguments to other functions
@@ -310,12 +289,8 @@ setTimeout(function () {
 }, 1000);
 ```
 
----
-
 ### 3. Function Expressions
-
 A function assigned to a variable.
-
 #### Characteristics:
 - Not hoisted.
 - Can be named or anonymous.
@@ -336,12 +311,8 @@ const factorial = function fact(n) {
 console.log(factorial(5)); // Output: 120
 ```
 
----
-
 ### 4. Arrow Functions
-
 Introduced in ES6, they provide a concise syntax for writing functions.
-
 #### Characteristics:
 - Do not bind their own `this` keyword (inherits `this` from the enclosing scope).
 - Cannot be used as constructors.
@@ -365,10 +336,7 @@ const greet = () => "Hello, World!";
 console.log(greet()); // Output: Hello, World!
 ```
 
----
-
 ### 5. Pure Functions
-
 Functions that:
 - Always return the same output for the same input.
 - Do not have side effects (e.g., modifying external variables).
@@ -391,8 +359,6 @@ function increment() {
 console.log(increment()); // Output: 1 (Modifies `count` outside the function)
 ```
 
----
-
 ## Key Differences Between Function Types
 
 | Type                | Syntax                        | Hoisted | `this` Binding        |
@@ -402,16 +368,6 @@ console.log(increment()); // Output: 1 (Modifies `count` outside the function)
 | Function Expression | `const fn = function () {};` | No      | Own `this`.           |
 | Arrow Function      | `const fn = () => {};`       | No      | Lexical (inherits).   |
 | Pure Function       | Same as Named or Expression  | Depends | Depends.              |
-
----
-
-## Common Use Cases
-
-- **Named Functions**: Reusable blocks for repetitive tasks.
-- **Anonymous Functions**: Short-lived tasks like callbacks in event listeners.
-- **Function Expressions**: Closures or defining functions conditionally.
-- **Arrow Functions**: Clean, concise syntax for functional programming.
-- **Pure Functions**: Used in functional programming for predictable results and easier debugging.
 
 
 ## Pure vs Impure Functions
@@ -425,45 +381,11 @@ console.log(increment()); // Output: 1 (Modifies `count` outside the function)
 | **Testability**  | Easy to test due to predictable behavior.                                        | Difficult to test due to external dependencies or side effects.           |
 | **Performance**  | Can be optimized by caching results (memoization).                               | Cannot leverage caching due to unpredictable output.                      |
 
----
-
 ### Key Differences
-
 1. **Predictability:** Pure functions are predictable; impure functions are not.  
 2. **State Management:** Pure functions do not alter state; impure functions do.  
 3. **Functional Programming:** Pure functions are a core principle of functional programming, promoting immutability and stateless design.
-
 ---
-
-### Why Prefer Pure Functions?
-
-- Easier to debug and test.  
-- Promotes reusable and maintainable code.  
-- Prevents unintended side effects, reducing bugs.
-
----
-
-### Pure Function Example
-
-```javascript
-function add(a, b) {
-    return a + b;
-}
-console.log(add(2, 3)); // Always returns 5
-```
-
-Impure Function Example
-```javascript
-Copy code
-let counter = 0;
-function incrementCounter() {
-    counter++;
-    return counter;
-}
-console.log(incrementCounter()); // Output depends on the external `counter` variable
-```
-
-
 # What is a Callback in JavaScript?
 
 A callback is a function that is passed as an argument to another function and is executed after the completion of that function. It allows asynchronous or deferred execution in JavaScript.
@@ -504,19 +426,12 @@ greet("John", sayGoodbye);
 - **Modularity:** Helps in separating logic into smaller, reusable functions.
 
 ## Limitations of Callbacks
-
 - **Callback Hell:** Nesting multiple callbacks can lead to messy, hard-to-read code.
 
+- Summary: A callback is a function passed into another function to be executed later. It's vital for handling asynchronous operations and making JavaScript non-blocking. While powerful, it’s important to manage them properly to avoid callback hell.
 ---
-
-A callback is a function passed into another function to be executed later. It's vital for handling asynchronous operations and making JavaScript non-blocking. While powerful, it’s important to manage them properly to avoid callback hell.
-
-
 ## What is Function Currying in JavaScript?
-
 Function currying is a technique in JavaScript where a function, instead of taking all its arguments at once, takes them one at a time. It transforms a function with multiple arguments into a sequence of nested functions, each taking a single argument.
-
----
 
 ### Why Use Currying?
 
@@ -529,21 +444,13 @@ Function currying is a technique in JavaScript where a function, instead of taki
 3. **Functional Programming:**  
    Currying is commonly used in functional programming to create specialized functions from general ones.
 
----
-
 ### When to Use Currying?
-
 - When you need to create specialized versions of a function.  
 - In functional programming where functions are composed and reused.  
 - To simplify complex operations into modular, smaller functions.
 
----
-
 ### In Short
-
 Currying transforms a function into a chain of functions that take one argument at a time. It improves reusability and readability and is a key technique in functional programming.
-
----
 
 ### Example: Currying in JavaScript
 
@@ -557,6 +464,7 @@ function add(a) {
 }
 
 console.log(add(1)(2)(3)); // Output: 6
+```
 
 ## What is a Higher-Order Function in JavaScript?
 
